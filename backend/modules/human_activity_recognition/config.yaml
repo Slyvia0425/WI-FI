@@ -1,0 +1,51 @@
+module_id: human_activity_recognition
+dataset:
+  task_dir: Multitask/HumanActivityRecognition
+  sample_root: ../sub_Human_h5
+  metadata_file: metadata/sample_metadata.csv
+  label_mapping_file: metadata/label_mapping.json
+  split_dir: splits
+  h5_glob: "**/*.h5"
+  hdf5_key_candidates: [CSI_amps, csi_amps, amplitudes, amplitude]
+  expected_feature_size: 232
+  window_seconds: 5.0
+  min_frames: 20
+  max_abs_amplitude: 100000.0
+  allowed_roles:
+    - system
+    - researcher
+model:
+  default_name: cnn_transformer
+  candidates: [cnn_1d, cnn_transformer]
+  class_ids: [standing, sitting, walking, lying]
+  batch_size: 64
+  epochs: 40
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  patience: 8
+  dropout: 0.15
+  decision_threshold: 0.6
+  stability_threshold: 0.15
+  hidden_dim: 128
+  transformer_heads: 4
+  transformer_layers: 2
+  max_parameters: 5000000
+  seeds: [42, 43, 44]
+runtime:
+  mode: local
+  remote_endpoint_env: HAR_REMOTE_ENDPOINT
+  remote_token_env: HAR_REMOTE_TOKEN
+  timeout_seconds: 8.0
+  retries: 2
+  backoff_seconds: 0.25
+  requests_per_second: 5.0
+  max_batch_size: 64
+  max_concurrent_requests: 4
+  max_input_megabytes: 32
+  allow_local_fallback: true
+logging:
+  level: INFO
+  redact_keys: [authorization, token, secret, password, api_key]
+paths:
+  output_root_env: HAR_OUTPUT_ROOT
+  allowed_data_root_envs: [HAR_DATA_ROOT, CSI_DATA_ROOT]

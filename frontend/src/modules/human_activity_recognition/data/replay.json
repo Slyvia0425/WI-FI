@@ -1,37 +1,104 @@
 {
  "module": "human_activity_recognition",
- "version": "0.1",
+ "version": "0.2.0",
  "mock": true,
+ "model_version": "fixture-cnn-transformer",
  "frames": [
   {
    "t": 0,
-   "activity": "none",
-   "confidence": 0,
-   "stable": false
+   "activity": "standing",
+   "activity_id": 0,
+   "confidence": 0.86,
+   "stable": true,
+   "probabilities": {"standing": 0.86, "sitting": 0.05, "walking": 0.07, "lying": 0.02},
+   "stability": 0.79,
+   "quality": "good"
   },
   {
-   "t": 12,
-   "activity": "Walking",
+   "t": 5,
+   "activity": "walking",
+   "activity_id": 2,
+   "confidence": 0.9,
+   "stable": true,
+   "probabilities": {"standing": 0.04, "sitting": 0.02, "walking": 0.9, "lying": 0.04},
+   "stability": 0.86,
+   "quality": "good"
+  },
+  {
+   "t": 10,
+   "activity": "transition",
+   "activity_id": null,
+   "confidence": 0.48,
+   "stable": false,
+   "transition": true,
+   "probabilities": {"standing": 0.31, "sitting": 0.48, "walking": 0.09, "lying": 0.12},
+   "stability": 0.18,
+   "quality": "good"
+  },
+  {
+   "t": 15,
+   "activity": "sitting",
+   "activity_id": 1,
+   "confidence": 0.82,
+   "stable": true,
+   "probabilities": {"standing": 0.08, "sitting": 0.82, "walking": 0.03, "lying": 0.07},
+   "stability": 0.72,
+   "quality": "good"
+  },
+  {
+   "t": 20,
+   "activity": "lying",
+   "activity_id": 3,
    "confidence": 0.88,
-   "stable": true
+   "stable": true,
+   "probabilities": {"standing": 0.03, "sitting": 0.05, "walking": 0.04, "lying": 0.88},
+   "stability": 0.81,
+   "quality": "good"
   },
   {
-   "t": 35,
-   "activity": "Sitting",
-   "confidence": 0.79,
-   "stable": true
-  },
-  {
-   "t": 48,
-   "activity": "Transition",
-   "confidence": 0.41,
-   "stable": false
-  },
-  {
-   "t": 56,
-   "activity": "Uncertain",
-   "confidence": 0.35,
-   "stable": false
+   "t": 25,
+   "activity": "unknown",
+   "activity_id": null,
+   "confidence": 0.39,
+   "stable": false,
+   "probabilities": {"standing": 0.23, "sitting": 0.24, "walking": 0.14, "lying": 0.39},
+   "stability": 0.09,
+   "quality": "degraded"
   }
- ]
+ ],
+ "preprocessing": {
+  "tiles": [
+   {"label": "Task", "value": "HumanActivityRecognition"},
+   {"label": "Window", "value": "5 s"},
+   {"label": "Feature size", "value": "232"},
+   {"label": "Split guard", "value": "session/user/env/device"}
+  ],
+  "table": [
+   {"group": "train", "policy": "official or deterministic holdout", "normalisation": "train only"},
+   {"group": "validation", "policy": "used for early stopping", "normalisation": "frozen train statistics"},
+   {"group": "test", "policy": "never used for tuning", "normalisation": "frozen train statistics"}
+  ]
+ },
+ "training": {
+  "table": [
+   {"model": "cnn_1d", "parameters": "pending real run", "seed": "42/43/44"},
+   {"model": "cnn_transformer", "parameters": "pending real run", "seed": "42/43/44"}
+  ]
+ },
+ "experiments": {
+  "table": [
+   {"model": "cnn_1d", "status": "implemented", "metric": "pending real dataset run"},
+   {"model": "cnn_transformer", "status": "implemented", "metric": "pending real dataset run"}
+  ]
+ },
+ "metrics": {
+  "table": [
+   {"split": "fixture", "macroF1": "0.00", "note": "replace with evaluated output"},
+   {"split": "test_id", "macroF1": "pending", "note": "requires csi-bench download"}
+  ],
+  "confusion": {
+   "labels": ["standing", "sitting", "walking", "lying"],
+   "matrix": [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+  }
+ }
 }

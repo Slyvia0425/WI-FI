@@ -1,25 +1,24 @@
-// Plan for this module. Edit freely: add, remove or reword items, and move `s` from 'planned' to 'doing' to 'done'.
-// Starting text follows the team proposal.
+// Plan for this module. Statuses describe implemented code versus work still requiring the real dataset.
 const p = (t, s = 'planned') => ({ t, s })
 
 export default {
   preprocessing: [
-    p("Read HumanActivityRecognition HDF5, metadata and official splits; keep user, environment, device ids"),
-    p("Check label definitions before training; map to standing, sitting, walking or lying only when the data supports it"),
-    p("Normalisation fitted on training data only; subcarrier trimming or zero padding with valid_length"),
+    p("Read HumanActivityRecognition HDF5, metadata and official splits; keep user, environment, device ids", 'done'),
+    p("Validate labels, shapes, finite values, signal quality and split-group leakage", 'done'),
+    p("Fit normalisation on training data only and serialise feature statistics with the model", 'done'),
   ],
   training: [
-    p("1D-CNN baseline for local temporal features"),
-    p("CNN-Transformer for longer-range changes"),
-    p("Keep time order and source metadata during training"),
+    p("1D-CNN baseline for local temporal features", 'done'),
+    p("CNN-Transformer for longer-range changes", 'done'),
+    p("Deterministic seeds, class weights, early stopping and checkpoint metadata", 'done'),
   ],
   experiments: [
-    p("Does the complex model really help on confusable activities, not just add size"),
-    p("Three seeds, mean and std"),
+    p("Compare 1D-CNN and CNN-Transformer on identical splits and seeds", 'doing'),
+    p("Run three seeds and report mean and standard deviation with the real dataset", 'doing'),
   ],
   evaluation: [
-    p("Macro-F1, per-class precision and recall, confusion matrix of the five official activities"),
-    p("OOD results across user, environment and device; transitions, low quality input and class imbalance analysed separately"),
-    p("Output: activity, confidence and stability; uncertain during transitions"),
+    p("Macro-F1, per-class precision and recall, confusion matrix and calibration error", 'done'),
+    p("OOD results across user, environment and device with transition and quality slices", 'doing'),
+    p("Export activity, confidence and stable fields plus probabilities and model version", 'done'),
   ],
 }

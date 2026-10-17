@@ -1,0 +1,17 @@
+sample_id,path,activity,session_id,user_id,environment_id,device_id
+standing-00,../../sub_Human_h5/standing-00.h5,standing,session-standing-00,user-standing-00,env-standing-00,fixture-device-standing-00
+standing-01,../../sub_Human_h5/standing-01.h5,standing,session-standing-01,user-standing-01,env-standing-01,fixture-device-standing-01
+standing-02,../../sub_Human_h5/standing-02.h5,standing,session-standing-02,user-standing-02,env-standing-02,fixture-device-standing-02
+standing-03,../../sub_Human_h5/standing-03.h5,standing,session-standing-03,user-standing-03,env-standing-03,fixture-device-standing-03
+sitting-00,../../sub_Human_h5/sitting-00.h5,sitting,session-sitting-00,user-sitting-00,env-sitting-00,fixture-device-sitting-00
+sitting-01,../../sub_Human_h5/sitting-01.h5,sitting,session-sitting-01,user-sitting-01,env-sitting-01,fixture-device-sitting-01
+sitting-02,../../sub_Human_h5/sitting-02.h5,sitting,session-sitting-02,user-sitting-02,env-sitting-02,fixture-device-sitting-02
+sitting-03,../../sub_Human_h5/sitting-03.h5,sitting,session-sitting-03,user-sitting-03,env-sitting-03,fixture-device-sitting-03
+walking-00,../../sub_Human_h5/walking-00.h5,walking,session-walking-00,user-walking-00,env-walking-00,fixture-device-walking-00
+walking-01,../../sub_Human_h5/walking-01.h5,walking,session-walking-01,user-walking-01,env-walking-01,fixture-device-walking-01
+walking-02,../../sub_Human_h5/walking-02.h5,walking,session-walking-02,user-walking-02,env-walking-02,fixture-device-walking-02
+walking-03,../../sub_Human_h5/walking-03.h5,walking,session-walking-03,user-walking-03,env-walking-03,fixture-device-walking-03
+lying-00,../../sub_Human_h5/lying-00.h5,lying,session-lying-00,user-lying-00,env-lying-00,fixture-device-lying-00
+lying-01,../../sub_Human_h5/lying-01.h5,lying,session-lying-01,user-lying-01,env-lying-01,fixture-device-lying-01
+lying-02,../../sub_Human_h5/lying-02.h5,lying,session-lying-02,user-lying-02,env-lying-02,fixture-device-lying-02
+lying-03,../../sub_Human_h5/lying-03.h5,lying,session-lying-03,user-lying-03,env-lying-03,fixture-device-lying-03
