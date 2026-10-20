@@ -1,25 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MODULES } from '../../modules/registry.js'
-import { fetchModule, framesByRole } from '../../api/replay.js'
+import { framesByRole } from '../../api/replay.js'
+import DEMO from './demo.json'
 import { fuse, TONES } from '../fusion/rules.js'
 import { Notice } from '../../components/ui.jsx'
 import FloorPlan from './FloorPlan.jsx'
 
 export default function LandingPage() {
-  const [all, setAll] = useState({})
+  // The animation runs on its own invented data (demo.json), not on the output of the modules.
+  const all = useMemo(() => Object.fromEntries(MODULES.map((m) => [m.id, DEMO[m.id] ? { frames: DEMO[m.id] } : null])), [])
   const [time, setTime] = useState(0)
   const [playing, setPlaying] = useState(true)
   const started = useRef(false)
   const timer = useRef(null)
-
-  useEffect(() => {
-    Promise.allSettled(MODULES.map((m) => fetchModule(m))).then((res) => {
-      const next = {}
-      res.forEach((r, i) => { next[MODULES[i].id] = r.status === 'fulfilled' ? r.value : null })
-      setAll(next)
-    })
-  }, [])
 
   const times = useMemo(() => {
     const s = new Set()

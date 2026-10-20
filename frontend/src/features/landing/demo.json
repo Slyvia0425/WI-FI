@@ -1,0 +1,241 @@
+{
+ "_about": "Invented demonstration data for the home page animation only. Nothing else reads it, and it is not the output of any module: the story is walk -> sit -> stand -> stumble (possible fall) -> lying still. Each list has the frame shape of its module (see the module's contract.py and meta.js summarize).",
+ "motion_source_recognition": [
+  {
+   "t": 0,
+   "label": "Fan",
+   "confidence": 0.82,
+   "probs": {
+    "Human": 0.05,
+    "Pet": 0.07,
+    "IRobot": 0.06,
+    "Fan": 0.82
+   },
+   "quality": {
+    "ok": true,
+    "level": "ok",
+    "reasons": []
+   }
+  },
+  {
+   "t": 12,
+   "label": "Human",
+   "confidence": 0.91,
+   "probs": {
+    "Human": 0.91,
+    "Pet": 0.04,
+    "IRobot": 0.02,
+    "Fan": 0.03
+   },
+   "quality": {
+    "ok": true,
+    "level": "ok",
+    "reasons": []
+   }
+  },
+  {
+   "t": 35,
+   "label": "Human",
+   "confidence": 0.94,
+   "probs": {
+    "Human": 0.94,
+    "Pet": 0.03,
+    "IRobot": 0.01,
+    "Fan": 0.02
+   },
+   "quality": {
+    "ok": true,
+    "level": "ok",
+    "reasons": []
+   }
+  },
+  {
+   "t": 42,
+   "label": "Human",
+   "confidence": 0.92,
+   "probs": {
+    "Human": 0.92,
+    "Pet": 0.04,
+    "IRobot": 0.02,
+    "Fan": 0.02
+   },
+   "quality": {
+    "ok": true,
+    "level": "ok",
+    "reasons": []
+   }
+  },
+  {
+   "t": 48,
+   "label": "Human",
+   "confidence": 0.93,
+   "probs": {
+    "Human": 0.93,
+    "Pet": 0.03,
+    "IRobot": 0.02,
+    "Fan": 0.02
+   },
+   "quality": {
+    "ok": true,
+    "level": "ok",
+    "reasons": []
+   }
+  },
+  {
+   "t": 56,
+   "label": "Human",
+   "confidence": 0.92,
+   "probs": {
+    "Human": 0.92,
+    "Pet": 0.04,
+    "IRobot": 0.02,
+    "Fan": 0.02
+   },
+   "quality": {
+    "ok": true,
+    "level": "ok",
+    "reasons": []
+   }
+  }
+ ],
+ "human_activity_recognition": [
+  {
+   "t": 0,
+   "activity": "none",
+   "confidence": 0,
+   "stable": false
+  },
+  {
+   "t": 12,
+   "activity": "Walking",
+   "confidence": 0.88,
+   "stable": true
+  },
+  {
+   "t": 35,
+   "activity": "Sitting",
+   "confidence": 0.79,
+   "stable": true
+  },
+  {
+   "t": 42,
+   "activity": "Standing",
+   "confidence": 0.74,
+   "stable": true
+  },
+  {
+   "t": 48,
+   "activity": "Transition",
+   "confidence": 0.41,
+   "stable": false
+  },
+  {
+   "t": 56,
+   "activity": "Lying",
+   "confidence": 0.74,
+   "stable": true
+  }
+ ],
+ "fall_detection": [
+  {
+   "t": 0,
+   "fall_score": 0.02,
+   "state": "normal"
+  },
+  {
+   "t": 12,
+   "fall_score": 0.05,
+   "state": "normal"
+  },
+  {
+   "t": 35,
+   "fall_score": 0.12,
+   "state": "normal"
+  },
+  {
+   "t": 42,
+   "fall_score": 0.15,
+   "state": "normal"
+  },
+  {
+   "t": 48,
+   "fall_score": 0.86,
+   "state": "suspected"
+  },
+  {
+   "t": 56,
+   "fall_score": 0.93,
+   "state": "alert"
+  }
+ ],
+ "breathing_detection": [
+  {
+   "t": 0,
+   "status": "not_assessable",
+   "confidence": 0
+  },
+  {
+   "t": 12,
+   "status": "not_assessable",
+   "confidence": 0
+  },
+  {
+   "t": 35,
+   "status": "breathing",
+   "confidence": 0.71
+  },
+  {
+   "t": 42,
+   "status": "not_assessable",
+   "confidence": 0
+  },
+  {
+   "t": 48,
+   "status": "not_assessable",
+   "confidence": 0
+  },
+  {
+   "t": 56,
+   "status": "breathing",
+   "confidence": 0.58
+  }
+ ],
+ "space_proximity_sensing": [
+  {
+   "t": 0,
+   "zone": "unknown",
+   "proximity": null,
+   "confidence": 0
+  },
+  {
+   "t": 12,
+   "zone": "doorway",
+   "proximity": "far",
+   "confidence": 0.8
+  },
+  {
+   "t": 35,
+   "zone": "sofa",
+   "proximity": "near",
+   "confidence": 0.82
+  },
+  {
+   "t": 42,
+   "zone": "sofa",
+   "proximity": "near",
+   "confidence": 0.8
+  },
+  {
+   "t": 48,
+   "zone": "sofa",
+   "proximity": "near",
+   "confidence": 0.8
+  },
+  {
+   "t": 56,
+   "zone": "sofa",
+   "proximity": "near",
+   "confidence": 0.8
+  }
+ ]
+}

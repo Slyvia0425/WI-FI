@@ -21,6 +21,8 @@ export default function FloorPlan({ frames, fused }) {
   const label = fused.tone === 'alert' ? 'FALL ALERT'
     : fused.tone === 'suspected' ? 'POSSIBLE FALL'
     : (B && B.activity && B.activity !== 'none' ? B.activity.toUpperCase() : 'PRESENT')
+  // During a fall state the label also says what the person was doing, so that the story reads: standing up, then a possible fall.
+  const sub = (fused.tone === 'alert' || fused.tone === 'suspected') && B && B.activity && B.activity !== 'none' ? B.activity.toUpperCase() : null
   const left = show && zone.x > 440
   const fanOn = A?.label === 'Fan'
   return (
@@ -58,8 +60,9 @@ export default function FloorPlan({ frames, fused }) {
             <animate attributeName="stroke-opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite" />
           </circle>
           <circle r="7" fill={col} style={{ transition: 'fill .4s' }} />
-          <rect x={left ? -126 : 22} y="-28" width="104" height="26" rx="13" fill={col} fillOpacity="0.12" stroke={col} strokeOpacity="0.6" />
-          <text x={left ? -74 : 74} y="-11" textAnchor="middle" fill={col} fontFamily={MONO} fontSize="11">{label}</text>
+          <rect x={left ? -126 : 22} y={sub ? -44 : -28} width="104" height={sub ? 42 : 26} rx="13" fill={col} fillOpacity="0.12" stroke={col} strokeOpacity="0.6" />
+          <text x={left ? -74 : 74} y={sub ? -26 : -11} textAnchor="middle" fill={col} fontFamily={MONO} fontSize="11">{label}</text>
+          {sub && <text x={left ? -74 : 74} y="-10" textAnchor="middle" fill="#9FB3CC" fontFamily={MONO} fontSize="10">{sub}</text>}
         </g>
       )}
       <text x="604" y="426" textAnchor="end" fill="#9FB3CC" fillOpacity="0.6" fontFamily={MONO} fontSize="9">SCHEMATIC POSITIONS</text>
