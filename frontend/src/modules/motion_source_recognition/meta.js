@@ -7,7 +7,7 @@ export default {
   navLabel: "Motion source",
   title: "Motion source recognition",
   role: "motionSource",
-  blurb: "Human, Pet, Robot or Fan: who is disturbing the signal.",
+  blurb: "Human, Pet, IRobot or Fan: who is disturbing the signal.",
   owner: '',
   summarize: (f) => `${f.label} ${Math.round(f.confidence * 100)}%`,
 }

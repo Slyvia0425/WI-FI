@@ -25,7 +25,6 @@ def discover(only: list[str] | None = None) -> dict:
 
 MODULES = discover()
 
-
 # A handler takes the path parameters and returns (http status, JSON-serialisable body).
 def health(params):
     return 200, {"ok": True}

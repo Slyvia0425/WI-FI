@@ -7,7 +7,8 @@ page, all inside this module's folders. Fusion (frontend/src/features/fusion/rul
 FRAME_FIELDS = ['label', 'confidence', 'probs']
 
 FIELD_NOTES = {
-    "label": "Human, Pet, IRobot, Fan or unknown",
-    "confidence": "probability of the chosen label, 0 to 1",
-    "probs": "probability of each class"
+    "label": "Human, Pet, IRobot, Fan or unknown (unknown = highest probability below the threshold; a decision state, not a class)",
+    "confidence": "the highest of the four calibrated probabilities, 0 to 1 (0 when the window is invalid)",
+    "probs": "calibrated probability of each class, sum 1; null when the window is invalid. Always given, also when the label is unknown",
+    "quality": "optional: {ok, level: ok | degraded | invalid, reasons: [...]}; see INTERFACE.md"
 }
