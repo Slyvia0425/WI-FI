@@ -1,10 +1,20 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { readingAt, eventsAt, DURATION } from './session.js'
+import { readingAt, eventsAt, DURATION, historicalReading } from './session.js'
 
 const data = JSON.parse(readFileSync(new URL('./data/replay.json', import.meta.url), 'utf8'))
 const samples = data.records.flatMap(r => r.samples)
+test('historical replay preserves the last window without reviving live results', () => {
+  for (const sample of samples) for (const mode of ['recorded', 'interrupted']) {
+    assert.equal(historicalReading(sample, 0, mode), null)
+    const history = historicalReading(sample, DURATION, mode)
+    const last = sample.streaming[mode].events.filter(e => e.status).at(-1)
+    assert.deepEqual(history, last || null)
+    assert.equal(readingAt(sample, DURATION, data.threshold, mode).rate, null)
+    if (mode === 'interrupted') assert.equal(history?.rate_bpm ?? null, null)
+  }
+})
 test('all backend timelines hide future evidence, rate and events', () => {
   for (const s of samples) for (const mode of ['recorded','interrupted']) {
     assert.equal(readingAt(s, 9.99, data.threshold, mode).status, 'collecting')

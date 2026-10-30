@@ -1,6 +1,12 @@
 export const DURATION = 34
 export const SIGNAL_DURATION = 30
 
+// Completed replay results are historical; never revive the live watchdog state.
+export function historicalReading(sample, seconds, mode = 'recorded') {
+  const events = sample.streaming?.[mode]?.events || []
+  return events.filter(e => e.status && e.time <= seconds).at(-1) || null
+}
+
 export function readingAt(sample, seconds, threshold, mode = 'recorded') {
   const elapsed = Math.max(0, Math.min(DURATION, seconds))
   const timeline = sample.streaming?.[mode]

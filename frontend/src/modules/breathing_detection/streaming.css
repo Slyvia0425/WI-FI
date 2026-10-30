@@ -1,3 +1,30 @@
+.bm-source-strip { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin:0 0 18px; color:#aec2d1; font-size:13px; }
+.bm-source-strip button { background:transparent; color:#9fb3cc; border:1px solid #a9c1d229; border-radius:7px; padding:8px 12px; }
+.bm-advanced { margin:0 0 18px; color:#aec2d1; font-size:14px; }
+.bm-advanced summary { cursor:pointer; padding:8px 0; }
+.bm-advanced>p { max-width:80ch; }
+.bm-advanced .bm-selection { margin-top:10px; }
+.bm-rate-unavailable { font-size:14px; color:#aec2d1; border-top:1px solid #a9c1d229; padding-top:18px; margin-top:22px; }
+.bm-mode-note { color:#efc087; font-size:14px; }
+.bm-research-heading h2 { margin:8px 0; font-size:24px; }
+.bm-research-heading p { color:#aec2d1; font-size:14px; margin-bottom:20px; }
+.bm-page .bm-heading { margin-bottom:20px; }
+.bm-page { padding-top:8px; }
+.bm-page .bm-review-language { margin-bottom:8px; }
+.bm-page .bm-heading h1 { margin:4px 0; }
+.bm-page .bm-dataset-picker { padding:12px 16px; margin-bottom:12px; }
+.bm-page .bm-selection { padding:12px 16px; margin-bottom:12px; }
+.bm-page .bm-observation>h2 { margin-top:16px; }
+.bm-page .bm-session-help { min-height:0; }
+.bm-page .bm-clock { margin:12px 0; }
+.bm-page .bm-controls { margin:14px 0; }
+.bm-page .bm-session-help,.bm-page .bm-evidence p,.bm-page .bm-bpm p,.bm-page .bm-quality p,.bm-page .bm-guidance p,.bm-page .bm-selection select { font-size:14px; }
+.bm-page .bm-limit,.bm-page .bm-details p,.bm-page .bm-selection label,.bm-page .bm-card-heading>span:last-child { font-size:12px; }
+.bm-page .bm-dataset-picker p,.bm-page .bm-dataset-picker button { font-size:14px; }
+.bm-page .bm-dataset-picker { flex-wrap:wrap; }
+.bm-page .bm-signal-heading { gap:12px; flex-wrap:wrap; }
+.bm-page .bm-signal-heading span { font-size:12px; }
+@media(max-width:900px) { .bm-page .bm-results { grid-row:1; } }
 .bm-page .bm-milestones { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .bm-review-language { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-bottom: 18px; color: #98b0c1; font-size: 11px; }
 .bm-review-language button { border: 1px solid #60e9ce66; border-radius: 6px; padding: 8px 14px; color: #60e9ce; background: #132333; min-height: 38px; }

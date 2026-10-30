@@ -64,14 +64,14 @@ export default function ResearchView({ language = 'en' }) {
     setTab(tabs[next][0]); document.getElementById(`br-tab-${tabs[next][0]}`)?.focus()
   }
   return localizeTree(<div className="br-page">
-    <header className="br-heading"><div><div className="br-eyebrow"><i />SIGNAL INTELLIGENCE / MODULE 04</div><h1>A closer look at<br /><em>every breath.</em></h1><p>Explore breathing evidence, experimental respiratory rates, and the moments a Wi-Fi signal needs a second look.</p></div><div className="br-identity" aria-hidden="true"><div className="br-orbit"><svg viewBox="0 0 160 80"><path d="M0 40 H15 Q25 40 30 20 T45 40 T60 40 Q70 40 75 10 T90 40 T105 40 Q115 40 120 22 T135 40 H160" /></svg></div><span>CSI → EVIDENCE → INSIGHT</span></div></header>
-    <div className="br-mode"><span className="br-chip mint"><i />OFFLINE RESEARCH</span><span>Real recorded data · no live device connection</span><span className="br-source">{data?.records ? data._source : 'bundled'} dataset</span></div>
+    <header className="bm-research-heading"><h2>Models & validation</h2><p>Detection performance, experimental rate estimates, and validation limits.</p></header>
+    <div className="br-mode"><span className="br-chip mint"><i />OFFLINE RESEARCH</span><span>Real recorded data · no live device connection</span><span className="br-source">{dashboard === data ? data._source : 'bundled'} dataset</span></div>
     {error && <p className="br-inline-note">Backend unavailable. Showing the bundled offline dataset.</p>}
     {data && !data.records && <p className="br-inline-note">The backend uses an older format. Showing the bundled research dashboard.</p>}
     <section className="br-stats" aria-label="Evaluation overview">
       <Stat label="DETECTION · CSI-BENCH TEST" value={fmt(b.csi_bench_test.macro_f1 * 100, 2)} unit="% F1" detail="Frozen LSTM · binary Macro-F1" />
-      <Stat label="EXTERNAL · WIRE-BREATH" value={fmt(b.external_recall * 100, 2)} unit="%" detail="Breathing recall · assessable windows" />
-      <Stat label="RATE · EXPERIMENTAL" value={fmt(b.rate.mae_bpm, 2)} unit="BPM" detail="Retrospective MAE · unified fixed estimator" purple />
+      <Stat label="EXTERNAL · WIRE-BREATH" value={fmt(b.external_recall * 100, 2)} unit="%" detail="Positive-only recall · no empty-room evaluation" />
+      <Stat label="RATE · EXPERIMENTAL" value={fmt(b.rate.mae_bpm, 2)} unit="BPM" detail="Development MAE · not independent validation" purple />
       <Stat label="RATE COVERAGE" value={fmt(b.rate_coverage * 100, 2)} unit="%" detail="394 / 467 segments · 100 ms gap rule" />
     </section>
     <section aria-labelledby="br-explorer-title"><div className="br-section-head"><div><div className="br-eyebrow">01 / RECORDING EXPLORER</div><h2 id="br-explorer-title">The signal behind the result</h2></div><span className="br-chip">30s recorded segments</span></div>
