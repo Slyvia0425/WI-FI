@@ -37,13 +37,35 @@ The public confidence is a decision-margin score. It is zero at the frozen
 breathing threshold and approaches one farther from the boundary. A rejected
 window reports the score of the gate that rejected it.
 
-## Deliberately not calibrated yet
+## Risk producer status
 
-The periodic-interference and temporal-instability risk producers are not yet
-implemented. The K=208 analysis cannot be converted directly into a hard gate:
-the official test set has already been observed, and K is confounded with
-environment, user, deployment, and label. Thresholds for new risk producers
-must be developed using train/validation data only.
+The unified estimator's motion-related signal-pollution study uses CSI-only
+transient, energy, broadband and adjacent-correlation proxies. It has no reliable
+per-window physical-motion labels. Its selected grouped rules withheld six
+accurate rates and intercepted none of 19 large errors, so it is not a motion
+probability producer and is not connected to a deployed gate. No BPM or breathing
+status is changed. See [`MOTION_POLLUTION_REPORT.md`](MOTION_POLLUTION_REPORT.md).
+
+The temporal-instability producer is implemented as a stateful five-window
+tracker. It combines decision flips with proximity to the frozen breathing
+threshold and waits for at least three windows before returning a score. The
+official dataset does not provide a trustworthy ordered continuous replay, so
+its operating threshold has not been empirically validated yet. A subsequent
+5-second sliding-window replay of 467 independent WiRe-Breath segments produced
+1,234 scored windows: the diagnostic 0.8 cutoff flagged one correct prediction
+and no false `none` predictions. It remains disabled. These short segments are
+not long-duration validation; see
+[`STREAMING_PIPELINE_REPORT.md`](STREAMING_PIPELINE_REPORT.md).
+
+A signal-only periodic-risk producer was trained on train and calibrated on
+validation. It rejected 116 correct breathing windows while removing only six
+false positives and therefore did not pass the promotion criterion. It is not
+enabled by default. See
+[`PERIODIC_GATE_REPORT.md`](PERIODIC_GATE_REPORT.md).
+
+The K=208 analysis still cannot be converted into a hard gate: the official
+test set has already been observed, and K is confounded with environment,
+user, deployment, and label.
 
 The next experiment must report both coverage and selective performance:
 

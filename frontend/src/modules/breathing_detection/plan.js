@@ -13,8 +13,9 @@ export default {
     p("One time-series model: LSTM or Transformer", "done"),
   ],
   experiments: [
-    p("Window length vs response time for slow, weak signals"),
-    p("Effect of motion interference, fan periodic signal and low quality"),
+    p("Compare 10s and 30s rate estimates under fixed person/recording folds", "done"),
+    p("Analyze interference, spectral boundary errors and conservative rate correction", "done"),
+    p("Validate reliability on new matched interference and empty-room recordings"),
   ],
   evaluation: [
     p("Recall, precision and F1; empty room, motion and fan interference analysis", "doing"),

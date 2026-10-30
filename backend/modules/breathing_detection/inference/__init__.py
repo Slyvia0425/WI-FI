@@ -7,6 +7,9 @@ from .gating import (
     GateReason,
     decide_breathing_status,
 )
+from .periodic_risk import PeriodicInterferenceScorer
+from .temporal_risk import TemporalInstabilityTracker
+from .streaming import BreathingStream, StreamConfig
 
 __all__ = [
     "GateConfig",
@@ -14,4 +17,8 @@ __all__ = [
     "GateInputs",
     "GateReason",
     "decide_breathing_status",
+    "PeriodicInterferenceScorer",
+    "TemporalInstabilityTracker",
+    "BreathingStream",
+    "StreamConfig",
 ]

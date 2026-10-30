@@ -10,6 +10,13 @@ from .temporal import (
     extract_top_variance_subcarriers,
 )
 from .cache import TemporalCache, build_temporal_cache, load_temporal_cache
+from .wire_breath import WireBreathDataset, WireBreathSample
+from .wire_cache import (
+    WireBreathCache,
+    build_wire_breath_cache,
+    load_wire_breath_cache,
+    subject_holdout_folds,
+)
 
 __all__ = [
     "BreathingDataset",
@@ -27,4 +34,10 @@ __all__ = [
     "TemporalCache",
     "build_temporal_cache",
     "load_temporal_cache",
+    "WireBreathDataset",
+    "WireBreathSample",
+    "WireBreathCache",
+    "build_wire_breath_cache",
+    "load_wire_breath_cache",
+    "subject_holdout_folds",
 ]
