@@ -1,0 +1,3 @@
+# Downloaded data never goes into git; only the scripts, samples and descriptions do.
+*/data/
+*/sample_check/
