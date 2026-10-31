@@ -52,4 +52,4 @@ The existing complete project, data layout and Release restoration remain availa
 
 `scripts/verify_spatial_modes.py` sends the exact same signal arrays to both services and compares all returned fields except compute timing. It covers both validated layouts, six example scenes, two noise levels and missing-signal rejection (14 cases). This is an equivalence check, not a new accuracy evaluation.
 
-All work on the dual-mode version is local until the owner approves publication.
+Download the [standalone light demo](https://github.com/Slyvia0425/WI-FI/releases/tag/spatial-light-20261031) for a prebuilt website, model assets and six examples. Extract it, run `INSTALL_LIGHT.bat` once, then run `START_LIGHT.bat`.
