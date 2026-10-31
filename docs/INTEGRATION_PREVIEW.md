@@ -30,3 +30,7 @@ Model B/C assets remain available through the existing `scripts/restore_bc_model
 - Fusion: existing rule/interface demonstration, not a simultaneous multi-sensor experiment.
 
 The home room animation is explicitly labelled illustrative. Module E does not estimate human proximity or feed simulated furniture locations into a human-monitoring recording. No joint five-module accuracy is reported. Source models, thresholds and existing evaluation results are unchanged.
+
+## Spatial visual effects
+
+The spatial workspace adds ambient particles, decorative TX/RX signal streams, hover lighting, button ripples and an effects toggle. The visual streams illustrate signal flow; they are not recovered propagation paths or model evidence. Animations follow the processing status, pause when the page is hidden or outside the viewport, and respect reduced-motion preferences. Local overlay assets live in `backend/api/assets/`; model-bound spatial source files, predictions and thresholds are unchanged.

@@ -13,7 +13,7 @@ from backend.api.server import Handler
 class Upstream(BaseHTTPRequestHandler):
     def do_GET(self):
         responses = {
-            '/': ('text/html', b'<head><link href="/style.css"></head><script src="/app.js"></script>'),
+            '/': ('text/html', b'<head><link href="/style.css"></head><body><script src="/app.js"></script></body>'),
             '/app.js': ('text/javascript', b"fetch('/api/state');const x=\"/api/predict\";"),
             '/api/health': ('application/json', b'{"service":"roomsense-multi","ready":true}'),
         }
@@ -79,6 +79,16 @@ class IntegrationBridgeTest(unittest.TestCase):
         self.assertIn('/spatial/style.css', html)
         self.assertIn('/spatial/app.js', html)
         self.assertIn('.page-heading', html)
+        self.assertIn('/spatial/effects.css', html)
+        self.assertIn('/spatial/effects.js', html)
+
+    def test_effects_assets_are_local(self):
+        with patch('backend.api.integration.spatial_origin', return_value='http://127.0.0.1:1'):
+            for path, kind in [('effects.css', 'text/css'), ('effects.js', 'text/javascript')]:
+                with self.get('/spatial/' + path) as response:
+                    self.assertEqual(response.status, 200)
+                    self.assertIn(kind, response.headers['Content-Type'])
+                    self.assertGreater(len(response.read()), 100)
 
     def test_javascript_api_prefix(self):
         with self.get('/spatial/app.js') as response:

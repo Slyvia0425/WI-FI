@@ -2,6 +2,7 @@ import json
 import os
 import urllib.error
 import urllib.request
+from pathlib import Path
 from urllib.parse import urlsplit
 
 from .routes import MODULES
@@ -40,6 +41,16 @@ def integration_status():
 def proxy_spatial(handler):
     parsed = urlsplit(handler.path)
     path = parsed.path.removeprefix('/spatial') or '/'
+    if path in ('/effects.css', '/effects.js'):
+        file = Path(__file__).parent / 'assets' / ('spatial-effects.css' if path.endswith('.css') else 'spatial-effects.js')
+        data = file.read_bytes()
+        handler.send_response(200)
+        handler.send_header('Content-Type', 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
+        handler.send_header('Cache-Control', 'no-store')
+        handler.send_header('Content-Length', str(len(data)))
+        handler.end_headers()
+        handler.wfile.write(data)
+        return
     target = spatial_origin() + path + ('?' + parsed.query if parsed.query else '')
     try:
         length = int(handler.headers.get('Content-Length', '0'))
@@ -62,6 +73,8 @@ def proxy_spatial(handler):
         if path == '/' and status == 200:
             data = data.replace(b'href="/style.css"', b'href="/spatial/style.css"').replace(b'src="/app.js"', b'src="/spatial/app.js"').replace(b'href="/"', b'href="/spatial/"')
             data = data.replace(b'</head>', b'<style>body>header,.page-heading{display:none!important}main{padding:0!important;max-width:none!important}.workspace{margin-top:0!important}body{background:#070b14!important}</style></head>')
+            data = data.replace(b'</head>', b'<link rel="stylesheet" href="/spatial/effects.css"></head>')
+            data = data.replace(b'</body>', b'<script src="/spatial/effects.js"></script></body>')
         handler.send_response(status)
         handler.send_header('Content-Type', content_type)
         handler.send_header('Cache-Control', 'no-store')

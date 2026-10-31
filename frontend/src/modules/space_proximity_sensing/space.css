@@ -1,0 +1,21 @@
+.space-module .space-hero{position:relative;isolation:isolate;overflow:hidden;margin:8px 0 20px;padding:24px 26px;border:1px solid #58e3ec29;border-left:3px solid #60e9e8;border-radius:0 22px 22px 0;background:linear-gradient(110deg,#0d29365e,#101b2b66 65%,#27203a55);box-shadow:0 0 45px #1cd6e107,inset 0 1px 0 #96e9ec0c}
+.space-fx-on .space-hero:before{content:"";position:absolute;inset:-80% -20%;z-index:-1;pointer-events:none;background:conic-gradient(from 15deg at 70% 50%,transparent 0deg,#5fd1e90c 35deg,transparent 60deg,transparent 180deg,#9b7cdd0c 210deg,transparent 250deg);animation:space-aurora 25s linear infinite}
+.space-module .space-hero h1{font-size:clamp(34px,4vw,48px);background:linear-gradient(110deg,#f1fbff,#cffafb 65%,#b9b4ee);background-clip:text;-webkit-background-clip:text;color:transparent}
+.space-module .space-hero .kicker{color:#71eff1;text-shadow:0 0 18px #67e2ef44}
+.space-module .space-hero .lead{font-size:15px}
+.space-hero-tools{display:flex;gap:18px;align-items:center}
+.space-radar{width:120px;height:90px;color:#72e5ed;filter:drop-shadow(0 0 8px #5bdddf44)}
+.space-toggles{display:flex;align-items:flex-end;flex-direction:column;gap:12px}
+.space-effects-toggle{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:9px;border:1px solid #69e6e82e;background:#0c202a;color:#8ddce4;font-size:12px;cursor:pointer;transition:transform .18s,border-color .18s,background .18s,box-shadow .18s}
+.space-effects-toggle:hover{border-color:#80ebed7d;background:#17333c;box-shadow:0 0 20px #40dce51c;transform:translateY(-1px)}
+.space-effects-toggle:active{transform:scale(.96)}
+.space-effects-toggle:focus-visible{outline:2px solid #79e8ec;outline-offset:4px}
+.space-effects-toggle[aria-pressed=false]{color:#96a6bb;border-color:#96a6bb35;background:#101b2b}
+.space-fx-on .radar-orbit{transform-origin:60px 45px;animation:space-orbit 14s linear infinite}
+.space-fx-on .radar-core{animation:space-core 3s ease-in-out infinite}
+.space-module .space-frame{border-radius:18px}
+@keyframes space-aurora{to{transform:rotate(360deg)}}
+@keyframes space-orbit{to{transform:rotate(360deg)}}
+@keyframes space-core{50%{opacity:.35;filter:drop-shadow(0 0 8px #8ffaff)}}
+@media(max-width:800px){.space-radar{display:none}.space-module .space-hero{padding:20px}.space-hero-tools{flex:1}.space-toggles{width:100%;flex-direction:row;align-items:center;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){.space-module *,.space-module *:before{animation:none!important;transition:none!important}}

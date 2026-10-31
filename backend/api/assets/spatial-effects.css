@@ -1,0 +1,51 @@
+:root{--fx-cyan:#60e9ee;--fx-violet:#b394ff}
+body{isolation:isolate}
+body>main{position:relative;z-index:1}
+#space-particles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.6}
+.workspace{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(135deg,#102637ed,#101b2beb 58%,#191d35eb)!important;border-color:#365261!important;box-shadow:0 22px 70px #0004,inset 0 1px 0 #c6fbff0b}
+.workspace:before{content:"";position:absolute;pointer-events:none;z-index:-1;inset:0;background:radial-gradient(480px circle at var(--fx-x,25%) var(--fx-y,0%),#53dce012,transparent 70%);transition:opacity .3s}
+.workspace:after{content:"";position:absolute;top:0;left:15%;width:45%;height:1px;background:linear-gradient(90deg,transparent,#6ce4ecb0,transparent);pointer-events:none;box-shadow:0 0 22px #52e6eb4d}
+.maps article{position:relative;isolation:isolate;background:linear-gradient(155deg,#0a1929e8,#0b1725ed)!important;border-color:#2a4358!important;transition:border-color .25s,box-shadow .25s}
+.maps article:hover{border-color:#58cfdc88!important;box-shadow:inset 0 0 35px #39bec307,0 0 25px #35dce809}
+.maps article:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:radial-gradient(300px circle at var(--fx-x,50%) var(--fx-y,40%),#6fbdff0d,transparent 75%);opacity:0;transition:opacity .25s}
+.maps article:hover:before{opacity:1}
+.map-heading h2{display:flex;gap:9px;align-items:center}
+.map-heading h2:before{content:"";width:5px;height:17px;background:linear-gradient(#6aeeef,#6280ee);border-radius:4px;box-shadow:0 0 14px #52e4eb44}
+.prediction-map .map-heading h2:before{background:linear-gradient(#caabff,#7f74db);box-shadow:0 0 14px #bb91ff55}
+button,select,input,summary{transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
+button:not(:disabled):hover{transform:translateY(-2px);box-shadow:0 5px 20px #1cc9de18,0 0 0 1px #51ceda26}
+button:not(:disabled):active{transform:translateY(1px) scale(.975);box-shadow:0 0 0 4px #62e5e912}
+button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #79e8ec;outline-offset:4px}
+button.primary{background:linear-gradient(120deg,#75e8d4,#59d7e2)!important;border-color:#88f5df!important;box-shadow:0 0 24px #53e3d51c}
+button.primary:hover{box-shadow:0 0 28px #55eadb38!important}
+.object-pick.is-selected{background:linear-gradient(135deg,#56416d,#393254)!important;box-shadow:0 0 18px #b28aef1e;border-color:#bd9ee6!important}
+select:hover,input:hover{border-color:#5cdde3!important;box-shadow:0 0 14px #4bd3dd0d}
+.drawer{background:linear-gradient(125deg,#112231,#121d2c)!important;transition:border-color .25s,box-shadow .25s}
+.drawer:hover{border-color:#5c819d!important;box-shadow:0 0 23px #2ed5e009}
+.drawer>summary:hover{color:#9bf2f2;background:#56d6e006}
+.drawer[open]{border-color:#5599ac!important;box-shadow:inset 3px 0 0 #56dce16b}
+.decision{border-top:1px solid #4ac8d023;padding-top:20px!important}
+.decision>div{padding:10px 12px;border-radius:10px;transition:background .2s,box-shadow .2s}
+.decision>div:hover{background:#62dddf07;box-shadow:inset 0 0 0 1px #6ce9eb18}
+.map-object{transition:filter .2s;cursor:grab}
+.map-object:hover,.map-object:focus-visible{filter:drop-shadow(0 0 5px #bda0ff88)}
+.map-object:active{cursor:grabbing}
+.fx-ripple{position:fixed;z-index:20;width:24px;height:24px;margin:-12px;border:1px solid #88f0ef;box-shadow:0 0 15px #70e9e344,inset 0 0 12px #55dddf18;border-radius:50%;pointer-events:none;animation:fx-ripple .65s ease-out forwards}
+.fx-signal-layer{pointer-events:none}
+.fx-link{stroke:#67d9e8;stroke-width:.65;opacity:.11;fill:none}
+.fx-flow{stroke:#81f4f1;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:2 98;fill:none;opacity:.25;animation:fx-flow 7s linear infinite;filter:drop-shadow(0 0 2px #42e7ec)}
+.fx-ring{fill:none;stroke:#74dcf6;stroke-width:.8;opacity:0;transform-box:fill-box;transform-origin:center;animation:fx-ring 5s ease-out infinite}
+.fx-running .fx-flow{opacity:.8;animation-duration:2.8s}
+.fx-running .fx-link{opacity:.2}
+.fx-running .fx-ring{animation-duration:2.6s}
+.fx-running #status{color:#80f5e7;text-shadow:0 0 14px #65e9d96b}
+.fx-result .prediction-map{animation:fx-result .8s ease-out}
+body.fx-off #space-particles,body.fx-off .fx-signal-layer{display:none}
+body.fx-off .workspace:before,body.fx-off .maps article:before{display:none}
+body.fx-off .fx-ripple{display:none}
+body.fx-off *,body.fx-suspended *{animation-play-state:paused!important}
+@keyframes fx-flow{to{stroke-dashoffset:-100}}
+@keyframes fx-ring{0%{r:5;opacity:0}12%{opacity:.45}100%{r:42;opacity:0}}
+@keyframes fx-ripple{to{transform:scale(4);opacity:0}}
+@keyframes fx-result{0%{box-shadow:0 0 0 1px #9bb4d044,0 0 36px #70d9ff22}100%{box-shadow:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}#space-particles,.fx-signal-layer,.fx-ripple{display:none}}

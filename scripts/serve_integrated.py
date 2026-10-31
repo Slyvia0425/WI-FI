@@ -22,6 +22,11 @@ class IntegratedHandler(Handler, SimpleHTTPRequestHandler):
             return Handler.do_GET(self)
         return SimpleHTTPRequestHandler.do_GET(self)
 
+    def end_headers(self):
+        if not self.path.startswith(('/api/', '/spatial/')):
+            self.send_header('Cache-Control', 'no-store')
+        super().end_headers()
+
 
 def start_spatial(port):
     settings_file = ROOT / '.runtime/config.json'
