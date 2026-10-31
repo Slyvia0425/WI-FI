@@ -1,0 +1,60 @@
+{
+  "version": "tcs_cross_subject_preparation_v1",
+  "date": "2026-10-29",
+  "status": "data preparation; training has not started",
+  "scope": "four-subject feasibility experiment, not the paper's twenty-subject cross-validation",
+  "subject_roles": {"1": "train", "2": "train", "3": "validation", "4": "test"},
+  "source": {
+    "repository": "https://github.com/zhouziyu2050/TCS-Fall",
+    "commit": "3907c3244eb17770ff92e6d0e8575e9dced0f8f0",
+    "paper": "https://journals.sagepub.com/doi/full/10.1177/20552076241259047",
+    "baidu": "https://pan.baidu.com/s/1IT5KZEhvhNjuBjQ3EKxMnw?pwd=qitg",
+    "extraction_code": "qitg",
+    "directory": "TCS-Fall/dataset",
+    "alternative": "https://ieee-dataport.org/documents/tcs-fall",
+    "archives_required": ["1.zip", "2.zip", "3.zip", "4.zip"]
+  },
+  "single_action_labels": {"0": 1, "1": 1, "2": 1, "3": 0, "4": 0, "5": 0, "6": 0},
+  "continuous_activity_ids": [10, 11, 12, 13, 14, 15],
+  "unknown_activity_policy": "Exclude activities without established semantics, including16/17; do not label as Nonfall.",
+  "existing_subject01": {
+    "previously_inspected": true,
+    "continuous_replay_used_for_development": true,
+    "allowed_partial_archive_sha256": "27cef481fa8fdf89a365ebb99285c7396285c9d2dd0d4873af2a6ec1d63729e8",
+    "authorized_excluded_members": ["1/a_01_03_22.dat", "1/a_01_03_23.dat", "1/a_01_03_24.dat"],
+    "reason": "User authorized using intact subject01 records before archive repair. This exception does not automatically apply to new archives."
+  },
+  "split_rules": [
+    "Assign entire subjects before generating any overlapping windows.",
+    "All single-action and continuous recordings of a subject inherit that subject's role.",
+    "Subject04 receives integrity checks but no model evaluation until all choices are frozen.",
+    "Check canonical CSI content duplicates and recognizable source recording overlap before accepting the split.",
+    "If a required subject is incomplete, stop and report; do not silently move subjects or create random window splits."
+  ],
+  "continuous_negative_policy": {
+    "intended_source": "Only training subjects' early continuous recordings.",
+    "requirement": "The entire input window must end within the documented first120 seconds, using audited actual timestamps; check supplied fall annotation is outside this interval. Time-zero uncertainty remains disclosed.",
+    "window_packets": 8000,
+    "hop_packets": 1000,
+    "difference_from_public_code": "Public code labels windows by start time0..119. Requiring the entire window to remain within first120s is a conservative explicit deviation, not a claim of exact reproduction."
+  },
+  "preprocessing": {
+    "base": "Existing Tx0 RF-scaled amplitude -> window-local Butterworth(8,0.2) filtfilt -> GCV over20 packets -> [1,400,90]",
+    "paper_standardization": "Paper specifies per-subcarrier zero mean and unit standard deviation; the statistics population is not explicit and preprocess.ipynb is absent in inspected source.",
+    "candidate_standardization": "An explicitly documented experimental variant: per-feature mean/std fitted on training features only, reused unchanged for validation/test/inference. Do not claim this is the missing official implementation.",
+    "existing_checkpoint_policy": "Never attach new standardization to an existing checkpoint trained without it. Use a new run/checkpoint."
+  },
+  "planned_comparison_arms": [
+    {"name": "SA_raw_GCV", "continuous_negatives": false, "train_fitted_standardization": false},
+    {"name": "SA_CT_raw_GCV", "continuous_negatives": true, "train_fitted_standardization": false},
+    {"name": "SA_standardized_GCV", "continuous_negatives": false, "train_fitted_standardization": true},
+    {"name": "SA_CT_standardized_GCV", "continuous_negatives": true, "train_fitted_standardization": true}
+  ],
+  "comparison_constraints": {
+    "network": "same official five-convolution CNN class",
+    "seed": 42,
+    "initial_threshold": 0.5,
+    "training_protocol_pending": "Finalize common validation membership, class/record sampling and epoch budget after auditing counts, before observing validation model results. Keep class prior and optimization steps comparable across arms.",
+    "metrics": ["Fall recall and precision", "continuous event recall", "background false-alarm episodes/hour", "background positive-state fraction", "recording-level NEWR/CWR proxies", "nominal timestamp offset and separate compute latency"]
+  }
+}

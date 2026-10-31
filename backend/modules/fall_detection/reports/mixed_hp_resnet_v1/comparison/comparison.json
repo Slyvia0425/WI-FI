@@ -1,0 +1,442 @@
+{
+  "status": "complete",
+  "candidate_sha256": "9ec1016f6d3fbce2f76b686ba839a90e1baa6ba882102f9af28fd5599ae9ae9d",
+  "original_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "baseline_receipt_sha256": "86424c55c9990b480699973c944dfe6ab185f31b66f07d8d1c6256e9a0d0b296",
+  "best_epoch": 18,
+  "seed": 42,
+  "reload_check": {
+    "reference_score": 0.9977623224258423,
+    "fresh_process_score": 0.9977623224258423,
+    "absolute_error": 0.0,
+    "tolerance": 5e-05
+  },
+  "results": {
+    "0.5": {
+      "original": {
+        "FallDetection": {
+          "n": 926,
+          "Fall": 390,
+          "Nonfall": 536,
+          "TP": 384,
+          "FP": 27,
+          "FN": 6,
+          "TN": 509,
+          "precision": 0.9343065693430657,
+          "recall": 0.9846153846153847,
+          "F1": 0.9588014981273408,
+          "nonfall_trigger_rate": 0.05037313432835821
+        },
+        "HAR": {
+          "n": 250,
+          "Fall": 0,
+          "Nonfall": 250,
+          "TP": 0,
+          "FP": 192,
+          "FN": 0,
+          "TN": 58,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "nonfall_trigger_rate": 0.768
+        },
+        "HAR_by_activity": {
+          "jumping": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 40,
+            "FN": 0,
+            "TN": 10,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.8
+          },
+          "running": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 43,
+            "FN": 0,
+            "TN": 7,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.86
+          },
+          "seated-breathing": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 33,
+            "FN": 0,
+            "TN": 17,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.66
+          },
+          "walking": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 43,
+            "FN": 0,
+            "TN": 7,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.86
+          },
+          "wavinghand": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 33,
+            "FN": 0,
+            "TN": 17,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.66
+          }
+        }
+      },
+      "mixed_HP": {
+        "FallDetection": {
+          "n": 926,
+          "Fall": 390,
+          "Nonfall": 536,
+          "TP": 384,
+          "FP": 16,
+          "FN": 6,
+          "TN": 520,
+          "precision": 0.96,
+          "recall": 0.9846153846153847,
+          "F1": 0.9721518987341772,
+          "nonfall_trigger_rate": 0.029850746268656716
+        },
+        "HAR": {
+          "n": 250,
+          "Fall": 0,
+          "Nonfall": 250,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 250,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "nonfall_trigger_rate": 0.0
+        },
+        "HAR_by_activity": {
+          "jumping": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "running": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "seated-breathing": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "walking": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "wavinghand": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          }
+        }
+      }
+    },
+    "0.574872225522995": {
+      "original": {
+        "FallDetection": {
+          "n": 926,
+          "Fall": 390,
+          "Nonfall": 536,
+          "TP": 384,
+          "FP": 23,
+          "FN": 6,
+          "TN": 513,
+          "precision": 0.9434889434889435,
+          "recall": 0.9846153846153847,
+          "F1": 0.9636135508155583,
+          "nonfall_trigger_rate": 0.04291044776119403
+        },
+        "HAR": {
+          "n": 250,
+          "Fall": 0,
+          "Nonfall": 250,
+          "TP": 0,
+          "FP": 188,
+          "FN": 0,
+          "TN": 62,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "nonfall_trigger_rate": 0.752
+        },
+        "HAR_by_activity": {
+          "jumping": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 40,
+            "FN": 0,
+            "TN": 10,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.8
+          },
+          "running": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 42,
+            "FN": 0,
+            "TN": 8,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.84
+          },
+          "seated-breathing": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 32,
+            "FN": 0,
+            "TN": 18,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.64
+          },
+          "walking": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 42,
+            "FN": 0,
+            "TN": 8,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.84
+          },
+          "wavinghand": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 32,
+            "FN": 0,
+            "TN": 18,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.64
+          }
+        }
+      },
+      "mixed_HP": {
+        "FallDetection": {
+          "n": 926,
+          "Fall": 390,
+          "Nonfall": 536,
+          "TP": 383,
+          "FP": 16,
+          "FN": 7,
+          "TN": 520,
+          "precision": 0.9598997493734336,
+          "recall": 0.982051282051282,
+          "F1": 0.9708491761723701,
+          "nonfall_trigger_rate": 0.029850746268656716
+        },
+        "HAR": {
+          "n": 250,
+          "Fall": 0,
+          "Nonfall": 250,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 250,
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "nonfall_trigger_rate": 0.0
+        },
+        "HAR_by_activity": {
+          "jumping": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "running": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "seated-breathing": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "walking": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          },
+          "wavinghand": {
+            "n": 50,
+            "Fall": 0,
+            "Nonfall": 50,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 50,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0,
+            "nonfall_trigger_rate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "transition_05": {
+    "FallDetection_both_correct": 882,
+    "FallDetection_regressed": 11,
+    "FallDetection_fixed": 22,
+    "FallDetection_both_wrong": 11,
+    "HAR_fixed": 192,
+    "HAR_both_correct": 58
+  },
+  "common_subset_without_original_train_duplicates": {
+    "excluded_ids": [
+      "FallDetection::Human_U22_Fall_E22_HP_7019000"
+    ],
+    "threshold_05": {
+      "original": {
+        "n": 925,
+        "Fall": 389,
+        "Nonfall": 536,
+        "TP": 383,
+        "FP": 27,
+        "FN": 6,
+        "TN": 509,
+        "precision": 0.9341463414634147,
+        "recall": 0.9845758354755784,
+        "F1": 0.9586983729662077,
+        "nonfall_trigger_rate": 0.05037313432835821
+      },
+      "mixed_HP": {
+        "n": 925,
+        "Fall": 389,
+        "Nonfall": 536,
+        "TP": 383,
+        "FP": 16,
+        "FN": 6,
+        "TN": 520,
+        "precision": 0.9598997493734336,
+        "recall": 0.9845758354755784,
+        "F1": 0.9720812182741116,
+        "nonfall_trigger_rate": 0.029850746268656716
+      }
+    }
+  },
+  "interpretation": "Validation comparison after early stopping; not an unseen test estimate. HAR labels are weak clip-level Nonfall labels. Not continuous false alarms/hour. Old model HP+ESP32; candidate HP-only mixed-source and class-weighted. B gate bypassed; no deployment or threshold optimization."
+}

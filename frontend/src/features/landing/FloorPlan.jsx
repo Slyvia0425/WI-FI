@@ -27,7 +27,7 @@ export default function FloorPlan({ frames, fused }) {
   const fanOn = A?.label === 'Fan'
   return (
     <svg viewBox="0 0 640 440" style={{ width: '100%', height: 'auto', display: 'block' }} role="img"
-      aria-label="Top-down room map with a WiFi router, an ESP32 node, labelled zones and a person marker">
+      aria-label="Top-down room map with a WiFi router, a CSI receiver, labelled zones and a person marker">
       <defs>
         <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(120,160,255,0.08)" /></pattern>
         <clipPath id="room"><rect x={box.x} y={box.y} width={box.w} height={box.h} rx="14" /></clipPath>
@@ -48,7 +48,7 @@ export default function FloorPlan({ frames, fused }) {
       <rect x={router.x - 16} y={router.y - 8} width="32" height="16" rx="4" fill="#0C1424" stroke={TONES.normal} strokeWidth="1.5" />
       <text x={router.x - 30} y={router.y + 28} fill={TONES.normal} fontFamily={MONO} fontSize="10">ROUTER</text>
       <rect x={node.x - 8} y={node.y - 8} width="16" height="16" rx="3" fill="#0C1424" stroke={TONES.normal} strokeWidth="1.5" />
-      <text x={node.x - 42} y={node.y + 26} fill={TONES.normal} fontFamily={MONO} fontSize="10">ESP32</text>
+      <text x={node.x - 42} y={node.y + 26} fill={TONES.normal} fontFamily={MONO} fontSize="10">CSI RX</text>
       <circle cx={fan.x} cy={fan.y} r="14" fill="none" stroke={fanOn ? TONES.normal : '#9FB3CC'} strokeOpacity={fanOn ? 1 : 0.4} strokeWidth={fanOn ? 2 : 1}>
         {fanOn && <animate attributeName="r" from="14" to="24" dur="1.6s" repeatCount="indefinite" />}
       </circle>

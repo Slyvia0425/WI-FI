@@ -4,19 +4,21 @@ const p = (t, s = 'planned') => ({ t, s })
 
 export default {
   preprocessing: [
-    p("Read BreathingDetection data; choose window lengths for slow, weak signals"),
-    p("Mark low signal quality and fan-like periodic signals"),
+    p("Read and validate the BreathingDetection official splits", "done"),
+    p("Mark low signal quality and fan-like periodic signals", "doing"),
+    p("Apply ordered quality, motion, Fan, periodic and stability gates", "doing"),
   ],
   training: [
-    p("Traditional baseline: spectral peak, autocorrelation, subcarrier consistency"),
-    p("One time-series model: LSTM or Transformer"),
+    p("Traditional baseline: spectral peak, autocorrelation, subcarrier consistency", "done"),
+    p("One time-series model: LSTM or Transformer", "done"),
   ],
   experiments: [
-    p("Window length vs response time"),
-    p("Effect of motion interference, fan periodic signal and low quality"),
+    p("Compare 10s and 30s rate estimates under fixed person/recording folds", "done"),
+    p("Analyze interference, spectral boundary errors and conservative rate correction", "done"),
+    p("Validate reliability on new matched interference and empty-room recordings"),
   ],
   evaluation: [
-    p("Recall, precision and F1; empty room, motion and fan interference analysis"),
-    p("Output \"not assessable\" when activity recognition sees clear motion, motion source recognition gives high Fan probability or quality is low"),
+    p("Recall, precision and F1; empty room, motion and fan interference analysis", "doing"),
+    p("Output \"not assessable\" when activity recognition sees clear motion, motion source recognition gives high Fan probability or quality is low", "doing"),
   ],
 }

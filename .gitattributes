@@ -1,0 +1,4 @@
+backend/modules/*/outputs/*.json linguist-generated=true
+backend/modules/fall_detection/reports/** linguist-generated=true
+frontend/src/modules/*/data/*.json linguist-generated=true
+backend/modules/fall_detection/official_reproduction/upstream/** linguist-vendored=true

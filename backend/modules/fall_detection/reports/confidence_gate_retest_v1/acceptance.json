@@ -1,0 +1,10 @@
+{
+  "n_completed": 951,
+  "actual_C_calls": 626,
+  "routing_disagreement_with_previous_simulation": [],
+  "C_classification_disagreement_with_previous_scores": [],
+  "skipped_C_null_outputs_verified": true,
+  "test_scope": "Fresh computation on existing validation/probe cohorts; not new held-out generalization evidence",
+  "weights_thresholds_and_production_replays_unchanged": true,
+  "script_sha256": "42837d25bce53715417260cc69047910211a18bf5088b0a20dceb65d305dddc9"
+}

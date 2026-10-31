@@ -8,6 +8,33 @@ __pycache__/
 node_modules/
 dist/
 .env.local
+/data/
 backend/modules/*/outputs/*
 !backend/modules/*/outputs/.gitkeep
 !backend/modules/*/outputs/replay.json
+
+# Local CSI datasets and trained model artifacts
+backend/modules/*/local_data/
+*.pt
+*.joblib
+*.npy
+*.npz
+*.partial
+*.zip
+*.tar.zst
+!backend/modules/fall_detection/outputs/before_real_B_v1.json
+!backend/modules/fall_detection/outputs/before_confidence_gate_v1.json
+!backend/modules/fall_detection/outputs/tcs_D_replay.json
+!backend/modules/human_activity_recognition/outputs/before_real_B_v1.json
+
+# Local quality-tool caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Also ignore a dependency-directory symlink used for local validation
+node_modules
+
+# Downloaded release model archives
+model_artifacts/downloads/
+*.restore-partial

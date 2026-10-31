@@ -1,0 +1,48 @@
+{
+  "train_n": 5341,
+  "val_n": 1176,
+  "batch_shape": [
+    8,
+    1,
+    500,
+    232
+  ],
+  "batch_dtype": "torch.float32",
+  "labels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "finite": true,
+  "range": [
+    -2.291391372680664,
+    3.3165667057037354
+  ],
+  "ID_overlap": 0,
+  "content_overlap": 0,
+  "architecture_check": "all122 state tensors exactly equal to pinned official initialization under seed42",
+  "raw_to_cache_checks": [
+    {
+      "id": "FallDetection::Human_U07_Fall_E21_HP_2168000",
+      "max_absolute_error": 0.0,
+      "tolerance": "atol2e-5,rtol1e-5; CPU thread reduction roundoff"
+    },
+    {
+      "id": "HAR::Human_U03_wavinghand_E02_HP_232_870035",
+      "max_absolute_error": 4.76837158203125e-07,
+      "tolerance": "atol2e-5,rtol1e-5; CPU thread reduction roundoff"
+    }
+  ],
+  "validation_unique_raw_contents": 1176,
+  "class_weights_train_only": [
+    1.5463231036479443,
+    0.7389319313779745
+  ],
+  "sanity_training": "Actual CUDA forward/backward and epoch1 verified in preserved startup check; formal run restarts seed42 with identical hyperparameters after JSON resume-key comparison fix",
+  "formal_train_source_sha256": "cc3ec4e12c5b8a823080983c47c706f051737d9b51a2b2a2147084778c1ce355"
+}

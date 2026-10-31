@@ -97,7 +97,7 @@ export default function ModulePage({ id, summary, renderFrame, stages = {} }) {
           {mod.owner && <p className="sm">Owner: {mod.owner}</p>}
         </div>
         <span className="state-pill" style={{ color: data?.mock ? '#FFB347' : '#22E4FF', background: data?.mock ? 'rgba(255,179,71,.12)' : 'rgba(34,228,255,.10)' }}>
-          {loading ? 'LOADING' : error ? 'NO DATA' : data?.mock ? 'PLACEHOLDER RESULTS' : 'LIVE DATA'}
+          {loading ? 'LOADING' : error ? 'NO DATA' : data?.mock ? 'PLACEHOLDER RESULTS' : 'RECORDED RESULTS'}
         </span>
       </header>
 
@@ -108,7 +108,7 @@ export default function ModulePage({ id, summary, renderFrame, stages = {} }) {
         <section className="card glow">
           <div className="sec-head">
             <h3>OUTPUT PREVIEW</h3>
-            <span className="mono dim">{frames.length} frames · t = {frame.t}s · {idx + 1}/{frames.length} · source: {data._source}</span>
+            <span className="mono dim">{data.timeline_kind === 'presentation_only' ? `${frames.length} independent segments · sample ${idx + 1}/${frames.length}` : `${frames.length} frames · t = ${frame.t}s · ${idx + 1}/${frames.length}`} · source: {data._source}</span>
           </div>
           <div className="replay-ctl">
             <input type="range" min="0" max={frames.length - 1} value={idx} onChange={(e) => setIdx(+e.target.value)} aria-label="Frame" />

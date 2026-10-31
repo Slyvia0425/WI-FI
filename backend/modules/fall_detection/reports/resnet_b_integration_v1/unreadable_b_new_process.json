@@ -1,0 +1,21 @@
+{
+  "file": "/Users/chenxiaohe/Documents/CSI-Bench-v12/FallDetection/sub_Human/user_U07/act_Fall/env_E21/device_HP/session_2176000__freq232.h5",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "fall_output_index": 0,
+  "sample_id": "session_2176000__freq232",
+  "recording_id": "session_2176000__freq232",
+  "input_id": "csi-amplitude-f32-v1:14c494b5aab5589327f125a6b989abcb22325e531fe4378d59cd71c2a9bff901",
+  "device": "HP",
+  "fall_score": 0.9996678829193115,
+  "threshold": 0.574872225522995,
+  "state": "suspected",
+  "prediction": "Fall",
+  "model_version": "csi-bench-resnet18-b-context-v1",
+  "activity_reference": {
+    "status": "unavailable",
+    "reason": "Module B output unreadable; C score remains available",
+    "role": "activity_context_only",
+    "affects_fall_score": false
+  },
+  "scope": "CSI-Bench HP segment; Module B context is advisory and cannot alter C score; no TCS adaptation"
+}

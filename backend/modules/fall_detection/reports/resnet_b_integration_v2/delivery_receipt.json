@@ -1,0 +1,41 @@
+{
+  "archive": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/bc_demo_delivery/WiFi_Sense_ResNet18_RealB_20261030_v3.zip",
+  "bytes": 57412682,
+  "sha256": "4dff4abb7ccd76428e489445868b63c6d74fcc18d9d74f051323f829c556e256",
+  "files_verified": 445,
+  "paired_real_B_records": 926,
+  "B_model_sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687",
+  "C_model_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "portable_backend_tests_passed": 32,
+  "portable_real_B_C_inference": {
+    "file": "/Users/chenxiaohe/Documents/CSI-Bench-v12/FallDetection/sub_Human/user_U07/act_Fall/env_E21/device_HP/session_2176000__freq232.h5",
+    "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+    "fall_output_index": 0,
+    "sample_id": "session_2176000__freq232",
+    "recording_id": "session_2176000__freq232",
+    "input_id": "csi-amplitude-f32-v1:14c494b5aab5589327f125a6b989abcb22325e531fe4378d59cd71c2a9bff901",
+    "device": "HP",
+    "fall_score": 0.9996678829193115,
+    "threshold": 0.574872225522995,
+    "state": "suspected",
+    "prediction": "Fall",
+    "model_version": "csi-bench-resnet18-b-context-v1",
+    "activity_reference": {
+      "status": "aligned",
+      "alignment": "exact_input",
+      "activity": "jumping",
+      "confidence": 0.44496296296296267,
+      "stable": false,
+      "quality": "good",
+      "model_version": "spectral-ensemble-csi-band-power-v1-seed42-31bb8f0d9c4b3e77",
+      "role": "activity_context_only",
+      "affects_fall_score": false,
+      "decision_note": "Top class among five trained activities; stable means confidence >=0.6, not temporal stability. Fall is not a trained B class.",
+      "note": "Activity context does not confirm or veto the independent ResNet18 fall decision"
+    },
+    "scope": "CSI-Bench HP segment; Module B context is advisory and cannot alter C score; no TCS adaptation"
+  },
+  "python_sources_unchanged_since_portable_check": true,
+  "last_changes_only_frontend_wording_and_build": true,
+  "raw_real_dataset_included": false
+}

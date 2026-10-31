@@ -1,0 +1,150 @@
+{
+  "kind": "official_resnet18",
+  "backend": "cpu",
+  "seed": 42,
+  "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "threshold_used_for_timing_only": 0.5,
+  "batch_size": 1,
+  "load_model_and_integrity_check_ms": 1836.064459,
+  "first_file_pipeline_ms": 61.253209,
+  "process_code_to_first_result_ms": 3026.449042,
+  "first_fall_score": 0.9987490177154541,
+  "first_prediction_is_fall": true,
+  "scopes": [
+    {
+      "scope": "forward_only",
+      "n": 600,
+      "median_ms": 42.597,
+      "p95_ms": 48.77870239999999,
+      "p99_ms": 55.71825800999999,
+      "min_ms": 40.862708,
+      "max_ms": 86.952458
+    },
+    {
+      "scope": "memory_pipeline",
+      "n": 600,
+      "median_ms": 49.7001875,
+      "p95_ms": 139.36775805,
+      "p99_ms": 288.2022661599999,
+      "min_ms": 42.584417,
+      "max_ms": 840.33325
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "n": 600,
+      "median_ms": 56.646125,
+      "p95_ms": 78.66570349999999,
+      "p99_ms": 109.46119416999998,
+      "min_ms": 45.399958,
+      "max_ms": 211.100083
+    }
+  ],
+  "trials": [
+    {
+      "scope": "forward_only",
+      "trial": 1,
+      "n": 200,
+      "median_ms": 42.452603999999994,
+      "p95_ms": 49.18262324999999,
+      "p99_ms": 58.39261883999992
+    },
+    {
+      "scope": "forward_only",
+      "trial": 2,
+      "n": 200,
+      "median_ms": 43.007916,
+      "p95_ms": 48.0169024,
+      "p99_ms": 52.795688329999976
+    },
+    {
+      "scope": "forward_only",
+      "trial": 3,
+      "n": 200,
+      "median_ms": 42.507937,
+      "p95_ms": 48.68320274999999,
+      "p99_ms": 50.598662329999996
+    },
+    {
+      "scope": "memory_pipeline",
+      "trial": 1,
+      "n": 200,
+      "median_ms": 46.5609795,
+      "p95_ms": 57.54777855,
+      "p99_ms": 139.9120217499995
+    },
+    {
+      "scope": "memory_pipeline",
+      "trial": 2,
+      "n": 200,
+      "median_ms": 47.8442085,
+      "p95_ms": 76.98118509999993,
+      "p99_ms": 288.6848636599995
+    },
+    {
+      "scope": "memory_pipeline",
+      "trial": 3,
+      "n": 200,
+      "median_ms": 65.443167,
+      "p95_ms": 194.52317534999992,
+      "p99_ms": 298.7979005099985
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "trial": 1,
+      "n": 200,
+      "median_ms": 58.1921875,
+      "p95_ms": 75.74461489999997,
+      "p99_ms": 87.00055065999994
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "trial": 2,
+      "n": 200,
+      "median_ms": 59.111145500000006,
+      "p95_ms": 85.77066074999996,
+      "p99_ms": 147.31644707999965
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "trial": 3,
+      "n": 200,
+      "median_ms": 47.341479,
+      "p95_ms": 54.201047599999995,
+      "p99_ms": 66.45971125
+    }
+  ],
+  "preprocess_max_abs_difference": 0.0,
+  "backend_score_max_abs_difference_vs_cpu": 1.1920928955078125e-07,
+  "parameter_count": 11171266,
+  "parameter_and_buffer_bytes": 44723624,
+  "checkpoint_file_bytes": 44997835,
+  "process_peak_rss_bytes": 535904256,
+  "input_shape": [
+    1,
+    1,
+    500,
+    232
+  ],
+  "dtype": "torch.float32",
+  "sample_ids": [
+    "Human_U06_Nonfall_E24_HP_311000",
+    "Human_U06_Nonfall_E24_HP_312000",
+    "Human_U06_Nonfall_E24_HP_320000",
+    "Human_U06_Nonfall_E24_HP_332000",
+    "Human_U06_Nonfall_E24_HP_337000",
+    "Human_U06_Nonfall_E24_HP_348000",
+    "Human_U09_Nonfall_E23_HP_11095000",
+    "Human_U09_Nonfall_E23_HP_11103000",
+    "Human_U06_Fall_E24_HP_1151000",
+    "Human_U06_Fall_E24_HP_155000",
+    "Human_U06_Fall_E24_HP_163000",
+    "Human_U06_Fall_E24_HP_696000",
+    "Human_U06_Fall_E24_HP_697000",
+    "Human_U07_Fall_E21_HP_2176000",
+    "Human_U07_Fall_E21_HP_2180000",
+    "Human_U07_Fall_E21_HP_2182000"
+  ],
+  "test_evaluated": false,
+  "completed_utc": "2026-10-26T14:18:11.990511+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "source_commit": "96b387daa08c3f393bb265e3bb490d80c28ee859",
+  "code_commit": "2963e7dd69891b2d3f2bfa0a8aa318b974e3ed91",
+  "release_url": "https://github.com/Bartley007/WI-FI/releases/tag/module-b-data-models-v1",
+  "archive_sha256": "46f1cc9efc73426e87e06cca50fb184ce8074cb7c18962639a6eeb5e94037665",
+  "checkpoint": "outputs/released_v1/optimized_final/spectral/seed-42-stable/model.joblib",
+  "checkpoint_sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687",
+  "model_version": "spectral-ensemble-csi-band-power-v1-seed42-31bb8f0d9c4b3e77",
+  "model_type": "spectral_ensemble",
+  "seed": 42,
+  "confidence_threshold": 0.6,
+  "input_shape": [
+    232,
+    500
+  ],
+  "preprocess": "Author spectral raw-amplitude branch; no CNN z-score",
+  "labels": [
+    "jumping",
+    "running",
+    "seated-breathing",
+    "walking",
+    "wavinghand"
+  ],
+  "feature_sources_sha256": {
+    "experiments/spectral.py": "b0e4e4e7864ba48d74bcf385f5f09d4eb128af1c9dd35d8d275031899183c35e",
+    "experiments/runner.py": "7a3938141cfb1976ec9e445c1e5fc806b47d50c8e30ca567477bd6c5fe89f108",
+    "preprocessing/hdf5_reader.py": "57c2514ecb4383b5fedef7bf512f7a2feceafecef5a82623eddca5b434de7c9f",
+    "preprocessing/quality.py": "10b2560d90c14dd764b42f959afb1a4b3ebb1ff4019f131395600bf27fc1e926"
+  },
+  "sklearn_version": "1.7.2"
+}

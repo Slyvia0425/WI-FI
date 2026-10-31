@@ -1,0 +1,47 @@
+{
+  "archive": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/bc_demo_delivery/WiFi_Sense_ResNet18_BC_20261030.zip",
+  "bytes": 48352555,
+  "sha256": "8245f049351b35b19df5fa3ae06a558fb4c10d75b277c5b25446d7d2a9e6b123",
+  "manifest_files_verified": 415,
+  "portable_backend_tests_passed": 30,
+  "portable_checkpoint_load": {
+    "source_provenance_verified": true,
+    "label_mapping": {
+      "Fall": 0,
+      "Nonfall": 1
+    },
+    "shape_smoke_output": [
+      1,
+      2
+    ],
+    "finite": true,
+    "raw_data_required_for_model_load": false
+  },
+  "portable_http_checks": {
+    "/api/health": {
+      "status": 200
+    },
+    "/api/modules": {
+      "status": 200
+    },
+    "/api/human_activity_recognition/replay": {
+      "status": 200,
+      "real_model_available": false
+    },
+    "/api/fall_detection/replay": {
+      "status": 200,
+      "model": "CSI-Bench official ResNet18",
+      "records": 926,
+      "threshold": 0.574872225522995,
+      "real_B_aligned": 0
+    },
+    "built_website": {
+      "index_status": 200,
+      "javascript_status": 200,
+      "bytes": 1183626
+    }
+  },
+  "no_training_or_threshold_change": true,
+  "real_B_model_still_needed": true,
+  "raw_real_dataset_included": false
+}

@@ -1,0 +1,24 @@
+# Dataset
+dataset/
+
+# Logs
+experiments/
+/*/__pycache__
+.ipynb_checkpoints/
+
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.idea/ 
+
+# Result
+result/
+/results
+result_analysis/.DS_Store
+.DS_Store
+/result_analysis/.ipynb_checkpoints
+
+# Staging output of util/build_*.py / add_cfreq_* scripts
+util/_*_artifacts/

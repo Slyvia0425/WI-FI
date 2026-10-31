@@ -1,0 +1,402 @@
+[
+  {
+    "sample_id": "Human_U04_jumping_E03_HP_232_889003",
+    "ok": true,
+    "file_sha256": "39021b765ca72c760505764f7083677df181a78ab2198d8699c208ef0772a891",
+    "bytes": 157998,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U01_jumping_E01_HP_232_10001",
+    "ok": true,
+    "file_sha256": "3f98680b18180b2c3fd05789fb099e87cfeedb8962be2f402d32d568c635e26e",
+    "bytes": 407233,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U03_jumping_E02_HP_232_736001",
+    "ok": true,
+    "file_sha256": "b8a6cf6e1b7cac4297e6cee42bef68875d4134c19debf00aba71e3fdd7e2df52",
+    "bytes": 410696,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U01_running_E01_HP_232_187013",
+    "ok": true,
+    "file_sha256": "5d20b5ff27fe7df1d3a60b28c7d0028c414e71c21fe30853a8646f5de1a9ff35",
+    "bytes": 414110,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U05_jumping_E04_HP_232_1184005",
+    "ok": true,
+    "file_sha256": "a6a440b64fddd1249a532f691b0568db9d347c1f4129b648f479cfb2f51ef953",
+    "bytes": 408521,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U06_jumping_E06_HP_232_1759002",
+    "ok": true,
+    "file_sha256": "c585d91ff1412cccc574f70d415321e2eee07254175b5fa34ee290d1cd78f652",
+    "bytes": 148032,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U05_running_E04_HP_232_1375016",
+    "ok": true,
+    "file_sha256": "ec2c9ebf507808e3b47901694e62bb92f997e07265f93fe2dffe1a6c9ceb70ee",
+    "bytes": 403825,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U04_running_E03_HP_232_1008001",
+    "ok": true,
+    "file_sha256": "88db7a33b09e450cfa705a806b81359f706aa11c876559d7ff2f529d94a5e3d0",
+    "bytes": 162932,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U03_running_E02_HP_232_791025",
+    "ok": true,
+    "file_sha256": "f3a321572a047911814c0db0a82b7902b476870bb6ce786d76d9f208b583be87",
+    "bytes": 406240,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U03_seated-breathing_E02_HP_232_811002",
+    "ok": true,
+    "file_sha256": "323a2d018313fca82d7837ef92c48bba76d0a91859007b41b0b7914bfe96dc67",
+    "bytes": 409363,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U04_seated-breathing_E03_HP_232_1052011",
+    "ok": true,
+    "file_sha256": "3a06ae39ace47cc751772a047bca01d6ef8ddab5f7f630b6b759a03db6a1182b",
+    "bytes": 142161,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U06_running_E06_HP_232_1902006",
+    "ok": true,
+    "file_sha256": "27bd6247e63dcc246e950f93a4c899fdcda16adb02ff7424a5810bba30b6c883",
+    "bytes": 144828,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U01_seated-breathing_E01_HP_232_235010",
+    "ok": true,
+    "file_sha256": "8e7c4712c35bd0cb78a5d34c9f3ec5bb6a90aa7ab33b3e16a381d79798046565",
+    "bytes": 406791,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U01_walking-case1_E01_HP_232_259000",
+    "ok": true,
+    "file_sha256": "c6515b5d5c16adf1c876a1830f056297cb8655112d79fad4975e14e905e2e65c",
+    "bytes": 411503,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U06_seated-breathing_E06_HP_232_1942012",
+    "ok": true,
+    "file_sha256": "d716155527f9383448fa37fceea6358126452c2a53c053c59f03ba0bf71e00c4",
+    "bytes": 145116,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U05_seated-breathing_E04_HP_232_1471004",
+    "ok": true,
+    "file_sha256": "18afe5de5e95520aa2f8aa70dff1a75ae5efdba2f113df92149610d269396684",
+    "bytes": 135907,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U03_walking-case1_E02_HP_232_817002",
+    "ok": true,
+    "file_sha256": "087b6825b7891165a6ca81d5e6a0c75e500c4afd5bce1bb640214384667a4164",
+    "bytes": 412514,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U05_walking-case1_E04_HP_232_1519004",
+    "ok": true,
+    "file_sha256": "4165456ed14fdd4aedb234031f3e9a1a40fa0db11b012f5fd64cfc3a45bf0645",
+    "bytes": 411180,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U04_walking-case1_E03_HP_232_1074005",
+    "ok": true,
+    "file_sha256": "f0be8b2dc94030b022c48a7f1dcabcfe7b89a6019c09789f73006a7d01dc8b57",
+    "bytes": 402944,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U06_walking-case1_E06_HP_232_1964014",
+    "ok": true,
+    "file_sha256": "0203d3b7aa62b055d25dacba51f1318f6080039c896c4bcad4a33e99d045b0d2",
+    "bytes": 165909,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U01_wavinghand_E01_HP_232_355000",
+    "ok": true,
+    "file_sha256": "bb5d865b7336b87f31e78929496a79dbe52ecf57730333dacd72bca824c3e5fb",
+    "bytes": 409483,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U03_wavinghand_E02_HP_232_869004",
+    "ok": true,
+    "file_sha256": "73d0d0cb889c6e6d35fe51cb0e9b7e00cfe4217db5a4e231f6a9f01f3dc919f5",
+    "bytes": 403205,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U04_wavinghand_E03_HP_232_1161001",
+    "ok": true,
+    "file_sha256": "fb8f4b66480993231f089576a4bec5a918c977008a6dfb506dc7d2d11d25e50a",
+    "bytes": 149029,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U05_wavinghand_E04_HP_232_1711008",
+    "ok": true,
+    "file_sha256": "2ea3d11bd519e834fe005373aa720bfc841763fcc09ed870022448f85a280aa6",
+    "bytes": 400622,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  },
+  {
+    "sample_id": "Human_U06_wavinghand_E06_HP_232_2058007",
+    "ok": true,
+    "file_sha256": "e6b58de8798502d8d36ca8837e2ea2d28e2d4fe99de8ac42b08cb123698ed0bd",
+    "bytes": 141237,
+    "keys": [
+      "CSI_amps"
+    ],
+    "shape": [
+      232,
+      500,
+      1
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0
+  }
+]

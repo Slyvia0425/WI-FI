@@ -1,0 +1,16 @@
+{
+  "kind": "original_1d_cnn",
+  "backend": "cpu",
+  "seed": 42,
+  "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+  "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+  "threshold_used_for_timing_only": 0.38938893377780914,
+  "batch_size": 1,
+  "load_model_and_integrity_check_ms": 40.13775,
+  "first_file_pipeline_ms": 6.792333,
+  "process_code_to_first_result_ms": 1143.083958,
+  "first_fall_score": 0.1610960215330124,
+  "first_prediction_is_fall": false,
+  "trial": 2,
+  "parent_process_wall_through_exit_ms": 1419.724416
+}

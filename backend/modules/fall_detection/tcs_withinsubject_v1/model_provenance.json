@@ -1,0 +1,6 @@
+{
+  "source_path": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/tcs_fall_local_v1/source_package/TCS-Fall-main/code/models.py",
+  "source_sha256": "28f54d5664bec75f649417cd224b1a27689aacf0bc459a310c31d8c36522a87e",
+  "extraction": "CNN class only, same AST and parameters, no pretrained weights",
+  "local_model_sha256": "1896b54ab1b44e78c3ce484a33c050fc6ccc4e15a605dd3ba9d020a6889d65b2"
+}

@@ -1,0 +1,14 @@
+{
+  "Fall": {
+    "fixed": 6,
+    "regressed": 6,
+    "both_wrong": 0,
+    "both_correct": 378
+  },
+  "Nonfall": {
+    "fixed": 16,
+    "regressed": 5,
+    "both_wrong": 11,
+    "both_correct": 504
+  }
+}

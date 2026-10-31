@@ -1,0 +1,73 @@
+{
+  "model_weights_unchanged": true,
+  "C_threshold": 0.574872225522995,
+  "B_gate_cutoff": 0.6,
+  "gate_operator": "<",
+  "real_process_checks": [
+    {
+      "case": "low_B_fall",
+      "B_confidence": 0.39724074074074067,
+      "C_ran": true,
+      "C_prediction": "Fall",
+      "C_score": 0.9990915060043335,
+      "C_execution": "fresh_inference"
+    },
+    {
+      "case": "high_B_running",
+      "B_confidence": 0.8944814814814813,
+      "C_ran": false,
+      "C_prediction": null,
+      "C_score": null,
+      "C_execution": "C_not_loaded_or_run"
+    },
+    {
+      "case": "high_B_real_fall",
+      "B_confidence": 0.7075925925925931,
+      "C_ran": false,
+      "C_prediction": null,
+      "C_score": null,
+      "C_execution": "C_not_loaded_or_run"
+    }
+  ],
+  "validation_routing_simulation": {
+    "policy": {
+      "version": "B_low_confidence_C_v1",
+      "enabled": true,
+      "B_confidence_cutoff": 0.6,
+      "comparison": "confidence < cutoff",
+      "unavailable_B": "do not run C; return not_evaluated",
+      "skipped_C": "no score or binary C decision; never substitute Nonfall"
+    },
+    "counts": {
+      "run_C": 621,
+      "Fall_run": 339,
+      "skip_C": 305,
+      "Fall_skipped": 51,
+      "Nonfall_skipped": 254,
+      "Nonfall_run": 282
+    },
+    "C_selected_subset": {
+      "tp": 333,
+      "fp": 21,
+      "tn": 261,
+      "fn": 6
+    },
+    "score_source": "Previously saved frozen B/C validation predictions; no new full-set inference",
+    "skipped_C_is_not_Nonfall": true
+  },
+  "activity_routing_simulation": {
+    "source": "Previously saved25 HAR activity probe records; routing simulation only",
+    "n": 25,
+    "C_selected": 5,
+    "C_skipped": 20,
+    "C_Fall_triggers_before": 17,
+    "C_Fall_triggers_selected": 5,
+    "not_strict_false_positive_rate": true
+  },
+  "backend_tests_passed": 37,
+  "frontend_build_passed": true,
+  "UI_verified_skipped_C_is_not_a_negative": true,
+  "new_full_validation_inference": false,
+  "training": false,
+  "artifact_note": "Local code/page and CLI updated. Earlier downloadable demo ZIPs preserve their earlier rules."
+}

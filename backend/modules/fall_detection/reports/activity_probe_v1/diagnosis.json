@@ -1,0 +1,799 @@
+{
+  "by_environment": {
+    "E01": {
+      "n": 5,
+      "C_Fall_triggers": 5,
+      "B_activity_agreement": 4
+    },
+    "E02": {
+      "n": 5,
+      "C_Fall_triggers": 5,
+      "B_activity_agreement": 4
+    },
+    "E03": {
+      "n": 5,
+      "C_Fall_triggers": 3,
+      "B_activity_agreement": 5
+    },
+    "E04": {
+      "n": 5,
+      "C_Fall_triggers": 4,
+      "B_activity_agreement": 5
+    },
+    "E06": {
+      "n": 5,
+      "C_Fall_triggers": 0,
+      "B_activity_agreement": 5
+    }
+  },
+  "C_runtime_controls": [
+    {
+      "case": "true_positive",
+      "saved_score": 0.9996678829193115,
+      "new_score": 0.9996678829193115,
+      "abs_difference": 0.0,
+      "same_classification": true
+    },
+    {
+      "case": "true_negative",
+      "saved_score": 0.046279121190309525,
+      "new_score": 0.046279121190309525,
+      "abs_difference": 0.0,
+      "same_classification": true
+    }
+  ],
+  "HAR_vs_C_raw_content_matches": [
+    {
+      "HAR_sample_id": "Human_U01_jumping_E01_HP_232_10001",
+      "audit_canonical_hash": "e00f7552504e1e5d4188f85c875e614e16f9ccbcb5a9b705b4ffdb7de46d952b",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U03_jumping_E02_HP_232_736001",
+      "audit_canonical_hash": "1d21b0fc33b5a9c09469ab761f46df89e2351f0889e625a27a8fcacdf01cae95",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U04_jumping_E03_HP_232_889003",
+      "audit_canonical_hash": "f65df43471ea2c89154d78cc89db1f5ccef9958e91a030908acb45eab85c60af",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U05_jumping_E04_HP_232_1184005",
+      "audit_canonical_hash": "7eee9037b99098ac0ab36605b0d0a349027921e408e5ccd74c20956b2d53768d",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U06_jumping_E06_HP_232_1759002",
+      "audit_canonical_hash": "eb13273145fe1b03ff44ea9afcaa59c1e383cab7c2b5ae60ccd915a4b52151c4",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U01_running_E01_HP_232_187013",
+      "audit_canonical_hash": "dcb10c9ea54cdbb2038b3b5ddf77569dad42d9c7a043d02509c23ebddbf33db5",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U03_running_E02_HP_232_791025",
+      "audit_canonical_hash": "2d5f66234626274e3452bdfaf529faaf40e89a6969cd03411c1ae87baa1ae6f2",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U04_running_E03_HP_232_1008001",
+      "audit_canonical_hash": "9818dc8bed759f0260c4c7043fb3054fff3fbb87a64fd1f8a99b4ad1705743e1",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U05_running_E04_HP_232_1375016",
+      "audit_canonical_hash": "ef854cc363de679166011251c2f34ea415b07de0b25fbc4a1514128f083c02b7",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U06_running_E06_HP_232_1902006",
+      "audit_canonical_hash": "e385758a8e7cce14c48fb8e755c9b07b94e61e939d0f27b7ef1f5a91abe03969",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U01_seated-breathing_E01_HP_232_235010",
+      "audit_canonical_hash": "9a56eb4704cec146cd711c550fd21c244e7b5bbed9729ad9f742b99f7ba7f227",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U03_seated-breathing_E02_HP_232_811002",
+      "audit_canonical_hash": "2b3caedd4bd34601c6902df247a349a9333acd45182ed6778bb53afbb60fc54b",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U04_seated-breathing_E03_HP_232_1052011",
+      "audit_canonical_hash": "3b5cb2145011e8911aba3c5d57c0f1a659bc03a7fe758b67dd48ae9aaef84f0b",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U05_seated-breathing_E04_HP_232_1471004",
+      "audit_canonical_hash": "ab92ba4e6290af2f410effc0b0fc8b5f5c8e58fa5af77fa375f248f7c5ce9f46",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U06_seated-breathing_E06_HP_232_1942012",
+      "audit_canonical_hash": "0a082a83aff18cd90e4d6fec125a5b1c908eacddf9c177463c643a8a199c332e",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U01_walking-case1_E01_HP_232_259000",
+      "audit_canonical_hash": "8da379e2f476c3ff39f4e517f6241748375f1bbe1b5979ee1d5cf7c7437e2cd0",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U03_walking-case1_E02_HP_232_817002",
+      "audit_canonical_hash": "4594876454b02ae996d57ca73190a1ab5ae4674983eb35a75a760af87bb4895b",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U04_walking-case1_E03_HP_232_1074005",
+      "audit_canonical_hash": "b14925e9b3fdd59c193658095875b42a86e9858f9652a6969d6a3e96fa1058df",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U05_walking-case1_E04_HP_232_1519004",
+      "audit_canonical_hash": "99b8c2b62ba8d8108a86984df80a96dc4009b3686e7da6c7dfc1c376cce3c372",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U06_walking-case1_E06_HP_232_1964014",
+      "audit_canonical_hash": "a30bc794610747db1f44367c97dd5f4a04c6fc2ccfa5ab60e35a8419f95cbce6",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U01_wavinghand_E01_HP_232_355000",
+      "audit_canonical_hash": "d5155197a6b6d7978a81f14015d064bd5349d1f34c4742f6d12d5f8014e15c80",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U03_wavinghand_E02_HP_232_869004",
+      "audit_canonical_hash": "98f6e0e222561ef7b953667a7bc603cef66a157a88d6aa0b28b50525300334a1",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U04_wavinghand_E03_HP_232_1161001",
+      "audit_canonical_hash": "2d38b8f8feaf501c850aaf49f71473c6942413282c176c92e315dc54a16d1acc",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U05_wavinghand_E04_HP_232_1711008",
+      "audit_canonical_hash": "4c57b2cea2e1eeafefcd9b627669083caf7a1671cd4235e996092989795e7c2e",
+      "C_matches": []
+    },
+    {
+      "HAR_sample_id": "Human_U06_wavinghand_E06_HP_232_2058007",
+      "audit_canonical_hash": "1ab72a2d348b9f6acc7136e1431b774f286ba5fcec036f78853c6b732d8a31dd",
+      "C_matches": []
+    }
+  ],
+  "HAR_records_with_any_exact_C_content_match": 0,
+  "hash_comparison": "Reused unchanged C audit manifest numeric content hashes; computed HAR hashes using the same shape+little-endian float64 convention. Equal content indicates duplication needing provenance review; absence does not establish no same-source overlap.",
+  "B_author_validation_same_session_count": 25,
+  "B_author_validation_same_session_ids": [
+    "Human_U01_jumping_E01_HP_232_10001",
+    "Human_U03_jumping_E02_HP_232_736001",
+    "Human_U04_jumping_E03_HP_232_889003",
+    "Human_U05_jumping_E04_HP_232_1184005",
+    "Human_U06_jumping_E06_HP_232_1759002",
+    "Human_U01_running_E01_HP_232_187013",
+    "Human_U03_running_E02_HP_232_791025",
+    "Human_U04_running_E03_HP_232_1008001",
+    "Human_U05_running_E04_HP_232_1375016",
+    "Human_U06_running_E06_HP_232_1902006",
+    "Human_U01_seated-breathing_E01_HP_232_235010",
+    "Human_U03_seated-breathing_E02_HP_232_811002",
+    "Human_U04_seated-breathing_E03_HP_232_1052011",
+    "Human_U05_seated-breathing_E04_HP_232_1471004",
+    "Human_U06_seated-breathing_E06_HP_232_1942012",
+    "Human_U01_walking-case1_E01_HP_232_259000",
+    "Human_U03_walking-case1_E02_HP_232_817002",
+    "Human_U04_walking-case1_E03_HP_232_1074005",
+    "Human_U05_walking-case1_E04_HP_232_1519004",
+    "Human_U06_walking-case1_E06_HP_232_1964014",
+    "Human_U01_wavinghand_E01_HP_232_355000",
+    "Human_U03_wavinghand_E02_HP_232_869004",
+    "Human_U04_wavinghand_E03_HP_232_1161001",
+    "Human_U05_wavinghand_E04_HP_232_1711008",
+    "Human_U06_wavinghand_E06_HP_232_2058007"
+  ],
+  "descriptive_HAR_signals": [
+    {
+      "sample_id": "Human_U01_jumping_E01_HP_232_10001",
+      "cohort": "HAR_jumping",
+      "environment": "E01",
+      "raw_mean": 1.4394673414965569,
+      "raw_std": 0.6784907876817763,
+      "normalized_temporal_variance_fraction": 0.3807830360237025,
+      "normalized_frequency_mean_variance": 0.6192083432866425,
+      "mean_adjacent_time_difference": 0.5298665610346139
+    },
+    {
+      "sample_id": "Human_U03_jumping_E02_HP_232_736001",
+      "cohort": "HAR_jumping",
+      "environment": "E02",
+      "raw_mean": 1.3225479932080098,
+      "raw_std": 0.6175161229397155,
+      "normalized_temporal_variance_fraction": 0.5875217684284749,
+      "normalized_frequency_mean_variance": 0.41246961088187,
+      "mean_adjacent_time_difference": 0.8840685142696887
+    },
+    {
+      "sample_id": "Human_U04_jumping_E03_HP_232_889003",
+      "cohort": "HAR_jumping",
+      "environment": "E03",
+      "raw_mean": 1.6078108855905975,
+      "raw_std": 0.8142550967118624,
+      "normalized_temporal_variance_fraction": 0.18305487916033425,
+      "normalized_frequency_mean_variance": 0.8169365001500107,
+      "mean_adjacent_time_difference": 0.2581611801440213
+    },
+    {
+      "sample_id": "Human_U05_jumping_E04_HP_232_1184005",
+      "cohort": "HAR_jumping",
+      "environment": "E04",
+      "raw_mean": 1.18245825443408,
+      "raw_std": 0.7575781908101846,
+      "normalized_temporal_variance_fraction": 0.3710752988906651,
+      "normalized_frequency_mean_variance": 0.6289160804196796,
+      "mean_adjacent_time_difference": 0.5318970454915509
+    },
+    {
+      "sample_id": "Human_U06_jumping_E06_HP_232_1759002",
+      "cohort": "HAR_jumping",
+      "environment": "E06",
+      "raw_mean": 1.3984334325622125,
+      "raw_std": 0.8169260477312645,
+      "normalized_temporal_variance_fraction": 0.09753148424719257,
+      "normalized_frequency_mean_variance": 0.902459895063152,
+      "mean_adjacent_time_difference": 0.2724762143342779
+    },
+    {
+      "sample_id": "Human_U01_running_E01_HP_232_187013",
+      "cohort": "HAR_running",
+      "environment": "E01",
+      "raw_mean": 1.3670635467329018,
+      "raw_std": 0.6386947182896882,
+      "normalized_temporal_variance_fraction": 0.7558608171221161,
+      "normalized_frequency_mean_variance": 0.2441305621882289,
+      "mean_adjacent_time_difference": 0.7807417999547314
+    },
+    {
+      "sample_id": "Human_U03_running_E02_HP_232_791025",
+      "cohort": "HAR_running",
+      "environment": "E02",
+      "raw_mean": 1.528653726287957,
+      "raw_std": 0.6228603817498554,
+      "normalized_temporal_variance_fraction": 0.40899174468042376,
+      "normalized_frequency_mean_variance": 0.5909996346299211,
+      "mean_adjacent_time_difference": 0.6323136927401303
+    },
+    {
+      "sample_id": "Human_U04_running_E03_HP_232_1008001",
+      "cohort": "HAR_running",
+      "environment": "E03",
+      "raw_mean": 1.5268346134632311,
+      "raw_std": 0.8639185483427193,
+      "normalized_temporal_variance_fraction": 0.31861624476966555,
+      "normalized_frequency_mean_variance": 0.6813751345406792,
+      "mean_adjacent_time_difference": 0.2848494885286845
+    },
+    {
+      "sample_id": "Human_U05_running_E04_HP_232_1375016",
+      "cohort": "HAR_running",
+      "environment": "E04",
+      "raw_mean": 1.1953373685059854,
+      "raw_std": 0.7295380900612055,
+      "normalized_temporal_variance_fraction": 0.32072785301897755,
+      "normalized_frequency_mean_variance": 0.6792635262913671,
+      "mean_adjacent_time_difference": 0.5007264375047366
+    },
+    {
+      "sample_id": "Human_U06_running_E06_HP_232_1902006",
+      "cohort": "HAR_running",
+      "environment": "E06",
+      "raw_mean": 1.3353526323328502,
+      "raw_std": 0.8353764504435638,
+      "normalized_temporal_variance_fraction": 0.09217519576811369,
+      "normalized_frequency_mean_variance": 0.9078161835422309,
+      "mean_adjacent_time_difference": 0.2562948068776695
+    },
+    {
+      "sample_id": "Human_U01_seated-breathing_E01_HP_232_235010",
+      "cohort": "HAR_seated-breathing",
+      "environment": "E01",
+      "raw_mean": 1.2141018351670911,
+      "raw_std": 0.6079050713323528,
+      "normalized_temporal_variance_fraction": 0.4884580683034929,
+      "normalized_frequency_mean_variance": 0.511533311006852,
+      "mean_adjacent_time_difference": 0.7635881780708939
+    },
+    {
+      "sample_id": "Human_U03_seated-breathing_E02_HP_232_811002",
+      "cohort": "HAR_seated-breathing",
+      "environment": "E02",
+      "raw_mean": 1.3792204862315336,
+      "raw_std": 0.6262843637171951,
+      "normalized_temporal_variance_fraction": 0.559827689482363,
+      "normalized_frequency_mean_variance": 0.4401636898279817,
+      "mean_adjacent_time_difference": 0.8440356179298906
+    },
+    {
+      "sample_id": "Human_U04_seated-breathing_E03_HP_232_1052011",
+      "cohort": "HAR_seated-breathing",
+      "environment": "E03",
+      "raw_mean": 1.5941684487084375,
+      "raw_std": 0.9371600993528031,
+      "normalized_temporal_variance_fraction": 0.04261898688223405,
+      "normalized_frequency_mean_variance": 0.9573723924281109,
+      "mean_adjacent_time_difference": 0.20269354748343474
+    },
+    {
+      "sample_id": "Human_U05_seated-breathing_E04_HP_232_1471004",
+      "cohort": "HAR_seated-breathing",
+      "environment": "E04",
+      "raw_mean": 1.4892913240741552,
+      "raw_std": 0.7920107382904409,
+      "normalized_temporal_variance_fraction": 0.07663447317635776,
+      "normalized_frequency_mean_variance": 0.9233569061339871,
+      "mean_adjacent_time_difference": 0.2722380652969622
+    },
+    {
+      "sample_id": "Human_U06_seated-breathing_E06_HP_232_1942012",
+      "cohort": "HAR_seated-breathing",
+      "environment": "E06",
+      "raw_mean": 1.3932257866967341,
+      "raw_std": 0.84345917663356,
+      "normalized_temporal_variance_fraction": 0.09194258381160733,
+      "normalized_frequency_mean_variance": 0.9080487954987375,
+      "mean_adjacent_time_difference": 0.2916198163361736
+    },
+    {
+      "sample_id": "Human_U01_walking-case1_E01_HP_232_259000",
+      "cohort": "HAR_walking",
+      "environment": "E01",
+      "raw_mean": 1.3214928111819435,
+      "raw_std": 0.6399615572025853,
+      "normalized_temporal_variance_fraction": 0.5087253598733334,
+      "normalized_frequency_mean_variance": 0.49126601943701154,
+      "mean_adjacent_time_difference": 0.7173248147250638
+    },
+    {
+      "sample_id": "Human_U03_walking-case1_E02_HP_232_817002",
+      "cohort": "HAR_walking",
+      "environment": "E02",
+      "raw_mean": 1.4043448399187055,
+      "raw_std": 0.6886445629705112,
+      "normalized_temporal_variance_fraction": 0.6495102769609493,
+      "normalized_frequency_mean_variance": 0.3504811023493957,
+      "mean_adjacent_time_difference": 0.7361329705470966
+    },
+    {
+      "sample_id": "Human_U04_walking-case1_E03_HP_232_1074005",
+      "cohort": "HAR_walking",
+      "environment": "E03",
+      "raw_mean": 1.0020469219959576,
+      "raw_std": 0.7892717493015159,
+      "normalized_temporal_variance_fraction": 0.3369131311116003,
+      "normalized_frequency_mean_variance": 0.6630782481987443,
+      "mean_adjacent_time_difference": 0.4903298295742973
+    },
+    {
+      "sample_id": "Human_U05_walking-case1_E04_HP_232_1519004",
+      "cohort": "HAR_walking",
+      "environment": "E04",
+      "raw_mean": 1.190579192010764,
+      "raw_std": 0.7128123920687296,
+      "normalized_temporal_variance_fraction": 0.46207572268294983,
+      "normalized_frequency_mean_variance": 0.537915656627395,
+      "mean_adjacent_time_difference": 0.6076447509280118
+    },
+    {
+      "sample_id": "Human_U06_walking-case1_E06_HP_232_1964014",
+      "cohort": "HAR_walking",
+      "environment": "E06",
+      "raw_mean": 1.5996371738459787,
+      "raw_std": 0.7301856886867593,
+      "normalized_temporal_variance_fraction": 0.2719242303631233,
+      "normalized_frequency_mean_variance": 0.7280671489472217,
+      "mean_adjacent_time_difference": 0.37250720598972753
+    },
+    {
+      "sample_id": "Human_U01_wavinghand_E01_HP_232_355000",
+      "cohort": "HAR_wavinghand",
+      "environment": "E01",
+      "raw_mean": 1.362608299463032,
+      "raw_std": 0.6179856313362074,
+      "normalized_temporal_variance_fraction": 0.491844069682838,
+      "normalized_frequency_mean_variance": 0.5081473096275068,
+      "mean_adjacent_time_difference": 0.74047380145213
+    },
+    {
+      "sample_id": "Human_U03_wavinghand_E02_HP_232_869004",
+      "cohort": "HAR_wavinghand",
+      "environment": "E02",
+      "raw_mean": 1.6378667473817277,
+      "raw_std": 0.6170061337315247,
+      "normalized_temporal_variance_fraction": 0.346121479558929,
+      "normalized_frequency_mean_variance": 0.6538698997514156,
+      "mean_adjacent_time_difference": 0.5179816469782164
+    },
+    {
+      "sample_id": "Human_U04_wavinghand_E03_HP_232_1161001",
+      "cohort": "HAR_wavinghand",
+      "environment": "E03",
+      "raw_mean": 1.5924515022533978,
+      "raw_std": 0.8809274353099547,
+      "normalized_temporal_variance_fraction": 0.073007387818949,
+      "normalized_frequency_mean_variance": 0.9269839914913959,
+      "mean_adjacent_time_difference": 0.20639929669292606
+    },
+    {
+      "sample_id": "Human_U05_wavinghand_E04_HP_232_1711008",
+      "cohort": "HAR_wavinghand",
+      "environment": "E04",
+      "raw_mean": 1.1400151271484211,
+      "raw_std": 0.71171140059701,
+      "normalized_temporal_variance_fraction": 0.3575449044510807,
+      "normalized_frequency_mean_variance": 0.6424464748592641,
+      "mean_adjacent_time_difference": 0.5665940253739207
+    },
+    {
+      "sample_id": "Human_U06_wavinghand_E06_HP_232_2058007",
+      "cohort": "HAR_wavinghand",
+      "environment": "E06",
+      "raw_mean": 1.348360789833141,
+      "raw_std": 0.8305600270685213,
+      "normalized_temporal_variance_fraction": 0.08457033549783005,
+      "normalized_frequency_mean_variance": 0.9154210438125149,
+      "mean_adjacent_time_difference": 0.26118300377585324
+    }
+  ],
+  "descriptive_C_training_references": [
+    {
+      "sample_id": "Human_U07_Fall_E21_HP_2168000",
+      "cohort": "C_train_Fall",
+      "environment": "E21",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.7272873231986987,
+      "raw_std": 0.8939996439202355,
+      "normalized_temporal_variance_fraction": 0.09551030537007088,
+      "normalized_frequency_mean_variance": 0.9044810739402739,
+      "mean_adjacent_time_difference": 0.29531594901305785
+    },
+    {
+      "sample_id": "Human_U08_Fall_E22_HP_3817000",
+      "cohort": "C_train_Fall",
+      "environment": "E22",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.0284535858977972,
+      "raw_std": 0.9396977541749973,
+      "normalized_temporal_variance_fraction": 0.09583244344888465,
+      "normalized_frequency_mean_variance": 0.9041589358614601,
+      "mean_adjacent_time_difference": 0.16141709291201112
+    },
+    {
+      "sample_id": "Human_U09_Fall_E23_HP_2354000",
+      "cohort": "C_train_Fall",
+      "environment": "E23",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.4712956540501065,
+      "raw_std": 1.0229361341765868,
+      "normalized_temporal_variance_fraction": 0.04828516309731283,
+      "normalized_frequency_mean_variance": 0.9517062162130319,
+      "mean_adjacent_time_difference": 0.13785517279024262
+    },
+    {
+      "sample_id": "Human_U06_Fall_E24_HP_1146000",
+      "cohort": "C_train_Fall",
+      "environment": "E24",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.463930703676081,
+      "raw_std": 0.8169310325844138,
+      "normalized_temporal_variance_fraction": 0.0934079422467704,
+      "normalized_frequency_mean_variance": 0.9065834370635745,
+      "mean_adjacent_time_difference": 0.18636646326602269
+    },
+    {
+      "sample_id": "Human_U11_Fall_E25_HP_125000",
+      "cohort": "C_train_Fall",
+      "environment": "E25",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.6267183434656212,
+      "raw_std": 0.8031530351103637,
+      "normalized_temporal_variance_fraction": 0.16251890284068315,
+      "normalized_frequency_mean_variance": 0.8374724764696614,
+      "mean_adjacent_time_difference": 0.3494492463305743
+    },
+    {
+      "sample_id": "Human_U11_Nonfall_E21_HP_1008000",
+      "cohort": "C_train_Nonfall",
+      "environment": "E21",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.7312700777779622,
+      "raw_std": 0.8666857783400183,
+      "normalized_temporal_variance_fraction": 0.041541557366495105,
+      "normalized_frequency_mean_variance": 0.9584498219438495,
+      "mean_adjacent_time_difference": 0.15626470749372773
+    },
+    {
+      "sample_id": "Human_U12_Nonfall_E22_HP_11497000",
+      "cohort": "C_train_Nonfall",
+      "environment": "E22",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.43749007134602,
+      "raw_std": 1.0137349375024773,
+      "normalized_temporal_variance_fraction": 0.15681315208008928,
+      "normalized_frequency_mean_variance": 0.8431782272302557,
+      "mean_adjacent_time_difference": 0.2967312616364519
+    },
+    {
+      "sample_id": "Human_U09_Nonfall_E23_HP_11094000",
+      "cohort": "C_train_Nonfall",
+      "environment": "E23",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.730243870365594,
+      "raw_std": 0.933386562978333,
+      "normalized_temporal_variance_fraction": 0.05096452476098487,
+      "normalized_frequency_mean_variance": 0.9490268545493602,
+      "mean_adjacent_time_difference": 0.21370694184970432
+    },
+    {
+      "sample_id": "Human_U06_Nonfall_E24_HP_308000",
+      "cohort": "C_train_Nonfall",
+      "environment": "E24",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.3452701973358876,
+      "raw_std": 0.8530374705537881,
+      "normalized_temporal_variance_fraction": 0.13970146810931103,
+      "normalized_frequency_mean_variance": 0.8602899112010337,
+      "mean_adjacent_time_difference": 0.2562186563108094
+    },
+    {
+      "sample_id": "Human_U11_Nonfall_E25_HP_11358000",
+      "cohort": "C_train_Nonfall",
+      "environment": "E25",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.7625490895850133,
+      "raw_std": 0.7677680905830158,
+      "normalized_temporal_variance_fraction": 0.14337448980486728,
+      "normalized_frequency_mean_variance": 0.8566168895054777,
+      "mean_adjacent_time_difference": 0.3718566688518467
+    },
+    {
+      "sample_id": "Human_U15_Nonfall_E26_HP_11300000",
+      "cohort": "C_train_Nonfall",
+      "environment": "E26",
+      "role": "descriptive input reference only; not model evaluation",
+      "raw_mean": 1.6432096371565914,
+      "raw_std": 0.8361194748652522,
+      "normalized_temporal_variance_fraction": 0.052557491599866675,
+      "normalized_frequency_mean_variance": 0.9474338877104779,
+      "mean_adjacent_time_difference": 0.21814832351321972
+    }
+  ],
+  "signal_summary": {
+    "C_train_Fall": {
+      "n": 5,
+      "raw_mean": {
+        "min": 1.0284535858977972,
+        "median": 1.4712956540501065,
+        "max": 1.7272873231986987
+      },
+      "raw_std": {
+        "min": 0.8031530351103637,
+        "median": 0.8939996439202355,
+        "max": 1.0229361341765868
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.04828516309731283,
+        "median": 0.09551030537007088,
+        "max": 0.16251890284068315
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.13785517279024262,
+        "median": 0.18636646326602269,
+        "max": 0.3494492463305743
+      }
+    },
+    "C_train_Nonfall": {
+      "n": 6,
+      "raw_mean": {
+        "min": 1.3452701973358876,
+        "median": 1.6867267537610928,
+        "max": 1.7625490895850133
+      },
+      "raw_std": {
+        "min": 0.7677680905830158,
+        "median": 0.8598616244469032,
+        "max": 1.0137349375024773
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.041541557366495105,
+        "median": 0.09612947985458885,
+        "max": 0.15681315208008928
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.15626470749372773,
+        "median": 0.23718348991201457,
+        "max": 0.3718566688518467
+      }
+    },
+    "HAR_jumping": {
+      "n": 5,
+      "raw_mean": {
+        "min": 1.18245825443408,
+        "median": 1.3984334325622125,
+        "max": 1.6078108855905975
+      },
+      "raw_std": {
+        "min": 0.6175161229397155,
+        "median": 0.7575781908101846,
+        "max": 0.8169260477312645
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.09753148424719257,
+        "median": 0.3710752988906651,
+        "max": 0.5875217684284749
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.2581611801440213,
+        "median": 0.5298665610346139,
+        "max": 0.8840685142696887
+      }
+    },
+    "HAR_running": {
+      "n": 5,
+      "raw_mean": {
+        "min": 1.1953373685059854,
+        "median": 1.3670635467329018,
+        "max": 1.528653726287957
+      },
+      "raw_std": {
+        "min": 0.6228603817498554,
+        "median": 0.7295380900612055,
+        "max": 0.8639185483427193
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.09217519576811369,
+        "median": 0.32072785301897755,
+        "max": 0.7558608171221161
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.2562948068776695,
+        "median": 0.5007264375047366,
+        "max": 0.7807417999547314
+      }
+    },
+    "HAR_seated-breathing": {
+      "n": 5,
+      "raw_mean": {
+        "min": 1.2141018351670911,
+        "median": 1.3932257866967341,
+        "max": 1.5941684487084375
+      },
+      "raw_std": {
+        "min": 0.6079050713323528,
+        "median": 0.7920107382904409,
+        "max": 0.9371600993528031
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.04261898688223405,
+        "median": 0.09194258381160733,
+        "max": 0.559827689482363
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.20269354748343474,
+        "median": 0.2916198163361736,
+        "max": 0.8440356179298906
+      }
+    },
+    "HAR_walking": {
+      "n": 5,
+      "raw_mean": {
+        "min": 1.0020469219959576,
+        "median": 1.3214928111819435,
+        "max": 1.5996371738459787
+      },
+      "raw_std": {
+        "min": 0.6399615572025853,
+        "median": 0.7128123920687296,
+        "max": 0.7892717493015159
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.2719242303631233,
+        "median": 0.46207572268294983,
+        "max": 0.6495102769609493
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.37250720598972753,
+        "median": 0.6076447509280118,
+        "max": 0.7361329705470966
+      }
+    },
+    "HAR_wavinghand": {
+      "n": 5,
+      "raw_mean": {
+        "min": 1.1400151271484211,
+        "median": 1.362608299463032,
+        "max": 1.6378667473817277
+      },
+      "raw_std": {
+        "min": 0.6170061337315247,
+        "median": 0.71171140059701,
+        "max": 0.8809274353099547
+      },
+      "normalized_temporal_variance_fraction": {
+        "min": 0.073007387818949,
+        "median": 0.346121479558929,
+        "max": 0.491844069682838
+      },
+      "mean_adjacent_time_difference": {
+        "min": 0.20639929669292606,
+        "median": 0.5179816469782164,
+        "max": 0.74047380145213
+      }
+    }
+  },
+  "confirmed": [
+    "All25 official HAR val HP/232/5G samples have finite[232,500,1] arrays; no padding/clipping needed.",
+    "Every B and C raw input identity matches;25 raw and normalized-C inputs are distinct.",
+    "All25 C tensors match the pinned official __getitem__ normalization/axis code exactly; zero max absolute difference.",
+    "C Fall/Nonfall output indices are verified from pinned checkpoint; existing positive/negative validation controls reproduce.",
+    "HAR probe environments E01/E02/E03/E04/E06 do not appear in C HP training E21-E26.",
+    "C training metadata provides only Fall/Nonfall labels; it does not establish coverage of running/walking/jumping negatives.",
+    "C/B weights, runtime/config, training manifest and production replay files have unchanged SHA256 values."
+  ],
+  "hypotheses_not_confirmed": [
+    "Cross-task/environment/acquisition distribution shift may drive C triggers; the cohort confounds task, environment and subjects, so environment causality is not established.",
+    "Insufficient diversity of C Nonfall/hard-negative training examples is plausible, but original action-level provenance is unavailable.",
+    "Acquisition cadence, exact physical subcarrier correspondence or signal scaling differences may remain despite equal tensor shape; metadata here does not establish physical equivalence.",
+    "High softmax scores may reflect overconfidence under shift; no probability calibration or calibration-quality estimate was performed."
+  ],
+  "next_experiments": [
+    "Verify recording-level no-fall intervals with annotations/video or original collection records before calling these strict false positives.",
+    "Reserve a larger cross-activity, cross-environment/person holdout before any tuning; report trigger counts by activity, device, environment and recording groups.",
+    "To assess fall recall, add a separately annotated positive-fall holdout; do not infer it from this probe.",
+    "If failures persist, verify physical time/subcarrier conventions, then compare frozen C and training-only hard-negative/domain adaptation candidates on the same untouched holdout. Use only designated training HAR records after annotation/provenance/duplicate checks, not these25 validation examples.",
+    "Keep official C experiment and cross-task/adapted experiment separate; do not silently replace the official split.",
+    "Any threshold/rule candidate must be chosen on designated validation data and assessed jointly for false alerts, missed falls and latency, then frozen before a true held-out test.",
+    "B activity preferences can be shown for review, but running/walking is not logically incompatible with a fall. Do not suppress C simply because B returns a trained ordinary activity."
+  ],
+  "recovery_notes": [
+    "Python requests returned404; all original selections downloaded with curl, initial failures retained.",
+    "A test-harness import of the archived TCS protection helper caused a model namespace collision before inference. The helper now executes in its own process; production runtime was not modified. No samples were replaced."
+  ],
+  "confirmed_zh": [
+    "25条均为官方HAR验证划分的HP/232/5G数据，形状[232,500,1]，无NaN/Inf；没有补零或裁剪。",
+    "每条B/C原始幅度内容身份一致；25条原始输入及归一化输入均无精确重复。",
+    "C逐值匹配固定官方__getitem__的轴转换和归一化，最大绝对差为0；该测试只替代了元数据/路径/标签查询，不测试官方构造器。",
+    "检查点确认Fall为softmax第0列；原有一条跌倒、一条非跌倒验证样本重算分数与保存值一致。",
+    "本队列环境E01/E02/E03/E04/E06与C的HP训练环境E21–E26不重叠。用户与环境绑定，不能据此分离环境与用户因果。",
+    "C训练metadata只有Fall/Nonfall，无法证明其Nonfall包含了哪些跑步、行走、跳跃等具体动作。",
+    "生产权重、阈值/运行配置、训练manifest、B/C运行代码及生产回放SHA256均保持不变。"
+  ],
+  "hypotheses_zh": [
+    "跨任务、环境、用户或采集条件的分布偏移可能导致触发；目前同时存在多种差异，尚未证明某一差异是根因。",
+    "C的Nonfall困难负样本覆盖不足是合理假设，但缺少原录制动作级来源，不能断言训练中从未包含某动作。",
+    "相同232×500尺寸不能证明实际采样间隔、物理子载波排列和射频条件相同；这些仍需采集记录核实。",
+    "极高softmax分数在本队列中出现，不等于真实事故概率高；目前未做概率校准或校准质量评价。"
+  ],
+  "next_experiments_zh": [
+    "先通过原始标注、视频或采集记录确认无跌倒区间，再把触发称为严格误报。",
+    "在调参前固定更大、多用户/环境/录制组的跨活动保留集，按活动、设备、环境分别报告触发；补充独立、已标注的跌倒阳性队列评价召回。",
+    "持续失败时先核对真实时间/子载波约定，再比较冻结C与加入困难负样本或域适配的候选；训练只使用另行指定并审核的训练样本，不能把这25条验证样本悄悄放入训练。",
+    "官方C实验和跨任务/适配实验分别记录，保留原官方划分；检查原始内容重复及同源录制组泄漏。",
+    "阈值或报警规则未来只在指定验证集选择，再冻结到独立保留集，同时比较误触发、漏检与延迟；本次没有做这些选择。",
+    "B并列展示动作与置信度，供复核；running/walking与跌倒并非逻辑互斥，不能根据B的普通活动偏好自动关闭C。"
+  ],
+  "coverage_zh": [
+    "仅HP设备、5G、单人完整分段；没有ESP32、其他设备或多人场景。",
+    "每类5条、确定性选择5个用户/环境组，样本很小且非随机代表性抽样。",
+    "只有五类HAR活动标签；没有逐帧无跌倒标注，也没有本次跌倒阳性队列。",
+    "没有连续录制、报警事件匹配、每小时误报或报警延迟评价。",
+    "25条均能匹配作者B既有验证session，因此B标签一致结果不是全新独立泛化基准。",
+    "没有在C现有全部样本中找到这些25条的精确数字内容重复；这不能排除非完全相同的同源录制。"
+  ]
+}

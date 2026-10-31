@@ -1,0 +1,24 @@
+{
+  "/api/health": {
+    "status": 200
+  },
+  "/api/modules": {
+    "status": 200
+  },
+  "/api/human_activity_recognition/replay": {
+    "status": 200,
+    "real_model_available": false
+  },
+  "/api/fall_detection/replay": {
+    "status": 200,
+    "model": "CSI-Bench official ResNet18",
+    "records": 926,
+    "threshold": 0.574872225522995,
+    "real_B_aligned": 0
+  },
+  "built_website": {
+    "index_status": 200,
+    "javascript_status": 200,
+    "bytes": 1183626
+  }
+}

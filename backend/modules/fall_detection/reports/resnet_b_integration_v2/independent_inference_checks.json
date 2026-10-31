@@ -1,0 +1,56 @@
+{
+  "new_process_per_case": true,
+  "real_B_and_C_loaded": true,
+  "raw_validation_inputs_only": true,
+  "new_test_inference": false,
+  "checks": [
+    {
+      "case": "true_positive",
+      "C_score": 0.9996678829193115,
+      "C_score_abs_difference": 0.0,
+      "B_activity": "jumping",
+      "B_confidence": 0.44496296296296267,
+      "B_confidence_abs_difference": 0.0,
+      "alignment": "exact_input",
+      "C_state": "suspected",
+      "C_state_unchanged": true,
+      "C_threshold": 0.574872225522995
+    },
+    {
+      "case": "true_negative",
+      "C_score": 0.046279121190309525,
+      "C_score_abs_difference": 2.2351741790771484e-08,
+      "B_activity": "seated-breathing",
+      "B_confidence": 0.8587592592592593,
+      "B_confidence_abs_difference": 0.0,
+      "alignment": "exact_input",
+      "C_state": "normal",
+      "C_state_unchanged": true,
+      "C_threshold": 0.574872225522995
+    },
+    {
+      "case": "false_positive",
+      "C_score": 0.9888263940811157,
+      "C_score_abs_difference": 0.0,
+      "B_activity": "wavinghand",
+      "B_confidence": 0.42172222222222217,
+      "B_confidence_abs_difference": 0.0,
+      "alignment": "exact_input",
+      "C_state": "suspected",
+      "C_state_unchanged": true,
+      "C_threshold": 0.574872225522995
+    },
+    {
+      "case": "false_negative",
+      "C_score": 0.3542289733886719,
+      "C_score_abs_difference": 2.9802322387695312e-08,
+      "B_activity": "jumping",
+      "B_confidence": 0.41575925925925916,
+      "B_confidence_abs_difference": 0.0,
+      "alignment": "exact_input",
+      "C_state": "normal",
+      "C_state_unchanged": true,
+      "C_threshold": 0.574872225522995
+    }
+  ]
+}

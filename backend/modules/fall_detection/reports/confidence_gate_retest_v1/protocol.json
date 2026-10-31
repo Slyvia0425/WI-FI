@@ -1,0 +1,19 @@
+{
+  "n": 951,
+  "cohorts": {
+    "HP_FallDetection_val": 926,
+    "HAR_activity_probe": 25
+  },
+  "policy": {
+    "version": "B_low_confidence_C_v1",
+    "enabled": true,
+    "B_confidence_cutoff": 0.6,
+    "comparison": "confidence < cutoff",
+    "unavailable_B": "do not run C; return not_evaluated",
+    "skipped_C": "no score or binary C decision; never substitute Nonfall"
+  },
+  "seed42_models": true,
+  "training": false,
+  "C_threshold": 0.574872225522995,
+  "method": "New Python process; B actual prediction batched32; lazy C model loading; C callback invoked per selected input only. Historical scores only used for agreement checks. No independent test/generalization claim."
+}

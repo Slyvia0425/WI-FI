@@ -1,0 +1,11 @@
+{
+  "live_API_status": 200,
+  "real_B_model_available": true,
+  "records": 926,
+  "aligned": 926,
+  "first_B_activity": "jumping",
+  "first_B_confidence": 0.44496296296296267,
+  "first_C_score": 0.9996678829193115,
+  "C_threshold": 0.574872225522995,
+  "joint_accuracy_claimed": false
+}

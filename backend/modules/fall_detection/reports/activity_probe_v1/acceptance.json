@@ -1,0 +1,32 @@
+{
+  "selected": 25,
+  "downloaded": 25,
+  "evaluated": 25,
+  "failures": 0,
+  "C_Fall_triggers_on_HAR_activity_examples": 17,
+  "B_top1_activity_label_agreement": 23,
+  "B_author_validation_session_matches": 25,
+  "C_raw_content_exact_overlap_records": 0,
+  "input_pairing_verified": true,
+  "C_upstream_normalization_axis_parity_verified": true,
+  "production_artifacts_unchanged": true,
+  "no_formal_training_threshold_change_or_deployment": true,
+  "strict_false_positive_rate_computable": false,
+  "fall_recall_computable": false,
+  "manual_plot_review": "Inspected bar counts and all25 score points; counts match JSON/CSV.",
+  "remaining_constraints": [
+    "No framewise fall absence/event annotations",
+    "No new annotated positive-fall cohort",
+    "No physical sampling/subcarrier acquisition proof across tasks",
+    "No new B held-out benchmark; all25 sessions match author validation records"
+  ],
+  "evidence": {
+    "summary.json": "5106fc6d863abf7803fbfa9ab7084634d8eb9c57c67a3c8476d12bf161288fdc",
+    "activity_results.png": "f20ae135091d5516250fc39e000630c08141e3bfc7dde5895ccaa549070a3798",
+    "report_zh.html": "97c5c2292f7d86a3807cb7ac36948fc944bd8421d24620268e3ad5c7810b3e3e",
+    "selection.json": "31a45b7ad16b93e16f5af20d4095cbfe61a05ea49a1cf959bcd0a74a1e3fc040",
+    "records.json": "88b17b6b4d5a8d31637b753d84d785256263e23c8ac64df22d4a23f25c90c5a8",
+    "results.csv": "bb8fc8d35eaa51ebdf626fef05f2378975d67a7655f217413d81f5d94ab39025",
+    "diagnosis.json": "a5b3c7addab6834d8407dbb8fd98df9362d50541833ee19d07784e2d52ef8244"
+  }
+}

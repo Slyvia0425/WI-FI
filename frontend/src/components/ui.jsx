@@ -3,4 +3,4 @@ export function Notice({ kind = 'info', children }) {
 }
 
 export const DISCLAIMER =
-  'Research prototype for single-person indoor monitoring. Not a medical device. Each module replays its own samples, so the combined view shows the expected effect, not joint ground truth.'
+  'Research prototype for single-person indoor monitoring. Not a medical device. B and C share HP input segments; other modules use independent data. The five-module room-state view is illustrative, without joint ground truth.'

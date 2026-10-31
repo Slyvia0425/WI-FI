@@ -1,0 +1,923 @@
+{
+  "selection_scope": "official val_id only",
+  "test_used_for_selection": false,
+  "protocol_sha256": "dac474b773b0519c3c7d90a8e91679b733f9b5859ed564cb055f4539558e556b",
+  "manifest_sha256": "854ade56cc64ae45c0e6f5e3734da3c36a6c48770dcc5ba9b3e3928d1a2b03ce",
+  "summary": {
+    "original_1d_cnn": {
+      "all": {
+        "fixed_0_5": {
+          "precision": {
+            "mean": 0.9251335876183436,
+            "sample_std": 0.01022191111517661
+          },
+          "recall": {
+            "mean": 0.9476082004555808,
+            "sample_std": 0.010438669009011076
+          },
+          "fall_f1": {
+            "mean": 0.9362342241580038,
+            "sample_std": 0.01020327051864469
+          },
+          "false_positive_rate": {
+            "mean": 0.059481743227326266,
+            "sample_std": 0.008160427833068917
+          }
+        },
+        "selected_global": {
+          "precision": {
+            "mean": 0.9095195575016203,
+            "sample_std": 0.026541235178983193
+          },
+          "recall": {
+            "mean": 0.9749430523917996,
+            "sample_std": 0.017791001539650676
+          },
+          "fall_f1": {
+            "mean": 0.9407503524157909,
+            "sample_std": 0.006437204681043879
+          },
+          "false_positive_rate": {
+            "mean": 0.07597173144876325,
+            "sample_std": 0.025048492718653403
+          }
+        }
+      },
+      "HP": {
+        "fixed_0_5": {
+          "precision": {
+            "mean": 0.9524928233572241,
+            "sample_std": 0.011264281396582424
+          },
+          "recall": {
+            "mean": 0.976068376068376,
+            "sample_std": 0.008242436547857198
+          },
+          "fall_f1": {
+            "mean": 0.964131100034216,
+            "sample_std": 0.009520730652360778
+          },
+          "false_positive_rate": {
+            "mean": 0.03544776119402985,
+            "sample_std": 0.008549581520439999
+          }
+        },
+        "selected_global": {
+          "precision": {
+            "mean": 0.9458727521817457,
+            "sample_std": 0.011624935853454902
+          },
+          "recall": {
+            "mean": 0.9837606837606838,
+            "sample_std": 0.0053376051268362815
+          },
+          "fall_f1": {
+            "mean": 0.964410956097468,
+            "sample_std": 0.0060017988219847945
+          },
+          "false_positive_rate": {
+            "mean": 0.041044776119402986,
+            "sample_std": 0.009328358208955223
+          }
+        }
+      },
+      "ESP32": {
+        "fixed_0_5": {
+          "precision": {
+            "mean": 0.7067173536081098,
+            "sample_std": 0.02907322603480037
+          },
+          "recall": {
+            "mean": 0.7210884353741497,
+            "sample_std": 0.03117398431942746
+          },
+          "fall_f1": {
+            "mean": 0.7137840994983852,
+            "sample_std": 0.029337108176800596
+          },
+          "false_positive_rate": {
+            "mean": 0.4888888888888889,
+            "sample_std": 0.05091750772173154
+          }
+        },
+        "selected_global": {
+          "precision": {
+            "mean": 0.6919355003656036,
+            "sample_std": 0.08253218862501634
+          },
+          "recall": {
+            "mean": 0.9047619047619048,
+            "sample_std": 0.13120613280262525
+          },
+          "fall_f1": {
+            "mean": 0.775108378870674,
+            "sample_std": 0.007702263006750986
+          },
+          "false_positive_rate": {
+            "mean": 0.7000000000000001,
+            "sample_std": 0.3179797338056486
+          }
+        }
+      }
+    },
+    "official_resnet18": {
+      "all": {
+        "fixed_0_5": {
+          "precision": {
+            "mean": 0.9299096998810882,
+            "sample_std": 0.012516607822779276
+          },
+          "recall": {
+            "mean": 0.9073652239939256,
+            "sample_std": 0.06403842312900758
+          },
+          "fall_f1": {
+            "mean": 0.9174132896659831,
+            "sample_std": 0.027963280183699934
+          },
+          "false_positive_rate": {
+            "mean": 0.0535924617196702,
+            "sample_std": 0.01349403914886879
+          }
+        },
+        "selected_global": {
+          "precision": {
+            "mean": 0.9115778169833985,
+            "sample_std": 0.030789236023013998
+          },
+          "recall": {
+            "mean": 0.955960516324981,
+            "sample_std": 0.025091437573057443
+          },
+          "fall_f1": {
+            "mean": 0.9326839041497538,
+            "sample_std": 0.005077279995125834
+          },
+          "false_positive_rate": {
+            "mean": 0.07302709069493522,
+            "sample_std": 0.02989644321907434
+          }
+        }
+      },
+      "HP": {
+        "fixed_0_5": {
+          "precision": {
+            "mean": 0.9430273560781394,
+            "sample_std": 0.01740445489947033
+          },
+          "recall": {
+            "mean": 0.9444444444444445,
+            "sample_std": 0.06518740159202852
+          },
+          "fall_f1": {
+            "mean": 0.9425160429517012,
+            "sample_std": 0.024987439980642567
+          },
+          "false_positive_rate": {
+            "mean": 0.04228855721393034,
+            "sample_std": 0.01564644978284717
+          }
+        },
+        "selected_global": {
+          "precision": {
+            "mean": 0.9341822962756986,
+            "sample_std": 0.008393865211816494
+          },
+          "recall": {
+            "mean": 0.9820512820512821,
+            "sample_std": 0.0025641025641026105
+          },
+          "fall_f1": {
+            "mean": 0.9575122079689541,
+            "sample_std": 0.005596136360502192
+          },
+          "false_positive_rate": {
+            "mean": 0.050373134328358216,
+            "sample_std": 0.006726774767656697
+          }
+        }
+      },
+      "ESP32": {
+        "fixed_0_5": {
+          "precision": {
+            "mean": 0.797979797979798,
+            "sample_std": 0.04929096286854329
+          },
+          "recall": {
+            "mean": 0.6122448979591836,
+            "sample_std": 0.08895712129674847
+          },
+          "fall_f1": {
+            "mean": 0.6903030396527875,
+            "sample_std": 0.059043605594570336
+          },
+          "false_positive_rate": {
+            "mean": 0.25555555555555554,
+            "sample_std": 0.0769800358919501
+          }
+        },
+        "selected_global": {
+          "precision": {
+            "mean": 0.7607740433580679,
+            "sample_std": 0.12558951848928882
+          },
+          "recall": {
+            "mean": 0.7482993197278911,
+            "sample_std": 0.2451812420536068
+          },
+          "fall_f1": {
+            "mean": 0.7242026959447173,
+            "sample_std": 0.0720336343590852
+          },
+          "false_positive_rate": {
+            "mean": 0.4777777777777778,
+            "sample_std": 0.4598711574794417
+          }
+        }
+      }
+    }
+  },
+  "runs": [
+    {
+      "kind": "original_1d_cnn",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/cnn_seed42_mps_v1/best.pt",
+      "checkpoint_sha256": "ea7b72009761125b39f0a823285dac60c7dd8148a5c1c993d0507f82938f1363",
+      "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_original_seed42_cpu/validation_predictions.csv",
+      "predictions_sha256": "31dcfedce05704699c3ed5aca038ec0aa1e6a72083bf7baf776369f14eb79897",
+      "selected_threshold": 0.38938893377780914,
+      "groups": {
+        "all": {
+          "fixed_0_5": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 417,
+            "fp": 31,
+            "fn": 22,
+            "tn": 535,
+            "precision": 0.9308035714285714,
+            "recall": 0.9498861047835991,
+            "fall_f1": 0.9402480270574972,
+            "false_positive_rate": 0.054770318021201414
+          },
+          "selected_global": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 433,
+            "fp": 48,
+            "fn": 6,
+            "tn": 518,
+            "precision": 0.9002079002079002,
+            "recall": 0.9863325740318907,
+            "fall_f1": 0.941304347826087,
+            "false_positive_rate": 0.08480565371024736
+          }
+        },
+        "HP": {
+          "fixed_0_5": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 382,
+            "fp": 15,
+            "fn": 8,
+            "tn": 521,
+            "precision": 0.9622166246851386,
+            "recall": 0.9794871794871794,
+            "fall_f1": 0.9707750952986023,
+            "false_positive_rate": 0.027985074626865673
+          },
+          "selected_global": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 386,
+            "fp": 22,
+            "fn": 4,
+            "tn": 514,
+            "precision": 0.946078431372549,
+            "recall": 0.9897435897435898,
+            "fall_f1": 0.9674185463659147,
+            "false_positive_rate": 0.041044776119402986
+          }
+        },
+        "ESP32": {
+          "fixed_0_5": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 35,
+            "fp": 16,
+            "fn": 14,
+            "tn": 14,
+            "precision": 0.6862745098039216,
+            "recall": 0.7142857142857143,
+            "fall_f1": 0.7,
+            "false_positive_rate": 0.5333333333333333
+          },
+          "selected_global": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 47,
+            "fp": 26,
+            "fn": 2,
+            "tn": 4,
+            "precision": 0.6438356164383562,
+            "recall": 0.9591836734693877,
+            "fall_f1": 0.7704918032786885,
+            "false_positive_rate": 0.8666666666666667
+          }
+        }
+      }
+    },
+    {
+      "kind": "original_1d_cnn",
+      "seed": 43,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_original_cnn_seed43_mps_v1/best.pt",
+      "checkpoint_sha256": "8f9258a8e5abe922c00b41c596d7fbf546f350a80d9c424211947c974300b051",
+      "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_original_seed43_cpu/validation_predictions.csv",
+      "predictions_sha256": "0a8b4f3907ad42d0ed0eb47bbc02b058f57e8afd1099704533a0bf7046a83241",
+      "selected_threshold": 0.4059196263551712,
+      "groups": {
+        "all": {
+          "fixed_0_5": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 411,
+            "fp": 39,
+            "fn": 28,
+            "tn": 527,
+            "precision": 0.9133333333333333,
+            "recall": 0.9362186788154897,
+            "fall_f1": 0.9246344206974129,
+            "false_positive_rate": 0.06890459363957598
+          },
+          "selected_global": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 432,
+            "fp": 54,
+            "fn": 7,
+            "tn": 512,
+            "precision": 0.8888888888888888,
+            "recall": 0.9840546697038725,
+            "fall_f1": 0.9340540540540541,
+            "false_positive_rate": 0.09540636042402827
+          }
+        },
+        "HP": {
+          "fixed_0_5": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 377,
+            "fp": 24,
+            "fn": 13,
+            "tn": 512,
+            "precision": 0.940149625935162,
+            "recall": 0.9666666666666667,
+            "fall_f1": 0.9532237673830595,
+            "false_positive_rate": 0.04477611940298507
+          },
+          "selected_global": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 383,
+            "fp": 27,
+            "fn": 7,
+            "tn": 509,
+            "precision": 0.9341463414634147,
+            "recall": 0.982051282051282,
+            "fall_f1": 0.9575,
+            "false_positive_rate": 0.05037313432835821
+          }
+        },
+        "ESP32": {
+          "fixed_0_5": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 34,
+            "fp": 15,
+            "fn": 15,
+            "tn": 15,
+            "precision": 0.6938775510204082,
+            "recall": 0.6938775510204082,
+            "fall_f1": 0.6938775510204082,
+            "false_positive_rate": 0.5
+          },
+          "selected_global": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 49,
+            "fp": 27,
+            "fn": 0,
+            "tn": 3,
+            "precision": 0.6447368421052632,
+            "recall": 1.0,
+            "fall_f1": 0.784,
+            "false_positive_rate": 0.9
+          }
+        }
+      }
+    },
+    {
+      "kind": "original_1d_cnn",
+      "seed": 44,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_original_cnn_seed44_mps_v1/best.pt",
+      "checkpoint_sha256": "768aa3f012dc08f72941c8f4b6280150ac22b90bd19b479011e8769d23f64854",
+      "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_original_seed44_cpu/validation_predictions.csv",
+      "predictions_sha256": "e851edbf898916a970723616ebaf44c249b34f3ec0df925cc5ed9ca19ea8c79c",
+      "selected_threshold": 0.5261302590370178,
+      "groups": {
+        "all": {
+          "fixed_0_5": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 420,
+            "fp": 31,
+            "fn": 19,
+            "tn": 535,
+            "precision": 0.9312638580931264,
+            "recall": 0.9567198177676538,
+            "fall_f1": 0.9438202247191011,
+            "false_positive_rate": 0.054770318021201414
+          },
+          "selected_global": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 419,
+            "fp": 27,
+            "fn": 20,
+            "tn": 539,
+            "precision": 0.9394618834080718,
+            "recall": 0.9544419134396356,
+            "fall_f1": 0.9468926553672317,
+            "false_positive_rate": 0.04770318021201413
+          }
+        },
+        "HP": {
+          "fixed_0_5": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 383,
+            "fp": 18,
+            "fn": 7,
+            "tn": 518,
+            "precision": 0.9551122194513716,
+            "recall": 0.982051282051282,
+            "fall_f1": 0.9683944374209861,
+            "false_positive_rate": 0.033582089552238806
+          },
+          "selected_global": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 382,
+            "fp": 17,
+            "fn": 8,
+            "tn": 519,
+            "precision": 0.9573934837092731,
+            "recall": 0.9794871794871794,
+            "fall_f1": 0.9683143219264893,
+            "false_positive_rate": 0.03171641791044776
+          }
+        },
+        "ESP32": {
+          "fixed_0_5": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 37,
+            "fp": 13,
+            "fn": 12,
+            "tn": 17,
+            "precision": 0.74,
+            "recall": 0.7551020408163265,
+            "fall_f1": 0.7474747474747475,
+            "false_positive_rate": 0.43333333333333335
+          },
+          "selected_global": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 37,
+            "fp": 10,
+            "fn": 12,
+            "tn": 20,
+            "precision": 0.7872340425531915,
+            "recall": 0.7551020408163265,
+            "fall_f1": 0.7708333333333334,
+            "false_positive_rate": 0.3333333333333333
+          }
+        }
+      }
+    },
+    {
+      "kind": "official_resnet18",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_resnet_seed42_cpu/validation_predictions.csv",
+      "predictions_sha256": "ffe4aa54a7615b1eb8c9ed4d0601bbed4cc943438e561bd98b5ac758cebc0854",
+      "selected_threshold": 0.574872225522995,
+      "groups": {
+        "all": {
+          "fixed_0_5": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 412,
+            "fp": 32,
+            "fn": 27,
+            "tn": 534,
+            "precision": 0.9279279279279279,
+            "recall": 0.9384965831435079,
+            "fall_f1": 0.9331823329558324,
+            "false_positive_rate": 0.05653710247349823
+          },
+          "selected_global": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 409,
+            "fp": 27,
+            "fn": 30,
+            "tn": 539,
+            "precision": 0.9380733944954128,
+            "recall": 0.9316628701594533,
+            "fall_f1": 0.9348571428571428,
+            "false_positive_rate": 0.04770318021201413
+          }
+        },
+        "HP": {
+          "fixed_0_5": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 384,
+            "fp": 27,
+            "fn": 6,
+            "tn": 509,
+            "precision": 0.9343065693430657,
+            "recall": 0.9846153846153847,
+            "fall_f1": 0.9588014981273408,
+            "false_positive_rate": 0.05037313432835821
+          },
+          "selected_global": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 384,
+            "fp": 23,
+            "fn": 6,
+            "tn": 513,
+            "precision": 0.9434889434889435,
+            "recall": 0.9846153846153847,
+            "fall_f1": 0.9636135508155583,
+            "false_positive_rate": 0.04291044776119403
+          }
+        },
+        "ESP32": {
+          "fixed_0_5": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 28,
+            "fp": 5,
+            "fn": 21,
+            "tn": 25,
+            "precision": 0.8484848484848485,
+            "recall": 0.5714285714285714,
+            "fall_f1": 0.6829268292682927,
+            "false_positive_rate": 0.16666666666666666
+          },
+          "selected_global": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 25,
+            "fp": 4,
+            "fn": 24,
+            "tn": 26,
+            "precision": 0.8620689655172413,
+            "recall": 0.5102040816326531,
+            "fall_f1": 0.6410256410256411,
+            "false_positive_rate": 0.13333333333333333
+          }
+        }
+      }
+    },
+    {
+      "kind": "official_resnet18",
+      "seed": 43,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed43_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "49ef10b096c7849840bd6cdbf98630a93d6f5aa344916464c4669f25632044f5",
+      "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_resnet_seed43_cpu/validation_predictions.csv",
+      "predictions_sha256": "cf2cf60703e9d7a16fb4bcb15ddca16d42627fa84e6c034b711f3a175e56e8ac",
+      "selected_threshold": 0.052523303776979446,
+      "groups": {
+        "all": {
+          "fixed_0_5": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 366,
+            "fp": 22,
+            "fn": 73,
+            "tn": 544,
+            "precision": 0.9432989690721649,
+            "recall": 0.8337129840546698,
+            "fall_f1": 0.8851269649334945,
+            "false_positive_rate": 0.038869257950530034
+          },
+          "selected_global": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 431,
+            "fp": 60,
+            "fn": 8,
+            "tn": 506,
+            "precision": 0.8778004073319755,
+            "recall": 0.9817767653758542,
+            "fall_f1": 0.9268817204301075,
+            "false_positive_rate": 0.10600706713780919
+          }
+        },
+        "HP": {
+          "fixed_0_5": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 339,
+            "fp": 13,
+            "fn": 51,
+            "tn": 523,
+            "precision": 0.9630681818181818,
+            "recall": 0.8692307692307693,
+            "fall_f1": 0.9137466307277629,
+            "false_positive_rate": 0.024253731343283583
+          },
+          "selected_global": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 382,
+            "fp": 30,
+            "fn": 8,
+            "tn": 506,
+            "precision": 0.9271844660194175,
+            "recall": 0.9794871794871794,
+            "fall_f1": 0.9526184538653366,
+            "false_positive_rate": 0.055970149253731345
+          }
+        },
+        "ESP32": {
+          "fixed_0_5": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 27,
+            "fp": 9,
+            "fn": 22,
+            "tn": 21,
+            "precision": 0.75,
+            "recall": 0.5510204081632653,
+            "fall_f1": 0.6352941176470588,
+            "false_positive_rate": 0.3
+          },
+          "selected_global": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 49,
+            "fp": 30,
+            "fn": 0,
+            "tn": 0,
+            "precision": 0.620253164556962,
+            "recall": 1.0,
+            "fall_f1": 0.765625,
+            "false_positive_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "kind": "official_resnet18",
+      "seed": 44,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed44_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "7926a4fbbdd536354a6c184120b49ad9d1dbd20e442438a01692fd342fb019a6",
+      "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_resnet_seed44_cpu/validation_predictions.csv",
+      "predictions_sha256": "3184f06a6249dc3511f3e89549134f1ece95c240bed10bc7049f67a233fdc2d7",
+      "selected_threshold": 0.48826925456523895,
+      "groups": {
+        "all": {
+          "fixed_0_5": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 417,
+            "fp": 37,
+            "fn": 22,
+            "tn": 529,
+            "precision": 0.9185022026431718,
+            "recall": 0.9498861047835991,
+            "fall_f1": 0.9339305711086227,
+            "false_positive_rate": 0.06537102473498234
+          },
+          "selected_global": {
+            "n": 1005,
+            "fall": 439,
+            "nonfall": 566,
+            "tp": 419,
+            "fp": 37,
+            "fn": 20,
+            "tn": 529,
+            "precision": 0.918859649122807,
+            "recall": 0.9544419134396356,
+            "fall_f1": 0.9363128491620112,
+            "false_positive_rate": 0.06537102473498234
+          }
+        },
+        "HP": {
+          "fixed_0_5": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 382,
+            "fp": 28,
+            "fn": 8,
+            "tn": 508,
+            "precision": 0.9317073170731708,
+            "recall": 0.9794871794871794,
+            "fall_f1": 0.955,
+            "false_positive_rate": 0.05223880597014925
+          },
+          "selected_global": {
+            "n": 926,
+            "fall": 390,
+            "nonfall": 536,
+            "tp": 383,
+            "fp": 28,
+            "fn": 7,
+            "tn": 508,
+            "precision": 0.9318734793187348,
+            "recall": 0.982051282051282,
+            "fall_f1": 0.9563046192259675,
+            "false_positive_rate": 0.05223880597014925
+          }
+        },
+        "ESP32": {
+          "fixed_0_5": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 35,
+            "fp": 9,
+            "fn": 14,
+            "tn": 21,
+            "precision": 0.7954545454545454,
+            "recall": 0.7142857142857143,
+            "fall_f1": 0.7526881720430108,
+            "false_positive_rate": 0.3
+          },
+          "selected_global": {
+            "n": 79,
+            "fall": 49,
+            "nonfall": 30,
+            "tp": 36,
+            "fp": 9,
+            "fn": 13,
+            "tn": 21,
+            "precision": 0.8,
+            "recall": 0.7346938775510204,
+            "fall_f1": 0.7659574468085106,
+            "false_positive_rate": 0.3
+          }
+        }
+      }
+    }
+  ],
+  "selected_kind": "original_1d_cnn",
+  "final_artifact_seed": 42,
+  "selected_run": {
+    "kind": "original_1d_cnn",
+    "seed": 42,
+    "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/cnn_seed42_mps_v1/best.pt",
+    "checkpoint_sha256": "ea7b72009761125b39f0a823285dac60c7dd8148a5c1c993d0507f82938f1363",
+    "prediction_file": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/reports/final_selection_v1_original_seed42_cpu/validation_predictions.csv",
+    "predictions_sha256": "31dcfedce05704699c3ed5aca038ec0aa1e6a72083bf7baf776369f14eb79897",
+    "selected_threshold": 0.38938893377780914,
+    "groups": {
+      "all": {
+        "fixed_0_5": {
+          "n": 1005,
+          "fall": 439,
+          "nonfall": 566,
+          "tp": 417,
+          "fp": 31,
+          "fn": 22,
+          "tn": 535,
+          "precision": 0.9308035714285714,
+          "recall": 0.9498861047835991,
+          "fall_f1": 0.9402480270574972,
+          "false_positive_rate": 0.054770318021201414
+        },
+        "selected_global": {
+          "n": 1005,
+          "fall": 439,
+          "nonfall": 566,
+          "tp": 433,
+          "fp": 48,
+          "fn": 6,
+          "tn": 518,
+          "precision": 0.9002079002079002,
+          "recall": 0.9863325740318907,
+          "fall_f1": 0.941304347826087,
+          "false_positive_rate": 0.08480565371024736
+        }
+      },
+      "HP": {
+        "fixed_0_5": {
+          "n": 926,
+          "fall": 390,
+          "nonfall": 536,
+          "tp": 382,
+          "fp": 15,
+          "fn": 8,
+          "tn": 521,
+          "precision": 0.9622166246851386,
+          "recall": 0.9794871794871794,
+          "fall_f1": 0.9707750952986023,
+          "false_positive_rate": 0.027985074626865673
+        },
+        "selected_global": {
+          "n": 926,
+          "fall": 390,
+          "nonfall": 536,
+          "tp": 386,
+          "fp": 22,
+          "fn": 4,
+          "tn": 514,
+          "precision": 0.946078431372549,
+          "recall": 0.9897435897435898,
+          "fall_f1": 0.9674185463659147,
+          "false_positive_rate": 0.041044776119402986
+        }
+      },
+      "ESP32": {
+        "fixed_0_5": {
+          "n": 79,
+          "fall": 49,
+          "nonfall": 30,
+          "tp": 35,
+          "fp": 16,
+          "fn": 14,
+          "tn": 14,
+          "precision": 0.6862745098039216,
+          "recall": 0.7142857142857143,
+          "fall_f1": 0.7,
+          "false_positive_rate": 0.5333333333333333
+        },
+        "selected_global": {
+          "n": 79,
+          "fall": 49,
+          "nonfall": 30,
+          "tp": 47,
+          "fp": 26,
+          "fn": 2,
+          "tn": 4,
+          "precision": 0.6438356164383562,
+          "recall": 0.9591836734693877,
+          "fall_f1": 0.7704918032786885,
+          "false_positive_rate": 0.8666666666666667
+        }
+      }
+    }
+  },
+  "paired_f1_difference_original_minus_resnet": [
+    0.006447204968944131,
+    0.007172333623946536,
+    0.010579806205220477
+  ],
+  "known_limitations": [
+    "official train/validation and train/test identical content pairs",
+    "device/environment confounding",
+    "small ESP32 validation subset (49 Fall,30 Nonfall)",
+    "segment-level evaluation does not measure continuous alarm false positives per hour",
+    "threshold tuning does not guarantee acceptable device-level false positives"
+  ],
+  "prior_test_exposure": "original CNN test results were already inspected in earlier work; cannot claim the test set has never been examined",
+  "deployment_claim": "research final baseline only; no claim of validated real-world alarm readiness"
+}

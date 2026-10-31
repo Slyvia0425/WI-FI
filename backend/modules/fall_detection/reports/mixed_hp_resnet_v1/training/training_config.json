@@ -1,0 +1,67 @@
+{
+  "model_config": {
+    "win_len": 500,
+    "feature_size": 232,
+    "num_classes": 2,
+    "in_channels": 1
+  },
+  "label_mapping": {
+    "Fall": 0,
+    "Nonfall": 1
+  },
+  "seed": 42,
+  "batch_size": 64,
+  "max_epochs": 100,
+  "early_stopping_patience": 10,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "scheduler": null,
+  "initialization": "random; no pretrained weights",
+  "loss": "CrossEntropyLoss; train-derived weights N/(2*N_class)",
+  "class_counts": {
+    "0": 1727,
+    "1": 3614
+  },
+  "class_weights": [
+    1.5463230609893799,
+    0.7389319539070129
+  ],
+  "checkpoint_selection": "minimum combined-source weighted validation CE",
+  "preprocess_config": {
+    "input_shape": [
+      1,
+      500,
+      232
+    ],
+    "raw_shape": [
+      232,
+      500,
+      1
+    ],
+    "h5_key": "CSI_amps",
+    "axes": "raw feature,time,link -> link,time,feature",
+    "normalization": "per-record scalar mean/std, correction1; std clamped1e-8",
+    "padding": false,
+    "augmentation": false
+  },
+  "data_version": "CSI-Bench Kaggle v12",
+  "selection_sha256": "3b1a622f1360c5e23996c6ed4ed63f4783b06e35e646ee4d92a4b1119e6ccef4",
+  "train_content_hashes_sha256": "8820cd497c076d0737fa1595f97a2f3583e5df0562f52995c21c8815221d3442",
+  "val_content_hashes_sha256": "703aa96bf25c0a0c3d26763de028f816e54ef696bd627e319376d1de9e2dfc20",
+  "cache_sha256": {
+    "train": "845ff4062a2dc1e64a8fb25d4a97548ba9bc97ed5fc25aa8ca83e13effb9542d",
+    "val": "acf0129b91caf09d53a03ef21a2bd7f9ad143d9cdba98eb610c8febea4454ec4"
+  },
+  "comparison_thresholds": [
+    0.5,
+    0.574872225522995
+  ],
+  "device": "cuda",
+  "hardware": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "source_sha256": {
+    "common.py": "3a3e123ea52729fe44b4db80c886ba8eaa5834f51f624e8655ae58110e735b41",
+    "train.py": "cc3ec4e12c5b8a823080983c47c706f051737d9b51a2b2a2147084778c1ce355"
+  }
+}

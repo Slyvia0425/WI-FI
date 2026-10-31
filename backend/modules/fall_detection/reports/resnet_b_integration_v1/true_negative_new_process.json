@@ -1,0 +1,21 @@
+{
+  "file": "/Users/chenxiaohe/Documents/CSI-Bench-v12/FallDetection/sub_Human/user_U09/act_Nonfall/env_E23/device_HP/session_11095000__freq232.h5",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "fall_output_index": 0,
+  "sample_id": "session_11095000__freq232",
+  "recording_id": "session_11095000__freq232",
+  "input_id": "csi-amplitude-f32-v1:17557e5daa79814a671949f1b35f656d2a7971b277c76ed3920c019b4e5919b6",
+  "device": "HP",
+  "fall_score": 0.046279121190309525,
+  "threshold": 0.574872225522995,
+  "state": "normal",
+  "prediction": "Nonfall",
+  "model_version": "csi-bench-resnet18-b-context-v1",
+  "activity_reference": {
+    "status": "unavailable",
+    "reason": "Module B output not supplied",
+    "role": "activity_context_only",
+    "affects_fall_score": false
+  },
+  "scope": "CSI-Bench HP segment; Module B context is advisory and cannot alter C score; no TCS adaptation"
+}

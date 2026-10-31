@@ -1,0 +1,850 @@
+{
+  "protocol": {
+    "created_utc": "2026-10-26T14:16:13.220119+00:00",
+    "scope": "HP validation samples only; latency only",
+    "models": [
+      "original_1d_cnn",
+      "official_resnet18"
+    ],
+    "backends": [
+      "cpu",
+      "mps"
+    ],
+    "batch_size": 1,
+    "cpu_threads": 2,
+    "interop_threads": 1,
+    "warmup_per_scope": 30,
+    "trials": 3,
+    "iterations_per_trial_per_scope": 200,
+    "new_process_startup_trials": 3,
+    "sample_selection": "first eight sorted HP val_id IDs per class",
+    "manifest_sha256": "854ade56cc64ae45c0e6f5e3734da3c36a6c48770dcc5ba9b3e3928d1a2b03ce",
+    "source_and_artifact_sha256_before": {
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/models/cnn.py": "92e04ae85d6e80c196f17599742e4e38e06c9310d7329faed12c409b28be8639",
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/preprocess.py": "e202289cab0b4f58ca96ae34cbf917fb17a33d6907352aa7d1a4e7fc7bed18ad",
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/final_selection_v1/runtime.py": "3f80d3a92109e341c18784086ee556e1c3e408aebed3cf112e7d7c3dcdcbfb20",
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/final_selection_v1/infer.py": "b91968cd02ca5f45c7f9dff3890da491fe7e88e967a7f9b3b76dd839a1eaaea0",
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.json": "c2a285b264f625c372e739ac6fcade7be8ea3a85919151643711a7b71d0a7d93",
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0"
+    },
+    "benchmark_source_sha256": "bf856f6731f9f8459ee200fd45e3bedadb17e5906dea92b0c09dea60e39848ee",
+    "python": "3.14.7",
+    "platform": "macOS-14.0-arm64-arm-64bit-Mach-O",
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "machine": "arm64",
+    "hardware": {
+      "hw.model": "Mac14,7",
+      "machdep.cpu.brand_string": "Apple M2",
+      "hw.memsize": "8589934592",
+      "hw.ncpu": "8"
+    },
+    "notes": [
+      "Backends run sequentially; FP32, eval and inference_mode; no compilation/quantization.",
+      "Forward-only input already on device; scoring/transfer excluded, synchronization included.",
+      "Memory pipeline begins with parsed amplitude in RAM; includes preprocessing, transfer, scoring and local threshold.",
+      "File pipeline uses exact existing runtime, OS file cache warm; no guaranteed physical disk read.",
+      "New-process startup is not a power-on/cold-disk experiment.",
+      "Peak RSS is whole Python process including imports/loading; not isolated model memory and not GPU allocation.",
+      "No acquisition wait, rolling-window wait, alarm confirmation, network/UI delivery or event latency measured.",
+      "No ESP32 records, training, threshold changes, test evaluation or continuous-monitoring claims."
+    ]
+  },
+  "runs": [
+    {
+      "kind": "original_1d_cnn",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 56.312125,
+      "first_file_pipeline_ms": 26.685125,
+      "process_code_to_first_result_ms": 1222.138959,
+      "first_fall_score": 0.1610960215330124,
+      "first_prediction_is_fall": false,
+      "scopes": [
+        {
+          "scope": "forward_only",
+          "n": 600,
+          "median_ms": 0.37725,
+          "p95_ms": 0.515375,
+          "p99_ms": 0.6578337499999997,
+          "min_ms": 0.32425,
+          "max_ms": 1.40475
+        },
+        {
+          "scope": "memory_pipeline",
+          "n": 600,
+          "median_ms": 0.742542,
+          "p95_ms": 0.84296635,
+          "p99_ms": 1.0383254099999997,
+          "min_ms": 0.631333,
+          "max_ms": 1.203875
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "n": 600,
+          "median_ms": 5.1832709999999995,
+          "p95_ms": 5.8707565499999985,
+          "p99_ms": 8.249675329999992,
+          "min_ms": 4.768667,
+          "max_ms": 22.690791
+        }
+      ],
+      "trials": [
+        {
+          "scope": "forward_only",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 0.374166,
+          "p95_ms": 0.4068648999999999,
+          "p99_ms": 0.49955049999999995
+        },
+        {
+          "scope": "forward_only",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 0.4027495,
+          "p95_ms": 0.6221819,
+          "p99_ms": 1.1646163399999998
+        },
+        {
+          "scope": "forward_only",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 0.370021,
+          "p95_ms": 0.40529614999999997,
+          "p99_ms": 0.47566898999999985
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 0.7443329999999999,
+          "p95_ms": 0.8336684499999998,
+          "p99_ms": 0.9029459199999998
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 0.7399795,
+          "p95_ms": 0.77835625,
+          "p99_ms": 0.8257219099999998
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 0.7445630000000001,
+          "p95_ms": 1.0014881499999997,
+          "p99_ms": 1.15826809
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 5.175833,
+          "p95_ms": 5.57734375,
+          "p99_ms": 10.503813749999907
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 5.178853999999999,
+          "p95_ms": 6.242971499999998,
+          "p99_ms": 9.051779169999993
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 5.2132505,
+          "p95_ms": 5.9126934,
+          "p99_ms": 7.254644579999999
+        }
+      ],
+      "preprocess_max_abs_difference": 0.0,
+      "backend_score_max_abs_difference_vs_cpu": 7.450580596923828e-08,
+      "parameter_count": 43425,
+      "parameter_and_buffer_bytes": 173700,
+      "checkpoint_file_bytes": 613781,
+      "process_peak_rss_bytes": 263798784,
+      "input_shape": [
+        1,
+        232,
+        500
+      ],
+      "dtype": "torch.float32",
+      "sample_ids": [
+        "Human_U06_Nonfall_E24_HP_311000",
+        "Human_U06_Nonfall_E24_HP_312000",
+        "Human_U06_Nonfall_E24_HP_320000",
+        "Human_U06_Nonfall_E24_HP_332000",
+        "Human_U06_Nonfall_E24_HP_337000",
+        "Human_U06_Nonfall_E24_HP_348000",
+        "Human_U09_Nonfall_E23_HP_11095000",
+        "Human_U09_Nonfall_E23_HP_11103000",
+        "Human_U06_Fall_E24_HP_1151000",
+        "Human_U06_Fall_E24_HP_155000",
+        "Human_U06_Fall_E24_HP_163000",
+        "Human_U06_Fall_E24_HP_696000",
+        "Human_U06_Fall_E24_HP_697000",
+        "Human_U07_Fall_E21_HP_2176000",
+        "Human_U07_Fall_E21_HP_2180000",
+        "Human_U07_Fall_E21_HP_2182000"
+      ],
+      "test_evaluated": false,
+      "completed_utc": "2026-10-26T14:16:18.783362+00:00"
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1836.064459,
+      "first_file_pipeline_ms": 61.253209,
+      "process_code_to_first_result_ms": 3026.449042,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "scopes": [
+        {
+          "scope": "forward_only",
+          "n": 600,
+          "median_ms": 42.597,
+          "p95_ms": 48.77870239999999,
+          "p99_ms": 55.71825800999999,
+          "min_ms": 40.862708,
+          "max_ms": 86.952458
+        },
+        {
+          "scope": "memory_pipeline",
+          "n": 600,
+          "median_ms": 49.7001875,
+          "p95_ms": 139.36775805,
+          "p99_ms": 288.2022661599999,
+          "min_ms": 42.584417,
+          "max_ms": 840.33325
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "n": 600,
+          "median_ms": 56.646125,
+          "p95_ms": 78.66570349999999,
+          "p99_ms": 109.46119416999998,
+          "min_ms": 45.399958,
+          "max_ms": 211.100083
+        }
+      ],
+      "trials": [
+        {
+          "scope": "forward_only",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 42.452603999999994,
+          "p95_ms": 49.18262324999999,
+          "p99_ms": 58.39261883999992
+        },
+        {
+          "scope": "forward_only",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 43.007916,
+          "p95_ms": 48.0169024,
+          "p99_ms": 52.795688329999976
+        },
+        {
+          "scope": "forward_only",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 42.507937,
+          "p95_ms": 48.68320274999999,
+          "p99_ms": 50.598662329999996
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 46.5609795,
+          "p95_ms": 57.54777855,
+          "p99_ms": 139.9120217499995
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 47.8442085,
+          "p95_ms": 76.98118509999993,
+          "p99_ms": 288.6848636599995
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 65.443167,
+          "p95_ms": 194.52317534999992,
+          "p99_ms": 298.7979005099985
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 58.1921875,
+          "p95_ms": 75.74461489999997,
+          "p99_ms": 87.00055065999994
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 59.111145500000006,
+          "p95_ms": 85.77066074999996,
+          "p99_ms": 147.31644707999965
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 47.341479,
+          "p95_ms": 54.201047599999995,
+          "p99_ms": 66.45971125
+        }
+      ],
+      "preprocess_max_abs_difference": 0.0,
+      "backend_score_max_abs_difference_vs_cpu": 1.1920928955078125e-07,
+      "parameter_count": 11171266,
+      "parameter_and_buffer_bytes": 44723624,
+      "checkpoint_file_bytes": 44997835,
+      "process_peak_rss_bytes": 535904256,
+      "input_shape": [
+        1,
+        1,
+        500,
+        232
+      ],
+      "dtype": "torch.float32",
+      "sample_ids": [
+        "Human_U06_Nonfall_E24_HP_311000",
+        "Human_U06_Nonfall_E24_HP_312000",
+        "Human_U06_Nonfall_E24_HP_320000",
+        "Human_U06_Nonfall_E24_HP_332000",
+        "Human_U06_Nonfall_E24_HP_337000",
+        "Human_U06_Nonfall_E24_HP_348000",
+        "Human_U09_Nonfall_E23_HP_11095000",
+        "Human_U09_Nonfall_E23_HP_11103000",
+        "Human_U06_Fall_E24_HP_1151000",
+        "Human_U06_Fall_E24_HP_155000",
+        "Human_U06_Fall_E24_HP_163000",
+        "Human_U06_Fall_E24_HP_696000",
+        "Human_U06_Fall_E24_HP_697000",
+        "Human_U07_Fall_E21_HP_2176000",
+        "Human_U07_Fall_E21_HP_2180000",
+        "Human_U07_Fall_E21_HP_2182000"
+      ],
+      "test_evaluated": false,
+      "completed_utc": "2026-10-26T14:18:11.990511+00:00"
+    },
+    {
+      "kind": "original_1d_cnn",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 55.480583,
+      "first_file_pipeline_ms": 1272.204166,
+      "process_code_to_first_result_ms": 2508.448958,
+      "first_fall_score": 0.16109587252140045,
+      "first_prediction_is_fall": false,
+      "scopes": [
+        {
+          "scope": "forward_only",
+          "n": 600,
+          "median_ms": 0.842021,
+          "p95_ms": 1.1374850999999995,
+          "p99_ms": 1.2318571699999998,
+          "min_ms": 0.599084,
+          "max_ms": 4.621333
+        },
+        {
+          "scope": "memory_pipeline",
+          "n": 600,
+          "median_ms": 1.3953125000000002,
+          "p95_ms": 1.6910229,
+          "p99_ms": 1.9110307399999995,
+          "min_ms": 1.242333,
+          "max_ms": 5.609042
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "n": 600,
+          "median_ms": 6.6711244999999995,
+          "p95_ms": 7.214581899999999,
+          "p99_ms": 8.979990919999995,
+          "min_ms": 5.926333,
+          "max_ms": 14.286208
+        }
+      ],
+      "trials": [
+        {
+          "scope": "forward_only",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 0.7241044999999999,
+          "p95_ms": 0.8259815999999999,
+          "p99_ms": 0.9100096699999997
+        },
+        {
+          "scope": "forward_only",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 0.8682295,
+          "p95_ms": 1.1858520499999996,
+          "p99_ms": 1.6343082499999997
+        },
+        {
+          "scope": "forward_only",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 1.0518955,
+          "p95_ms": 1.1730340000000001,
+          "p99_ms": 1.2268243399999998
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 1.3828125,
+          "p95_ms": 1.51313335,
+          "p99_ms": 1.57378709
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 1.4187705,
+          "p95_ms": 1.7949666499999999,
+          "p99_ms": 2.1162890799999983
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 1.3940000000000001,
+          "p95_ms": 1.7743764499999997,
+          "p99_ms": 1.9771018399999953
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 6.7003125,
+          "p95_ms": 7.1825622,
+          "p99_ms": 10.388908839999974
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 6.6229995,
+          "p95_ms": 7.157370799999998,
+          "p99_ms": 7.674431909999992
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 6.68525,
+          "p95_ms": 7.2630101,
+          "p99_ms": 8.979990919999995
+        }
+      ],
+      "preprocess_max_abs_difference": 0.0,
+      "backend_score_max_abs_difference_vs_cpu": 2.2351741790771484e-07,
+      "parameter_count": 43425,
+      "parameter_and_buffer_bytes": 173700,
+      "checkpoint_file_bytes": 613781,
+      "process_peak_rss_bytes": 329924608,
+      "input_shape": [
+        1,
+        232,
+        500
+      ],
+      "dtype": "torch.float32",
+      "sample_ids": [
+        "Human_U06_Nonfall_E24_HP_311000",
+        "Human_U06_Nonfall_E24_HP_312000",
+        "Human_U06_Nonfall_E24_HP_320000",
+        "Human_U06_Nonfall_E24_HP_332000",
+        "Human_U06_Nonfall_E24_HP_337000",
+        "Human_U06_Nonfall_E24_HP_348000",
+        "Human_U09_Nonfall_E23_HP_11095000",
+        "Human_U09_Nonfall_E23_HP_11103000",
+        "Human_U06_Fall_E24_HP_1151000",
+        "Human_U06_Fall_E24_HP_155000",
+        "Human_U06_Fall_E24_HP_163000",
+        "Human_U06_Fall_E24_HP_696000",
+        "Human_U06_Fall_E24_HP_697000",
+        "Human_U07_Fall_E21_HP_2176000",
+        "Human_U07_Fall_E21_HP_2180000",
+        "Human_U07_Fall_E21_HP_2182000"
+      ],
+      "test_evaluated": false,
+      "completed_utc": "2026-10-26T14:18:31.102332+00:00"
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1547.9045,
+      "first_file_pipeline_ms": 2221.861125,
+      "process_code_to_first_result_ms": 4927.177959,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "scopes": [
+        {
+          "scope": "forward_only",
+          "n": 600,
+          "median_ms": 12.9087085,
+          "p95_ms": 15.94416905,
+          "p99_ms": 16.48535134,
+          "min_ms": 8.994584,
+          "max_ms": 16.986458
+        },
+        {
+          "scope": "memory_pipeline",
+          "n": 600,
+          "median_ms": 13.4524995,
+          "p95_ms": 16.531081599999997,
+          "p99_ms": 19.073071249999995,
+          "min_ms": 9.111458,
+          "max_ms": 37.697917
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "n": 600,
+          "median_ms": 14.5855205,
+          "p95_ms": 19.969693749999998,
+          "p99_ms": 21.496854909999996,
+          "min_ms": 11.422333,
+          "max_ms": 36.573583
+        }
+      ],
+      "trials": [
+        {
+          "scope": "forward_only",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 13.131562500000001,
+          "p95_ms": 15.9529024,
+          "p99_ms": 16.35212366
+        },
+        {
+          "scope": "forward_only",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 13.467979,
+          "p95_ms": 16.11906075,
+          "p99_ms": 16.89038934
+        },
+        {
+          "scope": "forward_only",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 12.041062499999999,
+          "p95_ms": 13.3047271,
+          "p99_ms": 13.90987741
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 13.3254375,
+          "p95_ms": 15.642381899999995,
+          "p99_ms": 16.80262259
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 13.4144375,
+          "p95_ms": 16.35052355,
+          "p99_ms": 16.870028749999996
+        },
+        {
+          "scope": "memory_pipeline",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 13.748479,
+          "p95_ms": 18.556655949999996,
+          "p99_ms": 20.6755255099999
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 1,
+          "n": 200,
+          "median_ms": 14.8182705,
+          "p95_ms": 20.38955625,
+          "p99_ms": 21.654338089999996
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 2,
+          "n": 200,
+          "median_ms": 14.3928335,
+          "p95_ms": 19.85686635,
+          "p99_ms": 20.13490825
+        },
+        {
+          "scope": "file_pipeline_warm_os_cache",
+          "trial": 3,
+          "n": 200,
+          "median_ms": 14.450813,
+          "p95_ms": 19.5727628,
+          "p99_ms": 21.26815907999999
+        }
+      ],
+      "preprocess_max_abs_difference": 0.0,
+      "backend_score_max_abs_difference_vs_cpu": 1.3113021850585938e-06,
+      "parameter_count": 11171266,
+      "parameter_and_buffer_bytes": 44723624,
+      "checkpoint_file_bytes": 44997835,
+      "process_peak_rss_bytes": 494305280,
+      "input_shape": [
+        1,
+        1,
+        500,
+        232
+      ],
+      "dtype": "torch.float32",
+      "sample_ids": [
+        "Human_U06_Nonfall_E24_HP_311000",
+        "Human_U06_Nonfall_E24_HP_312000",
+        "Human_U06_Nonfall_E24_HP_320000",
+        "Human_U06_Nonfall_E24_HP_332000",
+        "Human_U06_Nonfall_E24_HP_337000",
+        "Human_U06_Nonfall_E24_HP_348000",
+        "Human_U09_Nonfall_E23_HP_11095000",
+        "Human_U09_Nonfall_E23_HP_11103000",
+        "Human_U06_Fall_E24_HP_1151000",
+        "Human_U06_Fall_E24_HP_155000",
+        "Human_U06_Fall_E24_HP_163000",
+        "Human_U06_Fall_E24_HP_696000",
+        "Human_U06_Fall_E24_HP_697000",
+        "Human_U07_Fall_E21_HP_2176000",
+        "Human_U07_Fall_E21_HP_2180000",
+        "Human_U07_Fall_E21_HP_2182000"
+      ],
+      "test_evaluated": false,
+      "completed_utc": "2026-10-26T14:19:08.325953+00:00"
+    }
+  ],
+  "startup": [
+    {
+      "kind": "original_1d_cnn",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 43.251458,
+      "first_file_pipeline_ms": 6.900833,
+      "process_code_to_first_result_ms": 1190.264,
+      "first_fall_score": 0.1610960215330124,
+      "first_prediction_is_fall": false,
+      "trial": 1,
+      "parent_process_wall_through_exit_ms": 1465.882041
+    },
+    {
+      "kind": "original_1d_cnn",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 40.13775,
+      "first_file_pipeline_ms": 6.792333,
+      "process_code_to_first_result_ms": 1143.083958,
+      "first_fall_score": 0.1610960215330124,
+      "first_prediction_is_fall": false,
+      "trial": 2,
+      "parent_process_wall_through_exit_ms": 1419.724416
+    },
+    {
+      "kind": "original_1d_cnn",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 40.0885,
+      "first_file_pipeline_ms": 6.726875,
+      "process_code_to_first_result_ms": 1160.728291,
+      "first_fall_score": 0.1610960215330124,
+      "first_prediction_is_fall": false,
+      "trial": 3,
+      "parent_process_wall_through_exit_ms": 1440.565917
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1572.962084,
+      "first_file_pipeline_ms": 55.501542,
+      "process_code_to_first_result_ms": 3143.409,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "trial": 1,
+      "parent_process_wall_through_exit_ms": 3661.541
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1398.61375,
+      "first_file_pipeline_ms": 49.052458,
+      "process_code_to_first_result_ms": 2621.983167,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "trial": 2,
+      "parent_process_wall_through_exit_ms": 3088.341167
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "cpu",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1364.332417,
+      "first_file_pipeline_ms": 56.915541,
+      "process_code_to_first_result_ms": 2557.116916,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "trial": 3,
+      "parent_process_wall_through_exit_ms": 3034.589875
+    },
+    {
+      "kind": "original_1d_cnn",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 45.227625,
+      "first_file_pipeline_ms": 303.211292,
+      "process_code_to_first_result_ms": 1482.1505,
+      "first_fall_score": 0.16109587252140045,
+      "first_prediction_is_fall": false,
+      "trial": 1,
+      "parent_process_wall_through_exit_ms": 1811.575625
+    },
+    {
+      "kind": "original_1d_cnn",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 43.989291,
+      "first_file_pipeline_ms": 300.603167,
+      "process_code_to_first_result_ms": 1467.174417,
+      "first_fall_score": 0.16109587252140045,
+      "first_prediction_is_fall": false,
+      "trial": 2,
+      "parent_process_wall_through_exit_ms": 1766.631584
+    },
+    {
+      "kind": "original_1d_cnn",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt",
+      "checkpoint_sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "threshold_used_for_timing_only": 0.38938893377780914,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 44.552958,
+      "first_file_pipeline_ms": 292.297708,
+      "process_code_to_first_result_ms": 1460.799833,
+      "first_fall_score": 0.16109587252140045,
+      "first_prediction_is_fall": false,
+      "trial": 3,
+      "parent_process_wall_through_exit_ms": 1747.551334
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1636.020583,
+      "first_file_pipeline_ms": 1524.54,
+      "process_code_to_first_result_ms": 4595.589458,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "trial": 1,
+      "parent_process_wall_through_exit_ms": 5121.201
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1539.195792,
+      "first_file_pipeline_ms": 1097.915375,
+      "process_code_to_first_result_ms": 3997.520458,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "trial": 2,
+      "parent_process_wall_through_exit_ms": 4486.0005
+    },
+    {
+      "kind": "official_resnet18",
+      "backend": "mps",
+      "seed": 42,
+      "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+      "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "threshold_used_for_timing_only": 0.5,
+      "batch_size": 1,
+      "load_model_and_integrity_check_ms": 1518.915,
+      "first_file_pipeline_ms": 1315.190375,
+      "process_code_to_first_result_ms": 4180.492958,
+      "first_fall_score": 0.9987490177154541,
+      "first_prediction_is_fall": true,
+      "trial": 3,
+      "parent_process_wall_through_exit_ms": 4724.086
+    }
+  ],
+  "protected_artifacts_unchanged": true,
+  "completed": true
+}

@@ -1,0 +1,186 @@
+{
+  "n_selected": 25,
+  "n_run": 25,
+  "failures": [],
+  "groups": {
+    "jumping": {
+      "n": 5,
+      "C_Fall_triggers": 4,
+      "C_Nonfall": 1,
+      "B_top1_matches_activity": 5,
+      "B_confidence_ge_0_6": 4,
+      "C_score_min": 0.002003064379096031,
+      "C_score_max": 0.9999744892120361,
+      "B_activity_counts": {
+        "jumping": 5
+      },
+      "users": [
+        "U01",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "environments": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E06"
+      ]
+    },
+    "running": {
+      "n": 5,
+      "C_Fall_triggers": 3,
+      "C_Nonfall": 2,
+      "B_top1_matches_activity": 4,
+      "B_confidence_ge_0_6": 4,
+      "C_score_min": 0.0005484505090862513,
+      "C_score_max": 0.9999985694885254,
+      "B_activity_counts": {
+        "running": 4,
+        "jumping": 1
+      },
+      "users": [
+        "U01",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "environments": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E06"
+      ]
+    },
+    "seated-breathing": {
+      "n": 5,
+      "C_Fall_triggers": 2,
+      "C_Nonfall": 3,
+      "B_top1_matches_activity": 5,
+      "B_confidence_ge_0_6": 5,
+      "C_score_min": 0.00500087533146143,
+      "C_score_max": 0.9999997615814209,
+      "B_activity_counts": {
+        "seated-breathing": 5
+      },
+      "users": [
+        "U01",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "environments": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E06"
+      ]
+    },
+    "walking": {
+      "n": 5,
+      "C_Fall_triggers": 4,
+      "C_Nonfall": 1,
+      "B_top1_matches_activity": 4,
+      "B_confidence_ge_0_6": 4,
+      "C_score_min": 0.07089376449584961,
+      "C_score_max": 0.9999998807907104,
+      "B_activity_counts": {
+        "running": 1,
+        "walking": 4
+      },
+      "users": [
+        "U01",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "environments": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E06"
+      ]
+    },
+    "wavinghand": {
+      "n": 5,
+      "C_Fall_triggers": 4,
+      "C_Nonfall": 1,
+      "B_top1_matches_activity": 5,
+      "B_confidence_ge_0_6": 3,
+      "C_score_min": 0.002064637839794159,
+      "C_score_max": 0.9999970197677612,
+      "B_activity_counts": {
+        "wavinghand": 5
+      },
+      "users": [
+        "U01",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "environments": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E06"
+      ]
+    }
+  },
+  "all_same_raw_B_C_identity": true,
+  "all_C_upstream_input_parity_exact": true,
+  "duplicate_raw_inputs": {},
+  "duplicate_normalized_C_inputs": {},
+  "C_checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "B_checkpoint_sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687",
+  "upstream_getitem_source_sha256": "56697f558d51bf0b9d12113c49c7053ff98755fa1127ae8cec5c92fb1ac97cdf",
+  "upstream_parity_method": "Pinned unmodified __getitem__ function executed with test metadata/path/label facade. Constructor and metadata search are not under test.",
+  "C_training_environments_all_devices": [
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26"
+  ],
+  "C_training_HP_environments": [
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26"
+  ],
+  "HAR_probe_environments": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E06"
+  ],
+  "C_HP_val_count": 926,
+  "old_artifacts": {
+    "old_artifacts_checked": 14,
+    "hp_frozen_model_and_source_unchanged": true
+  },
+  "production_artifacts_unchanged": true,
+  "interpretation": "C Fall counts are triggers on activity-labeled HAR examples; suspected false positives only. No framewise fall annotations, no Fall-positive cohort, no fall recall/specificity claim or official C test evaluation. B top1 agreement is exploratory on25 nonrandom diagnostic examples, not a new benchmark estimate.",
+  "coverage_limits": [
+    "HP only; no ESP32/other devices.",
+    "Five users/environments chosen deterministically per class, not random representative sampling.",
+    "Single-person segmented clips; no continuous recordings/event timestamps.",
+    "No positive falls or multi-person/unsupported activities.",
+    "HAR official val samples may overlap the B-author validation subset; not a fresh held-out benchmark.",
+    "Cross-task source/raw-overlap relationships with C training require further audit before any future fine-tuning."
+  ],
+  "no_training_no_threshold_change_no_deployment": true
+}

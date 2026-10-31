@@ -1,0 +1,23 @@
+{
+  "status": "protocol_fixed_before_new_runs_and_test_evaluation",
+  "candidates": ["original_1d_cnn", "official_resnet18"],
+  "data": "CSI-Bench FallDetection official Kaggle v12",
+  "selection_split": "val_id",
+  "seeds": [42, 43, 44],
+  "threshold_selection": {
+    "objective": "maximum overall Fall F1 on val_id",
+    "tie_breaks": ["higher Fall Recall", "higher threshold"],
+    "prediction_rule": "fall_score >= threshold",
+    "one_global_threshold_per_model_seed": true,
+    "device_specific_thresholds": false
+  },
+  "architecture_selection": ["higher mean validation Fall F1 over seeds 42,43,44", "higher mean Fall Recall", "smaller model if tied"],
+  "final_artifact_seed": 42,
+  "final_seed_selection": "fixed in advance; do not cherry-pick best seed",
+  "original_1d_cnn_training": {"preserve_existing_model": true, "optimizer": "Adam", "learning_rate": 0.001, "batch_size": 32, "max_epochs": 100, "patience": 10, "checkpoint": "lowest validation train-weighted BCE", "normalization": "existing train-fitted per-device per-feature parameters"},
+  "official_resnet18_training": {"source_commit": "b1beac7b0fa46e01748901195ecfbe309dfc0180", "optimizer": "AdamW", "learning_rate": 0.001, "weight_decay": 0.00001, "batch_size": 128, "max_epochs": 100, "patience": 15, "checkpoint": "lowest validation unweighted CE", "normalization": "pinned official per-record normalization then feature padding", "scheduler": "preserve existing source-faithful batch-count/epoch-count mismatch"},
+  "test_policy": {"no_test_predictions_before_freeze": true, "sets_after_freeze": ["test_id", "test_easy", "test_medium", "test_hard"], "no_selection_based_on_test": true, "prior_test_exposure": "original CNN test results were already inspected in earlier work; cannot claim the test set has never been examined"},
+  "reports": ["Precision-Recall curves", "metrics at 0.5 and selected threshold", "per-device TP FP FN TN and FPR", "three-seed mean and sample standard deviation", "independent-process reload and single-file inference", "final official test metrics"],
+  "known_limitations": ["official train/validation and train/test identical content pairs", "device/environment confounding", "small ESP32 validation subset (49 Fall,30 Nonfall)", "segment-level evaluation does not measure continuous alarm false positives per hour", "threshold tuning does not guarantee acceptable device-level false positives"],
+  "deployment_claim": "research final baseline only; no claim of validated real-world alarm readiness"
+}

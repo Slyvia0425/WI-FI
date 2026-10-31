@@ -7,6 +7,6 @@ page, all inside this module's folders. Fusion (frontend/src/features/fusion/rul
 FRAME_FIELDS = ['fall_score', 'state']
 
 FIELD_NOTES = {
-    "fall_score": "0 to 1",
-    "state": "normal, suspected or alert"
+    "fall_score": "0 to 1 when C ran; null when not evaluated by confidence gate",
+    "state": "normal, suspected, alert or not_evaluated (no C binary decision)"
 }

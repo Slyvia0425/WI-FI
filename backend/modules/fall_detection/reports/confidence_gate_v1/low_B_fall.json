@@ -1,0 +1,40 @@
+{
+  "file": "/Users/chenxiaohe/Documents/CSI-Bench-v12/FallDetection/sub_Human/user_U07/act_Fall/env_E21/device_HP/session_2180000__freq232.h5",
+  "sample_id": "session_2180000__freq232",
+  "recording_id": "session_2180000__freq232",
+  "input_id": "csi-amplitude-f32-v1:eb695cc6873b8215e3dee8ec88b26e939242d9fa0db11edbb6b8c3d0ef888b0c",
+  "device": "HP",
+  "threshold": 0.574872225522995,
+  "model_version": "csi-bench-resnet18-b-context-v1",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "fall_output_index": 0,
+  "gate": {
+    "policy": "B_low_confidence_C_v1",
+    "B_confidence_cutoff": 0.6,
+    "comparison": "confidence < cutoff",
+    "B_confidence": 0.39724074074074067,
+    "run_C": true,
+    "status": "B_low_confidence",
+    "reason": "B confidence <0.6: evaluate C"
+  },
+  "C_ran": true,
+  "fall_score": 0.9990915060043335,
+  "prediction": "Fall",
+  "is_fall": true,
+  "state": "suspected",
+  "activity_reference": {
+    "status": "aligned",
+    "alignment": "exact_input",
+    "activity": "jumping",
+    "confidence": 0.39724074074074067,
+    "stable": false,
+    "quality": "good",
+    "model_version": "spectral-ensemble-csi-band-power-v1-seed42-31bb8f0d9c4b3e77",
+    "role": "activity_context_only",
+    "affects_fall_score": false,
+    "decision_note": "Top class among five trained activities; stable means confidence >=0.6, not temporal stability. Fall is not a trained B class.",
+    "note": "Activity context does not confirm or veto the independent ResNet18 fall decision"
+  },
+  "execution_mode": "fresh_inference",
+  "scope": "B confidence routing; skipped C has no binary decision; no training or model threshold change"
+}

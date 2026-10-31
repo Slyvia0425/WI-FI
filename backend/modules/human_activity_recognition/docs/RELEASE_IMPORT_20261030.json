@@ -1,0 +1,382 @@
+{
+  "archive_sha256": "46f1cc9efc73426e87e06cca50fb184ce8074cb7c18962639a6eeb5e94037665",
+  "archive_bytes": 62945936,
+  "source_commit": "96b387daa08c3f393bb265e3bb490d80c28ee859",
+  "code_unchanged_from_prior_import": true,
+  "release_url": "https://github.com/Bartley007/WI-FI/releases/tag/module-b-data-models-v1",
+  "files": [
+    {
+      "path": "optimized_final/optimization_summary.md",
+      "bytes": 1481
+    },
+    {
+      "path": "optimized_final/spectral/report_seed42/confusion_matrix.png",
+      "bytes": 125100
+    },
+    {
+      "path": "optimized_final/spectral/report_seed42/confusion_matrix.svg",
+      "bytes": 56353
+    },
+    {
+      "path": "optimized_final/spectral/report_seed42/class_metrics.csv",
+      "bytes": 225
+    },
+    {
+      "path": "optimized_final/spectral/report_seed42/confusion_matrix.csv",
+      "bytes": 180
+    },
+    {
+      "path": "optimized_final/spectral/report_seed42/evaluation_summary.md",
+      "bytes": 782
+    },
+    {
+      "path": "optimized_final/spectral/seed-43/metrics.json",
+      "bytes": 668
+    },
+    {
+      "path": "optimized_final/spectral/seed-43/replay.json",
+      "bytes": 207512
+    },
+    {
+      "path": "optimized_final/spectral/seed-43/model.joblib",
+      "bytes": 36771492
+    },
+    {
+      "path": "optimized_final/spectral/seed-43/audit.jsonl",
+      "bytes": 172
+    },
+    {
+      "path": "optimized_final/spectral/seed-43/evaluation.json",
+      "bytes": 225892
+    },
+    {
+      "path": "optimized_final/spectral/seed-44/metrics.json",
+      "bytes": 667
+    },
+    {
+      "path": "optimized_final/spectral/seed-44/replay.json",
+      "bytes": 207529
+    },
+    {
+      "path": "optimized_final/spectral/seed-44/model.joblib",
+      "bytes": 36828276
+    },
+    {
+      "path": "optimized_final/spectral/seed-44/audit.jsonl",
+      "bytes": 172
+    },
+    {
+      "path": "optimized_final/spectral/seed-44/evaluation.json",
+      "bytes": 225876
+    },
+    {
+      "path": "optimized_final/spectral/seed-42-stable/metrics.json",
+      "bytes": 668
+    },
+    {
+      "path": "optimized_final/spectral/seed-42-stable/replay.json",
+      "bytes": 207526
+    },
+    {
+      "path": "optimized_final/spectral/seed-42-stable/model.joblib",
+      "bytes": 36703060
+    },
+    {
+      "path": "optimized_final/spectral/seed-42-stable/audit.jsonl",
+      "bytes": 173
+    },
+    {
+      "path": "optimized_final/spectral/seed-42-stable/evaluation.json",
+      "bytes": 225890
+    },
+    {
+      "path": "optimized_final/cnn_1d/seed-42/metrics.json",
+      "bytes": 670
+    },
+    {
+      "path": "optimized_final/cnn_1d/seed-42/model.pt",
+      "bytes": 132147
+    },
+    {
+      "path": "optimized_final/cnn_1d/seed-42/replay.json",
+      "bytes": 193246
+    },
+    {
+      "path": "optimized_final/cnn_1d/seed-42/audit.jsonl",
+      "bytes": 154
+    },
+    {
+      "path": "optimized_final/cnn_1d/seed-42/evaluation.json",
+      "bytes": 236263
+    },
+    {
+      "path": "real_final_eval/report_seed43/confusion_matrix.png",
+      "bytes": 135644
+    },
+    {
+      "path": "real_final_eval/report_seed43/confusion_matrix.svg",
+      "bytes": 59358
+    },
+    {
+      "path": "real_final_eval/report_seed43/class_metrics.csv",
+      "bytes": 227
+    },
+    {
+      "path": "real_final_eval/report_seed43/confusion_matrix.csv",
+      "bytes": 191
+    },
+    {
+      "path": "real_final_eval/report_seed43/evaluation_summary.md",
+      "bytes": 793
+    },
+    {
+      "path": "real_final_eval/report_seed42/confusion_matrix.png",
+      "bytes": 130570
+    },
+    {
+      "path": "real_final_eval/report_seed42/confusion_matrix.svg",
+      "bytes": 59189
+    },
+    {
+      "path": "real_final_eval/report_seed42/class_metrics.csv",
+      "bytes": 227
+    },
+    {
+      "path": "real_final_eval/report_seed42/confusion_matrix.csv",
+      "bytes": 191
+    },
+    {
+      "path": "real_final_eval/report_seed42/evaluation_summary.md",
+      "bytes": 793
+    },
+    {
+      "path": "real_final_eval/report_seed43_validation/confusion_matrix.png",
+      "bytes": 136752
+    },
+    {
+      "path": "real_final_eval/report_seed43_validation/confusion_matrix.svg",
+      "bytes": 59688
+    },
+    {
+      "path": "real_final_eval/report_seed43_validation/class_metrics.csv",
+      "bytes": 221
+    },
+    {
+      "path": "real_final_eval/report_seed43_validation/confusion_matrix.csv",
+      "bytes": 190
+    },
+    {
+      "path": "real_final_eval/report_seed43_validation/evaluation_summary.md",
+      "bytes": 798
+    },
+    {
+      "path": "real_final_eval/report_seed43_known_device/confusion_matrix.png",
+      "bytes": 138444
+    },
+    {
+      "path": "real_final_eval/report_seed43_known_device/confusion_matrix.svg",
+      "bytes": 60195
+    },
+    {
+      "path": "real_final_eval/report_seed43_known_device/class_metrics.csv",
+      "bytes": 227
+    },
+    {
+      "path": "real_final_eval/report_seed43_known_device/confusion_matrix.csv",
+      "bytes": 191
+    },
+    {
+      "path": "real_final_eval/report_seed43_known_device/evaluation_summary.md",
+      "bytes": 802
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-43/metrics.json",
+      "bytes": 677
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-43/model.pt",
+      "bytes": 132147
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-43/replay.json",
+      "bytes": 193424
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-43/audit.jsonl",
+      "bytes": 153
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-43/evaluation.json",
+      "bytes": 236365
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-44/metrics.json",
+      "bytes": 677
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-44/model.pt",
+      "bytes": 132147
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-44/replay.json",
+      "bytes": 193658
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-44/audit.jsonl",
+      "bytes": 153
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-44/evaluation.json",
+      "bytes": 236359
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-42/metrics.json",
+      "bytes": 678
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-42/model.pt",
+      "bytes": 132147
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-42/replay.json",
+      "bytes": 193773
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-42/audit.jsonl",
+      "bytes": 153
+    },
+    {
+      "path": "real_final_eval/cnn_1d/seed-42/evaluation.json",
+      "bytes": 7876
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_transformer/seed-42/metrics.json",
+      "bytes": 675
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_transformer/seed-42/model.pt",
+      "bytes": 3758730
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_transformer/seed-42/replay.json",
+      "bytes": 197984
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_transformer/seed-42/audit.jsonl",
+      "bytes": 171
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_transformer/seed-42/evaluation.json",
+      "bytes": 7900
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/confusion_matrix.png",
+      "bytes": 136253
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/metrics.json",
+      "bytes": 674
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/model.pt",
+      "bytes": 363763
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/replay.json",
+      "bytes": 193484
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/confusion_matrix.svg",
+      "bytes": 57981
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/class_metrics.csv",
+      "bytes": 226
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/audit.jsonl",
+      "bytes": 153
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/confusion_matrix.csv",
+      "bytes": 186
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/evaluation_summary.md",
+      "bytes": 795
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d_v2/seed-42/evaluation.json",
+      "bytes": 7876
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d/seed-42/metrics.json",
+      "bytes": 673
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d/seed-42/model.pt",
+      "bytes": 363763
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d/seed-42/replay.json",
+      "bytes": 192201
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d/seed-42/audit.jsonl",
+      "bytes": 154
+    },
+    {
+      "path": "real_eval_window_zscore/cnn_1d/seed-42/evaluation.json",
+      "bytes": 7863
+    },
+    {
+      "path": "spectral_features_2000.npz",
+      "bytes": 40152299
+    },
+    {
+      "path": "tuned_real_config.yaml",
+      "bytes": 1790
+    }
+  ],
+  "selected_model": {
+    "source_commit": "96b387daa08c3f393bb265e3bb490d80c28ee859",
+    "code_commit": "2963e7dd69891b2d3f2bfa0a8aa318b974e3ed91",
+    "release_url": "https://github.com/Bartley007/WI-FI/releases/tag/module-b-data-models-v1",
+    "archive_sha256": "46f1cc9efc73426e87e06cca50fb184ce8074cb7c18962639a6eeb5e94037665",
+    "checkpoint": "outputs/released_v1/optimized_final/spectral/seed-42-stable/model.joblib",
+    "checkpoint_sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687",
+    "model_version": "spectral-ensemble-csi-band-power-v1-seed42-31bb8f0d9c4b3e77",
+    "model_type": "spectral_ensemble",
+    "seed": 42,
+    "confidence_threshold": 0.6,
+    "input_shape": [
+      232,
+      500
+    ],
+    "preprocess": "Author spectral raw-amplitude branch; no CNN z-score",
+    "labels": [
+      "jumping",
+      "running",
+      "seated-breathing",
+      "walking",
+      "wavinghand"
+    ],
+    "feature_sources_sha256": {
+      "experiments/spectral.py": "b0e4e4e7864ba48d74bcf385f5f09d4eb128af1c9dd35d8d275031899183c35e",
+      "experiments/runner.py": "7a3938141cfb1976ec9e445c1e5fc806b47d50c8e30ca567477bd6c5fe89f108",
+      "preprocessing/hdf5_reader.py": "57c2514ecb4383b5fedef7bf512f7a2feceafecef5a82623eddca5b434de7c9f",
+      "preprocessing/quality.py": "10b2560d90c14dd764b42f959afb1a4b3ebb1ff4019f131395600bf27fc1e926"
+    },
+    "sklearn_version": "1.7.2"
+  },
+  "other_seeds_and_CNN_preserved": true,
+  "HAR_dataset_downloaded": false,
+  "training": false,
+  "bundled_feature_cache": {
+    "file": "spectral_features_2000.npz",
+    "feature_width": 3963,
+    "final_model_expected_feature_width": 4195,
+    "usable_for_final_model_parity": false,
+    "action": "Retained historical cache; no cropping, padding or fitting. Raw HP windows produce the required4195 features."
+  }
+}

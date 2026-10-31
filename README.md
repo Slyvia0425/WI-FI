@@ -1,5 +1,18 @@
 # WiFi Sense：无摄像头、无穿戴的 WiFi 人体活动与跌倒感知
 
+## B + C 集成演示（2026-10-30）
+
+B/C训练权重和配套模型数据见 [模型发布与恢复说明](model_artifacts/README.md)。运行 `python3 scripts/restore_bc_models.py` 恢复当前模型，添加 `--all` 可恢复所有35个历史/当前权重文件。
+
+代码交付、模型文件位置及独立HP混合ResNet18候选的结果见 [B/C代码交付说明](docs/BC_RESNET18_CODE_DELIVERY.md)。候选模型未替换当前运行模型。
+
+最新默认规则：B置信度<0.6才运行C；高置信度时C未评估，不表示未跌倒。验证回放会跳过51条真实Fall，具体见[门控说明](docs/B_LOW_CONFIDENCE_GATE.md)。下段保留此前并行接口背景。
+
+Module B已接入作者新发布的频谱ExtraTrees seed42参数；Module C使用CSI-Bench官方ResNet18，显示926条HP验证分数，阈值0.574872。B实际读取同一原始分段并按内容身份配对，只作为活动参考，不修改C分数。B无Fall类，当前分段无五类动作真值，未评价联合准确率。此前TCS D回放已单独归档。运行 `python3 scripts/serve_demo.py` 后打开 http://localhost:5173/#/module/fall_detection 。
+
+最新接口、启动与缺项见 [ResNet18 + B交接说明](docs/RESNET_B_HANDOFF.md)；[旧版TCS交接](docs/BC_DEMO_HANDOFF.md)保留作历史记录。B/C使用同一原始HP输入；其余模块数据未同步，五模块融合页只展示预期规则效果。
+
+
 基于 WiFi CSI 的室内感知研究原型，面向单人房间的非临床安全监测（模式识别系统实践模块课程项目）。
 五个感知模块分别处理 CSI 数据，再由一层透明的规则式融合把各模块输出合成房间状态和安全提示。
 网站展示每个模块的工作过程，以及一张"集成后预期效果"的平面图。

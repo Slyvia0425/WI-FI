@@ -1,0 +1,57 @@
+{
+  "protected_artifacts": {
+    "old_artifacts_checked": 14,
+    "hp_frozen_model_and_source_unchanged": true
+  },
+  "backend_test_log": "..............................\n----------------------------------------------------------------------\nRan 30 tests in 0.130s\n\nOK\n",
+  "module_b_test_log": ".................{\"action\": \"train_model\", \"event\": \"operation.started\", \"model\": \"cnn_1d\", \"samples\": 10, \"seed\": 42, \"status\": \"started\", \"ts\": 1793292206.0928798}\n{\"action\": \"train_model\", \"duration_ms\": 1426.046, \"event\": \"operation.succeeded\", \"model\": \"cnn_1d\", \"samples\": 10, \"seed\": 42, \"status\": \"succeeded\", \"ts\": 1793292207.518966}\n{\"action\": \"train_model\", \"event\": \"operation.started\", \"model\": \"cnn_transformer\", \"samples\": 10, \"seed\": 42, \"status\": \"started\", \"ts\": 1793292207.523176}\n{\"action\": \"train_model\", \"duration_ms\": 456.716, \"event\": \"operation.succeeded\", \"model\": \"cnn_transformer\", \"samples\": 10, \"seed\": 42, \"status\": \"succeeded\", \"ts\": 1793292207.9799092}\n...................{\n  \"ok\": true,\n  \"dry_run\": false,\n  \"destination\": \"/private/var/folders/rg/djfvhxzj2sb0z3vbglx45fjr0000gn/T/tmpzbjynbzk/subset\",\n  \"file_count\": 2,\n  \"total_bytes\": 14\n}\nexport HAR_DATA_ROOT=/private/var/folders/rg/djfvhxzj2sb0z3vbglx45fjr0000gn/T/tmpzbjynbzk/subset\n{\"code\": \"MODEL_UNAVAILABLE\", \"event\": \"service.error\", \"message\": \"model checkpoint not found\", \"ts\": 1793292208.029912}\n.{\"action\": \"train_model\", \"event\": \"operation.started\", \"model\": \"cnn_1d\", \"samples\": 16, \"seed\": 7, \"status\": \"started\", \"ts\": 1793292208.037659}\n{\"action\": \"train_model\", \"duration_ms\": 12.425, \"event\": \"operation.succeeded\", \"model\": \"cnn_1d\", \"samples\": 16, \"seed\": 7, \"status\": \"succeeded\", \"ts\": 1793292208.050087}\n{\"action\": \"predict\", \"actor\": \"researcher\", \"event\": \"operation.started\", \"quality\": \"good\", \"status\": \"started\", \"ts\": 1793292208.05722}\n{\"action\": \"predict\", \"actor\": \"researcher\", \"duration_ms\": 0.664, \"event\": \"operation.succeeded\", \"quality\": \"good\", \"status\": \"succeeded\", \"ts\": 1793292208.057886}\n........\n----------------------------------------------------------------------\nRan 45 tests in 2.347s\n\nOK\n",
+  "new_process_checks": {
+    "new_process_per_case": true,
+    "raw_validation_inputs_only": true,
+    "test_inference": false,
+    "threshold_retuned": false,
+    "checks": [
+      {
+        "case": "true_positive",
+        "sample_id": "Human_U07_Fall_E21_HP_2176000",
+        "fall_score": 0.9996678829193115,
+        "saved_score": 0.9996678829193115,
+        "max_abs_difference": 0.0,
+        "input_identity_matches_export": true,
+        "B_missing_did_not_block_C": true
+      },
+      {
+        "case": "true_negative",
+        "sample_id": "Human_U09_Nonfall_E23_HP_11095000",
+        "fall_score": 0.046279121190309525,
+        "saved_score": 0.046279143542051315,
+        "max_abs_difference": 2.2351741790771484e-08,
+        "input_identity_matches_export": true,
+        "B_missing_did_not_block_C": true
+      },
+      {
+        "case": "false_positive",
+        "sample_id": "Human_U09_Nonfall_E23_HP_11103000",
+        "fall_score": 0.9888263940811157,
+        "saved_score": 0.9888263940811157,
+        "max_abs_difference": 0.0,
+        "input_identity_matches_export": true,
+        "B_missing_did_not_block_C": true
+      },
+      {
+        "case": "false_negative",
+        "sample_id": "Human_U10_Fall_E23_HP_2547000",
+        "fall_score": 0.3542289733886719,
+        "saved_score": 0.35422900319099426,
+        "max_abs_difference": 2.9802322387695312e-08,
+        "input_identity_matches_export": true,
+        "B_missing_did_not_block_C": true
+      }
+    ]
+  },
+  "frontend_build_passed": true,
+  "retraining": false,
+  "threshold_changed": false,
+  "new_test_predictions": false,
+  "real_B_model_available": false
+}

@@ -35,6 +35,17 @@ export default function FusionPage() {
       </header>
       <Notice>{DISCLAIMER}</Notice>
       {missing.length > 0 && <Notice kind="warn">No data from {missing.join(', ')}. They show as "no data" below and the rest keep working.</Notice>}
+      <section className="card" style={{ marginBottom: 24 }}>
+        <h3>INPUT PROVENANCE</h3>
+        <p className="sm">B now uses the author-released spectral model on the same raw HP segments as C; the fall page verifies each reference by input identity. Other modules remain independent. TCS is archived separately. This five-module table remains an interface demonstration, not synchronised multi-module evaluation.</p>
+        <div className="tblwrap"><table className="mt">
+          <thead><tr><th>Module</th><th>Data shown</th><th>Frames</th><th>Joint recording</th></tr></thead>
+          <tbody>{MODULES.map((m) => <tr key={m.id}>
+            <td>{m.title}</td><td>{!all[m.id] ? 'Unavailable' : all[m.id].mock ? 'Synthetic / placeholder fixture' : `${all[m.id].dataset || 'Recorded'} ${all[m.id].split || 'results'}`}</td>
+            <td>{all[m.id]?.frames?.length ?? 0}</td><td>Not established</td>
+          </tr>)}</tbody>
+        </table></div>
+      </section>
 
       <section className="stage">
         <div className="stage-head"><div className="stage-num">1</div><div><div className="kicker dim" style={{ padding: 0 }}>RESULT</div><h2>Fusion replay</h2></div></div>

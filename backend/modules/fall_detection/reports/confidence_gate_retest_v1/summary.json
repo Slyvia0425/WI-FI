@@ -1,0 +1,65 @@
+{
+  "n": 951,
+  "actual_B_predictions": 951,
+  "actual_C_model_loads": 1,
+  "actual_C_forward_calls": 626,
+  "C_called_on_skipped_inputs": false,
+  "HP_validation": {
+    "run_C": 621,
+    "Fall_run": 339,
+    "C_Fall": 354,
+    "skip_C": 305,
+    "Fall_skipped": 51,
+    "Nonfall_skipped": 254,
+    "Nonfall_run": 282,
+    "C_Nonfall": 267
+  },
+  "HP_validation_C_selected_confusion": {
+    "tp": 333,
+    "fp": 21,
+    "tn": 261,
+    "fn": 6
+  },
+  "HAR_activity_probe": {
+    "skip_C": 20,
+    "run_C": 5,
+    "C_Fall": 5
+  },
+  "HAR_by_activity": {
+    "jumping": {
+      "skip_C": 4,
+      "run_C": 1,
+      "C_Fall": 1
+    },
+    "running": {
+      "skip_C": 4,
+      "run_C": 1,
+      "C_Fall": 1
+    },
+    "seated-breathing": {
+      "skip_C": 5
+    },
+    "walking": {
+      "run_C": 1,
+      "C_Fall": 1,
+      "skip_C": 4
+    },
+    "wavinghand": {
+      "run_C": 2,
+      "C_Fall": 2,
+      "skip_C": 3
+    }
+  },
+  "max_B_confidence_abs_difference": 2.220446049250313e-16,
+  "max_C_score_abs_difference": 1.341104507446289e-07,
+  "weights_threshold_policy_production_replays_unchanged": true,
+  "wall_seconds_including_loads_io_and_inference": 62.265758249996,
+  "timing_note": "Whole diagnostic run duration, not per-sample latency or alarm latency",
+  "C_threshold": 0.574872225522995,
+  "B_cutoff": 0.6,
+  "evidence_limits": [
+    "These are already-used validation examples, not independent generalization tests.",
+    "Skipped C outputs remain unknown, not Nonfall.",
+    "HAR activity labels are not framewise no-fall truth; HAR triggers are not strict false-positive rate."
+  ]
+}

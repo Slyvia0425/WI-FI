@@ -1,0 +1,15 @@
+{
+  "version": "csi-bench-resnet18-b-context-v1",
+  "candidate_kind": "official_resnet18",
+  "seed": 42,
+  "checkpoint": "outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "threshold": 0.574872225522995,
+  "threshold_origin": "Previously selected global validation Fall F1 operating point; not retuned for integration",
+  "label_mapping": {
+    "Fall": 0,
+    "Nonfall": 1
+  },
+  "scope": "HP validation for B/C interface integration; original architecture-selection result is preserved",
+  "source_commit": "b1beac7b0fa46e01748901195ecfbe309dfc0180"
+}

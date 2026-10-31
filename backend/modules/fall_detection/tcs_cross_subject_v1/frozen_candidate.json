@@ -1,0 +1,15 @@
+{
+  "model_version": "tcs_cross_subject_SA_CT_standardized_GCV_seed42_v1",
+  "checkpoint": "outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_standardized_GCV/best.pt",
+  "checkpoint_sha256": "77a87c8b6da3552dab1cd827429ee08e878d8f9d7d5daefcc8b21c577c40190e",
+  "sources_sha256": {
+    "tcs_withinsubject_v1/model.py": "1896b54ab1b44e78c3ce484a33c050fc6ccc4e15a605dd3ba9d020a6889d65b2",
+    "tcs_withinsubject_v1/prepare.py": "4cffb14cfd8a22ddf7f5a702b7899a1a4aeb0ffe853c6b9f66ca0242a246c0bc",
+    "tcs_fall_audit_v1/audit_local_archives.py": "2fbdb593b00acde7538b7e9a0d38970a529905c1d8876e0764e25e0295ee9542"
+  },
+  "threshold": 0.5,
+  "normalization_required": true,
+  "input": "Intel5300 native .dat; Tx0,3Rx\u00d730 positions;8000 complete packets",
+  "scope": "Frozen D integration candidate; research prototype, not final deployment validation",
+  "best_epoch": 15
+}

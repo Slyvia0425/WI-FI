@@ -1,0 +1,562 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.43923517479041796,
+    "val_loss": 0.3402860770270949,
+    "seconds": 41.20777153968811,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 330,
+      "FP": 84,
+      "FN": 60,
+      "TN": 452,
+      "precision": 0.7971014492753623,
+      "recall": 0.8461538461538461,
+      "F1": 0.8208955223880597,
+      "nonfall_trigger_rate": 0.15671641791044777
+    },
+    "HAR_val_triggered_05": 20
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.22551105292731688,
+    "val_loss": 0.3858515025529921,
+    "seconds": 41.659546852111816,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 369,
+      "FP": 133,
+      "FN": 21,
+      "TN": 403,
+      "precision": 0.7350597609561753,
+      "recall": 0.9461538461538461,
+      "F1": 0.827354260089686,
+      "nonfall_trigger_rate": 0.24813432835820895
+    },
+    "HAR_val_triggered_05": 19
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.16387071983367563,
+    "val_loss": 0.20531770639150398,
+    "seconds": 41.56763029098511,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 356,
+      "FP": 51,
+      "FN": 34,
+      "TN": 485,
+      "precision": 0.8746928746928747,
+      "recall": 0.9128205128205128,
+      "F1": 0.8933500627352572,
+      "nonfall_trigger_rate": 0.09514925373134328
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.1395258577222717,
+    "val_loss": 0.16096392429402187,
+    "seconds": 42.205764055252075,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 375,
+      "FP": 50,
+      "FN": 15,
+      "TN": 486,
+      "precision": 0.8823529411764706,
+      "recall": 0.9615384615384616,
+      "F1": 0.9202453987730062,
+      "nonfall_trigger_rate": 0.09328358208955224
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.10799467875894643,
+    "val_loss": 0.19174375480955483,
+    "seconds": 41.45605134963989,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 349,
+      "FP": 32,
+      "FN": 41,
+      "TN": 504,
+      "precision": 0.916010498687664,
+      "recall": 0.8948717948717949,
+      "F1": 0.9053177691309987,
+      "nonfall_trigger_rate": 0.05970149253731343
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.08778848156725957,
+    "val_loss": 0.11097493808056577,
+    "seconds": 41.64266347885132,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 381,
+      "FP": 36,
+      "FN": 9,
+      "TN": 500,
+      "precision": 0.9136690647482014,
+      "recall": 0.9769230769230769,
+      "F1": 0.9442379182156134,
+      "nonfall_trigger_rate": 0.06716417910447761
+    },
+    "HAR_val_triggered_05": 2
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.08450031599602172,
+    "val_loss": 0.19629939076083097,
+    "seconds": 41.6404504776001,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 344,
+      "FP": 27,
+      "FN": 46,
+      "TN": 509,
+      "precision": 0.9272237196765498,
+      "recall": 0.882051282051282,
+      "F1": 0.9040735873850198,
+      "nonfall_trigger_rate": 0.05037313432835821
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.07943859512663155,
+    "val_loss": 0.12434958366634573,
+    "seconds": 41.73568630218506,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 389,
+      "FP": 69,
+      "FN": 1,
+      "TN": 467,
+      "precision": 0.8493449781659389,
+      "recall": 0.9974358974358974,
+      "F1": 0.9174528301886793,
+      "nonfall_trigger_rate": 0.1287313432835821
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.06231953705253411,
+    "val_loss": 0.1714954616216652,
+    "seconds": 42.26586365699768,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 353,
+      "FP": 16,
+      "FN": 37,
+      "TN": 520,
+      "precision": 0.9566395663956639,
+      "recall": 0.9051282051282051,
+      "F1": 0.930171277997365,
+      "nonfall_trigger_rate": 0.029850746268656716
+    },
+    "HAR_val_triggered_05": 4
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.04978218419700455,
+    "val_loss": 0.09051547730874515,
+    "seconds": 41.889448404312134,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 380,
+      "FP": 31,
+      "FN": 10,
+      "TN": 505,
+      "precision": 0.9245742092457421,
+      "recall": 0.9743589743589743,
+      "F1": 0.9488139825218477,
+      "nonfall_trigger_rate": 0.05783582089552239
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.035534955074570475,
+    "val_loss": 0.09653106152096394,
+    "seconds": 42.021875858306885,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 387,
+      "FP": 35,
+      "FN": 3,
+      "TN": 501,
+      "precision": 0.9170616113744076,
+      "recall": 0.9923076923076923,
+      "F1": 0.9532019704433498,
+      "nonfall_trigger_rate": 0.06529850746268656
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.05287224960631392,
+    "val_loss": 0.11346473117411651,
+    "seconds": 41.887407302856445,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 374,
+      "FP": 34,
+      "FN": 16,
+      "TN": 502,
+      "precision": 0.9166666666666666,
+      "recall": 0.958974358974359,
+      "F1": 0.9373433583959899,
+      "nonfall_trigger_rate": 0.06343283582089553
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.06099821805659224,
+    "val_loss": 0.30621680048018496,
+    "seconds": 41.999948263168335,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 326,
+      "FP": 32,
+      "FN": 64,
+      "TN": 504,
+      "precision": 0.9106145251396648,
+      "recall": 0.8358974358974359,
+      "F1": 0.8716577540106952,
+      "nonfall_trigger_rate": 0.05970149253731343
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.08301628630442627,
+    "val_loss": 0.11043065287197318,
+    "seconds": 41.90502381324768,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 384,
+      "FP": 38,
+      "FN": 6,
+      "TN": 498,
+      "precision": 0.909952606635071,
+      "recall": 0.9846153846153847,
+      "F1": 0.9458128078817734,
+      "nonfall_trigger_rate": 0.0708955223880597
+    },
+    "HAR_val_triggered_05": 2
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.032952695454994976,
+    "val_loss": 0.08398669894963394,
+    "seconds": 41.72261095046997,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 387,
+      "FP": 34,
+      "FN": 3,
+      "TN": 502,
+      "precision": 0.9192399049881235,
+      "recall": 0.9923076923076923,
+      "F1": 0.9543773119605425,
+      "nonfall_trigger_rate": 0.06343283582089553
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 16,
+    "train_loss": 0.02574827848655321,
+    "val_loss": 0.09209459221088068,
+    "seconds": 42.198041915893555,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 386,
+      "FP": 32,
+      "FN": 4,
+      "TN": 504,
+      "precision": 0.9234449760765551,
+      "recall": 0.9897435897435898,
+      "F1": 0.9554455445544554,
+      "nonfall_trigger_rate": 0.05970149253731343
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 17,
+    "train_loss": 0.0198521998124847,
+    "val_loss": 0.1060830852425708,
+    "seconds": 42.44939613342285,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 381,
+      "FP": 32,
+      "FN": 9,
+      "TN": 504,
+      "precision": 0.9225181598062954,
+      "recall": 0.9769230769230769,
+      "F1": 0.9489414694894147,
+      "nonfall_trigger_rate": 0.05970149253731343
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 18,
+    "train_loss": 0.01855063467020484,
+    "val_loss": 0.07557840866807472,
+    "seconds": 41.81923985481262,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 384,
+      "FP": 16,
+      "FN": 6,
+      "TN": 520,
+      "precision": 0.96,
+      "recall": 0.9846153846153847,
+      "F1": 0.9721518987341772,
+      "nonfall_trigger_rate": 0.029850746268656716
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 19,
+    "train_loss": 0.02270387542735302,
+    "val_loss": 0.10114726814842744,
+    "seconds": 41.749531745910645,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 387,
+      "FP": 36,
+      "FN": 3,
+      "TN": 500,
+      "precision": 0.9148936170212766,
+      "recall": 0.9923076923076923,
+      "F1": 0.9520295202952029,
+      "nonfall_trigger_rate": 0.06716417910447761
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 20,
+    "train_loss": 0.05546047827709192,
+    "val_loss": 0.21780861700770954,
+    "seconds": 42.20784091949463,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 346,
+      "FP": 19,
+      "FN": 44,
+      "TN": 517,
+      "precision": 0.947945205479452,
+      "recall": 0.8871794871794871,
+      "F1": 0.9165562913907285,
+      "nonfall_trigger_rate": 0.03544776119402985
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 21,
+    "train_loss": 0.06652699258118817,
+    "val_loss": 0.12110892781892606,
+    "seconds": 41.727962017059326,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 386,
+      "FP": 40,
+      "FN": 4,
+      "TN": 496,
+      "precision": 0.9061032863849765,
+      "recall": 0.9897435897435898,
+      "F1": 0.946078431372549,
+      "nonfall_trigger_rate": 0.07462686567164178
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 22,
+    "train_loss": 0.018799132340968173,
+    "val_loss": 0.07624536273427378,
+    "seconds": 41.71910262107849,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 387,
+      "FP": 27,
+      "FN": 3,
+      "TN": 509,
+      "precision": 0.9347826086956522,
+      "recall": 0.9923076923076923,
+      "F1": 0.9626865671641791,
+      "nonfall_trigger_rate": 0.05037313432835821
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 23,
+    "train_loss": 0.020673211032835398,
+    "val_loss": 0.09218597724020113,
+    "seconds": 41.66938829421997,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 381,
+      "FP": 30,
+      "FN": 9,
+      "TN": 506,
+      "precision": 0.927007299270073,
+      "recall": 0.9769230769230769,
+      "F1": 0.951310861423221,
+      "nonfall_trigger_rate": 0.055970149253731345
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 24,
+    "train_loss": 0.018703954872701184,
+    "val_loss": 0.08236633783424649,
+    "seconds": 41.884931802749634,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 389,
+      "FP": 23,
+      "FN": 1,
+      "TN": 513,
+      "precision": 0.9441747572815534,
+      "recall": 0.9974358974358974,
+      "F1": 0.970074812967581,
+      "nonfall_trigger_rate": 0.04291044776119403
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 25,
+    "train_loss": 0.014834036417631582,
+    "val_loss": 0.08183847255180042,
+    "seconds": 41.965386629104614,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 388,
+      "FP": 27,
+      "FN": 2,
+      "TN": 509,
+      "precision": 0.9349397590361446,
+      "recall": 0.9948717948717949,
+      "F1": 0.9639751552795031,
+      "nonfall_trigger_rate": 0.05037313432835821
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 26,
+    "train_loss": 0.02875407914663699,
+    "val_loss": 0.13666494781196933,
+    "seconds": 41.79639983177185,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 388,
+      "FP": 52,
+      "FN": 2,
+      "TN": 484,
+      "precision": 0.8818181818181818,
+      "recall": 0.9948717948717949,
+      "F1": 0.9349397590361446,
+      "nonfall_trigger_rate": 0.09701492537313433
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 27,
+    "train_loss": 0.04291420787943758,
+    "val_loss": 0.13792049610405946,
+    "seconds": 41.89141583442688,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 370,
+      "FP": 25,
+      "FN": 20,
+      "TN": 511,
+      "precision": 0.9367088607594937,
+      "recall": 0.9487179487179487,
+      "F1": 0.9426751592356688,
+      "nonfall_trigger_rate": 0.04664179104477612
+    },
+    "HAR_val_triggered_05": 0
+  },
+  {
+    "epoch": 28,
+    "train_loss": 0.033112694328051105,
+    "val_loss": 0.10181076244369068,
+    "seconds": 41.94124698638916,
+    "FallDetection_val_05": {
+      "n": 926,
+      "Fall": 390,
+      "Nonfall": 536,
+      "TP": 381,
+      "FP": 31,
+      "FN": 9,
+      "TN": 505,
+      "precision": 0.9247572815533981,
+      "recall": 0.9769230769230769,
+      "F1": 0.9501246882793017,
+      "nonfall_trigger_rate": 0.05783582089552239
+    },
+    "HAR_val_triggered_05": 0
+  }
+]

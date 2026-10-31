@@ -1,0 +1,1 @@
+{"version":"B_low_confidence_C_v1","enabled":true,"B_confidence_cutoff":0.6,"comparison":"confidence < cutoff","unavailable_B":"do not run C; return not_evaluated","skipped_C":"no score or binary C decision; never substitute Nonfall"}

@@ -1,0 +1,9 @@
+{
+  "source": "Previously saved25 HAR activity probe records; routing simulation only",
+  "n": 25,
+  "C_selected": 5,
+  "C_skipped": 20,
+  "C_Fall_triggers_before": 17,
+  "C_Fall_triggers_selected": 5,
+  "not_strict_false_positive_rate": true
+}

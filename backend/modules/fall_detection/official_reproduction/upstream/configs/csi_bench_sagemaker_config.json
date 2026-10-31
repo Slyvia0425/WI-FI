@@ -1,0 +1,42 @@
+{
+  "pipeline": "supervised",
+  "s3_data_base": "s3://YOUR-BUCKET/CSI-Bench/",
+  "s3_output_base": "s3://YOUR-BUCKET/CSI-Bench-Results/",
+  "win_len": 500,
+  "feature_size": 232,
+  "seed": 42,
+  "seeds": [42],
+  "batch_size": 128,
+  "epochs": 100,
+  "learning_rate": 1e-3,
+  "weight_decay": 1e-5,
+  "warmup_epochs": 5,
+  "patience": 15,
+  "test_splits": "all",
+  "instance_type": ["ml.g5.12xlarge"],
+  "instance_count": 1,
+  "framework_version": "2.0.0",
+  "py_version": "py310",
+  "base_job_name": "csi-bench",
+  "available_models": [
+    "mlp",
+    "lstm",
+    "resnet18",
+    "transformer",
+    "vit",
+    "patchtst",
+    "timesformer1d"
+  ],
+  "available_tasks": [
+    "FallDetection",
+    "BreathingDetection",
+    "Localization",
+    "MotionSourceRecognition",
+    "HumanActivityRecognition",
+    "HumanIdentification",
+    "ProximityRecognition"
+  ],
+  "file_format": "h5",
+  "num_workers": 4,
+  "use_root_data_path": true
+}

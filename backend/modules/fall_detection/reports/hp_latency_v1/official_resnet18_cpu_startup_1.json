@@ -1,0 +1,16 @@
+{
+  "kind": "official_resnet18",
+  "backend": "cpu",
+  "seed": 42,
+  "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "threshold_used_for_timing_only": 0.5,
+  "batch_size": 1,
+  "load_model_and_integrity_check_ms": 1572.962084,
+  "first_file_pipeline_ms": 55.501542,
+  "process_code_to_first_result_ms": 3143.409,
+  "first_fall_score": 0.9987490177154541,
+  "first_prediction_is_fall": true,
+  "trial": 1,
+  "parent_process_wall_through_exit_ms": 3661.541
+}

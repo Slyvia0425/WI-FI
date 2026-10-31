@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "stop_reason": "early_stopping",
+  "epochs": 28,
+  "best_epoch": 18,
+  "best_val_loss": 0.07557840866807472,
+  "checkpoint_sha256": "9ec1016f6d3fbce2f76b686ba839a90e1baa6ba882102f9af28fd5599ae9ae9d"
+}

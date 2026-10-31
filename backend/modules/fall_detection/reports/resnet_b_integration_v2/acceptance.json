@@ -1,0 +1,99 @@
+{
+  "protected_previous_models": {
+    "old_artifacts_checked": 14,
+    "hp_frozen_model_and_source_unchanged": true
+  },
+  "backend_tests_passed": 32,
+  "module_B_tests_passed": 45,
+  "frontend_build_passed": true,
+  "paired_inference": {
+    "records": 926,
+    "reference": {
+      "aligned": 926,
+      "total": 926,
+      "affects_fall_score": false,
+      "display_time_used_for_alignment": false
+    },
+    "B_activity_counts": {
+      "jumping": 215,
+      "seated-breathing": 393,
+      "walking": 64,
+      "wavinghand": 243,
+      "running": 11
+    },
+    "confidence_ge_0_6": 305,
+    "B_export_wall_seconds": 8.807546583004296,
+    "C_scores_thresholds_states_unchanged": true,
+    "HAR_activity_ground_truth_available": false,
+    "joint_accuracy_evaluated": false,
+    "new_training": false,
+    "new_C_test_predictions": false,
+    "B_checkpoint_sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687"
+  },
+  "independent_process_checks": {
+    "new_process_per_case": true,
+    "real_B_and_C_loaded": true,
+    "raw_validation_inputs_only": true,
+    "new_test_inference": false,
+    "checks": [
+      {
+        "case": "true_positive",
+        "C_score": 0.9996678829193115,
+        "C_score_abs_difference": 0.0,
+        "B_activity": "jumping",
+        "B_confidence": 0.44496296296296267,
+        "B_confidence_abs_difference": 0.0,
+        "alignment": "exact_input",
+        "C_state": "suspected",
+        "C_state_unchanged": true,
+        "C_threshold": 0.574872225522995
+      },
+      {
+        "case": "true_negative",
+        "C_score": 0.046279121190309525,
+        "C_score_abs_difference": 2.2351741790771484e-08,
+        "B_activity": "seated-breathing",
+        "B_confidence": 0.8587592592592593,
+        "B_confidence_abs_difference": 0.0,
+        "alignment": "exact_input",
+        "C_state": "normal",
+        "C_state_unchanged": true,
+        "C_threshold": 0.574872225522995
+      },
+      {
+        "case": "false_positive",
+        "C_score": 0.9888263940811157,
+        "C_score_abs_difference": 0.0,
+        "B_activity": "wavinghand",
+        "B_confidence": 0.42172222222222217,
+        "B_confidence_abs_difference": 0.0,
+        "alignment": "exact_input",
+        "C_state": "suspected",
+        "C_state_unchanged": true,
+        "C_threshold": 0.574872225522995
+      },
+      {
+        "case": "false_negative",
+        "C_score": 0.3542289733886719,
+        "C_score_abs_difference": 2.9802322387695312e-08,
+        "B_activity": "jumping",
+        "B_confidence": 0.41575925925925916,
+        "B_confidence_abs_difference": 0.0,
+        "alignment": "exact_input",
+        "C_state": "normal",
+        "C_state_unchanged": true,
+        "C_threshold": 0.574872225522995
+      }
+    ]
+  },
+  "environment": {
+    "sklearn": "1.7.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "joblib": "1.6.0"
+  },
+  "HAR_feature_cache_incompatible_and_not_used": true,
+  "formal_retraining": false,
+  "C_threshold_retuned": false,
+  "new_C_test_evaluation": false
+}

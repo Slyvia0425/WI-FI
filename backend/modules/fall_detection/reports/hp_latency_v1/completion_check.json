@@ -1,0 +1,9 @@
+{
+  "old_preserved_artifacts_checked": 14,
+  "old_artifacts_changed": [],
+  "new_scripts_parse": true,
+  "benchmark_completed": true,
+  "inference_source_hashes_unchanged": true,
+  "threshold_changed": false,
+  "training_run": false
+}

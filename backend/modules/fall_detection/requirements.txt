@@ -1,0 +1,18 @@
+# Stages 1 and 2: audit, download, complete-segment tensors and inspection plots.
+h5py>=3.11,<4
+numpy>=2,<3
+requests>=2.32,<3
+remotezip==0.12.6
+torch>=2.5,<3
+matplotlib>=3.9,<4
+
+# TCS-Fall Butterworth/GCV preprocessing and frozen inference.
+scipy>=1.14,<2
+
+# Official CSI-Bench ResNet18 inference.
+torchvision>=0.20,<1
+
+# Author-released Module B spectral model used as advisory context.
+scikit-learn==1.7.2
+joblib>=1.4,<2
+PyYAML>=6,<7

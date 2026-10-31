@@ -7,8 +7,8 @@ export default {
   navLabel: "Fall detection",
   title: "Fall detection",
   role: "fall",
-  blurb: "Fall or non-fall score with temporal alert evidence.",
+  blurb: "B confidence below0.6 triggers the frozen ResNet18 C.",
   owner: '',
-  summarize: (f) => `score ${f.fall_score.toFixed(2)}`,
+  summarize: (f) => f.state === 'not_evaluated' ? 'C not evaluated' : `score ${f.fall_score.toFixed(2)}`,
   danger: true,
 }

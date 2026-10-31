@@ -1,0 +1,5 @@
+local_data/
+fixtures/generated/
+outputs/*
+!outputs/.gitkeep
+!outputs/replay.json

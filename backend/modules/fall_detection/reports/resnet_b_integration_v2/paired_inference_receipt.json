@@ -1,0 +1,24 @@
+{
+  "records": 926,
+  "reference": {
+    "aligned": 926,
+    "total": 926,
+    "affects_fall_score": false,
+    "display_time_used_for_alignment": false
+  },
+  "B_activity_counts": {
+    "jumping": 215,
+    "seated-breathing": 393,
+    "walking": 64,
+    "wavinghand": 243,
+    "running": 11
+  },
+  "confidence_ge_0_6": 305,
+  "B_export_wall_seconds": 8.807546583004296,
+  "C_scores_thresholds_states_unchanged": true,
+  "HAR_activity_ground_truth_available": false,
+  "joint_accuracy_evaluated": false,
+  "new_training": false,
+  "new_C_test_predictions": false,
+  "B_checkpoint_sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687"
+}

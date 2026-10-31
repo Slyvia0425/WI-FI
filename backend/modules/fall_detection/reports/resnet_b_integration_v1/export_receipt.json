@@ -1,0 +1,20 @@
+{
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "predictions_sha256": "ffe4aa54a7615b1eb8c9ed4d0601bbed4cc943438e561bd98b5ac758cebc0854",
+  "threshold": 0.574872225522995,
+  "records": 926,
+  "metrics": {
+    "n": 926,
+    "tp": 384,
+    "fp": 23,
+    "fn": 6,
+    "tn": 513,
+    "precision": 0.9434889434889435,
+    "recall": 0.9846153846153847,
+    "f1": 0.9636135508155583
+  },
+  "test_inference": false,
+  "retraining": false,
+  "threshold_retuned": false,
+  "labels_from_original_manifest": true
+}

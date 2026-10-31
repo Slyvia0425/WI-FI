@@ -1,24 +1,24 @@
-// Plan for this module. Edit freely: add, remove or reword items, and move `s` from 'planned' to 'doing' to 'done'.
-// Starting text follows the team proposal.
 const p = (t, s = 'planned') => ({ t, s })
-
 export default {
   preprocessing: [
-    p("Read FallDetection data with the official splits; windowing and quality marks"),
-    p("List hard cases the data does not cover: quick sit, lying down on purpose, strong motion, interference"),
+    p('CSI-Bench HP [232,500,1] amplitudes; preserve the official ResNet18 preprocessing', 'done'),
+    p('Interface carries same-input identity; each module keeps its own preprocessing', 'done'),
+    p('Do not match unrelated predictions by replay display time', 'done'),
   ],
   training: [
-    p("1D-CNN baseline"),
-    p("1D-CNN + LSTM for the order of changes before and after a fall"),
-    p("Class weights, early stopping, repeated runs"),
+    p('Reuse the CSI-Bench official ResNet18 seed42 weights; best epoch12', 'done'),
+    p('Preserve earlier 1D-CNN and TCS models as separate experiments', 'done'),
+    p('No ResNet18-to-TCS fine-tuning has been performed', 'done'),
   ],
   experiments: [
-    p("Threshold chosen on validation data only"),
-    p("Single-window score vs consecutive-window rule, with activity-change evidence from activity recognition"),
+    p('Run C only for paired B confidence <0.6; otherwise return not evaluated', 'done'),
+    p('Accept B context only for an exact input or an explicit same-clock overlapping window', 'done'),
+    p('Load author-released B seed42 and produce same-raw-input HP predictions', 'done'),
   ],
   evaluation: [
-    p("Fall recall, precision and F1; false alarms and the hard cases"),
-    p("Event-level recall, false alarms per hour and alert delay, only if continuous recordings exist"),
-    p("State machine: normal, suspected fall, sustained high risk"),
+    p('Show all926 HP validation segment scores and original operating point', 'done'),
+    p('New-process ResNet18 reload and raw HDF5 inference', 'done'),
+    p('Report routing coverage and real Fall segments skipped by the gate', 'done'),
+    p('Joint B/C accuracy on paired real recordings'),
   ],
 }

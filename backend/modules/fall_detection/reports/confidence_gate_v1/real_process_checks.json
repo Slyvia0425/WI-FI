@@ -1,0 +1,26 @@
+[
+  {
+    "case": "low_B_fall",
+    "B_confidence": 0.39724074074074067,
+    "C_ran": true,
+    "C_prediction": "Fall",
+    "C_score": 0.9990915060043335,
+    "C_execution": "fresh_inference"
+  },
+  {
+    "case": "high_B_running",
+    "B_confidence": 0.8944814814814813,
+    "C_ran": false,
+    "C_prediction": null,
+    "C_score": null,
+    "C_execution": "C_not_loaded_or_run"
+  },
+  {
+    "case": "high_B_real_fall",
+    "B_confidence": 0.7075925925925931,
+    "C_ran": false,
+    "C_prediction": null,
+    "C_score": null,
+    "C_execution": "C_not_loaded_or_run"
+  }
+]

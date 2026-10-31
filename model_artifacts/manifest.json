@@ -1,0 +1,1173 @@
+{
+  "version": 1,
+  "repository": "Slyvia0425/WI-FI",
+  "release_tag": "bc-models-20261031-v1",
+  "model_count": 35,
+  "application_model_unchanged": true,
+  "active_c_threshold": 0.574872225522995,
+  "candidate_threshold_for_independent_comparison": 0.5,
+  "raw_csi_included": false,
+  "feature_caches_included": false,
+  "files": {
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/cnn_1d/seed-42/audit.jsonl": {
+      "bytes": 154,
+      "sha256": "60df3b7d6358c3325872b79b8ef0d783d0ad9ba144186c1e6870f883cab9545e",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/cnn_1d/seed-42/evaluation.json": {
+      "bytes": 236263,
+      "sha256": "1db455358b2610874d2f14b405915a96a096071ee917f03e2fd3c26f0ab0d070",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/cnn_1d/seed-42/metrics.json": {
+      "bytes": 670,
+      "sha256": "fdd3779bb3b961d68233dfa6e44c5c350d06db5e76f05e3cbd72603afab7407a",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/cnn_1d/seed-42/model.pt": {
+      "bytes": 132147,
+      "sha256": "b30d003d7345aaaaba49484646bd3d34468e55757f7321cd675b2628728a0083",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/cnn_1d/seed-42/replay.json": {
+      "bytes": 193246,
+      "sha256": "d38d3f1ed186717ddbaf9f2ef3e5bf2e0c2258fa3d431164088a13224dbb3a97",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/optimization_summary.md": {
+      "bytes": 1481,
+      "sha256": "aaa8b2e0f9f5351aeca490fdb9f3d20382c42edc974cd607e1eb20a2c080d8a7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/report_seed42/class_metrics.csv": {
+      "bytes": 225,
+      "sha256": "587abf6587d7b83794ec43b7aee4353723c3669423466a1274ef058a719dd7ae",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/report_seed42/confusion_matrix.csv": {
+      "bytes": 180,
+      "sha256": "5c68f0932e7892936a649f7375e6e04819dc6cf16926c75fdb3aebfdfe150ce9",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/report_seed42/confusion_matrix.png": {
+      "bytes": 125100,
+      "sha256": "d9a3970854dfdb83bc8467faf32ea8ec4dde2fb42922d83354b4e1f691cc0dd8",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/report_seed42/confusion_matrix.svg": {
+      "bytes": 56353,
+      "sha256": "55f8e9a1947b51f39a4efd54f663835852ab7e5786e8e5f3efc65f4673c69678",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/report_seed42/evaluation_summary.md": {
+      "bytes": 782,
+      "sha256": "7b017db1ad48867168b3a4d203860886edadd706a21664435308ddd13b01eec7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-42-stable/audit.jsonl": {
+      "bytes": 173,
+      "sha256": "5d0883ff7442885395d1b9b775bf8319b31c3ea8d7fe78411bbdc01c750d4c51",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-42-stable/evaluation.json": {
+      "bytes": 225890,
+      "sha256": "04b5ed8ed2b898c36b70765b59269070a99a205777378aedf8760ed0f8973611",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-42-stable/metrics.json": {
+      "bytes": 668,
+      "sha256": "1088fccd40118a3d48f4b0c04ab9868a2889cab1cf8369d77f3d6efb3e2a4d4a",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-42-stable/model.joblib": {
+      "bytes": 36703060,
+      "sha256": "bb991b90504f5520cdf83fb9a07b1b39cf3d1c20a6b875ff1a2ffcf24dec7687",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "module_b_current"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-42-stable/replay.json": {
+      "bytes": 207526,
+      "sha256": "63bc9e0ffe90851e1514280e527b91b0c880a7f7b3348bf54c276a42ca91ccbc",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-43/audit.jsonl": {
+      "bytes": 172,
+      "sha256": "781a790ed5979798279e38cb72986445b1e8561bc133c5233a237db9fd3f05c2",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-43/evaluation.json": {
+      "bytes": 225892,
+      "sha256": "a36131b805f067361d6d9cdf71473a253420d4106df8184ef45ceeaa8977e843",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-43/metrics.json": {
+      "bytes": 668,
+      "sha256": "6bb147d39d4197d46257917f722647ade5159edf579cc365e62652c643484c3c",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-43/model.joblib": {
+      "bytes": 36771492,
+      "sha256": "2a5c29d99434957722530249dc2f6883d48b8ff252b0fb749fe4d565ac301837",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-43/replay.json": {
+      "bytes": 207512,
+      "sha256": "2a858b8ce23300b6d1c2a2e8ca8efb39c6b98845df8110202a5961cc40b3e50b",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-44/audit.jsonl": {
+      "bytes": 172,
+      "sha256": "754ff6076175fd68fe656a662ece871077d20a04fe0e9b50080c158f9e76cafd",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-44/evaluation.json": {
+      "bytes": 225876,
+      "sha256": "e6ee729787f1bb66dab3e205c391c08a167342e9df512566972026917c0802fe",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-44/metrics.json": {
+      "bytes": 667,
+      "sha256": "d101017b17f2c34f3dc1005b33e8b7aa5c5cd67c8ff90c2f22763340a78264dd",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-44/model.joblib": {
+      "bytes": 36828276,
+      "sha256": "95c3487aa82d1c735daa8d68f6ec017ea6818f4a78c6ec498f3a7c22b64089ca",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/optimized_final/spectral/seed-44/replay.json": {
+      "bytes": 207529,
+      "sha256": "d1192ff7101f1f8a9a7a9fa822768274978cd9c79377a4d6a5e296ba4a23476f",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d/seed-42/audit.jsonl": {
+      "bytes": 154,
+      "sha256": "6d2820ccfdaaa68bb6093b57bcac69a10ec5a58ac4d664bf53f215e9297d0c3a",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d/seed-42/evaluation.json": {
+      "bytes": 7863,
+      "sha256": "492d07d05684a4626e723e287d428200c105558e1eb6b278f29d28c6717f84b6",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d/seed-42/metrics.json": {
+      "bytes": 673,
+      "sha256": "9d6414571df76c5b1daf8e823d52ff4a0a47031f3d5926f97332e5ce6b9f79a6",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d/seed-42/model.pt": {
+      "bytes": 363763,
+      "sha256": "3e5d6cdcd1e413e7570fbc313a22d1d5adfc08f0bf2903b2276e867d496865c1",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d/seed-42/replay.json": {
+      "bytes": 192201,
+      "sha256": "a5d3136f0ce3bfda65b68ab8acc46c3392e2536fd72da54673e70d720330784f",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/audit.jsonl": {
+      "bytes": 153,
+      "sha256": "5a8ccf0d4081effec5b222ca74eecf516493b727628b3dabc22d8e97f485104a",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/class_metrics.csv": {
+      "bytes": 226,
+      "sha256": "612a6960ce446757ea956d4bc431baf56b301a14ce287c5303a6e1cebc0fe7e2",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/confusion_matrix.csv": {
+      "bytes": 186,
+      "sha256": "535c91fc4410ec05d1338b57e16df9449859c3310c290be6a51c4a157fbbf478",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/confusion_matrix.png": {
+      "bytes": 136253,
+      "sha256": "8918cba41db6879f99b2002ed6dac1ea46bcb2ad0aa8277ebc763219657f7cac",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/confusion_matrix.svg": {
+      "bytes": 57981,
+      "sha256": "a4490512b2c14bb9c0b202d4f7a95194297d09a4c3126118ca62af8a678e4672",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/evaluation.json": {
+      "bytes": 7876,
+      "sha256": "e3dc401d0816bba5f65b6c0c693caf6d57bdbe12afc5eece699973d0620cb838",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/evaluation_summary.md": {
+      "bytes": 795,
+      "sha256": "4506a3e5aa9334a3b7166b736cf074255b5a2d4c90ae9b7152aabcbfbe4cc2a7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/metrics.json": {
+      "bytes": 674,
+      "sha256": "6cd5f913d5a43298c9ef67e6b37534a3ced369a6cd9dc0c24b01a87c40c775f3",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/model.pt": {
+      "bytes": 363763,
+      "sha256": "3e5d6cdcd1e413e7570fbc313a22d1d5adfc08f0bf2903b2276e867d496865c1",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_1d_v2/seed-42/replay.json": {
+      "bytes": 193484,
+      "sha256": "ea9539c682c722cfcda489b938106034405dbdc14c348fdd4a3e72fca17ff5cf",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_transformer/seed-42/audit.jsonl": {
+      "bytes": 171,
+      "sha256": "1033e48fc8ce7b70221fa40840658726aa7ab9254fa070a407f37e42e9485200",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_transformer/seed-42/evaluation.json": {
+      "bytes": 7900,
+      "sha256": "55a7c067db6d6bfd10c8df9a45fdae24330c77f1fcda668ced085e0cef1bd759",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_transformer/seed-42/metrics.json": {
+      "bytes": 675,
+      "sha256": "2d4ebbac396e2228d0796d6b17c661358032390c4673f26ac561bcca52cef63b",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_transformer/seed-42/model.pt": {
+      "bytes": 3758730,
+      "sha256": "3172851a755fa90842c2eb05da1331717fb1fd2e92694172f4106e08cca36b31",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_eval_window_zscore/cnn_transformer/seed-42/replay.json": {
+      "bytes": 197984,
+      "sha256": "bddb53fb4e98c56b7199f28ad4b01501a6270262815145f0b4cc2a6393b83045",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-42/audit.jsonl": {
+      "bytes": 153,
+      "sha256": "a62677bd0b2c6e9914eb62513e1b6692d12efa3143cf1cfb760efd8ea8aa242e",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-42/evaluation.json": {
+      "bytes": 7876,
+      "sha256": "76f93eefa216c4ebfd655a986bd6186c033948a99f58d3282e019a2f80a9e954",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-42/metrics.json": {
+      "bytes": 678,
+      "sha256": "4fbcca4c946a9b7cd48e811ea9ac6d16cbeab91dccbf575c88fcba986207f854",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-42/model.pt": {
+      "bytes": 132147,
+      "sha256": "28395bdca74e5195c4c115f349bcbacbdcebd8f69e7d72e00f1ea2dd13dd3135",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-42/replay.json": {
+      "bytes": 193773,
+      "sha256": "8d6705138a8e0cd43d53d5e2e1087bbba14e09cbef82fb1623a68c52cd641f4b",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-43/audit.jsonl": {
+      "bytes": 153,
+      "sha256": "cd0979db2b0616e409a2ed033fe4229d33e0ccce08eac9ec1e02175fdfb5bf0b",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-43/evaluation.json": {
+      "bytes": 236365,
+      "sha256": "6f17c8a4139e8c50de7bde44dc250282e5b765df136769ad2e28452918248ee2",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-43/metrics.json": {
+      "bytes": 677,
+      "sha256": "d97bb5fea78f66426c0160a48628799a8e2146b24fd671be4f1cb9c16b02e221",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-43/model.pt": {
+      "bytes": 132147,
+      "sha256": "f842fec757823be3a3fc999b9372aa7ccad5f3c38b3092b33fb819b6428b2a9f",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-43/replay.json": {
+      "bytes": 193424,
+      "sha256": "9eda120f66c4741cf9d97c19eafef05ff64eb5173a826e8e5a7d6d9697a289b7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-44/audit.jsonl": {
+      "bytes": 153,
+      "sha256": "58a77e1ecbba2370983bdae14ab3a30d54bc17ca4b332abe67a68542d7c613ea",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-44/evaluation.json": {
+      "bytes": 236359,
+      "sha256": "fe7b97bf1e2a3b37dfa3d0bd704df463f5fbb85157b9e64dad9ec97aee15add5",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-44/metrics.json": {
+      "bytes": 677,
+      "sha256": "57973d0ca6e2b3459e264aa3c0175b0c1a183c7a297d332346129e25b42fab55",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-44/model.pt": {
+      "bytes": 132147,
+      "sha256": "d216af6504d9edb55c32130ef655bf5c36ef0767cd116d414e421cb152d3ccfe",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/cnn_1d/seed-44/replay.json": {
+      "bytes": 193658,
+      "sha256": "9aafb5b5516535145884254241e8e5b6161599db34f50bdc816fb241a2ac8454",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed42/class_metrics.csv": {
+      "bytes": 227,
+      "sha256": "91eb3b71af3365770fa81039c2d5f64cbace4ec3904a0c7fadb3b608c2dcb3a1",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed42/confusion_matrix.csv": {
+      "bytes": 191,
+      "sha256": "145ba0cccb43b6453b0c61db254a657b169127d0850f50e7b66f0b42fbf92f31",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed42/confusion_matrix.png": {
+      "bytes": 130570,
+      "sha256": "dac3102706d6d7c23fbcf722c4bdae9aa76a1361302bc4558381f83190b92fb1",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed42/confusion_matrix.svg": {
+      "bytes": 59189,
+      "sha256": "7bb3f7ccfdd2b53b29d158ba32dc7e8b6380dfa13d255e2b3976621d104389ed",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed42/evaluation_summary.md": {
+      "bytes": 793,
+      "sha256": "064f163d3d39328ec0abb5c4493652f8ed3ee838dea7705804969e660cde2ee3",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43/class_metrics.csv": {
+      "bytes": 227,
+      "sha256": "8b0afe5159d62199392eac22563fdf14bda8adab6156ed466585b4ea7634eaf7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43/confusion_matrix.csv": {
+      "bytes": 191,
+      "sha256": "74c8c230e6c67577f8b436edac45bf43f6d04302dde2727a11927cb55b8f92cf",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43/confusion_matrix.png": {
+      "bytes": 135644,
+      "sha256": "c8f446b8357c3c5b53be924f50c7e3d082ee96baeb2e54fb4f497060f08c2b7c",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43/confusion_matrix.svg": {
+      "bytes": 59358,
+      "sha256": "6f33c6582a5d0eba89887c874f1f13d6259de150266bb7c82496aa6135815c2d",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43/evaluation_summary.md": {
+      "bytes": 793,
+      "sha256": "1811be66098ad7f834f7811da287e8b4abe1f31ad03771283e576f178d3cae33",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_known_device/class_metrics.csv": {
+      "bytes": 227,
+      "sha256": "8b0afe5159d62199392eac22563fdf14bda8adab6156ed466585b4ea7634eaf7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_known_device/confusion_matrix.csv": {
+      "bytes": 191,
+      "sha256": "74c8c230e6c67577f8b436edac45bf43f6d04302dde2727a11927cb55b8f92cf",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_known_device/confusion_matrix.png": {
+      "bytes": 138444,
+      "sha256": "cfe0c255519ab6bd2a1a357f4bdd352ef4b7c1ba70c08f1dee85384bde0fedbd",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_known_device/confusion_matrix.svg": {
+      "bytes": 60195,
+      "sha256": "cb359578f4cbb752cff9a0ac28f86c168062fe392f996fd286541ec0e5280b52",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_known_device/evaluation_summary.md": {
+      "bytes": 802,
+      "sha256": "47525ab837a7bb4620588b027e9a0e81b1f642a1d39d6773af1899dddd3d5372",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_validation/class_metrics.csv": {
+      "bytes": 221,
+      "sha256": "0e6dad7b117d07204c265e7229ef37abed7778ea3ff0adf1be439f8ef1ec3b46",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_validation/confusion_matrix.csv": {
+      "bytes": 190,
+      "sha256": "f665d64ab689c31b92b45057fae4925ebbd033a37ed5086651550184c0379ea3",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_validation/confusion_matrix.png": {
+      "bytes": 136752,
+      "sha256": "32e377feee1d1a5f7f1f3fe3977d0dc2b5a580c5e4ab97e02ddfcbe936f229d1",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_validation/confusion_matrix.svg": {
+      "bytes": 59688,
+      "sha256": "08b0f93f930ea47511ca8bd3ca758a69e1614bb1797f313408172ebab2933211",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/real_final_eval/report_seed43_validation/evaluation_summary.md": {
+      "bytes": 798,
+      "sha256": "da295579a938b7ec11e1ede0d1ef03410abd357f475fc40844e8173e92cb36fc",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/human_activity_recognition/outputs/released_v1/tuned_real_config.yaml": {
+      "bytes": 1790,
+      "sha256": "824cac81e291b09afdf1f50b44360dc67f42996eb71b37ff94a12abb6c705dad",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/cnn_seed42_mps_v1/best.pt": {
+      "bytes": 964763,
+      "sha256": "ea7b72009761125b39f0a823285dac60c7dd8148a5c1c993d0507f82938f1363",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/cnn_seed42_mps_v1/frozen.json": {
+      "bytes": 1910,
+      "sha256": "bc7b25119aeebee6b78309ee0b64ccbf0b3c98960442bcfdade2e70990224ec1",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/cnn_seed42_mps_v1/frozen.pt": {
+      "bytes": 964989,
+      "sha256": "78e56a1fb314e18bd6e1b262b0e2f4cac9fec8a4ee28f3fb748401a975d76011",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/cnn_seed42_v1/best.pt": {
+      "bytes": 965147,
+      "sha256": "43affab4cf4f784059e138f42f588b37ccd7e717bf1360999d872afa94b8578e",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/final_original_cnn_seed43_mps_v1/best.pt": {
+      "bytes": 964763,
+      "sha256": "8f9258a8e5abe922c00b41c596d7fbf546f350a80d9c424211947c974300b051",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/final_original_cnn_seed44_mps_v1/best.pt": {
+      "bytes": 964763,
+      "sha256": "768aa3f012dc08f72941c8f4b6280150ac22b90bd19b479011e8769d23f64854",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.json": {
+      "bytes": 1464,
+      "sha256": "c2a285b264f625c372e739ac6fcade7be8ea3a85919151643711a7b71d0a7d93",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt": {
+      "bytes": 613781,
+      "sha256": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/best.pt": {
+      "bytes": 45127041,
+      "sha256": "9ec1016f6d3fbce2f76b686ba839a90e1baa6ba882102f9af28fd5599ae9ae9d",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "module_c_independent_candidate"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/best_reference.json": {
+      "bytes": 195,
+      "sha256": "ff9463b711a3a72e6c56237e12877e8fe5f22ce9bfdcd25dd692276262d62fda",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/environment.json": {
+      "bytes": 215,
+      "sha256": "71cdad0828b41e051d0824567ecd468de3f140aefe681c1ba435a23debb69d12",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/history.json": {
+      "bytes": 13491,
+      "sha256": "4d5db49aff6128166f1323a69e9d29531399ad2db6b40e5f425e3cc8848ceb98",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/last.pt": {
+      "bytes": 134543199,
+      "sha256": "a122c87981677a42dc513df74be0c76f978241e9816960b930ccfd4a552ee832",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/status.json": {
+      "bytes": 228,
+      "sha256": "ef0e258a639c4bcce10766df2865e5743e94be0f403c8f1422ffadafad9342cc",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/train_log.txt": {
+      "bytes": 13206,
+      "sha256": "2c621c85087e0c5f1fb71aeada50b5a37f60716ceabb24d3eccfcdf0453108d5",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/training_config.json": {
+      "bytes": 1885,
+      "sha256": "bfe821f2ae1928448557379720b82166e63c67e020485cd15ee8cf7993921444",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/hp_mixed_resnet18_v1/training_curves.png": {
+      "bytes": 136030,
+      "sha256": "983bf23aec2fb774cb08f93417fb642fbe88784b9b9cb8024ea2826f18aee000",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/official_mlp_seed42_sourcefaithful_v1/best_model.pt": {
+      "bytes": 62245237,
+      "sha256": "1beb7cef207402e4f38eb5ef19526e683fc5fd5e70f6fa0c9b644a1439743e7a",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/official_mlp_seed42_sourcefaithful_v1/classification_report_val.csv": {
+      "bytes": 409,
+      "sha256": "b374492f6d9c13ba2feb1a4db6926a5bfeb4f08f7543f44edd08ff6d325717f5",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/official_mlp_seed42_sourcefaithful_v1/confusion_matrix_val.png": {
+      "bytes": 18896,
+      "sha256": "465b3770179444a66a0f4bae297f69aebee1ea150b6c38df9e3c0988ecdf3170",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/official_mlp_seed42_sourcefaithful_v1/reproduction_bundle.pt": {
+      "bytes": 20982501,
+      "sha256": "e2f6cd80d6a866b148c4a35bad9f0bf2b32f1c6d93acbb025c128596b9d02db3",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/official_mlp_seed42_sourcefaithful_v1/training_results.csv": {
+      "bytes": 4866,
+      "sha256": "55c529f30af5b0c51bcee036a7ca7cdeceaeb4c1034124a2ccc3d1100bb248ef",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/official_mlp_seed42_sourcefaithful_v1/training_results.png": {
+      "bytes": 91548,
+      "sha256": "39f337d3f50b54897b1089cc10769ee3c1769fd4eda60787deb8e9998317422f",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt": {
+      "bytes": 44997835,
+      "sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "module_c_current"
+    },
+    "backend/modules/fall_detection/outputs/official_resnet18_seed43_v1/reproduction_bundle.pt": {
+      "bytes": 44997835,
+      "sha256": "49ef10b096c7849840bd6cdbf98630a93d6f5aa344916464c4669f25632044f5",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/official_resnet18_seed44_v1/reproduction_bundle.pt": {
+      "bytes": 44997835,
+      "sha256": "7926a4fbbdd536354a6c184120b49ad9d1dbd20e442438a01692fd342fb019a6",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/original_cnn_lstm_seed42_mps_v1/best.pt": {
+      "bytes": 1369259,
+      "sha256": "b3ea920bbf8cfac290165ea8abf649f3d4a6206b8ae7402698d258cb503da170",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/sensefi_style_cnn_lstm_seed42_mps_v1/best.pt": {
+      "bytes": 1426979,
+      "sha256": "0d21462e5a65287458ce6d70e5fab1897a90712e08f75635a227f5ce3aff4df4",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/sensefi_style_seed42_mps_v1/best.pt": {
+      "bytes": 1076731,
+      "sha256": "5960f044623d28c637884536cd7ceec75b3474bb93dbe9bd1fc9073010a9bdc4",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_raw_GCV/best.pt": {
+      "bytes": 4942911,
+      "sha256": "28b032649dd1a8d90e6046f6bc932efa4b588f03c38853ae96c3a8eaf43f25a2",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_raw_GCV/config.json": {
+      "bytes": 3188,
+      "sha256": "974beb3607537463689d837a612bf86dc11bcafe26010c3d0f726db651f2139c",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_raw_GCV/last.pt": {
+      "bytes": 14824013,
+      "sha256": "a9a53c191affbb3acfd5ca00c7e0323be81b3cfd239fe23ef25aeb906ba736f9",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_standardized_GCV/best.pt": {
+      "bytes": 4946239,
+      "sha256": "77a87c8b6da3552dab1cd827429ee08e878d8f9d7d5daefcc8b21c577c40190e",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "module_c_archived_tcs"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_standardized_GCV/config.json": {
+      "bytes": 11444,
+      "sha256": "ad54e39caddfa94e6a3f13a8ccdc756f44f5892767f6c264c19f625b6a095863",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_CT_standardized_GCV/last.pt": {
+      "bytes": 14826253,
+      "sha256": "837e032609e4e8ea371ef3ab47691013e1cc3b270eb32fe0f4722f43f4825c4e",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_raw_GCV/best.pt": {
+      "bytes": 4942911,
+      "sha256": "aa87cac257702b54a17a667b9d333128b297f41e1d4d7fefcaf5f58fcb7033cf",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_raw_GCV/config.json": {
+      "bytes": 3186,
+      "sha256": "bf935326b51d565dac5dd807fbd157f15681e05aaaa9cedeae39c62d2661d380",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_raw_GCV/last.pt": {
+      "bytes": 14841741,
+      "sha256": "4e70d737e2b576e5c4f5f5a6d29a4ec9ff49ebff94d3a27389a80c91b92d63c0",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_standardized_GCV/best.pt": {
+      "bytes": 4946239,
+      "sha256": "f83cce676dad9739e06d50b6b20829d19f6c46511659fcc59ea48f3e0e53a154",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_standardized_GCV/config.json": {
+      "bytes": 11406,
+      "sha256": "8f26fbbf307b8bfe27d8c91bf867940ad1d949482d24b6d0f64258be2a55349c",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/comparison_seed42_v1/SA_standardized_GCV/last.pt": {
+      "bytes": 14829773,
+      "sha256": "282a6f1f9442ae12447c1aff9fa2d85c8308085b29e35d255e7e54d6d2498db6",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/features_v1/dataset_check.json": {
+      "bytes": 668,
+      "sha256": "6aa8e661742cff8892d911972bf876864ffa5febbbb8955661befbc497b35a0a",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/features_v1/input_examples.png": {
+      "bytes": 401442,
+      "sha256": "7dbcd3b5aa044c7e975c34b8bbb6f43bdeea019a68dbfab609dfbfd143778b20",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/features_v1/normalization_sa.json": {
+      "bytes": 7630,
+      "sha256": "376e7ecdf7a9062d18439bf874016e54f74a535b7bd1500b85f8ba853d861325",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/features_v1/normalization_sa_ct.json": {
+      "bytes": 7666,
+      "sha256": "1e31b28239c900a2042ac07ad3d01d3a3db6bf7b99208f4c800c4f92f5a91f69",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/features_v1/preparation.json": {
+      "bytes": 271803,
+      "sha256": "ff8880d04a61027601bfd05c3be0af3c34e99367cb08f88baa9e1d9b73ab7351",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/features_v1/samples.json": {
+      "bytes": 1977242,
+      "sha256": "104254ee29f53f4f971b49f8cf6e62fe57acf1c1202c154f277ff3f774134ee7",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/validation_replay_features_v1/preparation.json": {
+      "bytes": 581,
+      "sha256": "ba4fad1b4ce203f9f3cba97e2c44206810e6da4ea6ceca614eda10879acf533a",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/validation_replay_features_v1/protocol.json": {
+      "bytes": 1402,
+      "sha256": "ade159e144d575df1c04e5460f8051c66e508b8ab18022230e2fcb6bffb6facc",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/validation_replay_features_v1/windows.json": {
+      "bytes": 620770,
+      "sha256": "47b3ed23ffc46717a45f8215cde2d56f510ed56081809df733ed2990c1b03bad",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/window_robustness_v1/preparation.json": {
+      "bytes": 400,
+      "sha256": "11c06873577a9fa43a3033cc6a3315411d85836690ee096371856225dd09b254",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/window_robustness_v1/record_indices.json": {
+      "bytes": 215393,
+      "sha256": "96b0013b79131193d35af06be79fc46aecf90565c29af2fc18fa025dbf71ef95",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_cross_subject_v1/window_robustness_v1/windows.json": {
+      "bytes": 418938,
+      "sha256": "78404c7e97f29fc66868501d85ea32fd5f618caac8e558c2c33eb341e059cdcc",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_subject01_gcv_cnn_seed42_v1/preparation.json": {
+      "bytes": 82841,
+      "sha256": "7093b4bae47a181f80feda1e250746cef32c1462b8a2d816edc1e74bde6dd1fc",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_subject01_gcv_cnn_seed42_v1/run/best.pt": {
+      "bytes": 4948031,
+      "sha256": "4d5d40831f37d3a226f7552811487c2e74b6333cfce46a6478953cf1d931fe39",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "checkpoint",
+      "role": "historical_or_resume"
+    },
+    "backend/modules/fall_detection/outputs/tcs_subject01_gcv_cnn_seed42_v1/run/run_config.json": {
+      "bytes": 9969,
+      "sha256": "133d78571a645543b220579e13d75d063caffadc49623dcbed02276de023164d",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/outputs/tcs_subject01_gcv_cnn_seed42_v1/split.json": {
+      "bytes": 5955,
+      "sha256": "cc6cc4e7cbb7dcd0caec536292de4d1d43f6ee9df03ab7a3ef85db3437d3a2b3",
+      "asset": "module_bc_research_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "sidecar"
+    },
+    "backend/modules/fall_detection/reports/tcs_cross_subject_v1/comparison_seed42_v1/evaluation/SA_CT_standardized_GCV.json": {
+      "bytes": 12183,
+      "sha256": "fbbee57ea7d17ec0b69a1fd1b972d9a4a81c1c8e834f67a2dc2039ed90636093",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "archived_tcs_replay_evidence"
+    },
+    "backend/modules/fall_detection/reports/tcs_cross_subject_v1/comparison_seed42_v1/evaluation/SA_CT_standardized_GCV_windows.csv": {
+      "bytes": 220876,
+      "sha256": "86a88f8fe03ee0939b8f951219d3c555c08ee2aefb672bac768468ad016b2020",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "archived_tcs_replay_evidence"
+    },
+    "backend/modules/human_activity_recognition/integration_v1/frozen_model.json": {
+      "bytes": 1336,
+      "sha256": "93b77bd0ae12a503d7d8f1a9e6a27c1fc1e0708e29428782ac8d98b3f3fdd142",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "human_activity_recognition",
+      "kind": "metadata",
+      "role": "frozen_runtime_configuration"
+    },
+    "backend/modules/fall_detection/resnet_b_integration/frozen_model.json": {
+      "bytes": 665,
+      "sha256": "590e1944dbce07145fb3ee4ca10a167d96d7bf1f11d669a606d17fe0122659b2",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "frozen_runtime_configuration"
+    },
+    "backend/modules/fall_detection/confidence_gate_v1/policy.json": {
+      "bytes": 235,
+      "sha256": "2a6770d58200324c1de43a2248155c716c36526e2dc9550f5776b734b8dc1a9d",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "frozen_runtime_configuration"
+    },
+    "backend/modules/fall_detection/tcs_cross_subject_v1/frozen_candidate.json": {
+      "bytes": 878,
+      "sha256": "c9bab869a811e248c82d480ee2f04fb620156c0428a2c3f7424e2b6138f8b131",
+      "asset": "module_bc_runtime_models.tar.gz",
+      "module": "fall_detection",
+      "kind": "metadata",
+      "role": "frozen_runtime_configuration"
+    }
+  }
+}

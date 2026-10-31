@@ -1,0 +1,26 @@
+{
+  "policy": {
+    "version": "B_low_confidence_C_v1",
+    "enabled": true,
+    "B_confidence_cutoff": 0.6,
+    "comparison": "confidence < cutoff",
+    "unavailable_B": "do not run C; return not_evaluated",
+    "skipped_C": "no score or binary C decision; never substitute Nonfall"
+  },
+  "counts": {
+    "run_C": 621,
+    "Fall_run": 339,
+    "skip_C": 305,
+    "Fall_skipped": 51,
+    "Nonfall_skipped": 254,
+    "Nonfall_run": 282
+  },
+  "C_selected_subset": {
+    "tp": 333,
+    "fp": 21,
+    "tn": 261,
+    "fn": 6
+  },
+  "score_source": "Previously saved frozen B/C validation predictions; no new full-set inference",
+  "skipped_C_is_not_Nonfall": true
+}

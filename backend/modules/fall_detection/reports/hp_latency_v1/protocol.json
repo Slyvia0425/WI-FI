@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-10-26T14:16:13.220119+00:00",
+  "scope": "HP validation samples only; latency only",
+  "models": [
+    "original_1d_cnn",
+    "official_resnet18"
+  ],
+  "backends": [
+    "cpu",
+    "mps"
+  ],
+  "batch_size": 1,
+  "cpu_threads": 2,
+  "interop_threads": 1,
+  "warmup_per_scope": 30,
+  "trials": 3,
+  "iterations_per_trial_per_scope": 200,
+  "new_process_startup_trials": 3,
+  "sample_selection": "first eight sorted HP val_id IDs per class",
+  "manifest_sha256": "854ade56cc64ae45c0e6f5e3734da3c36a6c48770dcc5ba9b3e3928d1a2b03ce",
+  "source_and_artifact_sha256_before": {
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/models/cnn.py": "92e04ae85d6e80c196f17599742e4e38e06c9310d7329faed12c409b28be8639",
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/preprocess.py": "e202289cab0b4f58ca96ae34cbf917fb17a33d6907352aa7d1a4e7fc7bed18ad",
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/final_selection_v1/runtime.py": "3f80d3a92109e341c18784086ee556e1c3e408aebed3cf112e7d7c3dcdcbfb20",
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/final_selection_v1/infer.py": "b91968cd02ca5f45c7f9dff3890da491fe7e88e967a7f9b3b76dd839a1eaaea0",
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.json": "c2a285b264f625c372e739ac6fcade7be8ea3a85919151643711a7b71d0a7d93",
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/final_selection_v1/final_research_model.pt": "08d512c5e92602c79520b740b25102405cee775a79a44e26f913a83f2c0af643",
+    "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0"
+  },
+  "benchmark_source_sha256": "bf856f6731f9f8459ee200fd45e3bedadb17e5906dea92b0c09dea60e39848ee",
+  "python": "3.14.7",
+  "platform": "macOS-14.0-arm64-arm-64bit-Mach-O",
+  "torch": "2.14.1",
+  "numpy": "2.5.4",
+  "machine": "arm64",
+  "hardware": {
+    "hw.model": "Mac14,7",
+    "machdep.cpu.brand_string": "Apple M2",
+    "hw.memsize": "8589934592",
+    "hw.ncpu": "8"
+  },
+  "notes": [
+    "Backends run sequentially; FP32, eval and inference_mode; no compilation/quantization.",
+    "Forward-only input already on device; scoring/transfer excluded, synchronization included.",
+    "Memory pipeline begins with parsed amplitude in RAM; includes preprocessing, transfer, scoring and local threshold.",
+    "File pipeline uses exact existing runtime, OS file cache warm; no guaranteed physical disk read.",
+    "New-process startup is not a power-on/cold-disk experiment.",
+    "Peak RSS is whole Python process including imports/loading; not isolated model memory and not GPU allocation.",
+    "No acquisition wait, rolling-window wait, alarm confirmation, network/UI delivery or event latency measured.",
+    "No ESP32 records, training, threshold changes, test evaluation or continuous-monitoring claims."
+  ]
+}

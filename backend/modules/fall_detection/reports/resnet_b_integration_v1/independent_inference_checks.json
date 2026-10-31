@@ -1,0 +1,44 @@
+{
+  "new_process_per_case": true,
+  "raw_validation_inputs_only": true,
+  "test_inference": false,
+  "threshold_retuned": false,
+  "checks": [
+    {
+      "case": "true_positive",
+      "sample_id": "Human_U07_Fall_E21_HP_2176000",
+      "fall_score": 0.9996678829193115,
+      "saved_score": 0.9996678829193115,
+      "max_abs_difference": 0.0,
+      "input_identity_matches_export": true,
+      "B_missing_did_not_block_C": true
+    },
+    {
+      "case": "true_negative",
+      "sample_id": "Human_U09_Nonfall_E23_HP_11095000",
+      "fall_score": 0.046279121190309525,
+      "saved_score": 0.046279143542051315,
+      "max_abs_difference": 2.2351741790771484e-08,
+      "input_identity_matches_export": true,
+      "B_missing_did_not_block_C": true
+    },
+    {
+      "case": "false_positive",
+      "sample_id": "Human_U09_Nonfall_E23_HP_11103000",
+      "fall_score": 0.9888263940811157,
+      "saved_score": 0.9888263940811157,
+      "max_abs_difference": 0.0,
+      "input_identity_matches_export": true,
+      "B_missing_did_not_block_C": true
+    },
+    {
+      "case": "false_negative",
+      "sample_id": "Human_U10_Fall_E23_HP_2547000",
+      "fall_score": 0.3542289733886719,
+      "saved_score": 0.35422900319099426,
+      "max_abs_difference": 2.9802322387695312e-08,
+      "input_identity_matches_export": true,
+      "B_missing_did_not_block_C": true
+    }
+  ]
+}

@@ -33,6 +33,7 @@ export function fuse({ motionSource: A, activity: B, fall: C, breathing: D }) {
     notes.push('Fall detection: high score, waiting for next windows')
     return { room: 'Possible fall', tone: 'suspected', notes, humanGate }
   }
+  if (humanGate && C?.state === 'not_evaluated') return { room: 'Occupied; fall not evaluated', tone: 'uncertain', notes: [...notes, 'B confidence gate did not run C; no negative fall decision'], humanGate }
   if (humanGate) {
     const act = B && B.activity && B.activity !== 'none' ? B.activity.toLowerCase() : 'activity unclear'
     const rest = D && D.status === 'breathing' ? ', breathing evidence' : ''

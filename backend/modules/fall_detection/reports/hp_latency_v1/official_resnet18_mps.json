@@ -1,0 +1,150 @@
+{
+  "kind": "official_resnet18",
+  "backend": "mps",
+  "seed": 42,
+  "checkpoint": "/Users/chenxiaohe/Documents/ChatGPT/csi-bench/backend/modules/fall_detection/outputs/official_resnet18_seed42_recovery_v1/reproduction_bundle.pt",
+  "checkpoint_sha256": "e3aabc34810aee4a647555eb7b1970bbf19a063b9d76f31d4ff59bfc5521a0a0",
+  "threshold_used_for_timing_only": 0.5,
+  "batch_size": 1,
+  "load_model_and_integrity_check_ms": 1547.9045,
+  "first_file_pipeline_ms": 2221.861125,
+  "process_code_to_first_result_ms": 4927.177959,
+  "first_fall_score": 0.9987490177154541,
+  "first_prediction_is_fall": true,
+  "scopes": [
+    {
+      "scope": "forward_only",
+      "n": 600,
+      "median_ms": 12.9087085,
+      "p95_ms": 15.94416905,
+      "p99_ms": 16.48535134,
+      "min_ms": 8.994584,
+      "max_ms": 16.986458
+    },
+    {
+      "scope": "memory_pipeline",
+      "n": 600,
+      "median_ms": 13.4524995,
+      "p95_ms": 16.531081599999997,
+      "p99_ms": 19.073071249999995,
+      "min_ms": 9.111458,
+      "max_ms": 37.697917
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "n": 600,
+      "median_ms": 14.5855205,
+      "p95_ms": 19.969693749999998,
+      "p99_ms": 21.496854909999996,
+      "min_ms": 11.422333,
+      "max_ms": 36.573583
+    }
+  ],
+  "trials": [
+    {
+      "scope": "forward_only",
+      "trial": 1,
+      "n": 200,
+      "median_ms": 13.131562500000001,
+      "p95_ms": 15.9529024,
+      "p99_ms": 16.35212366
+    },
+    {
+      "scope": "forward_only",
+      "trial": 2,
+      "n": 200,
+      "median_ms": 13.467979,
+      "p95_ms": 16.11906075,
+      "p99_ms": 16.89038934
+    },
+    {
+      "scope": "forward_only",
+      "trial": 3,
+      "n": 200,
+      "median_ms": 12.041062499999999,
+      "p95_ms": 13.3047271,
+      "p99_ms": 13.90987741
+    },
+    {
+      "scope": "memory_pipeline",
+      "trial": 1,
+      "n": 200,
+      "median_ms": 13.3254375,
+      "p95_ms": 15.642381899999995,
+      "p99_ms": 16.80262259
+    },
+    {
+      "scope": "memory_pipeline",
+      "trial": 2,
+      "n": 200,
+      "median_ms": 13.4144375,
+      "p95_ms": 16.35052355,
+      "p99_ms": 16.870028749999996
+    },
+    {
+      "scope": "memory_pipeline",
+      "trial": 3,
+      "n": 200,
+      "median_ms": 13.748479,
+      "p95_ms": 18.556655949999996,
+      "p99_ms": 20.6755255099999
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "trial": 1,
+      "n": 200,
+      "median_ms": 14.8182705,
+      "p95_ms": 20.38955625,
+      "p99_ms": 21.654338089999996
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "trial": 2,
+      "n": 200,
+      "median_ms": 14.3928335,
+      "p95_ms": 19.85686635,
+      "p99_ms": 20.13490825
+    },
+    {
+      "scope": "file_pipeline_warm_os_cache",
+      "trial": 3,
+      "n": 200,
+      "median_ms": 14.450813,
+      "p95_ms": 19.5727628,
+      "p99_ms": 21.26815907999999
+    }
+  ],
+  "preprocess_max_abs_difference": 0.0,
+  "backend_score_max_abs_difference_vs_cpu": 1.3113021850585938e-06,
+  "parameter_count": 11171266,
+  "parameter_and_buffer_bytes": 44723624,
+  "checkpoint_file_bytes": 44997835,
+  "process_peak_rss_bytes": 494305280,
+  "input_shape": [
+    1,
+    1,
+    500,
+    232
+  ],
+  "dtype": "torch.float32",
+  "sample_ids": [
+    "Human_U06_Nonfall_E24_HP_311000",
+    "Human_U06_Nonfall_E24_HP_312000",
+    "Human_U06_Nonfall_E24_HP_320000",
+    "Human_U06_Nonfall_E24_HP_332000",
+    "Human_U06_Nonfall_E24_HP_337000",
+    "Human_U06_Nonfall_E24_HP_348000",
+    "Human_U09_Nonfall_E23_HP_11095000",
+    "Human_U09_Nonfall_E23_HP_11103000",
+    "Human_U06_Fall_E24_HP_1151000",
+    "Human_U06_Fall_E24_HP_155000",
+    "Human_U06_Fall_E24_HP_163000",
+    "Human_U06_Fall_E24_HP_696000",
+    "Human_U06_Fall_E24_HP_697000",
+    "Human_U07_Fall_E21_HP_2176000",
+    "Human_U07_Fall_E21_HP_2180000",
+    "Human_U07_Fall_E21_HP_2182000"
+  ],
+  "test_evaluated": false,
+  "completed_utc": "2026-10-26T14:19:08.325953+00:00"
+}

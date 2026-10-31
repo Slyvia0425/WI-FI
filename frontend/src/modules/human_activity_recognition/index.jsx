@@ -1,17 +1,31 @@
 import ModulePage from '../../components/ModulePage.jsx'
+import { ProbBars } from '../../components/charts.jsx'
+import ActivityTimelineSection from './components/ActivityTimelineSection.jsx'
+import { Notice } from '../../components/ui.jsx'
 
-// Page for this module. Owner: edit freely. Add your own JSX per stage with the `stages` prop, e.g. stages={{ evaluation: <MyChart /> }}.
 export default function HumanActivityRecognition() {
   return (
     <ModulePage
       id="human_activity_recognition"
-      summary="Which normal activity is the person doing, and how stable is the estimate?"
-      renderFrame={(f) => (
-        <div>
-          <div className="big">{f.activity} <span className="sm">confidence {Math.round(f.confidence * 100)}%</span></div>
-          <p className="sm">{f.stable ? 'Stable' : 'Transition or weak evidence'}</p>
-        </div>
-      )}
+      summary="Author-released spectral ExtraTrees seed42, run on the same raw HP segments as Module C. Five-class activity preferences provide context for independent ResNet18 fall scoring."
+      stages={{ evaluation: <><Notice>Real frozen B model inference. FallDetection segments have no five-class activity annotations, so B accuracy and joint B/C accuracy are not measured. B has no Fall class and cannot veto C.</Notice><ActivityTimelineSection /></> }}
+      renderFrame={(f) => {
+        const confidence = Math.round((f.confidence || 0) * 100)
+        const probabilities = f.probabilities || {}
+        return (
+          <div>
+            <div className="big">
+              {f.activity} <span className="sm">confidence {confidence}%</span>
+            </div>
+            <p className="sm">
+              {f.stable ? 'B confidence cutoff passed' : f.transition ? 'Transition or unstable evidence' : 'Weak B evidence'}
+              {f.quality ? ` · quality ${f.quality}` : ''}
+            </p>
+            <p className="sm">{f.sample_id} · confidence flag is not temporal stability or a verified activity label.</p>
+            {Object.keys(probabilities).length > 0 && <ProbBars probs={probabilities} highlight={f.activity} />}
+          </div>
+        )
+      }}
     />
   )
 }
