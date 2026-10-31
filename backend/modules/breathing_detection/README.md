@@ -1,5 +1,9 @@
 # Breathing detection (backend)
 
+For the included complete WiRe-Breath data, the CSI-Bench download link, and
+English setup and usage instructions, see
+[`datasets/breathing_detection/README.md`](../../../datasets/breathing_detection/README.md).
+
 Output: breathing evidence or "not assessable".
 
 Everything for this module on the backend lives in this folder. Work on your own branch and edit only here.
