@@ -11,8 +11,9 @@ def digest(path):
 
 def main():
  spec=json.loads((ROOT/'assets.json').read_text(encoding='utf-8'))
- if all((ROOT/p).is_file() and digest(ROOT/p)==value for p,value in spec['models'].items()) and (ROOT/'multi_object/data/home_v5/manifest.json').exists():return
  cache=ROOT/'.downloads';cache.mkdir(exist_ok=True)
+ complete=cache/'complete.json'
+ if complete.exists() and json.loads(complete.read_text()).get('sha256')==spec['archive_sha256'] and all((ROOT/p).is_file() and digest(ROOT/p)==value for p,value in spec['models'].items()) and (ROOT/'multi_object/data/home_v5/manifest.json').exists():return
  for part in spec['parts']:
   path=cache/part['name']
   if path.exists() and path.stat().st_size==part['bytes'] and digest(path)==part['sha256']:continue
@@ -52,5 +53,6 @@ def main():
    with z.open(info) as source,temp.open('wb') as out:shutil.copyfileobj(source,out,4*1024*1024)
    temp.replace(target)
  if not all(digest(ROOT/p)==value for p,value in spec['models'].items()):raise RuntimeError('Model checksum mismatch')
+ temp=cache/'complete.json.partial';temp.write_text(json.dumps({'sha256':spec['archive_sha256']}),encoding='utf-8');temp.replace(complete)
 
 if __name__=='__main__':main()
