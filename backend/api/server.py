@@ -19,7 +19,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path.split('?')[0] == '/api/integration':
             return self.send_json(integration_status())
-        if self.path.startswith('/spatial/'):
+        if self.path.startswith(('/spatial/', '/spatial-lite/')):
             return proxy_spatial(self)
         status, body = routes.dispatch("GET", self.path)
         data = json.dumps(body).encode()
@@ -31,7 +31,7 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def do_POST(self):
-        if self.path.startswith('/spatial/'):
+        if self.path.startswith(('/spatial/', '/spatial-lite/')):
             return proxy_spatial(self)
         self.send_json({'error': 'Not found'}, 404)
 

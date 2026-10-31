@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import './space.css'
 
 export default function SpaceProximitySensing() {
+  const [params, setParams] = useSearchParams()
+  const mode = params.get('mode') === 'research' ? 'research' : 'lite'
+  const [profiles, setProfiles] = useState(null)
   const [status, setStatus] = useState('checking')
   const [attempt, setAttempt] = useState(0)
   const [effects, setEffects] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
@@ -12,10 +15,14 @@ export default function SpaceProximitySensing() {
     const controller = new AbortController()
     fetch('/api/integration', { signal: controller.signal })
       .then(r => { if (!r.ok) throw Error(); return r.json() })
-      .then(d => setStatus(d.spatial?.available ? 'ready' : 'offline'))
+      .then(d => {
+        const available = d.spatial?.profiles || { research: d.spatial }
+        setProfiles(available)
+        setStatus(available[mode]?.available ? 'ready' : 'offline')
+      })
       .catch(e => { if (e.name !== 'AbortError') setStatus('offline') })
     return () => controller.abort()
-  }, [attempt])
+  }, [attempt, mode])
   useEffect(() => () => observer.current?.disconnect(), [])
   useEffect(() => {
     const target = frame.current
@@ -25,7 +32,13 @@ export default function SpaceProximitySensing() {
     }, { rootMargin: '120px' })
     visibility.observe(target)
     return () => visibility.disconnect()
-  }, [effects, status, attempt])
+  }, [effects, status, attempt, mode])
+  const chooseMode = next => {
+    if (mode === next) return
+    observer.current?.disconnect()
+    setStatus('checking')
+    setParams({ mode: next })
+  }
   const resize = () => {
     observer.current?.disconnect()
     const body = frame.current?.contentDocument?.body
@@ -44,8 +57,20 @@ export default function SpaceProximitySensing() {
         <div className="space-toggles"><span className="mode-chip simulation">Signal simulation</span><button type="button" className="space-effects-toggle" aria-pressed={effects} onClick={() => setEffects(v => !v)}><span aria-hidden="true">✦</span> Effects {effects ? 'on' : 'off'}</button></div>
       </div>
     </header>
+    <section className="space-mode-grid" aria-label="Spatial run mode">
+      <button className={`space-mode-card ${mode === 'lite' ? 'selected' : ''}`} aria-pressed={mode === 'lite'} onClick={() => chooseMode('lite')}>
+        <span className="space-mode-title"><span>Light demo</span><span className={`space-mode-state ${profiles?.lite?.available ? 'ready' : ''}`}>{profiles ? profiles.lite?.available ? 'Ready' : 'Not installed' : 'Checking'}</span></span>
+        <span className="space-mode-description">Same models. No full dataset download.</span>
+        <span className="space-mode-features">Custom simulation · Signal import · 6 examples</span>
+      </button>
+      <button className={`space-mode-card ${mode === 'research' ? 'selected' : ''}`} aria-pressed={mode === 'research'} onClick={() => chooseMode('research')}>
+        <span className="space-mode-title"><span>Full research</span><span className={`space-mode-state ${profiles?.research?.available ? 'ready' : ''}`}>{profiles ? profiles.research?.available ? 'Ready' : 'Not installed' : 'Checking'}</span></span>
+        <span className="space-mode-description">Complete data and research assets.</span>
+        <span className="space-mode-features">Custom simulation · Full test replay · Research tools</span>
+      </button>
+    </section>
     {status === 'checking' ? <div className="card">Connecting to the spatial model…</div> : status === 'ready' ?
-      <iframe key={attempt} ref={frame} src="/spatial/" title="Interactive spatial sensing" className="space-frame" onLoad={resize} /> :
-      <section className="card space-offline"><h2>Spatial service is offline</h2><p>Start the integrated server with the spatial models installed.</p><code>python scripts/serve_integrated.py</code><div className="btns"><button className="btn primary" onClick={() => { setStatus('checking'); setAttempt(a => a + 1) }}>Reconnect</button><Link className="btn ghost" to="/">Back to home</Link></div></section>}
+      <iframe key={mode + attempt} ref={frame} src={mode === 'lite' ? '/spatial-lite/' : '/spatial/'} title={`Interactive spatial sensing · ${mode === 'lite' ? 'Light demo' : 'Full research'}`} className="space-frame" onLoad={resize} /> :
+      <section className="card space-offline"><h2>{mode === 'lite' ? 'Light demo is unavailable' : 'Full research is unavailable'}</h2><p>{mode === 'lite' ? 'Install the light runtime package, then reconnect.' : 'Restore the full research package to enable all test scenes.'}</p><div className="btns"><button className="btn primary" onClick={() => { setStatus('checking'); setAttempt(a => a + 1) }}>Reconnect</button>{profiles?.[mode === 'lite' ? 'research' : 'lite']?.available && <button className="btn ghost" onClick={() => chooseMode(mode === 'lite' ? 'research' : 'lite')}>Switch to {mode === 'lite' ? 'full research' : 'light demo'}</button>}<Link className="btn ghost" to="/">Back to home</Link></div></section>}
   </main>
 }

@@ -44,7 +44,7 @@ class IntegrationBridgeTest(unittest.TestCase):
     def setUpClass(cls):
         cls.upstream = ThreadingHTTPServer(('127.0.0.1', 0), Upstream)
         cls.server = ThreadingHTTPServer(('127.0.0.1', 0), QuietHandler)
-        cls.env = patch.dict(os.environ, WIFI_SPATIAL_PORT=str(cls.upstream.server_port))
+        cls.env = patch.dict(os.environ, WIFI_SPATIAL_PORT=str(cls.upstream.server_port), WIFI_SPATIAL_LITE_PORT=str(cls.upstream.server_port))
         cls.env.start()
         cls.threads = []
         for server in [cls.upstream, cls.server]:
@@ -95,6 +95,25 @@ class IntegrationBridgeTest(unittest.TestCase):
             data = response.read().decode()
         self.assertIn("fetch('/spatial/api/state')", data)
         self.assertIn('"/spatial/api/predict"', data)
+
+    def test_light_javascript_uses_its_own_api(self):
+        with self.get('/spatial-lite/app.js') as response:
+            data = response.read().decode()
+        self.assertIn("fetch('/spatial-lite/api/state')", data)
+        self.assertNotIn("fetch('/spatial/api/state')", data)
+
+    def test_light_html_keeps_all_assets_in_its_prefix(self):
+        with self.get('/spatial-lite/') as response:
+            html = response.read().decode()
+        for asset in ['style.css', 'app.js', 'effects.css', 'effects.js', 'runtime-ui.js']:
+            self.assertIn('/spatial-lite/' + asset, html)
+
+    def test_status_reports_two_profiles(self):
+        with self.get('/api/integration') as response:
+            data = json.load(response)
+        self.assertEqual(set(data['spatial']['profiles']), {'lite', 'research'})
+        self.assertFalse(data['spatial']['profiles']['lite']['full_dataset_required'])
+        self.assertTrue(data['spatial']['profiles']['research']['full_dataset_required'])
 
     def test_post_body_and_query_unchanged(self):
         payload = {'objects': [{'x': 1.2, 'y': 2.4}], 'seed': 42}
