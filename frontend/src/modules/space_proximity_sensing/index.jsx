@@ -51,7 +51,7 @@ export default function SpaceProximitySensing() {
   }
   return <main className={`space-module ${effects ? 'space-fx-on' : ''}`}>
     <header className="mhead space-hero">
-      <div className="mhead-text"><div className="kicker">MODULE E</div><h1>Spatial sensing</h1><p className="lead">Place objects, adjust transmitters and view predicted zone counts.</p></div>
+      <div className="mhead-text"><div className="kicker">MODULE E</div><h1>Spatial sensing</h1></div>
       <div className="space-hero-tools">
         <svg className="space-radar" viewBox="0 0 120 90" fill="none" aria-hidden="true"><ellipse cx="60" cy="45" rx="45" ry="25" stroke="currentColor" opacity=".15"/><ellipse className="radar-orbit" cx="60" cy="45" rx="45" ry="25" stroke="currentColor" strokeDasharray="12 24 4 40"/><ellipse cx="60" cy="45" rx="29" ry="16" stroke="currentColor" opacity=".35"/><path d="M35 45h50M60 30v30" stroke="currentColor" opacity=".18"/><circle className="radar-core" cx="60" cy="45" r="4" fill="currentColor"/><circle cx="96" cy="31" r="2" fill="#bb99fa"/></svg>
         <div className="space-toggles"><span className="mode-chip simulation">Signal simulation</span><button type="button" className="space-effects-toggle" aria-pressed={effects} onClick={() => setEffects(v => !v)}><span aria-hidden="true">✦</span> Effects {effects ? 'on' : 'off'}</button></div>
@@ -60,13 +60,9 @@ export default function SpaceProximitySensing() {
     <section className="space-mode-grid" aria-label="Spatial run mode">
       <button className={`space-mode-card ${mode === 'lite' ? 'selected' : ''}`} aria-pressed={mode === 'lite'} onClick={() => chooseMode('lite')}>
         <span className="space-mode-title"><span>Light demo</span><span className={`space-mode-state ${profiles?.lite?.available ? 'ready' : ''}`}>{profiles ? profiles.lite?.available ? 'Ready' : 'Not installed' : 'Checking'}</span></span>
-        <span className="space-mode-description">Same models. No full dataset download.</span>
-        <span className="space-mode-features">Custom simulation · Signal import · 6 examples</span>
       </button>
       <button className={`space-mode-card ${mode === 'research' ? 'selected' : ''}`} aria-pressed={mode === 'research'} onClick={() => chooseMode('research')}>
         <span className="space-mode-title"><span>Full research</span><span className={`space-mode-state ${profiles?.research?.available ? 'ready' : ''}`}>{profiles ? profiles.research?.available ? 'Ready' : 'Not installed' : 'Checking'}</span></span>
-        <span className="space-mode-description">Complete data and research assets.</span>
-        <span className="space-mode-features">Custom simulation · Full test replay · Research tools</span>
       </button>
     </section>
     {status === 'checking' ? <div className="card">Connecting to the spatial model…</div> : status === 'ready' ?
