@@ -1,8 +1,13 @@
 # Datasets
 
-Where the data of every module comes from, and how to get it again. The data itself is not in git: it is large, and the CSI-Bench licence
+Where the data of every module comes from, and how to get it again. Complete CSI-Bench data is not in git: it is large, and the CSI-Bench licence
 (CC BY-NC-ND 4.0) lets us share the original files but not changed copies. So each module has a description (source, version, licence),
 a script that fetches the original files and checks them, and a few original files as a sample.
+
+Exception: the complete WiRe-Breath v1.0.0 data used by the breathing module is
+included in `breathing_detection/WiReBreath/` (467 original MAT files, approximately
+726 MiB, CC BY 4.0). See the module's English [usage guide](breathing_detection/README.md)
+for verification, working-copy preparation and processing commands.
 
 ```
 datasets/
@@ -21,7 +26,7 @@ datasets/
 | `motion_source_recognition` | CSI-Bench `MotionSourceRecognition` | 9.3 GB, 60,867 files | CC BY-NC-ND 4.0 |
 | `human_activity_recognition` | CSI-Bench `Multitask`: `HumanActivityRecognition` and `sub_Human_h5` | 13.1 GB, 80,915 files | CC BY-NC-ND 4.0 |
 | `fall_detection` | CSI-Bench `FallDetection` | 0.9 GB, 6,708 files | CC BY-NC-ND 4.0 |
-| `breathing_detection` | CSI-Bench `BreathingDetection`, and WiRe-Breath (not CSI-Bench) | 12.8 GB, 100,008 files, and 467 MATLAB files | CC BY-NC-ND 4.0, and WiRe-Breath under its authors' terms |
+| `breathing_detection` | CSI-Bench `BreathingDetection` (external download), and WiRe-Breath (included) | CSI-Bench: 12.8 GB, 100,008 files; WiRe: approximately 726 MiB, 467 MATLAB files | CSI-Bench: CC BY-NC-ND 4.0; WiRe-Breath: CC BY 4.0 |
 | `space_proximity_sensing` | simulated by the group (not CSI-Bench) | 2.78 GB signal data, 179,064 files; full project archive 11.5 GB | produced by our own code |
 
 ## CSI-Bench
@@ -64,7 +69,12 @@ python3 datasets/motion_source_recognition/get_data.py --verify-only
 ## For the submission
 
 The person in charge of the datasets downloads this folder; it holds everything needed to get the CSI-Bench data and the samples.
-WiRe-Breath for breathing detection is supplied separately by its owner. Module E's simulated data is already distributed through this repository's `wifi-space-20261031` Release and can be restored with the dedicated command below. Keep each source in its own module folder.
+WiRe-Breath for breathing detection is included in `breathing_detection/WiReBreath/`,
+with original licensing and a SHA-256 manifest. It is present in the GitHub source
+ZIP and does not require a separate download. CSI-Bench still uses the original
+download links and scripts. Module E's simulated data is distributed through this
+repository's `wifi-space-20261031` Release and can be restored with the dedicated
+command below. Keep each source in its own module folder.
 
 ### Module E data
 

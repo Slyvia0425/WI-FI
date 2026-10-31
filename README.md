@@ -27,7 +27,7 @@ python scripts/serve_integrated.py
 ### 其他模块的数据和模型
 
 - B/C 模型恢复：`python scripts/restore_bc_models.py`；完整文件清单在 `model_artifacts/manifest.json`。
-- A–D 的原始数据下载说明、脚本和少量原始 H5 示例在 `datasets/`。完整原始 CSI-Bench 数据未提交到 Git；D 的 WiRe-Breath 数据需另行取得。
+- A–D 的原始数据下载说明、脚本和少量原始 H5 示例在 `datasets/`。完整原始 CSI-Bench 数据通过官方链接另行下载；D 使用的完整 WiRe-Breath 数据（467 个原始 MAT 文件）已包含在 `datasets/breathing_detection/WiReBreath/`，随 main 分支 ZIP 下载。英文使用说明见 [呼吸数据 README](datasets/breathing_detection/README.md)。
 - 浏览已保存的回放不需要先下载全部原始训练数据。E 页面执行仿真和推理，需要它自己的完整运行环境与模型。
 
 ### 开发与检查
