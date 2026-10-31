@@ -1,74 +1,45 @@
-# WiFi Sense：无摄像头、无穿戴的 WiFi 人体活动与跌倒感知
+# WiFi Sense：Wi-Fi 室内感知项目
 
-## B + C 集成演示（2026-10-30）
+五个模块共用一个 React 网站：运动来源、人体活动、跌倒、呼吸，以及静态物体空间感知。前端沿用 Fang Meiheng 的深色青蓝设计，首页导航和模块卡片可以进入各自工作区。
 
-B/C训练权重和配套模型数据见 [模型发布与恢复说明](model_artifacts/README.md)。运行 `python3 scripts/restore_bc_models.py` 恢复当前模型，添加 `--all` 可恢复所有35个历史/当前权重文件。
+A–D 展示各自的录制数据预测与评估结果；E 使用仿真信号执行区域计数推理。首页房间动画和融合规则页是明确标注的示意，各模块不是同一次同步录制，不报告五模块联合准确率。
 
-代码交付、模型文件位置及独立HP混合ResNet18候选的结果见 [B/C代码交付说明](docs/BC_RESNET18_CODE_DELIVERY.md)。候选模型未替换当前运行模型。
+## 本地启动
 
-最新默认规则：B置信度<0.6才运行C；高置信度时C未评估，不表示未跌倒。验证回放会跳过51条真实Fall，具体见[门控说明](docs/B_LOW_CONFIDENCE_GATE.md)。下段保留此前并行接口背景。
-
-Module B已接入作者新发布的频谱ExtraTrees seed42参数；Module C使用CSI-Bench官方ResNet18，显示926条HP验证分数，阈值0.574872。B实际读取同一原始分段并按内容身份配对，只作为活动参考，不修改C分数。B无Fall类，当前分段无五类动作真值，未评价联合准确率。此前TCS D回放已单独归档。运行 `python3 scripts/serve_demo.py` 后打开 http://localhost:5173/#/module/fall_detection 。
-
-最新接口、启动与缺项见 [ResNet18 + B交接说明](docs/RESNET_B_HANDOFF.md)；[旧版TCS交接](docs/BC_DEMO_HANDOFF.md)保留作历史记录。B/C使用同一原始HP输入；其余模块数据未同步，五模块融合页只展示预期规则效果。
-
-
-基于 WiFi CSI 的室内感知研究原型，面向单人房间的非临床安全监测（模式识别系统实践模块课程项目）。
-五个感知模块分别处理 CSI 数据，再由一层透明的规则式融合把各模块输出合成房间状态和安全提示。
-网站展示每个模块的工作过程，以及一张"集成后预期效果"的平面图。
-
-> 各模块使用各自的数据子集独立训练和评价，集成页只演示预期效果，**不是联合真值**。
-
-## 快速开始（本地启动）
-
-**环境要求**：Node.js 20+、npm 10+、Python 3.10+（`node -v`、`npm -v`、`python3 --version`；Windows 用 `python`）。后端只用 Python 标准库，不需要 `pip install`。
+需要 Node.js 20+、npm 10+、Python 3.10+。在仓库根目录执行：
 
 ```bash
-git clone <仓库地址>
-cd WI-FI
-npm run install:frontend      # 安装前端依赖，只需一次
-npm run dev                   # 同时启动后端和网站，Ctrl+C 一起关闭
+npm ci --prefix frontend
+npm run build
+python scripts/serve_integrated.py
 ```
 
-| 服务 | 地址 | 说明 |
-|---|---|---|
-| 网站 | http://localhost:5173 | 浏览器打开这个地址 |
-| 后端接口 | http://localhost:8000/api/health | 返回 `{"ok": true}` 说明后端正常 |
+打开 **http://127.0.0.1:5173/**。Windows 构建后也可双击 `START_TEAM.bat`。
 
-**确认成功**：首页应显示深色页面和房间平面图，图上的人会自动循环走动。进入任一模块页，顶部"OUTPUT PREVIEW"卡片右侧会显示 `source: backend` 或 `source: bundled`；`bundled` 表示该模块还没有导出结果，页面用的是自带示例数据，属正常。
+### 空间模块的模型与数据
 
-**其他启动方式**
+首次使用 E 模块，在 `backend/modules/space_proximity_sensing/wifi space` 中运行 `install.bat`（Windows，Python 3.12）。它会下载并校验已有 Release 的全部分卷，恢复模型和仿真数据，并创建 Python 环境。随后启动统一网站，空间服务会自动运行。
+
+其他系统可在该目录运行 `python3 fetch_data.py`，创建 `.venv` 并安装 `multi_object/requirements-night.txt`。空间模型缺失时，A–D 的保存结果页面仍可浏览，E 页面会显示服务离线并提供重连按钮。
+
+已有完整空间项目可通过 `WIFI_SPACE_ROOT` 指定；解释器可通过 `WIFI_SPATIAL_PYTHON` 指定。网站默认端口为 5173，内部空间服务默认端口为 8780；使用 `--port` 和 `--spatial-port` 修改。
+
+### 其他模块的数据和模型
+
+- B/C 模型恢复：`python scripts/restore_bc_models.py`；完整文件清单在 `model_artifacts/manifest.json`。
+- A–D 的原始数据下载说明、脚本和少量原始 H5 示例在 `datasets/`。完整原始 CSI-Bench 数据未提交到 Git；D 的 WiRe-Breath 数据需另行取得。
+- 浏览已保存的回放不需要先下载全部原始训练数据。E 页面执行仿真和推理，需要它自己的完整运行环境与模型。
+
+### 开发与检查
 
 ```bash
-# 只启动网站（用自带示例数据，不需要 Python）
-cd frontend && npm install && npm run dev
-
-# 只启动后端（在仓库根目录）
-python3 -m backend.api                          # 所有模块，端口 8000
-python3 -m backend.api --port 9000              # 换端口
-python3 -m backend.api --only fall_detection    # 开发时只启动自己的模块
+npm ci --prefix frontend
+npm run dev
+python -m unittest discover -s backend/tests -t .
+npm run build
 ```
 
-分开启动时，让网站读后端需要创建 `frontend/.env.local`，写入 `VITE_BACKEND_URL=http://localhost:8000`。
-
-**配置数据位置**：CSI-Bench 数据集很大，不进 git，用环境变量告诉后端它在哪里。
-
-```bash
-export CSI_DATA_ROOT="/path/to/MotionSourceRecognition"      # macOS / Linux
-$env:CSI_DATA_ROOT = "D:\data\MotionSourceRecognition"       # Windows PowerShell
-```
-
-**提交前检查**：`npm run check`（后端测试 + 前端构建）。
-
-**常见问题**
-
-| 现象 | 处理 |
-|---|---|
-| `npm run dev` 报找不到 python | 指定解释器：`PYTHON=python3 npm run dev`（Windows：`$env:PYTHON="python"; npm run dev`） |
-| 端口 5173 或 8000 被占用 | 关掉占用的程序，或分开启动并换端口 |
-| 页面一直显示 `source: bundled` | 该模块后端还没有输出，属正常；导出结果后会变成 `backend` |
-| 浏览器控制台出现 404 | 网站先问后端，后端没有输出时回退到自带数据，不影响页面 |
-| 页面缺模块或空白 | 前后端文件夹名必须一致，运行 `npm test` 会指出缺了什么 |
+开发模式：网站 5173，回放 API 8000，空间服务 8780。Vite 代理 `/api/` 与 `/spatial/`，统一入口会启动空间服务。部署说明见 [整合说明](docs/INTEGRATION.md)。
 
 ## 架构
 
@@ -131,7 +102,7 @@ frontend/src/
 | `human_activity_recognition` 人体活动识别 | 活动类别、置信度、稳定性 | |
 | `fall_detection` 跌倒检测 | 跌倒评分，状态：normal、suspected、alert | |
 | `breathing_detection` 呼吸检测 | 呼吸证据，或"当前不适合判断" | |
-| `space_proximity_sensing` 空间与接近程度感知 | 区域，近、中、远 | |
+| `space_proximity_sensing` 静态物体空间感知 | 仿真信号、占用区域、区域内物体数 | |
 
 每个模块在两处各有一个文件夹：
 

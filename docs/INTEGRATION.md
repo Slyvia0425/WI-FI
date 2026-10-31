@@ -1,6 +1,6 @@
 # Group 66 integration
 
-The local `integration-preview` branch combines `A_BRANCH` (already in `main`), `codex/bc-resnet18-hp-mixed`, `D-breathing`, and `wifi-space`. Publication to `main` is pending owner review.
+The unified application combines `A_BRANCH` (already in `main`), `codex/bc-resnet18-hp-mixed`, `D-breathing`, and `wifi-space`. The owner approved publication of the integrated application to `main`.
 
 The shared React shell retains Fang Meiheng's layout, typography, colours and room illustration. Home links to all five module workspaces and the fusion page. A–D retain their own experiments and recorded outputs. Module E opens the interactive static-object simulator through a same-origin proxy, without changing its model-bound source files.
 
