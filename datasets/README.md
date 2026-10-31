@@ -22,7 +22,7 @@ datasets/
 | `human_activity_recognition` | CSI-Bench `Multitask`: `HumanActivityRecognition` and `sub_Human_h5` | 13.1 GB, 80,915 files | CC BY-NC-ND 4.0 |
 | `fall_detection` | CSI-Bench `FallDetection` | 0.9 GB, 6,708 files | CC BY-NC-ND 4.0 |
 | `breathing_detection` | CSI-Bench `BreathingDetection`, and WiRe-Breath (not CSI-Bench) | 12.8 GB, 100,008 files, and 467 MATLAB files | CC BY-NC-ND 4.0, and WiRe-Breath under its authors' terms |
-| `space_proximity_sensing` | simulated by the group (not CSI-Bench) | 11.5 GB | produced by our own code |
+| `space_proximity_sensing` | simulated by the group (not CSI-Bench) | 2.78 GB signal data, 179,064 files; full project archive 11.5 GB | produced by our own code |
 
 ## CSI-Bench
 
@@ -66,3 +66,7 @@ python3 datasets/motion_source_recognition/get_data.py --verify-only
 The person in charge of the datasets downloads this folder; it holds everything needed to get the CSI-Bench data and the samples.
 Data from outside CSI-Bench (WiRe-Breath for breathing detection, the simulated data of space and proximity sensing) is sent to that
 person separately by its owner, who puts it into the module's folder.
+
+### Module E data
+
+Module E is isolated in `datasets/space_proximity_sensing/`. Its own `get_data.py` restores all signal data from the project's checksum-verified Release; it does not use the CSI-Bench downloader. A full file index and six original simulated examples are committed alongside it. See that folder's README for restoration and verification commands.
