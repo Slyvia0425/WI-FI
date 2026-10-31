@@ -10,11 +10,11 @@
 
 ## What it is
 
-A fixed 6 by 6 by 3 m room with one wooden cuboid (1.2 by 0.8 by 1.2 m), two transmitters and six receivers, 64 subcarriers at 5.24 GHz with
-20 MHz bandwidth, 100,000 samples per source, zones on a 3 by 3 grid with jitter. The settings are in `config.json` of the branch.
+The active multi-object workspace uses a 6 by 6 by 3 m furnished room, four transmitters, eight receivers (32 links), and 64 frequency samples at 5.24 GHz with 20 MHz bandwidth. One to three wooden cuboids occupy a 3 by 3 zone grid; objects can share a centre zone if they remain physically separated. Small, medium and large size bands allow dimensions within ±8%. Default and T1 transmitter layouts have separate validated models.
+
+The full archive preserves earlier single-object experiments as well as the active multi-object project. The root-level legacy two-transmitter/six-receiver configuration is not the active web application's configuration. The output is coarse zone counts, not measured furniture geometry or human proximity.
 
 ## Get it
 
 The archive is published as the release `wifi-space-20261031` of the project repository (11 parts). The branch's `fetch_data.py` downloads
-the parts, checks every part and the whole archive by SHA256, and unpacks them. The owner of the module sends the data separately, to be
-placed in `datasets/space_proximity_sensing/data`.
+the parts, checks every part and the whole archive by SHA256, and unpacks them. Run `fetch_data.py` inside `backend/modules/space_proximity_sensing/wifi space`; files are restored there at the paths expected by its models. Do not relocate the model-bound project to a different data layout.
