@@ -64,8 +64,7 @@ python3 datasets/motion_source_recognition/get_data.py --verify-only
 ## For the submission
 
 The person in charge of the datasets downloads this folder; it holds everything needed to get the CSI-Bench data and the samples.
-Data from outside CSI-Bench (WiRe-Breath for breathing detection, the simulated data of space and proximity sensing) is sent to that
-person separately by its owner, who puts it into the module's folder.
+WiRe-Breath for breathing detection is supplied separately by its owner. Module E's simulated data is already distributed through this repository's `wifi-space-20261031` Release and can be restored with the dedicated command below. Keep each source in its own module folder.
 
 ### Module E data
 
