@@ -4,11 +4,11 @@
 // `role` tells the shared fusion code which input this module provides.
 export default {
   order: 5,
-  navLabel: "Space & proximity",
-  title: "Space & proximity sensing",
+  navLabel: "Spatial sensing",
+  title: "Spatial sensing",
   role: "space",
-  blurb: "Zone plus a near, mid or far proximity level.",
-  owner: '',
+  blurb: "Place one to three objects and estimate occupied zones from simulated Wi-Fi signals.",
+  owner: 'Chen Siyi',
   summarize: (f) => `${f.zone}${f.proximity ? `, ${f.proximity}` : ''}`,
   zones: {
     doorway: {

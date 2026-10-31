@@ -34,6 +34,7 @@ backend/modules/*/local_data/
 
 # Also ignore a dependency-directory symlink used for local validation
 node_modules
+.runtime/
 
 # Downloaded release model archives
 model_artifacts/downloads/

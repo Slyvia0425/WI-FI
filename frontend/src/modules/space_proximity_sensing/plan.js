@@ -1,23 +1,7 @@
-// Plan for this module. Edit freely: add, remove or reword items, and move `s` from 'planned' to 'doing' to 'done'.
-// Starting text follows the team proposal.
-const p = (t, s = 'planned') => ({ t, s })
-
+const p = (t, s = 'done') => ({ t, s })
 export default {
-  preprocessing: [
-    p("Pick labels from Localization and ProximityRecognition that fit the prototype room"),
-    p("Zone and proximity are trained and checked separately, since labels are not joint"),
-  ],
-  training: [
-    p("Simple classifier baseline for zones"),
-    p("Compare with a small MLP or another light model; proximity as a classification problem"),
-  ],
-  experiments: [
-    p("Accuracy, stability across environments and deployment cost"),
-    p("Keep location unknown or proximity uncertain when confidence is low"),
-  ],
-  evaluation: [
-    p("Macro-F1 for zones and for the four distance levels, per-class recall, one confusion matrix each"),
-    p("Effect of user, environment and device changes"),
-    p("Continuous distance, exact trajectories and multi-person localisation are out of scope"),
-  ],
+  preprocessing: [p('Generate independent static-object scenes with simulated Wi-Fi channels'), p('Extract calibrated signal features using a fixed empty-room reference')],
+  training: [p('Train zone-count models for default and T1 transmitter layouts'), p('Freeze models, confidence thresholds and source bindings')],
+  experiments: [p('Compare baseline and refined zone-count models'), p('Test shared zones, object sizes and transmitter layouts')],
+  evaluation: [p('Report exact scene accuracy, zone metrics and confirmed-result coverage'), p('Preserve Uncertain results and known failure cases'), p('Validate against measured signals in additional rooms', 'planned')],
 }

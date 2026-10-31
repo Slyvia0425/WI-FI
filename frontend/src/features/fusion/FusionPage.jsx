@@ -10,7 +10,8 @@ function Cell({ tone, children }) {
 }
 
 export default function FusionPage() {
-  const { all, ready } = useAllModules(MODULES)
+  const { all: recorded, ready } = useAllModules(MODULES)
+  const all = useMemo(() => ({ ...recorded, space_proximity_sensing: null }), [recorded])
   const times = useMemo(() => {
     const s = new Set()
     Object.values(all).forEach((d) => d && d.frames.forEach((f) => s.add(f.t)))
@@ -21,7 +22,7 @@ export default function FusionPage() {
     const f = framesByRole(MODULES, all, t)
     return { t, f, fused: fuse(f) }
   })
-  const missing = MODULES.filter((m) => ready && !all[m.id]).map((m) => m.title)
+  const missing = MODULES.filter((m) => m.role !== 'space' && ready && !all[m.id]).map((m) => m.title)
   const areas = [...new Set(IDEAS.map((i) => i.area))]
 
   return (
@@ -37,12 +38,12 @@ export default function FusionPage() {
       {missing.length > 0 && <Notice kind="warn">No data from {missing.join(', ')}. They show as "no data" below and the rest keep working.</Notice>}
       <section className="card" style={{ marginBottom: 24 }}>
         <h3>INPUT PROVENANCE</h3>
-        <p className="sm">B now uses the author-released spectral model on the same raw HP segments as C; the fall page verifies each reference by input identity. Other modules remain independent. TCS is archived separately. This five-module table remains an interface demonstration, not synchronised multi-module evaluation.</p>
+        <p className="sm">B and C share HP input segments. A and D use independent recordings. E runs a separate static-object simulation and is excluded from this replay timeline. This is an interface demonstration, without synchronised joint labels.</p>
         <div className="tblwrap"><table className="mt">
           <thead><tr><th>Module</th><th>Data shown</th><th>Frames</th><th>Joint recording</th></tr></thead>
           <tbody>{MODULES.map((m) => <tr key={m.id}>
-            <td>{m.title}</td><td>{!all[m.id] ? 'Unavailable' : all[m.id].mock ? 'Synthetic / placeholder fixture' : `${all[m.id].dataset || 'Recorded'} ${all[m.id].split || 'results'}`}</td>
-            <td>{all[m.id]?.frames?.length ?? 0}</td><td>Not established</td>
+            <td>{m.title}</td><td>{m.role === 'space' ? 'Independent signal simulation' : !all[m.id] ? 'Unavailable' : all[m.id].mock ? 'Synthetic / placeholder fixture' : `${all[m.id].dataset || 'Recorded'} ${all[m.id].split || 'results'}`}</td>
+            <td>{m.role === 'space' ? 'Interactive' : all[m.id]?.frames?.length ?? 0}</td><td>{m.role === 'space' ? 'Excluded from replay fusion' : 'Not established'}</td>
           </tr>)}</tbody>
         </table></div>
       </section>

@@ -6,8 +6,8 @@ const python = process.env.PYTHON || (process.platform === 'win32' ? 'python' : 
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm'
 
 const children = [
-  spawn(python, ['-m', 'backend.api'], { stdio: 'inherit' }),
-  spawn(npm, ['--prefix', 'frontend', 'run', 'dev'], { stdio: 'inherit', env: { ...process.env, VITE_BACKEND_URL: 'http://localhost:8000' } }),
+  spawn(python, ['scripts/serve_integrated.py', '--api-only', '--port', '8000'], { stdio: 'inherit' }),
+  spawn(npm, ['--prefix', 'frontend', 'run', 'dev'], { stdio: 'inherit', shell: process.platform === 'win32', env: { ...process.env, VITE_BACKEND_URL: '' } }),
 ]
 
 const stop = () => children.forEach((c) => c.kill())

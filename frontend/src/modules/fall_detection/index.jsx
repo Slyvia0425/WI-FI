@@ -35,7 +35,7 @@ function ResNetActivityReference() {
         <div className="stage-body" style={{ marginTop: 20 }}>
           <div className="card">
             <h3>MODULE C · RESNET18</h3>
-            <div className="big">{frame.C_ran === false ? 'C 未运行 / Not evaluated' : frame.state === 'suspected' ? 'Suspected fall' : 'Below threshold'}</div>
+            <div className="big">{frame.C_ran === false ? 'C not evaluated' : frame.state === 'suspected' ? 'Suspected fall' : 'Below threshold'}</div>
             {frame.C_ran === false ? <p>{frame.gate?.reason}. No C score or binary decision is produced.</p> : <p>Fall score <strong>{frame.fall_score.toFixed(4)}</strong> · threshold <strong>{frame.threshold.toFixed(6)}</strong></p>}
             <p className="sm">Validation label: {frame.ground_truth} · {frame.C_ran === false ? 'Skipped; no C classification' : frame.correct ? 'Correct segment prediction' : 'Segment misclassification'}</p>
             <p className="sm">B confidence controls whether C runs. When selected, C keeps its frozen threshold and model. This replay selects previously saved C scores; it does not execute the model on page changes.</p>

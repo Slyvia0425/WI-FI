@@ -43,8 +43,7 @@ export default function BreathingDetection() {
     && data?.rate_estimator?.id === mod.bundled.rate_estimator?.id ? data : mod.bundled
   const [view, setView] = useState('monitor')
   const [dataset, setDataset] = useState('csi')
-  // Temporary review language; no persistence or inference-state dependency.
-  const [language, setLanguage] = useState('en')
+  const language = 'en'
   const [recordIndex, setRecordIndex] = useState(0)
   const [sampleIndex, setSampleIndex] = useState(0)
   const [phase, setPhase] = useState('ready')
@@ -95,7 +94,6 @@ export default function BreathingDetection() {
   const rateHistory = sample.streaming?.[mode]?.events.filter(e => e.rate_bpm != null) || []
   const historicalRate = phase === 'finished' ? rateHistory.at(-1)?.rate_bpm : null
   return localizeTree(<div className="bm-page" lang={language === 'zh' ? 'zh-CN' : 'en'}>
-    <div className="bm-review-language" data-review-language="skip"><span>{language === 'zh' ? '临时中文验收版 · 仅切换呼吸模块文案' : 'Temporary review translation · breathing module only'}</span><button type="button" aria-label={language === 'zh' ? 'Switch to English' : '切换中文验收版'} onClick={() => setLanguage(l => l === 'en' ? 'zh' : 'en')}>{language === 'zh' ? 'English' : '中文验收'}</button></div>
     <header className="bm-heading"><div><div className="bm-eyebrow">WIFI SENSE / BREATHING</div><h1>Breathing workspace</h1><p>Observe the signal. Understand the result.</p></div><nav aria-label="Module views"><button className={view === 'monitor' ? 'active' : ''} onClick={() => openView('monitor')}>Monitoring</button><button className={view === 'research' ? 'active' : ''} onClick={() => openView('research')}>Models & validation ↗</button></nav></header>
     {view === 'research' ? <><div className="bm-return"><button onClick={() => openView('monitor')}>← Back to monitoring</button><span>Offline research, not live monitoring.</span></div><ResearchView language={language} /></> : <>
       <section className="bm-dataset-picker" aria-label="Experience dataset"><div><strong>Recorded-data experience</strong><p>Choose a scenario, then start the replay.</p></div><div role="group" aria-label="Experience dataset"><button type="button" aria-pressed={dataset === 'csi'} onClick={() => { reset(); setDataset('csi') }}>Breathing detection</button><button type="button" aria-pressed={dataset === 'wire'} onClick={() => { reset(); setDataset('wire') }}>Respiratory rate</button><button type="button" aria-pressed={dataset === 'fan'} onClick={() => { reset(); setDataset('fan') }}>Fan interference</button></div></section>

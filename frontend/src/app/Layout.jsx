@@ -1,8 +1,11 @@
-import { NavLink, Link, Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
 import { MODULES } from '../modules/registry.js'
 import { DISCLAIMER } from '../components/ui.jsx'
 
 export default function Layout() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [pathname])
   return (
     <div className="page">
       <div className="wrap">
@@ -15,12 +18,13 @@ export default function Layout() {
             <span>WiFi Sense</span>
           </Link>
           <nav className="topnav">
+            <NavLink to="/" end>Home</NavLink>
             {MODULES.map((m) => (
               <NavLink key={m.id} to={`/module/${m.id}`}>{m.navLabel}</NavLink>
             ))}
-            <NavLink to="/fusion">Fusion & improvement</NavLink>
+            <NavLink to="/fusion">Fusion</NavLink>
           </nav>
-          <div className="badge"><i />REPLAY MODE</div>
+          <div className="badge"><i />GROUP 66</div>
         </header>
         <Outlet />
         <footer className="foot">{DISCLAIMER}</footer>

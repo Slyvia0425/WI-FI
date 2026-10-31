@@ -417,7 +417,7 @@ export default function MotionSourceRecognition() {
           <p className="lead">{SUMMARY}</p>
         </div>
         <span className="state-pill" style={{ color: data?.mock ? '#FFB347' : '#22E4FF', background: data?.mock ? 'rgba(255,179,71,.12)' : 'rgba(34,228,255,.10)' }}>
-          {loading ? 'LOADING' : error ? 'NO DATA' : data?.mock ? 'PLACEHOLDER RESULTS' : 'LIVE DATA'}
+          {loading ? 'LOADING' : error ? 'NO DATA' : data?.mock ? 'PLACEHOLDER RESULTS' : 'RECORDED RESULTS'}
         </span>
       </header>
       {error && <Notice kind="warn">Couldn't load this module's data ({error.message}).</Notice>}

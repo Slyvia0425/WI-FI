@@ -6,10 +6,10 @@ import { useEffect, useState } from 'react'
 // bundled src/modules/<module>/data/replay.json if the backend is unreachable or has no output yet.
 // Without it, the bundled file is used.
 export async function fetchModule(mod) {
-  const backend = import.meta.env.VITE_BACKEND_URL
+  const backend = import.meta.env.VITE_BACKEND_URL ?? ''
   let json = null
   let source = 'bundled'
-  if (backend) {
+  {
     try {
       const res = await fetch(`${backend.replace(/\/$/, '')}/api/${mod.id}/replay`)
       if (res.ok) { json = await res.json(); source = 'backend' }
