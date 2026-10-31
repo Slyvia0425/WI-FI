@@ -1,0 +1,356 @@
+[
+ {
+  "model": "logistic_regression",
+  "description": "Logistic Regression on MiniRocket features",
+  "feature_route": "minirocket",
+  "split": 0,
+  "parameters": {
+   "C": 0.01,
+   "max_iter": 300
+  },
+  "features": 9996,
+  "train_windows": 41331,
+  "validation_windows": 9424,
+  "macro_f1": 0.4693,
+  "accuracy": 0.8928,
+  "recall": {
+   "Human": 0.967,
+   "Pet": 0.9812,
+   "IRobot": 0.0,
+   "Fan": 0.0
+  },
+  "training_seconds": 643.5,
+  "model_megabytes": 0.4
+ },
+ {
+  "model": "logistic_regression",
+  "description": "Logistic Regression on MiniRocket features",
+  "feature_route": "minirocket",
+  "split": 1,
+  "parameters": {
+   "C": 1.0,
+   "max_iter": 300
+  },
+  "features": 9996,
+  "train_windows": 41881,
+  "validation_windows": 9817,
+  "macro_f1": 0.643,
+  "accuracy": 0.8633,
+  "recall": {
+   "Human": 0.9701,
+   "Pet": 0.9523,
+   "IRobot": 0.0,
+   "Fan": 0.986
+  },
+  "training_seconds": 627.4,
+  "model_megabytes": 0.4
+ },
+ {
+  "model": "logistic_regression",
+  "description": "Logistic Regression on MiniRocket features",
+  "feature_route": "minirocket",
+  "split": 2,
+  "parameters": {
+   "C": 3e-06,
+   "max_iter": 300
+  },
+  "features": 9996,
+  "train_windows": 39594,
+  "validation_windows": 9188,
+  "macro_f1": 0.5437,
+  "accuracy": 0.7584,
+  "recall": {
+   "Human": 0.8476,
+   "Pet": 0.7217,
+   "IRobot": 0.7729,
+   "Fan": 0.0
+  },
+  "training_seconds": 663.9,
+  "model_megabytes": 0.4
+ },
+ {
+  "model": "logistic_regression_statistics_physical",
+  "description": "Logistic Regression on statistics and physical features",
+  "feature_route": "statistics_physical",
+  "split": 0,
+  "parameters": {
+   "C": 0.001,
+   "max_iter": 300
+  },
+  "features": 2380,
+  "train_windows": 41331,
+  "validation_windows": 9424,
+  "macro_f1": 0.4801,
+  "accuracy": 0.7668,
+  "recall": {
+   "Human": 0.8079,
+   "Pet": 0.8391,
+   "IRobot": 0.3213,
+   "Fan": 0.0
+  },
+  "training_seconds": 89.7,
+  "model_megabytes": 0.1
+ },
+ {
+  "model": "logistic_regression_statistics_physical",
+  "description": "Logistic Regression on statistics and physical features",
+  "feature_route": "statistics_physical",
+  "split": 1,
+  "parameters": {
+   "C": 1.0,
+   "max_iter": 300
+  },
+  "features": 2380,
+  "train_windows": 41881,
+  "validation_windows": 9817,
+  "macro_f1": 0.5134,
+  "accuracy": 0.7338,
+  "recall": {
+   "Human": 0.8531,
+   "Pet": 0.7966,
+   "IRobot": 0.0721,
+   "Fan": 0.4298
+  },
+  "training_seconds": 93.9,
+  "model_megabytes": 0.1
+ },
+ {
+  "model": "logistic_regression_statistics_physical",
+  "description": "Logistic Regression on statistics and physical features",
+  "feature_route": "statistics_physical",
+  "split": 2,
+  "parameters": {
+   "C": 0.01,
+   "max_iter": 300
+  },
+  "features": 2380,
+  "train_windows": 39594,
+  "validation_windows": 9188,
+  "macro_f1": 0.5782,
+  "accuracy": 0.8026,
+  "recall": {
+   "Human": 0.8695,
+   "Pet": 0.8169,
+   "IRobot": 0.5457,
+   "Fan": 0.0451
+  },
+  "training_seconds": 88.8,
+  "model_megabytes": 0.1
+ },
+ {
+  "model": "random_forest",
+  "description": "Random Forest on time-series statistics",
+  "feature_route": "statistics",
+  "split": 0,
+  "parameters": {
+   "min_samples_leaf": 50,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 2320,
+  "train_windows": 41331,
+  "validation_windows": 9424,
+  "macro_f1": 0.4694,
+  "accuracy": 0.7785,
+  "recall": {
+   "Human": 0.8387,
+   "Pet": 0.8432,
+   "IRobot": 0.1385,
+   "Fan": 0.052
+  },
+  "training_seconds": 419.9,
+  "model_megabytes": 6.4
+ },
+ {
+  "model": "random_forest",
+  "description": "Random Forest on time-series statistics",
+  "feature_route": "statistics",
+  "split": 1,
+  "parameters": {
+   "min_samples_leaf": 50,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 2320,
+  "train_windows": 41881,
+  "validation_windows": 9817,
+  "macro_f1": 0.5641,
+  "accuracy": 0.771,
+  "recall": {
+   "Human": 0.8655,
+   "Pet": 0.8386,
+   "IRobot": 0.1275,
+   "Fan": 0.6657
+  },
+  "training_seconds": 419.8,
+  "model_megabytes": 6.4
+ },
+ {
+  "model": "random_forest",
+  "description": "Random Forest on time-series statistics",
+  "feature_route": "statistics",
+  "split": 2,
+  "parameters": {
+   "min_samples_leaf": 50,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 2320,
+  "train_windows": 39594,
+  "validation_windows": 9188,
+  "macro_f1": 0.5215,
+  "accuracy": 0.7576,
+  "recall": {
+   "Human": 0.8664,
+   "Pet": 0.7179,
+   "IRobot": 0.3934,
+   "Fan": 0.1662
+  },
+  "training_seconds": 355.0,
+  "model_megabytes": 5.2
+ },
+ {
+  "model": "random_forest_minirocket",
+  "description": "Random Forest on MiniRocket features",
+  "feature_route": "minirocket",
+  "split": 0,
+  "parameters": {
+   "min_samples_leaf": 2,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 9996,
+  "train_windows": 41331,
+  "validation_windows": 9424,
+  "macro_f1": 0.46,
+  "accuracy": 0.8787,
+  "recall": {
+   "Human": 0.9688,
+   "Pet": 0.9473,
+   "IRobot": 0.0,
+   "Fan": 0.0
+  },
+  "training_seconds": 166.1,
+  "model_megabytes": 13.5
+ },
+ {
+  "model": "random_forest_minirocket",
+  "description": "Random Forest on MiniRocket features",
+  "feature_route": "minirocket",
+  "split": 1,
+  "parameters": {
+   "min_samples_leaf": 5,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 9996,
+  "train_windows": 41881,
+  "validation_windows": 9817,
+  "macro_f1": 0.6553,
+  "accuracy": 0.8289,
+  "recall": {
+   "Human": 0.9472,
+   "Pet": 0.9121,
+   "IRobot": 0.0,
+   "Fan": 0.7781
+  },
+  "training_seconds": 141.9,
+  "model_megabytes": 12.5
+ },
+ {
+  "model": "random_forest_minirocket",
+  "description": "Random Forest on MiniRocket features",
+  "feature_route": "minirocket",
+  "split": 2,
+  "parameters": {
+   "min_samples_leaf": 50,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 9996,
+  "train_windows": 39594,
+  "validation_windows": 9188,
+  "macro_f1": 0.4758,
+  "accuracy": 0.8498,
+  "recall": {
+   "Human": 0.9639,
+   "Pet": 0.8661,
+   "IRobot": 0.0665,
+   "Fan": 0.0
+  },
+  "training_seconds": 79.0,
+  "model_megabytes": 4.3
+ },
+ {
+  "model": "random_forest_statistics_physical",
+  "description": "Random Forest on statistics and physical features",
+  "feature_route": "statistics_physical",
+  "split": 0,
+  "parameters": {
+   "min_samples_leaf": 5,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 2380,
+  "train_windows": 41331,
+  "validation_windows": 9424,
+  "macro_f1": 0.4471,
+  "accuracy": 0.8554,
+  "recall": {
+   "Human": 0.9436,
+   "Pet": 0.9215,
+   "IRobot": 0.0,
+   "Fan": 0.0
+  },
+  "training_seconds": 238.1,
+  "model_megabytes": 15.2
+ },
+ {
+  "model": "random_forest_statistics_physical",
+  "description": "Random Forest on statistics and physical features",
+  "feature_route": "statistics_physical",
+  "split": 1,
+  "parameters": {
+   "min_samples_leaf": 5,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 2380,
+  "train_windows": 41881,
+  "validation_windows": 9817,
+  "macro_f1": 0.5489,
+  "accuracy": 0.8077,
+  "recall": {
+   "Human": 0.9422,
+   "Pet": 0.8958,
+   "IRobot": 0.0,
+   "Fan": 0.441
+  },
+  "training_seconds": 249.8,
+  "model_megabytes": 15.7
+ },
+ {
+  "model": "random_forest_statistics_physical",
+  "description": "Random Forest on statistics and physical features",
+  "feature_route": "statistics_physical",
+  "split": 2,
+  "parameters": {
+   "min_samples_leaf": 50,
+   "max_features": "sqrt",
+   "n_estimators": 300
+  },
+  "features": 2380,
+  "train_windows": 39594,
+  "validation_windows": 9188,
+  "macro_f1": 0.5645,
+  "accuracy": 0.8053,
+  "recall": {
+   "Human": 0.936,
+   "Pet": 0.7476,
+   "IRobot": 0.4626,
+   "Fan": 0.107
+  },
+  "training_seconds": 203.7,
+  "model_megabytes": 4.9
+ }
+]

@@ -1,0 +1,20 @@
+{
+ "created": "2026-10-18T06:57:17+00:00",
+ "model": "logistic_regression",
+ "budget_share_unknown_on_validation": 0.2,
+ "rule": "unknown when the calibrated highest probability is below the threshold; calibrated = softmax(log p / T); threshold = quantile `budget` of the calibrated confidences of the validation rows",
+ "splits": {
+  "split_0": {
+   "temperature": 2.3042,
+   "threshold": 0.8062
+  },
+  "split_1": {
+   "temperature": 6.3231,
+   "threshold": 0.6887
+  },
+  "split_2": {
+   "temperature": 0.6876,
+   "threshold": 0.5355
+  }
+ }
+}

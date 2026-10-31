@@ -1,0 +1,94 @@
+{
+ "model": "Random Forest on MiniRocket features",
+ "feature_route": "minirocket",
+ "split": 1,
+ "seed": 42,
+ "chosen_parameters": {
+  "min_samples_leaf": 5,
+  "max_features": "sqrt",
+  "n_estimators": 300
+ },
+ "validation": {
+  "accuracy": 0.8289,
+  "macro_f1": 0.6553,
+  "per_class": {
+   "Human": {
+    "precision": 0.7776,
+    "recall": 0.9472,
+    "f1": 0.8541,
+    "windows": 4378
+   },
+   "Pet": {
+    "precision": 0.8834,
+    "recall": 0.9121,
+    "f1": 0.8975,
+    "windows": 4071
+   },
+   "IRobot": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "windows": 1012
+   },
+   "Fan": {
+    "precision": 0.9858,
+    "recall": 0.7781,
+    "f1": 0.8697,
+    "windows": 356
+   }
+  },
+  "confusion_matrix": [
+   [
+    4147,
+    227,
+    0,
+    4
+   ],
+   [
+    358,
+    3713,
+    0,
+    0
+   ],
+   [
+    766,
+    246,
+    0,
+    0
+   ],
+   [
+    62,
+    17,
+    0,
+    277
+   ]
+  ]
+ },
+ "tuning": [
+  {
+   "parameters": {
+    "min_samples_leaf": 5,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 141.9,
+   "accuracy": 0.8289,
+   "macro_f1": 0.6553,
+   "recall": {
+    "Human": 0.9472,
+    "Pet": 0.9121,
+    "IRobot": 0.0,
+    "Fan": 0.7781
+   }
+  }
+ ],
+ "class_weights": {
+  "Human": 0.5376,
+  "Pet": 0.5626,
+  "IRobot": 3.5698,
+  "Fan": 12.1747
+ },
+ "train_windows": 41881,
+ "validation_windows": 9817,
+ "features": 9996,
+ "training_seconds_total": 141.9
+}

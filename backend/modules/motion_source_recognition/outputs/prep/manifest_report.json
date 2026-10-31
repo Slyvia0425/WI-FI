@@ -1,0 +1,62 @@
+{
+ "rows": 60858,
+ "h5_files_on_disk": 60858,
+ "rows_without_file": 0,
+ "files_not_in_table": 0,
+ "duplicate_ids": 0,
+ "duplicate_paths": 0,
+ "recording_groups": 238,
+ "groups_per_class": {
+  "Fan": 5,
+  "Human": 115,
+  "IRobot": 3,
+  "Pet": 115
+ },
+ "samples_per_class": {
+  "Human": 28154,
+  "Pet": 26759,
+  "IRobot": 4306,
+  "Fan": 1639
+ },
+ "users_per_class": {
+  "Fan": 4,
+  "Human": 19,
+  "IRobot": 2,
+  "Pet": 18
+ },
+ "environments_per_class": {
+  "Fan": [
+   "E11",
+   "E12",
+   "E13"
+  ],
+  "Human": [
+   "E11",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E19"
+  ],
+  "IRobot": [
+   "E11",
+   "E19"
+  ],
+  "Pet": [
+   "E11",
+   "E12",
+   "E13",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E20"
+  ]
+ },
+ "activity_names_raw": 75,
+ "activity_names_after_merge": 63,
+ "official_split_groups_in_more_than_one_split": 238,
+ "official_test_groups_also_in_train": "238 of 238"
+}

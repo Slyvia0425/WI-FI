@@ -1,0 +1,166 @@
+{
+ "model": "Random Forest on time-series statistics",
+ "split": 0,
+ "seed": 42,
+ "chosen_parameters": {
+  "min_samples_leaf": 50,
+  "max_features": "sqrt",
+  "n_estimators": 300
+ },
+ "validation": {
+  "accuracy": 0.7785,
+  "macro_f1": 0.4694,
+  "per_class": {
+   "Human": {
+    "precision": 0.7843,
+    "recall": 0.8387,
+    "f1": 0.8106,
+    "windows": 4488
+   },
+   "Pet": {
+    "precision": 0.8448,
+    "recall": 0.8432,
+    "f1": 0.844,
+    "windows": 4152
+   },
+   "IRobot": {
+    "precision": 0.1597,
+    "recall": 0.1385,
+    "f1": 0.1484,
+    "windows": 361
+   },
+   "Fan": {
+    "precision": 0.131,
+    "recall": 0.052,
+    "f1": 0.0745,
+    "windows": 423
+   }
+  },
+  "confusion_matrix": [
+   [
+    3764,
+    515,
+    119,
+    90
+   ],
+   [
+    451,
+    3501,
+    144,
+    56
+   ],
+   [
+    251,
+    60,
+    50,
+    0
+   ],
+   [
+    333,
+    68,
+    0,
+    22
+   ]
+  ]
+ },
+ "tuning": [
+  {
+   "parameters": {
+    "min_samples_leaf": 5,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 97.2,
+   "accuracy": 0.8328,
+   "macro_f1": 0.4369,
+   "recall": {
+    "Human": 0.9196,
+    "Pet": 0.896,
+    "IRobot": 0.0,
+    "Fan": 0.0024
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 20,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 85.0,
+   "accuracy": 0.8093,
+   "macro_f1": 0.4593,
+   "recall": {
+    "Human": 0.8908,
+    "Pet": 0.8661,
+    "IRobot": 0.0416,
+    "Fan": 0.0426
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 50,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 75.1,
+   "accuracy": 0.7785,
+   "macro_f1": 0.4694,
+   "recall": {
+    "Human": 0.8387,
+    "Pet": 0.8432,
+    "IRobot": 0.1385,
+    "Fan": 0.052
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 100
+   },
+   "fit_seconds": 62.1,
+   "accuracy": 0.7567,
+   "macro_f1": 0.4599,
+   "recall": {
+    "Human": 0.8151,
+    "Pet": 0.817,
+    "IRobot": 0.169,
+    "Fan": 0.0473
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 200
+   },
+   "fit_seconds": 53.7,
+   "accuracy": 0.7073,
+   "macro_f1": 0.4333,
+   "recall": {
+    "Human": 0.768,
+    "Pet": 0.7546,
+    "IRobot": 0.169,
+    "Fan": 0.0591
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 400
+   },
+   "fit_seconds": 44.8,
+   "accuracy": 0.6173,
+   "macro_f1": 0.41,
+   "recall": {
+    "Human": 0.6582,
+    "Pet": 0.6498,
+    "IRobot": 0.169,
+    "Fan": 0.2459
+   }
+  }
+ ],
+ "class_weights": {
+  "Human": 0.5353,
+  "Pet": 0.5665,
+  "IRobot": 3.5229,
+  "Fan": 12.0851
+ },
+ "train_windows": 41331,
+ "validation_windows": 9424,
+ "features": 2320,
+ "training_seconds_total": 419.9,
+ "feature_route": "statistics"
+}

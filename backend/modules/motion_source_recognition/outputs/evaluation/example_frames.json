@@ -1,0 +1,228 @@
+{
+ "split": 0,
+ "temperature": 2.3042,
+ "threshold": 0.8062,
+ "drawn_validation_windows": 400,
+ "answers_over_the_draw": {
+  "Human": 169,
+  "Pet": 156,
+  "unknown": 75
+ },
+ "examples": [
+  {
+   "true_class": "Pet",
+   "frame": {
+    "label": "Pet",
+    "confidence": 0.8845,
+    "probs": {
+     "Human": 0.0455,
+     "Pet": 0.8845,
+     "IRobot": 0.047,
+     "Fan": 0.0231
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Human",
+   "frame": {
+    "label": "Human",
+    "confidence": 0.9028,
+    "probs": {
+     "Human": 0.9028,
+     "Pet": 0.0468,
+     "IRobot": 0.0285,
+     "Fan": 0.0219
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Pet",
+   "frame": {
+    "label": "Pet",
+    "confidence": 0.9587,
+    "probs": {
+     "Human": 0.0109,
+     "Pet": 0.9587,
+     "IRobot": 0.0159,
+     "Fan": 0.0144
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Human",
+   "frame": {
+    "label": "Human",
+    "confidence": 0.9161,
+    "probs": {
+     "Human": 0.9161,
+     "Pet": 0.064,
+     "IRobot": 0.018,
+     "Fan": 0.002
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "IRobot",
+   "frame": {
+    "label": "unknown",
+    "confidence": 0.7224,
+    "probs": {
+     "Human": 0.7224,
+     "Pet": 0.2367,
+     "IRobot": 0.0216,
+     "Fan": 0.0193
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Fan",
+   "frame": {
+    "label": "unknown",
+    "confidence": 0.5744,
+    "probs": {
+     "Human": 0.0296,
+     "Pet": 0.5744,
+     "IRobot": 0.3099,
+     "Fan": 0.0861
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Fan",
+   "frame": {
+    "label": "unknown",
+    "confidence": 0.6839,
+    "probs": {
+     "Human": 0.6839,
+     "Pet": 0.2638,
+     "IRobot": 0.0327,
+     "Fan": 0.0196
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "IRobot",
+   "frame": {
+    "label": "Human",
+    "confidence": 0.857,
+    "probs": {
+     "Human": 0.857,
+     "Pet": 0.0906,
+     "IRobot": 0.0304,
+     "Fan": 0.0219
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Human",
+   "frame": {
+    "label": "unknown",
+    "confidence": 0.7366,
+    "probs": {
+     "Human": 0.7366,
+     "Pet": 0.1259,
+     "IRobot": 0.0836,
+     "Fan": 0.0539
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "Human",
+   "frame": {
+    "label": "unknown",
+    "confidence": 0.7305,
+    "probs": {
+     "Human": 0.7305,
+     "Pet": 0.2441,
+     "IRobot": 0.0032,
+     "Fan": 0.0222
+    },
+    "quality": {
+     "ok": true,
+     "level": "ok",
+     "reasons": []
+    }
+   }
+  },
+  {
+   "true_class": "(made-up window with one dead channel)",
+   "frame": {
+    "label": "Pet",
+    "confidence": 0.8688,
+    "probs": {
+     "Human": 0.0638,
+     "Pet": 0.8688,
+     "IRobot": 0.0406,
+     "Fan": 0.0268
+    },
+    "quality": {
+     "ok": false,
+     "level": "degraded",
+     "reasons": [
+      "zero_channels:1"
+     ]
+    }
+   }
+  },
+  {
+   "true_class": "(made-up window with a missing value)",
+   "frame": {
+    "label": "unknown",
+    "confidence": 0.0,
+    "probs": null,
+    "quality": {
+     "ok": false,
+     "level": "invalid",
+     "reasons": [
+      "non_finite_values"
+     ]
+    }
+   }
+  }
+ ]
+}

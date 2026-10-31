@@ -1,0 +1,372 @@
+{
+ "main_model": "logistic_regression",
+ "bootstrap": {
+  "resamples": 1000,
+  "seed": 42,
+  "unit": "recording group, resampled within each class"
+ },
+ "splits": {
+  "split_0": {
+   "majority_class_name": "Human",
+   "share_of_windows_in_unseen_room": 0.0,
+   "model": {
+    "macro_f1": 0.4501,
+    "accuracy": 0.8359,
+    "per_class": {
+     "Human": {
+      "recall": 0.986,
+      "f1": 0.862,
+      "predicted_windows": 5627
+     },
+     "Pet": {
+      "recall": 0.948,
+      "f1": 0.939,
+      "predicted_windows": 4454
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 22
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   },
+   "majority_class": {
+    "macro_f1": 0.1508,
+    "accuracy": 0.432,
+    "per_class": {
+     "Human": {
+      "recall": 1.0,
+      "f1": 0.603,
+      "predicted_windows": 10103
+     },
+     "Pet": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   },
+   "environment_lookup": {
+    "macro_f1": 0.391,
+    "accuracy": 0.7239,
+    "per_class": {
+     "Human": {
+      "recall": 0.804,
+      "f1": 0.832,
+      "predicted_windows": 4070
+     },
+     "Pet": {
+      "recall": 0.872,
+      "f1": 0.732,
+      "predicted_windows": 6033
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   }
+  },
+  "split_1": {
+   "majority_class_name": "Human",
+   "share_of_windows_in_unseen_room": 0.0,
+   "model": {
+    "macro_f1": 0.4765,
+    "accuracy": 0.8824,
+    "per_class": {
+     "Human": {
+      "recall": 0.961,
+      "f1": 0.948,
+      "predicted_windows": 4356
+     },
+     "Pet": {
+      "recall": 0.974,
+      "f1": 0.942,
+      "predicted_windows": 4129
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 213
+     },
+     "Fan": {
+      "recall": 0.012,
+      "f1": 0.016,
+      "predicted_windows": 193
+     }
+    }
+   },
+   "majority_class": {
+    "macro_f1": 0.1615,
+    "accuracy": 0.477,
+    "per_class": {
+     "Human": {
+      "recall": 1.0,
+      "f1": 0.646,
+      "predicted_windows": 8891
+     },
+     "Pet": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   },
+   "environment_lookup": {
+    "macro_f1": 0.3637,
+    "accuracy": 0.6956,
+    "per_class": {
+     "Human": {
+      "recall": 0.781,
+      "f1": 0.775,
+      "predicted_windows": 4307
+     },
+     "Pet": {
+      "recall": 0.743,
+      "f1": 0.68,
+      "predicted_windows": 4584
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   }
+  },
+  "split_2": {
+   "majority_class_name": "Human",
+   "share_of_windows_in_unseen_room": 0.2472,
+   "model": {
+    "macro_f1": 0.3643,
+    "accuracy": 0.5786,
+    "per_class": {
+     "Human": {
+      "recall": 0.841,
+      "f1": 0.711,
+      "predicted_windows": 6103
+     },
+     "Pet": {
+      "recall": 0.732,
+      "f1": 0.687,
+      "predicted_windows": 4641
+     },
+     "IRobot": {
+      "recall": 0.035,
+      "f1": 0.059,
+      "predicted_windows": 520
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 601
+     }
+    }
+   },
+   "majority_class": {
+    "macro_f1": 0.1367,
+    "accuracy": 0.3762,
+    "per_class": {
+     "Human": {
+      "recall": 1.0,
+      "f1": 0.547,
+      "predicted_windows": 11865
+     },
+     "Pet": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   },
+   "environment_lookup": {
+    "macro_f1": 0.3722,
+    "accuracy": 0.6211,
+    "per_class": {
+     "Human": {
+      "recall": 0.903,
+      "f1": 0.642,
+      "predicted_windows": 8098
+     },
+     "Pet": {
+      "recall": 0.811,
+      "f1": 0.847,
+      "predicted_windows": 3767
+     },
+     "IRobot": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     },
+     "Fan": {
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_windows": 0
+     }
+    }
+   }
+  }
+ },
+ "summary": {
+  "model": {
+   "macro_f1": {
+    "mean": 0.43,
+    "std": 0.059
+   },
+   "accuracy": {
+    "mean": 0.766,
+    "std": 0.164
+   },
+   "per_class_mean": {
+    "Human": {
+     "recall": 0.929,
+     "f1": 0.84
+    },
+    "Pet": {
+     "recall": 0.885,
+     "f1": 0.856
+    },
+    "IRobot": {
+     "recall": 0.012,
+     "f1": 0.02
+    },
+    "Fan": {
+     "recall": 0.004,
+     "f1": 0.005
+    }
+   },
+   "macro_f1_range_95_of_the_mean": [
+    0.415,
+    0.443
+   ]
+  },
+  "majority_class": {
+   "macro_f1": {
+    "mean": 0.15,
+    "std": 0.012
+   },
+   "accuracy": {
+    "mean": 0.428,
+    "std": 0.05
+   },
+   "per_class_mean": {
+    "Human": {
+     "recall": 1.0,
+     "f1": 0.599
+    },
+    "Pet": {
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "IRobot": {
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "Fan": {
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "macro_f1_range_95_of_the_mean": [
+    0.143,
+    0.156
+   ]
+  },
+  "environment_lookup": {
+   "macro_f1": {
+    "mean": 0.376,
+    "std": 0.014
+   },
+   "accuracy": {
+    "mean": 0.68,
+    "std": 0.053
+   },
+   "per_class_mean": {
+    "Human": {
+     "recall": 0.829,
+     "f1": 0.75
+    },
+    "Pet": {
+     "recall": 0.809,
+     "f1": 0.753
+    },
+    "IRobot": {
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "Fan": {
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "macro_f1_range_95_of_the_mean": [
+    0.337,
+    0.404
+   ]
+  },
+  "model_minus_majority_class": {
+   "macro_f1": 0.28,
+   "macro_f1_range_95": [
+    0.266,
+    0.294
+   ],
+   "accuracy": 0.338,
+   "share_of_resamples_model_better": 1.0
+  },
+  "model_minus_environment_lookup": {
+   "macro_f1": 0.054,
+   "macro_f1_range_95": [
+    0.03,
+    0.087
+   ],
+   "accuracy": 0.086,
+   "share_of_resamples_model_better": 1.0
+  }
+ }
+}

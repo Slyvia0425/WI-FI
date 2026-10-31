@@ -1,0 +1,299 @@
+{
+ "room": "E11",
+ "setting": {
+  "C": 0.1,
+  "folds": 5,
+  "fan_train_share": 0.7,
+  "fan_gap_windows": 30
+ },
+ "tested_windows": {
+  "Human": 1344,
+  "Pet": 3264,
+  "IRobot": 1373,
+  "Fan": 79
+ },
+ "recall": {
+  "Human": 0.985,
+  "Pet": 0.991,
+  "IRobot": 0.103,
+  "Fan": 0.253
+ },
+ "accuracy": 0.779,
+ "majority_class_accuracy": 0.539,
+ "confusion_matrix": [
+  [
+   1324,
+   1,
+   15,
+   4
+  ],
+  [
+   14,
+   3236,
+   10,
+   4
+  ],
+  [
+   922,
+   151,
+   142,
+   158
+  ],
+  [
+   7,
+   0,
+   52,
+   20
+  ]
+ ],
+ "per_recording": [
+  {
+   "fold": 0,
+   "class": "IRobot",
+   "individual": "IR01",
+   "recording": "Test_1",
+   "windows": 1012,
+   "recall": 0.14
+  },
+  {
+   "fold": 0,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_1",
+   "windows": 359,
+   "recall": 0.994
+  },
+  {
+   "fold": 0,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_6",
+   "windows": 215,
+   "recall": 0.981
+  },
+  {
+   "fold": 0,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_3",
+   "windows": 211,
+   "recall": 1.0
+  },
+  {
+   "fold": 0,
+   "class": "Human",
+   "individual": "U25",
+   "recording": "run",
+   "windows": 71,
+   "recall": 1.0
+  },
+  {
+   "fold": 0,
+   "class": "Human",
+   "individual": "U26",
+   "recording": "run",
+   "windows": 69,
+   "recall": 0.812
+  },
+  {
+   "fold": 1,
+   "class": "IRobot",
+   "individual": "IR01",
+   "recording": "Test_2",
+   "windows": 361,
+   "recall": 0.0
+  },
+  {
+   "fold": 1,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_2",
+   "windows": 214,
+   "recall": 1.0
+  },
+  {
+   "fold": 1,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_7",
+   "windows": 213,
+   "recall": 0.986
+  },
+  {
+   "fold": 1,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_4",
+   "windows": 209,
+   "recall": 0.995
+  },
+  {
+   "fold": 1,
+   "class": "Human",
+   "individual": "U25",
+   "recording": "sneak",
+   "windows": 144,
+   "recall": 1.0
+  },
+  {
+   "fold": 1,
+   "class": "Human",
+   "individual": "U26",
+   "recording": "sneak",
+   "windows": 142,
+   "recall": 0.979
+  },
+  {
+   "fold": 2,
+   "class": "Fan",
+   "individual": "F01",
+   "recording": "Test_1",
+   "windows": 79,
+   "recall": 0.253
+  },
+  {
+   "fold": 2,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_3",
+   "windows": 211,
+   "recall": 0.938
+  },
+  {
+   "fold": 2,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_8",
+   "windows": 212,
+   "recall": 0.995
+  },
+  {
+   "fold": 2,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_5",
+   "windows": 216,
+   "recall": 1.0
+  },
+  {
+   "fold": 2,
+   "class": "Human",
+   "individual": "U25",
+   "recording": "sneak2",
+   "windows": 212,
+   "recall": 0.995
+  },
+  {
+   "fold": 2,
+   "class": "Human",
+   "individual": "U26",
+   "recording": "swr",
+   "windows": 209,
+   "recall": 0.99
+  },
+  {
+   "fold": 3,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_4",
+   "windows": 213,
+   "recall": 0.995
+  },
+  {
+   "fold": 3,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_1",
+   "windows": 177,
+   "recall": 0.994
+  },
+  {
+   "fold": 3,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_6",
+   "windows": 212,
+   "recall": 0.995
+  },
+  {
+   "fold": 3,
+   "class": "Human",
+   "individual": "U25",
+   "recording": "swr",
+   "windows": 212,
+   "recall": 1.0
+  },
+  {
+   "fold": 3,
+   "class": "Human",
+   "individual": "U26",
+   "recording": "walk",
+   "windows": 140,
+   "recall": 1.0
+  },
+  {
+   "fold": 4,
+   "class": "Pet",
+   "individual": "P05",
+   "recording": "Test_5",
+   "windows": 213,
+   "recall": 1.0
+  },
+  {
+   "fold": 4,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_2",
+   "windows": 177,
+   "recall": 1.0
+  },
+  {
+   "fold": 4,
+   "class": "Pet",
+   "individual": "P06",
+   "recording": "Test_7",
+   "windows": 212,
+   "recall": 0.995
+  },
+  {
+   "fold": 4,
+   "class": "Human",
+   "individual": "U25",
+   "recording": "walk",
+   "windows": 145,
+   "recall": 0.993
+  }
+ ],
+ "folds": [
+  {
+   "fold": 0,
+   "train_windows": 4405,
+   "test_windows": 1937,
+   "iterations": 177
+  },
+  {
+   "fold": 1,
+   "train_windows": 5059,
+   "test_windows": 1283,
+   "iterations": 114
+  },
+  {
+   "fold": 2,
+   "train_windows": 5173,
+   "test_windows": 1139,
+   "iterations": 78
+  },
+  {
+   "fold": 3,
+   "train_windows": 5388,
+   "test_windows": 954,
+   "iterations": 185
+  },
+  {
+   "fold": 4,
+   "train_windows": 5595,
+   "test_windows": 747,
+   "iterations": 78
+  }
+ ]
+}

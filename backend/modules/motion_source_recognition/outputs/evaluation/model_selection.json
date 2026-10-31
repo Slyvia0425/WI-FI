@@ -1,0 +1,353 @@
+{
+ "created": "2026-10-17T03:29:44+00:00",
+ "rule": "main model = highest mean validation macro-F1 over the three splits; other candidates are comparison rows",
+ "validation_only": true,
+ "main_model": "logistic_regression",
+ "ranking_by_validation_macro_f1": [
+  "logistic_regression",
+  "random_forest_minirocket",
+  "random_forest"
+ ],
+ "gap_to_second_vs_split_spread": {
+  "gap": 0.022,
+  "std_of_main_model": 0.087
+ },
+ "plan_for_the_test_scoring": [
+  "all three candidates are scored on the test rows once, with the settings saved here; the test fingerprints below are checked first",
+  "the main numbers are without smoothing; the smoothed version (6 windows) is an extra row",
+  "confusion matrices, error analysis and the confidence threshold are done for the main model only",
+  "if the test ranking differs from the validation ranking, the report says so and the main model stays"
+ ],
+ "candidates": {
+  "logistic_regression": {
+   "description": "Logistic Regression on MiniRocket",
+   "parameters_per_split": [
+    {
+     "C": 0.01,
+     "max_iter": 300
+    },
+    {
+     "C": 1.0,
+     "max_iter": 300
+    },
+    {
+     "C": 3e-06,
+     "max_iter": 300
+    }
+   ],
+   "macro_f1": {
+    "mean": 0.552,
+    "std": 0.087,
+    "per_split": [
+     0.469,
+     0.643,
+     0.544
+    ]
+   },
+   "accuracy": {
+    "mean": 0.838,
+    "std": 0.071,
+    "per_split": [
+     0.893,
+     0.863,
+     0.758
+    ]
+   },
+   "recall_mean": {
+    "Human": 0.928,
+    "Pet": 0.885,
+    "IRobot": 0.258,
+    "Fan": 0.329
+   },
+   "recall_per_split": {
+    "IRobot": [
+     0.0,
+     0.0,
+     0.7729
+    ],
+    "Fan": [
+     0.0,
+     0.986,
+     0.0
+    ]
+   },
+   "accuracy_seen_user_per_split": [
+    0.974,
+    0.968,
+    0.811
+   ],
+   "accuracy_unseen_user_per_split": [
+    0.0,
+    0.286,
+    0.659
+   ],
+   "unseen_room_validation": {
+    "split": 2,
+    "windows": 2634,
+    "accuracy": 0.779,
+    "recall": {
+     "Human": 0.779,
+     "Pet": null,
+     "IRobot": null,
+     "Fan": null
+    }
+   },
+   "probability_ece_per_split": [
+    0.073,
+    0.121,
+    0.145
+   ],
+   "share_of_windows_with_confidence_at_least_0.99_per_split": [
+    0.759,
+    0.896,
+    0.0
+   ],
+   "macro_f1_with_smoothing_over_6_windows": {
+    "mean": 0.561,
+    "std": 0.091,
+    "per_split": [
+     0.473,
+     0.655,
+     0.554
+    ]
+   },
+   "model_megabytes_per_split": [
+    0.4,
+    0.4,
+    0.4
+   ],
+   "training_seconds_per_split": [
+    643.5,
+    627.4,
+    663.9
+   ],
+   "test_probability_fingerprint": {
+    "split_0": "96daf0fb879bffad83731023e68c5509c6b6f8e91a57e5e1f259f9958d22b742",
+    "split_1": "7730f072be5b30a261690e0056f7666a58ee5a3072b23b03f4a3e0bdbd82a8d3",
+    "split_2": "da387c2832e431872532a806d2f1ae2007096fd9488301453d7671e5ce245740"
+   }
+  },
+  "random_forest_minirocket": {
+   "description": "Random Forest on MiniRocket",
+   "parameters_per_split": [
+    {
+     "min_samples_leaf": 2,
+     "max_features": "sqrt",
+     "n_estimators": 300
+    },
+    {
+     "min_samples_leaf": 5,
+     "max_features": "sqrt",
+     "n_estimators": 300
+    },
+    {
+     "min_samples_leaf": 50,
+     "max_features": "sqrt",
+     "n_estimators": 300
+    }
+   ],
+   "macro_f1": {
+    "mean": 0.53,
+    "std": 0.108,
+    "per_split": [
+     0.46,
+     0.655,
+     0.476
+    ]
+   },
+   "accuracy": {
+    "mean": 0.852,
+    "std": 0.025,
+    "per_split": [
+     0.879,
+     0.829,
+     0.85
+    ]
+   },
+   "recall_mean": {
+    "Human": 0.96,
+    "Pet": 0.908,
+    "IRobot": 0.022,
+    "Fan": 0.259
+   },
+   "recall_per_split": {
+    "IRobot": [
+     0.0,
+     0.0,
+     0.0665
+    ],
+    "Fan": [
+     0.0,
+     0.7781,
+     0.0
+    ]
+   },
+   "accuracy_seen_user_per_split": [
+    0.958,
+    0.945,
+    0.887
+   ],
+   "accuracy_unseen_user_per_split": [
+    0.0,
+    0.187,
+    0.781
+   ],
+   "unseen_room_validation": {
+    "split": 2,
+    "windows": 2634,
+    "accuracy": 0.948,
+    "recall": {
+     "Human": 0.948,
+     "Pet": null,
+     "IRobot": null,
+     "Fan": null
+    }
+   },
+   "probability_ece_per_split": [
+    0.049,
+    0.057,
+    0.19
+   ],
+   "share_of_windows_with_confidence_at_least_0.99_per_split": [
+    0.073,
+    0.028,
+    0.0
+   ],
+   "macro_f1_with_smoothing_over_6_windows": {
+    "mean": 0.532,
+    "std": 0.11,
+    "per_split": [
+     0.461,
+     0.658,
+     0.477
+    ]
+   },
+   "model_megabytes_per_split": [
+    13.5,
+    12.5,
+    4.3
+   ],
+   "training_seconds_per_split": [
+    166.1,
+    141.9,
+    79.0
+   ],
+   "test_probability_fingerprint": {
+    "split_0": "b3625e3088f7e4489b52c49f75ae2a220329d1ee379e9632681c200a7ce842fd",
+    "split_1": "3cef68e5ee91156417f679af4953334bf61804fdb840d11ac735514ed14712e1",
+    "split_2": "b33d499a3500aaf612ac70c640b03f677cb2008fb245965aa84cbf1fba9f76fe"
+   }
+  },
+  "random_forest": {
+   "description": "Random Forest on statistics",
+   "parameters_per_split": [
+    {
+     "min_samples_leaf": 50,
+     "max_features": "sqrt",
+     "n_estimators": 300
+    },
+    {
+     "min_samples_leaf": 50,
+     "max_features": "sqrt",
+     "n_estimators": 300
+    },
+    {
+     "min_samples_leaf": 50,
+     "max_features": "sqrt",
+     "n_estimators": 300
+    }
+   ],
+   "macro_f1": {
+    "mean": 0.518,
+    "std": 0.047,
+    "per_split": [
+     0.469,
+     0.564,
+     0.521
+    ]
+   },
+   "accuracy": {
+    "mean": 0.769,
+    "std": 0.011,
+    "per_split": [
+     0.778,
+     0.771,
+     0.758
+    ]
+   },
+   "recall_mean": {
+    "Human": 0.857,
+    "Pet": 0.8,
+    "IRobot": 0.22,
+    "Fan": 0.295
+   },
+   "recall_per_split": {
+    "IRobot": [
+     0.1385,
+     0.1275,
+     0.3934
+    ],
+    "Fan": [
+     0.052,
+     0.6657,
+     0.1662
+    ]
+   },
+   "accuracy_seen_user_per_split": [
+    0.841,
+    0.873,
+    0.807
+   ],
+   "accuracy_unseen_user_per_split": [
+    0.092,
+    0.207,
+    0.664
+   ],
+   "unseen_room_validation": {
+    "split": 2,
+    "windows": 2634,
+    "accuracy": 0.784,
+    "recall": {
+     "Human": 0.784,
+     "Pet": null,
+     "IRobot": null,
+     "Fan": null
+    }
+   },
+   "probability_ece_per_split": [
+    0.114,
+    0.139,
+    0.137
+   ],
+   "share_of_windows_with_confidence_at_least_0.99_per_split": [
+    0.014,
+    0.015,
+    0.018
+   ],
+   "macro_f1_with_smoothing_over_6_windows": {
+    "mean": 0.522,
+    "std": 0.053,
+    "per_split": [
+     0.469,
+     0.574,
+     0.525
+    ]
+   },
+   "model_megabytes_per_split": [
+    6.4,
+    6.4,
+    5.2
+   ],
+   "training_seconds_per_split": [
+    419.9,
+    419.8,
+    355.0
+   ],
+   "test_probability_fingerprint": {
+    "split_0": "134eb2b2065e02e76cc32eb28245e8af56990f087f468c3652063b3e2bb834f3",
+    "split_1": "064994129989f55ee7c4c6bfd6fad4292230d36fd6370881ae91608a26bf600d",
+    "split_2": "949298b1adbfa07ae1e1108d874ded57efffaa28a1c8a476645132e73af7fc02"
+   }
+  }
+ }
+}

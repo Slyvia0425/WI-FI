@@ -1,0 +1,142 @@
+{
+ "model": "Logistic Regression on statistics and physical features",
+ "feature_route": "statistics_physical",
+ "split": 1,
+ "seed": 42,
+ "chosen_parameters": {
+  "C": 1.0,
+  "max_iter": 300
+ },
+ "validation": {
+  "accuracy": 0.7338,
+  "macro_f1": 0.5134,
+  "per_class": {
+   "Human": {
+    "precision": 0.7704,
+    "recall": 0.8531,
+    "f1": 0.8097,
+    "windows": 4378
+   },
+   "Pet": {
+    "precision": 0.7736,
+    "recall": 0.7966,
+    "f1": 0.7849,
+    "windows": 4071
+   },
+   "IRobot": {
+    "precision": 0.3054,
+    "recall": 0.0721,
+    "f1": 0.1167,
+    "windows": 1012
+   },
+   "Fan": {
+    "precision": 0.2844,
+    "recall": 0.4298,
+    "f1": 0.3423,
+    "windows": 356
+   }
+  },
+  "confusion_matrix": [
+   [
+    3735,
+    570,
+    44,
+    29
+   ],
+   [
+    640,
+    3243,
+    99,
+    89
+   ],
+   [
+    324,
+    348,
+    73,
+    267
+   ],
+   [
+    149,
+    31,
+    23,
+    153
+   ]
+  ]
+ },
+ "tuning": [
+  {
+   "parameters": {
+    "C": 0.001
+   },
+   "fit_seconds": 22.2,
+   "iterations": 252,
+   "converged": true,
+   "accuracy": 0.6754,
+   "macro_f1": 0.4776,
+   "recall": {
+    "Human": 0.7668,
+    "Pet": 0.7323,
+    "IRobot": 0.1482,
+    "Fan": 0.3989
+   }
+  },
+  {
+   "parameters": {
+    "C": 0.01
+   },
+   "fit_seconds": 24.0,
+   "iterations": 300,
+   "converged": false,
+   "accuracy": 0.7217,
+   "macro_f1": 0.5027,
+   "recall": {
+    "Human": 0.8337,
+    "Pet": 0.7792,
+    "IRobot": 0.1176,
+    "Fan": 0.4045
+   }
+  },
+  {
+   "parameters": {
+    "C": 0.1
+   },
+   "fit_seconds": 22.9,
+   "iterations": 300,
+   "converged": false,
+   "accuracy": 0.7302,
+   "macro_f1": 0.4976,
+   "recall": {
+    "Human": 0.8527,
+    "Pet": 0.7924,
+    "IRobot": 0.0603,
+    "Fan": 0.4157
+   }
+  },
+  {
+   "parameters": {
+    "C": 1.0
+   },
+   "fit_seconds": 24.2,
+   "iterations": 300,
+   "converged": false,
+   "accuracy": 0.7338,
+   "macro_f1": 0.5134,
+   "recall": {
+    "Human": 0.8531,
+    "Pet": 0.7966,
+    "IRobot": 0.0721,
+    "Fan": 0.4298
+   }
+  }
+ ],
+ "class_weights": {
+  "Human": 0.5376,
+  "Pet": 0.5626,
+  "IRobot": 3.5698,
+  "Fan": 12.1747
+ },
+ "train_windows": 41881,
+ "validation_windows": 9817,
+ "features": 2380,
+ "training_seconds_total": 93.9
+}

@@ -1,0 +1,174 @@
+{
+ "model": "Logistic Regression on MiniRocket features",
+ "split": 2,
+ "seed": 42,
+ "chosen_parameters": {
+  "C": 3e-06,
+  "max_iter": 300
+ },
+ "validation": {
+  "accuracy": 0.7584,
+  "macro_f1": 0.5437,
+  "per_class": {
+   "Human": {
+    "precision": 0.8359,
+    "recall": 0.8476,
+    "f1": 0.8417,
+    "windows": 4566
+   },
+   "Pet": {
+    "precision": 0.7857,
+    "recall": 0.7217,
+    "f1": 0.7523,
+    "windows": 3906
+   },
+   "IRobot": {
+    "precision": 0.465,
+    "recall": 0.7729,
+    "f1": 0.5806,
+    "windows": 361
+   },
+   "Fan": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "windows": 355
+   }
+  },
+  "confusion_matrix": [
+   [
+    3870,
+    570,
+    49,
+    77
+   ],
+   [
+    604,
+    2819,
+    272,
+    211
+   ],
+   [
+    0,
+    0,
+    279,
+    82
+   ],
+   [
+    156,
+    199,
+    0,
+    0
+   ]
+  ]
+ },
+ "tuning": [
+  {
+   "parameters": {
+    "C": 0.0001
+   },
+   "fit_seconds": 131.0,
+   "iterations": 300,
+   "converged": false,
+   "accuracy": 0.8427,
+   "macro_f1": 0.4832,
+   "recall": {
+    "Human": 0.9345,
+    "Pet": 0.8812,
+    "IRobot": 0.0942,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "C": 0.001
+   },
+   "fit_seconds": 125.0,
+   "iterations": 300,
+   "converged": false,
+   "accuracy": 0.84,
+   "macro_f1": 0.4565,
+   "recall": {
+    "Human": 0.9209,
+    "Pet": 0.8968,
+    "IRobot": 0.0277,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "C": 0.01
+   },
+   "fit_seconds": 129.1,
+   "iterations": 300,
+   "converged": false,
+   "accuracy": 0.836,
+   "macro_f1": 0.4457,
+   "recall": {
+    "Human": 0.9041,
+    "Pet": 0.9086,
+    "IRobot": 0.0111,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "C": 1e-05
+   },
+   "fit_seconds": 120.6,
+   "iterations": 246,
+   "converged": true,
+   "accuracy": 0.7872,
+   "macro_f1": 0.5349,
+   "recall": {
+    "Human": 0.8993,
+    "Pet": 0.7555,
+    "IRobot": 0.4875,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "C": 1e-06
+   },
+   "fit_seconds": 66.2,
+   "iterations": 130,
+   "converged": true,
+   "accuracy": 0.6734,
+   "macro_f1": 0.484,
+   "recall": {
+    "Human": 0.7249,
+    "Pet": 0.6598,
+    "IRobot": 0.831,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "C": 3e-06
+   },
+   "fit_seconds": 84.3,
+   "iterations": 204,
+   "converged": true,
+   "accuracy": 0.7584,
+   "macro_f1": 0.5437,
+   "recall": {
+    "Human": 0.8476,
+    "Pet": 0.7217,
+    "IRobot": 0.7729,
+    "Fan": 0.0
+   }
+  }
+ ],
+ "class_weights": {
+  "Human": 0.5176,
+  "Pet": 0.5342,
+  "IRobot": 9.7811,
+  "Fan": 10.6665
+ },
+ "train_windows": 39594,
+ "validation_windows": 9188,
+ "features": 9996,
+ "training_seconds_total": 663.9,
+ "feature_route": "minirocket"
+}

@@ -1,0 +1,954 @@
+{
+ "model": "logistic_regression",
+ "stage": "calibration and trade-off curve on the validation rows; no test row read",
+ "splits": {
+  "split_0": {
+   "temperature": 2.304,
+   "windows": 9424,
+   "before": {
+    "ece": 0.073,
+    "mean_confidence": 0.965,
+    "accuracy": 0.893,
+    "bins": [
+     {
+      "confidence": "<0.5",
+      "share": 0.002,
+      "mean_confidence": 0.463,
+      "accuracy": 0.059
+     },
+     {
+      "confidence": "0.5-0.7",
+      "share": 0.036,
+      "mean_confidence": 0.605,
+      "accuracy": 0.398
+     },
+     {
+      "confidence": "0.7-0.9",
+      "share": 0.074,
+      "mean_confidence": 0.82,
+      "accuracy": 0.443
+     },
+     {
+      "confidence": "0.9-0.99",
+      "share": 0.129,
+      "mean_confidence": 0.96,
+      "accuracy": 0.782
+     },
+     {
+      "confidence": ">=0.99",
+      "share": 0.759,
+      "mean_confidence": 0.999,
+      "accuracy": 0.981
+     }
+    ]
+   },
+   "after": {
+    "ece": 0.062,
+    "mean_confidence": 0.868,
+    "accuracy": 0.893,
+    "bins": [
+     {
+      "confidence": "<0.5",
+      "share": 0.019,
+      "mean_confidence": 0.46,
+      "accuracy": 0.236
+     },
+     {
+      "confidence": "0.5-0.7",
+      "share": 0.107,
+      "mean_confidence": 0.605,
+      "accuracy": 0.469
+     },
+     {
+      "confidence": "0.7-0.9",
+      "share": 0.276,
+      "mean_confidence": 0.836,
+      "accuracy": 0.892
+     },
+     {
+      "confidence": "0.9-0.99",
+      "share": 0.596,
+      "mean_confidence": 0.942,
+      "accuracy": 0.989
+     },
+     {
+      "confidence": ">=0.99",
+      "share": 0.002,
+      "mean_confidence": 0.993,
+      "accuracy": 1.0
+     }
+    ]
+   },
+   "trade_off_before_calibration": [
+    {
+     "rejected_share": 0.0,
+     "threshold": 0.0,
+     "accuracy_kept": 0.8928,
+     "macro_f1_kept": 0.4693,
+     "errors_rejected": 0.0,
+     "rejected_by_true_class": {
+      "Human": 0.0,
+      "Pet": 0.0,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.05,
+     "threshold": 0.7541,
+     "accuracy_kept": 0.9204,
+     "macro_f1_kept": 0.4779,
+     "errors_rejected": 0.294,
+     "rejected_by_true_class": {
+      "Human": 0.036,
+      "Pet": 0.028,
+      "IRobot": 0.091,
+      "Fan": 0.385
+     }
+    },
+    {
+     "rejected_share": 0.1,
+     "threshold": 0.8827,
+     "accuracy_kept": 0.9476,
+     "macro_f1_kept": 0.485,
+     "errors_rejected": 0.56,
+     "rejected_by_true_class": {
+      "Human": 0.069,
+      "Pet": 0.051,
+      "IRobot": 0.277,
+      "Fan": 0.759
+     }
+    },
+    {
+     "rejected_share": 0.15,
+     "threshold": 0.9491,
+     "accuracy_kept": 0.966,
+     "macro_f1_kept": 0.4901,
+     "errors_rejected": 0.731,
+     "rejected_by_true_class": {
+      "Human": 0.114,
+      "Pet": 0.081,
+      "IRobot": 0.449,
+      "Fan": 0.948
+     }
+    },
+    {
+     "rejected_share": 0.2,
+     "threshold": 0.9797,
+     "accuracy_kept": 0.9753,
+     "macro_f1_kept": 0.4931,
+     "errors_rejected": 0.816,
+     "rejected_by_true_class": {
+      "Human": 0.165,
+      "Pet": 0.126,
+      "IRobot": 0.56,
+      "Fan": 0.991
+     }
+    },
+    {
+     "rejected_share": 0.25,
+     "threshold": 0.9914,
+     "accuracy_kept": 0.9812,
+     "macro_f1_kept": 0.4949,
+     "errors_rejected": 0.868,
+     "rejected_by_true_class": {
+      "Human": 0.222,
+      "Pet": 0.168,
+      "IRobot": 0.665,
+      "Fan": 1.0
+     }
+    },
+    {
+     "rejected_share": 0.3,
+     "threshold": 0.9953,
+     "accuracy_kept": 0.9835,
+     "macro_f1_kept": 0.4956,
+     "errors_rejected": 0.892,
+     "rejected_by_true_class": {
+      "Human": 0.279,
+      "Pet": 0.215,
+      "IRobot": 0.72,
+      "Fan": 1.0
+     }
+    },
+    {
+     "rejected_share": 0.4,
+     "threshold": 0.9978,
+     "accuracy_kept": 0.9912,
+     "macro_f1_kept": 0.4977,
+     "errors_rejected": 0.95,
+     "rejected_by_true_class": {
+      "Human": 0.373,
+      "Pet": 0.327,
+      "IRobot": 0.867,
+      "Fan": 1.0
+     }
+    },
+    {
+     "rejected_share": 0.5,
+     "threshold": 0.9988,
+     "accuracy_kept": 0.993,
+     "macro_f1_kept": 0.4982,
+     "errors_rejected": 0.967,
+     "rejected_by_true_class": {
+      "Human": 0.458,
+      "Pet": 0.459,
+      "IRobot": 0.914,
+      "Fan": 1.0
+     }
+    }
+   ],
+   "trade_off_after_calibration": [
+    {
+     "rejected_share": 0.0,
+     "threshold": 0.0,
+     "accuracy_kept": 0.8928,
+     "macro_f1_kept": 0.4693,
+     "errors_rejected": 0.0,
+     "rejected_by_true_class": {
+      "Human": 0.0,
+      "Pet": 0.0,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.05,
+     "threshold": 0.563,
+     "accuracy_kept": 0.9221,
+     "macro_f1_kept": 0.4775,
+     "errors_rejected": 0.31,
+     "rejected_by_true_class": {
+      "Human": 0.031,
+      "Pet": 0.025,
+      "IRobot": 0.058,
+      "Fan": 0.496
+     }
+    },
+    {
+     "rejected_share": 0.1,
+     "threshold": 0.6549,
+     "accuracy_kept": 0.9497,
+     "macro_f1_kept": 0.4852,
+     "errors_rejected": 0.577,
+     "rejected_by_true_class": {
+      "Human": 0.064,
+      "Pet": 0.051,
+      "IRobot": 0.233,
+      "Fan": 0.851
+     }
+    },
+    {
+     "rejected_share": 0.15,
+     "threshold": 0.7404,
+     "accuracy_kept": 0.9658,
+     "macro_f1_kept": 0.4899,
+     "errors_rejected": 0.729,
+     "rejected_by_true_class": {
+      "Human": 0.113,
+      "Pet": 0.082,
+      "IRobot": 0.427,
+      "Fan": 0.969
+     }
+    },
+    {
+     "rejected_share": 0.2,
+     "threshold": 0.8062,
+     "accuracy_kept": 0.9749,
+     "macro_f1_kept": 0.4928,
+     "errors_rejected": 0.813,
+     "rejected_by_true_class": {
+      "Human": 0.17,
+      "Pet": 0.12,
+      "IRobot": 0.562,
+      "Fan": 0.993
+     }
+    },
+    {
+     "rejected_share": 0.25,
+     "threshold": 0.847,
+     "accuracy_kept": 0.9805,
+     "macro_f1_kept": 0.4947,
+     "errors_rejected": 0.863,
+     "rejected_by_true_class": {
+      "Human": 0.229,
+      "Pet": 0.162,
+      "IRobot": 0.654,
+      "Fan": 0.998
+     }
+    },
+    {
+     "rejected_share": 0.3,
+     "threshold": 0.8709,
+     "accuracy_kept": 0.9847,
+     "macro_f1_kept": 0.4958,
+     "errors_rejected": 0.9,
+     "rejected_by_true_class": {
+      "Human": 0.282,
+      "Pet": 0.21,
+      "IRobot": 0.742,
+      "Fan": 1.0
+     }
+    },
+    {
+     "rejected_share": 0.4,
+     "threshold": 0.8997,
+     "accuracy_kept": 0.9892,
+     "macro_f1_kept": 0.4971,
+     "errors_rejected": 0.94,
+     "rejected_by_true_class": {
+      "Human": 0.38,
+      "Pet": 0.322,
+      "IRobot": 0.842,
+      "Fan": 1.0
+     }
+    },
+    {
+     "rejected_share": 0.5,
+     "threshold": 0.9174,
+     "accuracy_kept": 0.9915,
+     "macro_f1_kept": 0.4978,
+     "errors_rejected": 0.96,
+     "rejected_by_true_class": {
+      "Human": 0.465,
+      "Pet": 0.453,
+      "IRobot": 0.898,
+      "Fan": 1.0
+     }
+    }
+   ]
+  },
+  "split_1": {
+   "temperature": 6.323,
+   "windows": 9817,
+   "before": {
+    "ece": 0.121,
+    "mean_confidence": 0.984,
+    "accuracy": 0.863,
+    "bins": [
+     {
+      "confidence": "<0.5",
+      "share": 0.001,
+      "mean_confidence": 0.463,
+      "accuracy": 0.167
+     },
+     {
+      "confidence": "0.5-0.7",
+      "share": 0.018,
+      "mean_confidence": 0.599,
+      "accuracy": 0.358
+     },
+     {
+      "confidence": "0.7-0.9",
+      "share": 0.031,
+      "mean_confidence": 0.813,
+      "accuracy": 0.468
+     },
+     {
+      "confidence": "0.9-0.99",
+      "share": 0.054,
+      "mean_confidence": 0.962,
+      "accuracy": 0.568
+     },
+     {
+      "confidence": ">=0.99",
+      "share": 0.896,
+      "mean_confidence": 1.0,
+      "accuracy": 0.906
+     }
+    ]
+   },
+   "after": {
+    "ece": 0.062,
+    "mean_confidence": 0.806,
+    "accuracy": 0.863,
+    "bins": [
+     {
+      "confidence": "<0.5",
+      "share": 0.067,
+      "mean_confidence": 0.431,
+      "accuracy": 0.395
+     },
+     {
+      "confidence": "0.5-0.7",
+      "share": 0.144,
+      "mean_confidence": 0.609,
+      "accuracy": 0.699
+     },
+     {
+      "confidence": "0.7-0.9",
+      "share": 0.462,
+      "mean_confidence": 0.826,
+      "accuracy": 0.926
+     },
+     {
+      "confidence": "0.9-0.99",
+      "share": 0.309,
+      "mean_confidence": 0.938,
+      "accuracy": 0.94
+     },
+     {
+      "confidence": ">=0.99",
+      "share": 0.019,
+      "mean_confidence": 0.996,
+      "accuracy": 0.995
+     }
+    ]
+   },
+   "trade_off_before_calibration": [
+    {
+     "rejected_share": 0.0,
+     "threshold": 0.0,
+     "accuracy_kept": 0.8633,
+     "macro_f1_kept": 0.643,
+     "errors_rejected": 0.0,
+     "rejected_by_true_class": {
+      "Human": 0.0,
+      "Pet": 0.0,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.05,
+     "threshold": 0.9019,
+     "accuracy_kept": 0.8866,
+     "macro_f1_kept": 0.6625,
+     "errors_rejected": 0.212,
+     "rejected_by_true_class": {
+      "Human": 0.031,
+      "Pet": 0.031,
+      "IRobot": 0.175,
+      "Fan": 0.152
+     }
+    },
+    {
+     "rejected_share": 0.1,
+     "threshold": 0.9885,
+     "accuracy_kept": 0.9044,
+     "macro_f1_kept": 0.687,
+     "errors_rejected": 0.37,
+     "rejected_by_true_class": {
+      "Human": 0.065,
+      "Pet": 0.074,
+      "IRobot": 0.321,
+      "Fan": 0.197
+     }
+    },
+    {
+     "rejected_share": 0.15,
+     "threshold": 0.9981,
+     "accuracy_kept": 0.9208,
+     "macro_f1_kept": 0.7135,
+     "errors_rejected": 0.507,
+     "rejected_by_true_class": {
+      "Human": 0.095,
+      "Pet": 0.124,
+      "IRobot": 0.465,
+      "Fan": 0.225
+     }
+    },
+    {
+     "rejected_share": 0.2,
+     "threshold": 0.9997,
+     "accuracy_kept": 0.9324,
+     "macro_f1_kept": 0.728,
+     "errors_rejected": 0.604,
+     "rejected_by_true_class": {
+      "Human": 0.132,
+      "Pet": 0.175,
+      "IRobot": 0.569,
+      "Fan": 0.27
+     }
+    },
+    {
+     "rejected_share": 0.25,
+     "threshold": 0.9999,
+     "accuracy_kept": 0.9398,
+     "macro_f1_kept": 0.7319,
+     "errors_rejected": 0.67,
+     "rejected_by_true_class": {
+      "Human": 0.174,
+      "Pet": 0.23,
+      "IRobot": 0.636,
+      "Fan": 0.315
+     }
+    },
+    {
+     "rejected_share": 0.3,
+     "threshold": 1.0,
+     "accuracy_kept": 0.9446,
+     "macro_f1_kept": 0.734,
+     "errors_rejected": 0.716,
+     "rejected_by_true_class": {
+      "Human": 0.215,
+      "Pet": 0.289,
+      "IRobot": 0.686,
+      "Fan": 0.368
+     }
+    },
+    {
+     "rejected_share": 0.399,
+     "threshold": 1.0,
+     "accuracy_kept": 0.9482,
+     "macro_f1_kept": 0.7356,
+     "errors_rejected": 0.772,
+     "rejected_by_true_class": {
+      "Human": 0.302,
+      "Pet": 0.414,
+      "IRobot": 0.743,
+      "Fan": 0.444
+     }
+    },
+    {
+     "rejected_share": 0.493,
+     "threshold": 1.0,
+     "accuracy_kept": 0.9484,
+     "macro_f1_kept": 0.7358,
+     "errors_rejected": 0.808,
+     "rejected_by_true_class": {
+      "Human": 0.404,
+      "Pet": 0.517,
+      "IRobot": 0.783,
+      "Fan": 0.475
+     }
+    }
+   ],
+   "trade_off_after_calibration": [
+    {
+     "rejected_share": 0.0,
+     "threshold": 0.0,
+     "accuracy_kept": 0.8633,
+     "macro_f1_kept": 0.643,
+     "errors_rejected": 0.0,
+     "rejected_by_true_class": {
+      "Human": 0.0,
+      "Pet": 0.0,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.05,
+     "threshold": 0.4691,
+     "accuracy_kept": 0.8887,
+     "macro_f1_kept": 0.6751,
+     "errors_rejected": 0.227,
+     "rejected_by_true_class": {
+      "Human": 0.017,
+      "Pet": 0.03,
+      "IRobot": 0.233,
+      "Fan": 0.169
+     }
+    },
+    {
+     "rejected_share": 0.1,
+     "threshold": 0.5558,
+     "accuracy_kept": 0.9108,
+     "macro_f1_kept": 0.7131,
+     "errors_rejected": 0.413,
+     "rejected_by_true_class": {
+      "Human": 0.05,
+      "Pet": 0.071,
+      "IRobot": 0.406,
+      "Fan": 0.174
+     }
+    },
+    {
+     "rejected_share": 0.15,
+     "threshold": 0.6271,
+     "accuracy_kept": 0.924,
+     "macro_f1_kept": 0.7231,
+     "errors_rejected": 0.528,
+     "rejected_by_true_class": {
+      "Human": 0.088,
+      "Pet": 0.125,
+      "IRobot": 0.503,
+      "Fan": 0.194
+     }
+    },
+    {
+     "rejected_share": 0.2,
+     "threshold": 0.6887,
+     "accuracy_kept": 0.9311,
+     "macro_f1_kept": 0.7266,
+     "errors_rejected": 0.597,
+     "rejected_by_true_class": {
+      "Human": 0.131,
+      "Pet": 0.18,
+      "IRobot": 0.563,
+      "Fan": 0.253
+     }
+    },
+    {
+     "rejected_share": 0.25,
+     "threshold": 0.7368,
+     "accuracy_kept": 0.9373,
+     "macro_f1_kept": 0.7311,
+     "errors_rejected": 0.656,
+     "rejected_by_true_class": {
+      "Human": 0.173,
+      "Pet": 0.235,
+      "IRobot": 0.621,
+      "Fan": 0.312
+     }
+    },
+    {
+     "rejected_share": 0.3,
+     "threshold": 0.7727,
+     "accuracy_kept": 0.9387,
+     "macro_f1_kept": 0.7326,
+     "errors_rejected": 0.686,
+     "rejected_by_true_class": {
+      "Human": 0.218,
+      "Pet": 0.294,
+      "IRobot": 0.645,
+      "Fan": 0.396
+     }
+    },
+    {
+     "rejected_share": 0.4,
+     "threshold": 0.8222,
+     "accuracy_kept": 0.9406,
+     "macro_f1_kept": 0.734,
+     "errors_rejected": 0.739,
+     "rejected_by_true_class": {
+      "Human": 0.31,
+      "Pet": 0.418,
+      "IRobot": 0.696,
+      "Fan": 0.461
+     }
+    },
+    {
+     "rejected_share": 0.5,
+     "threshold": 0.8555,
+     "accuracy_kept": 0.9393,
+     "macro_f1_kept": 0.7338,
+     "errors_rejected": 0.778,
+     "rejected_by_true_class": {
+      "Human": 0.422,
+      "Pet": 0.526,
+      "IRobot": 0.739,
+      "Fan": 0.48
+     }
+    }
+   ]
+  },
+  "split_2": {
+   "temperature": 0.688,
+   "windows": 9188,
+   "before": {
+    "ece": 0.145,
+    "mean_confidence": 0.614,
+    "accuracy": 0.758,
+    "bins": [
+     {
+      "confidence": "<0.5",
+      "share": 0.273,
+      "mean_confidence": 0.429,
+      "accuracy": 0.543
+     },
+     {
+      "confidence": "0.5-0.7",
+      "share": 0.393,
+      "mean_confidence": 0.598,
+      "accuracy": 0.744
+     },
+     {
+      "confidence": "0.7-0.9",
+      "share": 0.324,
+      "mean_confidence": 0.778,
+      "accuracy": 0.95
+     },
+     {
+      "confidence": "0.9-0.99",
+      "share": 0.011,
+      "mean_confidence": 0.912,
+      "accuracy": 1.0
+     },
+     {
+      "confidence": ">=0.99",
+      "share": 0.0,
+      "mean_confidence": null,
+      "accuracy": null
+     }
+    ]
+   },
+   "after": {
+    "ece": 0.05,
+    "mean_confidence": 0.708,
+    "accuracy": 0.758,
+    "bins": [
+     {
+      "confidence": "<0.5",
+      "share": 0.137,
+      "mean_confidence": 0.438,
+      "accuracy": 0.469
+     },
+     {
+      "confidence": "0.5-0.7",
+      "share": 0.318,
+      "mean_confidence": 0.6,
+      "accuracy": 0.675
+     },
+     {
+      "confidence": "0.7-0.9",
+      "share": 0.415,
+      "mean_confidence": 0.811,
+      "accuracy": 0.841
+     },
+     {
+      "confidence": "0.9-0.99",
+      "share": 0.13,
+      "mean_confidence": 0.929,
+      "accuracy": 1.0
+     },
+     {
+      "confidence": ">=0.99",
+      "share": 0.0,
+      "mean_confidence": null,
+      "accuracy": null
+     }
+    ]
+   },
+   "trade_off_before_calibration": [
+    {
+     "rejected_share": 0.0,
+     "threshold": 0.0,
+     "accuracy_kept": 0.7584,
+     "macro_f1_kept": 0.5437,
+     "errors_rejected": 0.0,
+     "rejected_by_true_class": {
+      "Human": 0.0,
+      "Pet": 0.0,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.05,
+     "threshold": 0.3787,
+     "accuracy_kept": 0.7762,
+     "macro_f1_kept": 0.561,
+     "errors_rejected": 0.12,
+     "rejected_by_true_class": {
+      "Human": 0.024,
+      "Pet": 0.089,
+      "IRobot": 0.014,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.1,
+     "threshold": 0.4188,
+     "accuracy_kept": 0.7941,
+     "macro_f1_kept": 0.5737,
+     "errors_rejected": 0.233,
+     "rejected_by_true_class": {
+      "Human": 0.075,
+      "Pet": 0.136,
+      "IRobot": 0.133,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.15,
+     "threshold": 0.4452,
+     "accuracy_kept": 0.8056,
+     "macro_f1_kept": 0.5689,
+     "errors_rejected": 0.316,
+     "rejected_by_true_class": {
+      "Human": 0.131,
+      "Pet": 0.168,
+      "IRobot": 0.327,
+      "Fan": 0.008
+     }
+    },
+    {
+     "rejected_share": 0.2,
+     "threshold": 0.4668,
+     "accuracy_kept": 0.8215,
+     "macro_f1_kept": 0.5653,
+     "errors_rejected": 0.409,
+     "rejected_by_true_class": {
+      "Human": 0.189,
+      "Pet": 0.201,
+      "IRobot": 0.424,
+      "Fan": 0.107
+     }
+    },
+    {
+     "rejected_share": 0.25,
+     "threshold": 0.4887,
+     "accuracy_kept": 0.8314,
+     "macro_f1_kept": 0.5709,
+     "errors_rejected": 0.477,
+     "rejected_by_true_class": {
+      "Human": 0.248,
+      "Pet": 0.242,
+      "IRobot": 0.443,
+      "Fan": 0.175
+     }
+    },
+    {
+     "rejected_share": 0.3,
+     "threshold": 0.5144,
+     "accuracy_kept": 0.8468,
+     "macro_f1_kept": 0.5803,
+     "errors_rejected": 0.556,
+     "rejected_by_true_class": {
+      "Human": 0.303,
+      "Pet": 0.279,
+      "IRobot": 0.454,
+      "Fan": 0.344
+     }
+    },
+    {
+     "rejected_share": 0.4,
+     "threshold": 0.5636,
+     "accuracy_kept": 0.8705,
+     "macro_f1_kept": 0.5456,
+     "errors_rejected": 0.678,
+     "rejected_by_true_class": {
+      "Human": 0.416,
+      "Pet": 0.347,
+      "IRobot": 0.679,
+      "Fan": 0.499
+     }
+    },
+    {
+     "rejected_share": 0.5,
+     "threshold": 0.6138,
+     "accuracy_kept": 0.8916,
+     "macro_f1_kept": 0.4877,
+     "errors_rejected": 0.776,
+     "rejected_by_true_class": {
+      "Human": 0.531,
+      "Pet": 0.432,
+      "IRobot": 0.812,
+      "Fan": 0.535
+     }
+    }
+   ],
+   "trade_off_after_calibration": [
+    {
+     "rejected_share": 0.0,
+     "threshold": 0.0,
+     "accuracy_kept": 0.7584,
+     "macro_f1_kept": 0.5437,
+     "errors_rejected": 0.0,
+     "rejected_by_true_class": {
+      "Human": 0.0,
+      "Pet": 0.0,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.05,
+     "threshold": 0.4255,
+     "accuracy_kept": 0.7753,
+     "macro_f1_kept": 0.5587,
+     "errors_rejected": 0.117,
+     "rejected_by_true_class": {
+      "Human": 0.03,
+      "Pet": 0.082,
+      "IRobot": 0.014,
+      "Fan": 0.0
+     }
+    },
+    {
+     "rejected_share": 0.1,
+     "threshold": 0.4749,
+     "accuracy_kept": 0.7942,
+     "macro_f1_kept": 0.5722,
+     "errors_rejected": 0.233,
+     "rejected_by_true_class": {
+      "Human": 0.079,
+      "Pet": 0.13,
+      "IRobot": 0.133,
+      "Fan": 0.003
+     }
+    },
+    {
+     "rejected_share": 0.15,
+     "threshold": 0.5074,
+     "accuracy_kept": 0.8089,
+     "macro_f1_kept": 0.575,
+     "errors_rejected": 0.328,
+     "rejected_by_true_class": {
+      "Human": 0.133,
+      "Pet": 0.166,
+      "IRobot": 0.263,
+      "Fan": 0.082
+     }
+    },
+    {
+     "rejected_share": 0.2,
+     "threshold": 0.5355,
+     "accuracy_kept": 0.8237,
+     "macro_f1_kept": 0.5705,
+     "errors_rejected": 0.416,
+     "rejected_by_true_class": {
+      "Human": 0.182,
+      "Pet": 0.197,
+      "IRobot": 0.374,
+      "Fan": 0.287
+     }
+    },
+    {
+     "rejected_share": 0.25,
+     "threshold": 0.5665,
+     "accuracy_kept": 0.8349,
+     "macro_f1_kept": 0.5694,
+     "errors_rejected": 0.487,
+     "rejected_by_true_class": {
+      "Human": 0.242,
+      "Pet": 0.233,
+      "IRobot": 0.432,
+      "Fan": 0.358
+     }
+    },
+    {
+     "rejected_share": 0.3,
+     "threshold": 0.6041,
+     "accuracy_kept": 0.8499,
+     "macro_f1_kept": 0.5773,
+     "errors_rejected": 0.565,
+     "rejected_by_true_class": {
+      "Human": 0.3,
+      "Pet": 0.274,
+      "IRobot": 0.454,
+      "Fan": 0.428
+     }
+    },
+    {
+     "rejected_share": 0.4,
+     "threshold": 0.6686,
+     "accuracy_kept": 0.8689,
+     "macro_f1_kept": 0.5544,
+     "errors_rejected": 0.674,
+     "rejected_by_true_class": {
+      "Human": 0.415,
+      "Pet": 0.351,
+      "IRobot": 0.64,
+      "Fan": 0.504
+     }
+    },
+    {
+     "rejected_share": 0.5,
+     "threshold": 0.7278,
+     "accuracy_kept": 0.8918,
+     "macro_f1_kept": 0.5128,
+     "errors_rejected": 0.776,
+     "rejected_by_true_class": {
+      "Human": 0.529,
+      "Pet": 0.432,
+      "IRobot": 0.776,
+      "Fan": 0.594
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,929 @@
+{
+ "split_0": {
+  "validation_windows": 9424,
+  "models": {
+   "random_forest": {
+    "accuracy": 0.7785,
+    "macro_f1": 0.4694,
+    "per_class": {
+     "Human": {
+      "precision": 0.7843,
+      "recall": 0.8387,
+      "f1": 0.8106,
+      "windows": 4488
+     },
+     "Pet": {
+      "precision": 0.8448,
+      "recall": 0.8432,
+      "f1": 0.844,
+      "windows": 4152
+     },
+     "IRobot": {
+      "precision": 0.1597,
+      "recall": 0.1385,
+      "f1": 0.1484,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.131,
+      "recall": 0.052,
+      "f1": 0.0745,
+      "windows": 423
+     }
+    },
+    "confusion_matrix": [
+     [
+      3764,
+      515,
+      119,
+      90
+     ],
+     [
+      451,
+      3501,
+      144,
+      56
+     ],
+     [
+      251,
+      60,
+      50,
+      0
+     ],
+     [
+      333,
+      68,
+      0,
+      22
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 8640,
+       "accuracy": 0.841,
+       "recall": {
+        "Human": 0.839,
+        "Pet": 0.843,
+        "IRobot": null,
+        "Fan": null
+       }
+      },
+      "unseen": {
+       "windows": 784,
+       "accuracy": 0.092,
+       "recall": {
+        "Human": null,
+        "Pet": null,
+        "IRobot": 0.139,
+        "Fan": 0.052
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 9424,
+       "accuracy": 0.779,
+       "recall": {
+        "Human": 0.839,
+        "Pet": 0.843,
+        "IRobot": 0.139,
+        "Fan": 0.052
+       }
+      },
+      "unseen": null
+     }
+    }
+   },
+   "logistic_regression": {
+    "accuracy": 0.8928,
+    "macro_f1": 0.4693,
+    "per_class": {
+     "Human": {
+      "precision": 0.8999,
+      "recall": 0.967,
+      "f1": 0.9322,
+      "windows": 4488
+     },
+     "Pet": {
+      "precision": 0.9116,
+      "recall": 0.9812,
+      "f1": 0.9451,
+      "windows": 4152
+     },
+     "IRobot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 423
+     }
+    },
+    "confusion_matrix": [
+     [
+      4340,
+      148,
+      0,
+      0
+     ],
+     [
+      71,
+      4074,
+      7,
+      0
+     ],
+     [
+      357,
+      4,
+      0,
+      0
+     ],
+     [
+      55,
+      243,
+      125,
+      0
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 8640,
+       "accuracy": 0.974,
+       "recall": {
+        "Human": 0.967,
+        "Pet": 0.981,
+        "IRobot": null,
+        "Fan": null
+       }
+      },
+      "unseen": {
+       "windows": 784,
+       "accuracy": 0.0,
+       "recall": {
+        "Human": null,
+        "Pet": null,
+        "IRobot": 0.0,
+        "Fan": 0.0
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 9424,
+       "accuracy": 0.893,
+       "recall": {
+        "Human": 0.967,
+        "Pet": 0.981,
+        "IRobot": 0.0,
+        "Fan": 0.0
+       }
+      },
+      "unseen": null
+     }
+    }
+   },
+   "soft_voting": {
+    "accuracy": 0.8896,
+    "macro_f1": 0.4672,
+    "per_class": {
+     "Human": {
+      "precision": 0.889,
+      "recall": 0.965,
+      "f1": 0.9254,
+      "windows": 4488
+     },
+     "Pet": {
+      "precision": 0.9128,
+      "recall": 0.9762,
+      "f1": 0.9434,
+      "windows": 4152
+     },
+     "IRobot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 423
+     }
+    },
+    "confusion_matrix": [
+     [
+      4331,
+      157,
+      0,
+      0
+     ],
+     [
+      99,
+      4053,
+      0,
+      0
+     ],
+     [
+      359,
+      2,
+      0,
+      0
+     ],
+     [
+      83,
+      228,
+      112,
+      0
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 8640,
+       "accuracy": 0.97,
+       "recall": {
+        "Human": 0.965,
+        "Pet": 0.976,
+        "IRobot": null,
+        "Fan": null
+       }
+      },
+      "unseen": {
+       "windows": 784,
+       "accuracy": 0.0,
+       "recall": {
+        "Human": null,
+        "Pet": null,
+        "IRobot": 0.0,
+        "Fan": 0.0
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 9424,
+       "accuracy": 0.89,
+       "recall": {
+        "Human": 0.965,
+        "Pet": 0.976,
+        "IRobot": 0.0,
+        "Fan": 0.0
+       }
+      },
+      "unseen": null
+     }
+    }
+   }
+  },
+  "reference_lines": {
+   "majority_class": {
+    "accuracy": 0.4762,
+    "macro_f1": 0.1613
+   },
+   "environment_lookup": {
+    "accuracy": 0.8114,
+    "macro_f1": 0.424,
+    "share_of_samples_in_unseen_environment": 0.0
+   },
+   "user_lookup_diagnostic": {
+    "accuracy": 0.9168,
+    "macro_f1": 0.4799,
+    "share_of_samples_from_unseen_user": 0.0832
+   }
+  }
+ },
+ "split_1": {
+  "validation_windows": 9817,
+  "models": {
+   "random_forest": {
+    "accuracy": 0.771,
+    "macro_f1": 0.5641,
+    "per_class": {
+     "Human": {
+      "precision": 0.8302,
+      "recall": 0.8655,
+      "f1": 0.8475,
+      "windows": 4378
+     },
+     "Pet": {
+      "precision": 0.8716,
+      "recall": 0.8386,
+      "f1": 0.8548,
+      "windows": 4071
+     },
+     "IRobot": {
+      "precision": 0.3007,
+      "recall": 0.1275,
+      "f1": 0.179,
+      "windows": 1012
+     },
+     "Fan": {
+      "precision": 0.2613,
+      "recall": 0.6657,
+      "f1": 0.3753,
+      "windows": 356
+     }
+    },
+    "confusion_matrix": [
+     [
+      3789,
+      412,
+      67,
+      110
+     ],
+     [
+      382,
+      3414,
+      233,
+      42
+     ],
+     [
+      274,
+      91,
+      129,
+      518
+     ],
+     [
+      119,
+      0,
+      0,
+      237
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 8307,
+       "accuracy": 0.873,
+       "recall": {
+        "Human": 0.929,
+        "Pet": 0.839,
+        "IRobot": null,
+        "Fan": 0.666
+       }
+      },
+      "unseen": {
+       "windows": 1510,
+       "accuracy": 0.207,
+       "recall": {
+        "Human": 0.369,
+        "Pet": null,
+        "IRobot": 0.127,
+        "Fan": null
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 9817,
+       "accuracy": 0.771,
+       "recall": {
+        "Human": 0.865,
+        "Pet": 0.839,
+        "IRobot": 0.127,
+        "Fan": 0.666
+       }
+      },
+      "unseen": null
+     }
+    }
+   },
+   "logistic_regression": {
+    "accuracy": 0.8633,
+    "macro_f1": 0.643,
+    "per_class": {
+     "Human": {
+      "precision": 0.8447,
+      "recall": 0.9701,
+      "f1": 0.903,
+      "windows": 4378
+     },
+     "Pet": {
+      "precision": 0.9291,
+      "recall": 0.9523,
+      "f1": 0.9406,
+      "windows": 4071
+     },
+     "IRobot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 1012
+     },
+     "Fan": {
+      "precision": 0.5773,
+      "recall": 0.986,
+      "f1": 0.7282,
+      "windows": 356
+     }
+    },
+    "confusion_matrix": [
+     [
+      4247,
+      124,
+      6,
+      1
+     ],
+     [
+      192,
+      3877,
+      0,
+      2
+     ],
+     [
+      587,
+      171,
+      0,
+      254
+     ],
+     [
+      2,
+      1,
+      2,
+      351
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 8307,
+       "accuracy": 0.968,
+       "recall": {
+        "Human": 0.983,
+        "Pet": 0.952,
+        "IRobot": null,
+        "Fan": 0.986
+       }
+      },
+      "unseen": {
+       "windows": 1510,
+       "accuracy": 0.286,
+       "recall": {
+        "Human": 0.867,
+        "Pet": null,
+        "IRobot": 0.0,
+        "Fan": null
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 9817,
+       "accuracy": 0.863,
+       "recall": {
+        "Human": 0.97,
+        "Pet": 0.952,
+        "IRobot": 0.0,
+        "Fan": 0.986
+       }
+      },
+      "unseen": null
+     }
+    }
+   },
+   "soft_voting": {
+    "accuracy": 0.8624,
+    "macro_f1": 0.6438,
+    "per_class": {
+     "Human": {
+      "precision": 0.8393,
+      "recall": 0.9689,
+      "f1": 0.8995,
+      "windows": 4378
+     },
+     "Pet": {
+      "precision": 0.9278,
+      "recall": 0.9533,
+      "f1": 0.9404,
+      "windows": 4071
+     },
+     "IRobot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 1012
+     },
+     "Fan": {
+      "precision": 0.5945,
+      "recall": 0.9635,
+      "f1": 0.7353,
+      "windows": 356
+     }
+    },
+    "confusion_matrix": [
+     [
+      4242,
+      133,
+      2,
+      1
+     ],
+     [
+      190,
+      3881,
+      0,
+      0
+     ],
+     [
+      611,
+      168,
+      0,
+      233
+     ],
+     [
+      11,
+      1,
+      1,
+      343
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 8307,
+       "accuracy": 0.968,
+       "recall": {
+        "Human": 0.984,
+        "Pet": 0.953,
+        "IRobot": null,
+        "Fan": 0.963
+       }
+      },
+      "unseen": {
+       "windows": 1510,
+       "accuracy": 0.281,
+       "recall": {
+        "Human": 0.851,
+        "Pet": null,
+        "IRobot": 0.0,
+        "Fan": null
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 9817,
+       "accuracy": 0.862,
+       "recall": {
+        "Human": 0.969,
+        "Pet": 0.953,
+        "IRobot": 0.0,
+        "Fan": 0.963
+       }
+      },
+      "unseen": null
+     }
+    }
+   }
+  },
+  "reference_lines": {
+   "majority_class": {
+    "accuracy": 0.446,
+    "macro_f1": 0.1542
+   },
+   "environment_lookup": {
+    "accuracy": 0.7086,
+    "macro_f1": 0.381,
+    "share_of_samples_in_unseen_environment": 0.0
+   },
+   "user_lookup_diagnostic": {
+    "accuracy": 0.8969,
+    "macro_f1": 0.7241,
+    "share_of_samples_from_unseen_user": 0.1538
+   }
+  }
+ },
+ "split_2": {
+  "validation_windows": 9188,
+  "models": {
+   "random_forest": {
+    "accuracy": 0.7576,
+    "macro_f1": 0.5215,
+    "per_class": {
+     "Human": {
+      "precision": 0.7984,
+      "recall": 0.8664,
+      "f1": 0.831,
+      "windows": 4566
+     },
+     "Pet": {
+      "precision": 0.8393,
+      "recall": 0.7179,
+      "f1": 0.7738,
+      "windows": 3906
+     },
+     "IRobot": {
+      "precision": 0.2596,
+      "recall": 0.3934,
+      "f1": 0.3128,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.171,
+      "recall": 0.1662,
+      "f1": 0.1686,
+      "windows": 355
+     }
+    },
+    "confusion_matrix": [
+     [
+      3956,
+      407,
+      159,
+      44
+     ],
+     [
+      762,
+      2804,
+      246,
+      94
+     ],
+     [
+      71,
+      0,
+      142,
+      148
+     ],
+     [
+      166,
+      130,
+      0,
+      59
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 5988,
+       "accuracy": 0.807,
+       "recall": {
+        "Human": 0.978,
+        "Pet": 0.759,
+        "IRobot": 0.393,
+        "Fan": null
+       }
+      },
+      "unseen": {
+       "windows": 3200,
+       "accuracy": 0.664,
+       "recall": {
+        "Human": 0.784,
+        "Pet": 0.005,
+        "IRobot": null,
+        "Fan": 0.166
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 6554,
+       "accuracy": 0.747,
+       "recall": {
+        "Human": 0.978,
+        "Pet": 0.718,
+        "IRobot": 0.393,
+        "Fan": 0.166
+       }
+      },
+      "unseen": {
+       "windows": 2634,
+       "accuracy": 0.784,
+       "recall": {
+        "Human": 0.784,
+        "Pet": null,
+        "IRobot": null,
+        "Fan": null
+       }
+      }
+     }
+    }
+   },
+   "logistic_regression": {
+    "accuracy": 0.7584,
+    "macro_f1": 0.5437,
+    "per_class": {
+     "Human": {
+      "precision": 0.8359,
+      "recall": 0.8476,
+      "f1": 0.8417,
+      "windows": 4566
+     },
+     "Pet": {
+      "precision": 0.7857,
+      "recall": 0.7217,
+      "f1": 0.7523,
+      "windows": 3906
+     },
+     "IRobot": {
+      "precision": 0.465,
+      "recall": 0.7729,
+      "f1": 0.5806,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 355
+     }
+    },
+    "confusion_matrix": [
+     [
+      3870,
+      570,
+      49,
+      77
+     ],
+     [
+      604,
+      2819,
+      272,
+      211
+     ],
+     [
+      0,
+      0,
+      279,
+      82
+     ],
+     [
+      156,
+      199,
+      0,
+      0
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 5988,
+       "accuracy": 0.811,
+       "recall": {
+        "Human": 0.941,
+        "Pet": 0.747,
+        "IRobot": 0.773,
+        "Fan": null
+       }
+      },
+      "unseen": {
+       "windows": 3200,
+       "accuracy": 0.659,
+       "recall": {
+        "Human": 0.779,
+        "Pet": 0.27,
+        "IRobot": null,
+        "Fan": 0.0
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 6554,
+       "accuracy": 0.75,
+       "recall": {
+        "Human": 0.941,
+        "Pet": 0.722,
+        "IRobot": 0.773,
+        "Fan": 0.0
+       }
+      },
+      "unseen": {
+       "windows": 2634,
+       "accuracy": 0.779,
+       "recall": {
+        "Human": 0.779,
+        "Pet": null,
+        "IRobot": null,
+        "Fan": null
+       }
+      }
+     }
+    }
+   },
+   "soft_voting": {
+    "accuracy": 0.7874,
+    "macro_f1": 0.5402,
+    "per_class": {
+     "Human": {
+      "precision": 0.8499,
+      "recall": 0.8977,
+      "f1": 0.8731,
+      "windows": 4566
+     },
+     "Pet": {
+      "precision": 0.8363,
+      "recall": 0.7453,
+      "f1": 0.7881,
+      "windows": 3906
+     },
+     "IRobot": {
+      "precision": 0.3856,
+      "recall": 0.5928,
+      "f1": 0.4672,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0334,
+      "recall": 0.031,
+      "f1": 0.0322,
+      "windows": 355
+     }
+    },
+    "confusion_matrix": [
+     [
+      4099,
+      371,
+      64,
+      32
+     ],
+     [
+      579,
+      2911,
+      277,
+      139
+     ],
+     [
+      0,
+      0,
+      214,
+      147
+     ],
+     [
+      145,
+      199,
+      0,
+      11
+     ]
+    ],
+    "seen_vs_unseen": {
+     "user": {
+      "seen": {
+       "windows": 5988,
+       "accuracy": 0.829,
+       "recall": {
+        "Human": 0.966,
+        "Pet": 0.78,
+        "IRobot": 0.593,
+        "Fan": null
+       }
+      },
+      "unseen": {
+       "windows": 3200,
+       "accuracy": 0.71,
+       "recall": {
+        "Human": 0.848,
+        "Pet": 0.137,
+        "IRobot": null,
+        "Fan": 0.031
+       }
+      }
+     },
+     "environment": {
+      "seen": {
+       "windows": 6554,
+       "accuracy": 0.763,
+       "recall": {
+        "Human": 0.966,
+        "Pet": 0.745,
+        "IRobot": 0.593,
+        "Fan": 0.031
+       }
+      },
+      "unseen": {
+       "windows": 2634,
+       "accuracy": 0.848,
+       "recall": {
+        "Human": 0.848,
+        "Pet": null,
+        "IRobot": null,
+        "Fan": null
+       }
+      }
+     }
+    }
+   }
+  },
+  "reference_lines": {
+   "majority_class": {
+    "accuracy": 0.497,
+    "macro_f1": 0.166
+   },
+   "environment_lookup": {
+    "accuracy": 0.7926,
+    "macro_f1": 0.4083,
+    "share_of_samples_in_unseen_environment": 0.2867
+   },
+   "user_lookup_diagnostic": {
+    "accuracy": 0.9384,
+    "macro_f1": 0.7285,
+    "share_of_samples_from_unseen_user": 0.3483
+   }
+  }
+ }
+}

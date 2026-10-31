@@ -1,0 +1,170 @@
+[
+ {
+  "split": 0,
+  "variant": "all",
+  "features": 2320,
+  "fit_seconds": 66.3,
+  "accuracy": 0.7785,
+  "macro_f1": 0.4694,
+  "recall": {
+   "Human": 0.8387,
+   "Pet": 0.8432,
+   "IRobot": 0.1385,
+   "Fan": 0.052
+  }
+ },
+ {
+  "split": 0,
+  "variant": "no_level",
+  "features": 1624,
+  "fit_seconds": 65.7,
+  "accuracy": 0.7779,
+  "macro_f1": 0.432,
+  "recall": {
+   "Human": 0.8447,
+   "Pet": 0.8475,
+   "IRobot": 0.0277,
+   "Fan": 0.026
+  }
+ },
+ {
+  "split": 0,
+  "variant": "relative_level",
+  "features": 2088,
+  "fit_seconds": 76.3,
+  "accuracy": 0.7744,
+  "macro_f1": 0.4323,
+  "recall": {
+   "Human": 0.8396,
+   "Pet": 0.8447,
+   "IRobot": 0.0332,
+   "Fan": 0.026
+  }
+ },
+ {
+  "split": 0,
+  "variant": "no_level_no_energy",
+  "features": 1160,
+  "fit_seconds": 51.9,
+  "accuracy": 0.7865,
+  "macro_f1": 0.4738,
+  "recall": {
+   "Human": 0.83,
+   "Pet": 0.8687,
+   "IRobot": 0.169,
+   "Fan": 0.0449
+  }
+ },
+ {
+  "split": 1,
+  "variant": "all",
+  "features": 2320,
+  "fit_seconds": 71.9,
+  "accuracy": 0.771,
+  "macro_f1": 0.5641,
+  "recall": {
+   "Human": 0.8655,
+   "Pet": 0.8386,
+   "IRobot": 0.1275,
+   "Fan": 0.6657
+  }
+ },
+ {
+  "split": 1,
+  "variant": "no_level",
+  "features": 1624,
+  "fit_seconds": 64.5,
+  "accuracy": 0.7715,
+  "macro_f1": 0.5794,
+  "recall": {
+   "Human": 0.8712,
+   "Pet": 0.8231,
+   "IRobot": 0.17,
+   "Fan": 0.6657
+  }
+ },
+ {
+  "split": 1,
+  "variant": "relative_level",
+  "features": 2088,
+  "fit_seconds": 76.4,
+  "accuracy": 0.7693,
+  "macro_f1": 0.5738,
+  "recall": {
+   "Human": 0.8684,
+   "Pet": 0.8192,
+   "IRobot": 0.1759,
+   "Fan": 0.6657
+  }
+ },
+ {
+  "split": 1,
+  "variant": "no_level_no_energy",
+  "features": 1160,
+  "fit_seconds": 50.3,
+  "accuracy": 0.7476,
+  "macro_f1": 0.5677,
+  "recall": {
+   "Human": 0.8545,
+   "Pet": 0.7824,
+   "IRobot": 0.1769,
+   "Fan": 0.6573
+  }
+ },
+ {
+  "split": 2,
+  "variant": "all",
+  "features": 2320,
+  "fit_seconds": 59.0,
+  "accuracy": 0.7576,
+  "macro_f1": 0.5215,
+  "recall": {
+   "Human": 0.8664,
+   "Pet": 0.7179,
+   "IRobot": 0.3934,
+   "Fan": 0.1662
+  }
+ },
+ {
+  "split": 2,
+  "variant": "no_level",
+  "features": 1624,
+  "fit_seconds": 53.4,
+  "accuracy": 0.7508,
+  "macro_f1": 0.516,
+  "recall": {
+   "Human": 0.8476,
+   "Pet": 0.7243,
+   "IRobot": 0.3934,
+   "Fan": 0.1606
+  }
+ },
+ {
+  "split": 2,
+  "variant": "relative_level",
+  "features": 2088,
+  "fit_seconds": 62.0,
+  "accuracy": 0.7281,
+  "macro_f1": 0.491,
+  "recall": {
+   "Human": 0.8268,
+   "Pet": 0.703,
+   "IRobot": 0.3158,
+   "Fan": 0.1549
+  }
+ },
+ {
+  "split": 2,
+  "variant": "no_level_no_energy",
+  "features": 1160,
+  "fit_seconds": 43.0,
+  "accuracy": 0.7298,
+  "macro_f1": 0.4806,
+  "recall": {
+   "Human": 0.8706,
+   "Pet": 0.6615,
+   "IRobot": 0.4044,
+   "Fan": 0.0
+  }
+ }
+]

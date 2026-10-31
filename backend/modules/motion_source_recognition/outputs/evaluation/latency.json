@@ -1,0 +1,119 @@
+{
+ "sample_windows": 200,
+ "threads": 1,
+ "blocks_ms": {
+  "statistics": {
+   "median_ms": 1.79,
+   "p95_ms": 1.98,
+   "mean_ms": 1.76
+  },
+  "minirocket": {
+   "median_ms": 19.88,
+   "p95_ms": 20.26,
+   "mean_ms": 19.89
+  },
+  "spectral_shape": {
+   "median_ms": 0.81,
+   "p95_ms": 0.98,
+   "mean_ms": 0.83
+  },
+  "physical_raw_numbers": {
+   "median_ms": 4.28,
+   "p95_ms": 4.51,
+   "mean_ms": 4.28
+  },
+  "assemble_with_dynamics": {
+   "median_ms": 0.54,
+   "p95_ms": 0.61,
+   "mean_ms": 0.55
+  }
+ },
+ "minirocket_cold_start_ms": 4976.1,
+ "candidates": {
+  "random_forest": {
+   "label": "Random Forest on statistics",
+   "features": "statistics",
+   "classify_ms": {
+    "median_ms": 7.64,
+    "p95_ms": 7.9,
+    "mean_ms": 7.67
+   },
+   "total_ms": {
+    "median_ms": 9.29,
+    "p95_ms": 9.7,
+    "mean_ms": 9.31
+   },
+   "share_of_the_5_s_between_windows_percent": 0.19,
+   "model_megabytes": 6.37,
+   "also_ship_megabytes": 0.0
+  },
+  "logistic_regression": {
+   "label": "Logistic Regression on MiniRocket",
+   "features": "minirocket",
+   "classify_ms": {
+    "median_ms": 0.22,
+    "p95_ms": 0.28,
+    "mean_ms": 0.23
+   },
+   "total_ms": {
+    "median_ms": 21.82,
+    "p95_ms": 22.29,
+    "mean_ms": 21.83
+   },
+   "share_of_the_5_s_between_windows_percent": 0.44,
+   "model_megabytes": 0.38,
+   "also_ship_megabytes": 0.08
+  },
+  "random_forest_minirocket": {
+   "label": "Random Forest on MiniRocket",
+   "features": "minirocket",
+   "classify_ms": {
+    "median_ms": 7.46,
+    "p95_ms": 7.7,
+    "mean_ms": 7.49
+   },
+   "total_ms": {
+    "median_ms": 29.38,
+    "p95_ms": 29.96,
+    "mean_ms": 29.41
+   },
+   "share_of_the_5_s_between_windows_percent": 0.59,
+   "model_megabytes": 13.48,
+   "also_ship_megabytes": 0.08
+  },
+  "random_forest_statistics_physical": {
+   "label": "Random Forest on statistics + physical",
+   "features": "statistics_physical",
+   "classify_ms": {
+    "median_ms": 7.59,
+    "p95_ms": 7.81,
+    "mean_ms": 7.61
+   },
+   "total_ms": {
+    "median_ms": 15.02,
+    "p95_ms": 15.54,
+    "mean_ms": 15.02
+   },
+   "share_of_the_5_s_between_windows_percent": 0.3,
+   "model_megabytes": 15.17,
+   "also_ship_megabytes": 0.0
+  },
+  "logistic_regression_statistics_physical": {
+   "label": "Logistic Regression on statistics + physical",
+   "features": "statistics_physical",
+   "classify_ms": {
+    "median_ms": 0.19,
+    "p95_ms": 0.22,
+    "mean_ms": 0.19
+   },
+   "total_ms": {
+    "median_ms": 7.52,
+    "p95_ms": 7.92,
+    "mean_ms": 7.47
+   },
+   "share_of_the_5_s_between_windows_percent": 0.15,
+   "model_megabytes": 0.09,
+   "also_ship_megabytes": 0.0
+  }
+ }
+}

@@ -1,0 +1,341 @@
+{
+ "random_forest": {
+  "split_0": {
+   "ece": 0.114,
+   "mean_confidence": 0.665,
+   "accuracy": 0.779,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.194,
+     "mean_confidence": 0.413,
+     "accuracy": 0.451
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.371,
+     "mean_confidence": 0.604,
+     "accuracy": 0.752
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.329,
+     "mean_confidence": 0.791,
+     "accuracy": 0.931
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.092,
+     "mean_confidence": 0.94,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.014,
+     "mean_confidence": 0.995,
+     "accuracy": 1.0
+    }
+   ]
+  },
+  "split_1": {
+   "ece": 0.139,
+   "mean_confidence": 0.631,
+   "accuracy": 0.771,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.291,
+     "mean_confidence": 0.412,
+     "accuracy": 0.539
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.325,
+     "mean_confidence": 0.6,
+     "accuracy": 0.806
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.313,
+     "mean_confidence": 0.795,
+     "accuracy": 0.897
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.057,
+     "mean_confidence": 0.938,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.015,
+     "mean_confidence": 0.995,
+     "accuracy": 1.0
+    }
+   ]
+  },
+  "split_2": {
+   "ece": 0.137,
+   "mean_confidence": 0.62,
+   "accuracy": 0.758,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.336,
+     "mean_confidence": 0.405,
+     "accuracy": 0.538
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.303,
+     "mean_confidence": 0.597,
+     "accuracy": 0.79
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.264,
+     "mean_confidence": 0.799,
+     "accuracy": 0.909
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.08,
+     "mean_confidence": 0.941,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.018,
+     "mean_confidence": 0.996,
+     "accuracy": 1.0
+    }
+   ]
+  }
+ },
+ "logistic_regression": {
+  "split_0": {
+   "ece": 0.073,
+   "mean_confidence": 0.965,
+   "accuracy": 0.893,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.002,
+     "mean_confidence": 0.463,
+     "accuracy": 0.059
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.036,
+     "mean_confidence": 0.605,
+     "accuracy": 0.398
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.074,
+     "mean_confidence": 0.82,
+     "accuracy": 0.443
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.129,
+     "mean_confidence": 0.96,
+     "accuracy": 0.782
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.759,
+     "mean_confidence": 0.999,
+     "accuracy": 0.981
+    }
+   ]
+  },
+  "split_1": {
+   "ece": 0.121,
+   "mean_confidence": 0.984,
+   "accuracy": 0.863,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.001,
+     "mean_confidence": 0.463,
+     "accuracy": 0.167
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.018,
+     "mean_confidence": 0.599,
+     "accuracy": 0.358
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.031,
+     "mean_confidence": 0.813,
+     "accuracy": 0.468
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.054,
+     "mean_confidence": 0.962,
+     "accuracy": 0.568
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.896,
+     "mean_confidence": 1.0,
+     "accuracy": 0.906
+    }
+   ]
+  },
+  "split_2": {
+   "ece": 0.145,
+   "mean_confidence": 0.614,
+   "accuracy": 0.758,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.273,
+     "mean_confidence": 0.429,
+     "accuracy": 0.543
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.393,
+     "mean_confidence": 0.598,
+     "accuracy": 0.744
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.324,
+     "mean_confidence": 0.778,
+     "accuracy": 0.95
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.011,
+     "mean_confidence": 0.912,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.0,
+     "mean_confidence": null,
+     "accuracy": null
+    }
+   ]
+  }
+ },
+ "random_forest_minirocket": {
+  "split_0": {
+   "ece": 0.049,
+   "mean_confidence": 0.862,
+   "accuracy": 0.879,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.011,
+     "mean_confidence": 0.483,
+     "accuracy": 0.269
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.162,
+     "mean_confidence": 0.601,
+     "accuracy": 0.515
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.246,
+     "mean_confidence": 0.823,
+     "accuracy": 0.923
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.507,
+     "mean_confidence": 0.954,
+     "accuracy": 0.97
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.073,
+     "mean_confidence": 0.994,
+     "accuracy": 1.0
+    }
+   ]
+  },
+  "split_1": {
+   "ece": 0.057,
+   "mean_confidence": 0.791,
+   "accuracy": 0.829,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.085,
+     "mean_confidence": 0.452,
+     "accuracy": 0.349
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.19,
+     "mean_confidence": 0.593,
+     "accuracy": 0.587
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.36,
+     "mean_confidence": 0.811,
+     "accuracy": 0.896
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.338,
+     "mean_confidence": 0.951,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.028,
+     "mean_confidence": 0.994,
+     "accuracy": 1.0
+    }
+   ]
+  },
+  "split_2": {
+   "ece": 0.19,
+   "mean_confidence": 0.66,
+   "accuracy": 0.85,
+   "bins": [
+    {
+     "confidence": "<0.5",
+     "share": 0.26,
+     "mean_confidence": 0.444,
+     "accuracy": 0.773
+    },
+    {
+     "confidence": "0.5-0.7",
+     "share": 0.319,
+     "mean_confidence": 0.562,
+     "accuracy": 0.758
+    },
+    {
+     "confidence": "0.7-0.9",
+     "share": 0.274,
+     "mean_confidence": 0.832,
+     "accuracy": 0.948
+    },
+    {
+     "confidence": "0.9-0.99",
+     "share": 0.148,
+     "mean_confidence": 0.931,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": ">=0.99",
+     "share": 0.0,
+     "mean_confidence": 0.991,
+     "accuracy": 1.0
+    }
+   ]
+  }
+ }
+}

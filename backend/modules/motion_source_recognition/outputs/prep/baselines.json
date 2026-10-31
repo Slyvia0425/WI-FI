@@ -1,0 +1,155 @@
+{
+ "split_0": {
+  "majority_class": "Human",
+  "train_samples_per_class": {
+   "Human": 19302,
+   "Pet": 18241,
+   "IRobot": 2933,
+   "Fan": 855
+  },
+  "class_weights": {
+   "Human": 0.5353,
+   "Pet": 0.5665,
+   "IRobot": 3.5229,
+   "Fan": 12.0851
+  },
+  "baselines": {
+   "val": {
+    "samples": 9424,
+    "majority_class": {
+     "accuracy": 0.4762,
+     "macro_f1": 0.1613
+    },
+    "environment_lookup": {
+     "accuracy": 0.8114,
+     "macro_f1": 0.424,
+     "share_of_samples_in_unseen_environment": 0.0
+    },
+    "user_lookup_diagnostic": {
+     "accuracy": 0.9168,
+     "macro_f1": 0.4799,
+     "share_of_samples_from_unseen_user": 0.0832
+    }
+   },
+   "test": {
+    "samples": 10103,
+    "majority_class": {
+     "accuracy": 0.432,
+     "macro_f1": 0.1508
+    },
+    "environment_lookup": {
+     "accuracy": 0.7239,
+     "macro_f1": 0.391,
+     "share_of_samples_in_unseen_environment": 0.0
+    },
+    "user_lookup_diagnostic": {
+     "accuracy": 0.8641,
+     "macro_f1": 0.466,
+     "share_of_samples_from_unseen_user": 0.1359
+    }
+   }
+  }
+ },
+ "split_1": {
+  "majority_class": "Human",
+  "train_samples_per_class": {
+   "Human": 19477,
+   "Pet": 18611,
+   "IRobot": 2933,
+   "Fan": 860
+  },
+  "class_weights": {
+   "Human": 0.5376,
+   "Pet": 0.5626,
+   "IRobot": 3.5698,
+   "Fan": 12.1747
+  },
+  "baselines": {
+   "val": {
+    "samples": 9817,
+    "majority_class": {
+     "accuracy": 0.446,
+     "macro_f1": 0.1542
+    },
+    "environment_lookup": {
+     "accuracy": 0.7086,
+     "macro_f1": 0.381,
+     "share_of_samples_in_unseen_environment": 0.0
+    },
+    "user_lookup_diagnostic": {
+     "accuracy": 0.8969,
+     "macro_f1": 0.7241,
+     "share_of_samples_from_unseen_user": 0.1538
+    }
+   },
+   "test": {
+    "samples": 8891,
+    "majority_class": {
+     "accuracy": 0.477,
+     "macro_f1": 0.1615
+    },
+    "environment_lookup": {
+     "accuracy": 0.6956,
+     "macro_f1": 0.3637,
+     "share_of_samples_in_unseen_environment": 0.0
+    },
+    "user_lookup_diagnostic": {
+     "accuracy": 0.9118,
+     "macro_f1": 0.4788,
+     "share_of_samples_from_unseen_user": 0.1043
+    }
+   }
+  }
+ },
+ "split_2": {
+  "majority_class": "Human",
+  "train_samples_per_class": {
+   "Human": 19124,
+   "Pet": 18530,
+   "IRobot": 1012,
+   "Fan": 928
+  },
+  "class_weights": {
+   "Human": 0.5176,
+   "Pet": 0.5342,
+   "IRobot": 9.7811,
+   "Fan": 10.6665
+  },
+  "baselines": {
+   "val": {
+    "samples": 9188,
+    "majority_class": {
+     "accuracy": 0.497,
+     "macro_f1": 0.166
+    },
+    "environment_lookup": {
+     "accuracy": 0.7926,
+     "macro_f1": 0.4083,
+     "share_of_samples_in_unseen_environment": 0.2867
+    },
+    "user_lookup_diagnostic": {
+     "accuracy": 0.9384,
+     "macro_f1": 0.7285,
+     "share_of_samples_from_unseen_user": 0.3483
+    }
+   },
+   "test": {
+    "samples": 11865,
+    "majority_class": {
+     "accuracy": 0.3762,
+     "macro_f1": 0.1367
+    },
+    "environment_lookup": {
+     "accuracy": 0.6211,
+     "macro_f1": 0.3722,
+     "share_of_samples_in_unseen_environment": 0.2472
+    },
+    "user_lookup_diagnostic": {
+     "accuracy": 0.7051,
+     "macro_f1": 0.4231,
+     "share_of_samples_from_unseen_user": 0.2949
+    }
+   }
+  }
+ }
+}
