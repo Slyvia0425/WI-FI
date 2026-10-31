@@ -1,0 +1,11 @@
+{
+  "label_to_idx": {
+    "empty": 0,
+    "sleep": 1
+  },
+  "idx_to_label": {
+    "0": "empty",
+    "1": "sleep"
+  },
+  "num_classes": 2
+}

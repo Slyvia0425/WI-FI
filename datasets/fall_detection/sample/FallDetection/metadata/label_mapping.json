@@ -1,0 +1,11 @@
+{
+  "label_to_idx": {
+    "Fall": 0,
+    "Nonfall": 1
+  },
+  "idx_to_label": {
+    "0": "Fall",
+    "1": "Nonfall"
+  },
+  "num_classes": 2
+}
