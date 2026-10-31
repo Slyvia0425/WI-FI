@@ -1,0 +1,124 @@
+{
+ "model": "Random Forest on statistics and physical features",
+ "feature_route": "statistics_physical",
+ "split": 2,
+ "seed": 42,
+ "chosen_parameters": {
+  "min_samples_leaf": 50,
+  "max_features": "sqrt",
+  "n_estimators": 300
+ },
+ "validation": {
+  "accuracy": 0.8053,
+  "macro_f1": 0.5645,
+  "per_class": {
+   "Human": {
+    "precision": 0.8138,
+    "recall": 0.936,
+    "f1": 0.8706,
+    "windows": 4566
+   },
+   "Pet": {
+    "precision": 0.8665,
+    "recall": 0.7476,
+    "f1": 0.8026,
+    "windows": 3906
+   },
+   "IRobot": {
+    "precision": 0.4175,
+    "recall": 0.4626,
+    "f1": 0.4389,
+    "windows": 361
+   },
+   "Fan": {
+    "precision": 0.2289,
+    "recall": 0.107,
+    "f1": 0.1459,
+    "windows": 355
+   }
+  },
+  "confusion_matrix": [
+   [
+    4274,
+    240,
+    29,
+    23
+   ],
+   [
+    693,
+    2920,
+    204,
+    89
+   ],
+   [
+    178,
+    0,
+    167,
+    16
+   ],
+   [
+    107,
+    210,
+    0,
+    38
+   ]
+  ]
+ },
+ "tuning": [
+  {
+   "parameters": {
+    "min_samples_leaf": 5,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 77.1,
+   "accuracy": 0.833,
+   "macro_f1": 0.4979,
+   "recall": {
+    "Human": 0.9488,
+    "Pet": 0.8359,
+    "IRobot": 0.1579,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 20,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 66.9,
+   "accuracy": 0.8175,
+   "macro_f1": 0.519,
+   "recall": {
+    "Human": 0.938,
+    "Pet": 0.7993,
+    "IRobot": 0.2909,
+    "Fan": 0.0028
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 50,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 58.4,
+   "accuracy": 0.8053,
+   "macro_f1": 0.5645,
+   "recall": {
+    "Human": 0.936,
+    "Pet": 0.7476,
+    "IRobot": 0.4626,
+    "Fan": 0.107
+   }
+  }
+ ],
+ "class_weights": {
+  "Human": 0.5176,
+  "Pet": 0.5342,
+  "IRobot": 9.7811,
+  "Fan": 10.6665
+ },
+ "train_windows": 39594,
+ "validation_windows": 9188,
+ "features": 2380,
+ "training_seconds_total": 203.7
+}

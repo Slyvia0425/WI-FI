@@ -1,0 +1,124 @@
+{
+ "model": "Random Forest on statistics and physical features",
+ "feature_route": "statistics_physical",
+ "split": 0,
+ "seed": 42,
+ "chosen_parameters": {
+  "min_samples_leaf": 5,
+  "max_features": "sqrt",
+  "n_estimators": 300
+ },
+ "validation": {
+  "accuracy": 0.8554,
+  "macro_f1": 0.4471,
+  "per_class": {
+   "Human": {
+    "precision": 0.8204,
+    "recall": 0.9436,
+    "f1": 0.8777,
+    "windows": 4488
+   },
+   "Pet": {
+    "precision": 0.9004,
+    "recall": 0.9215,
+    "f1": 0.9108,
+    "windows": 4152
+   },
+   "IRobot": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "windows": 361
+   },
+   "Fan": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "windows": 423
+   }
+  },
+  "confusion_matrix": [
+   [
+    4235,
+    249,
+    4,
+    0
+   ],
+   [
+    324,
+    3826,
+    2,
+    0
+   ],
+   [
+    302,
+    59,
+    0,
+    0
+   ],
+   [
+    301,
+    115,
+    7,
+    0
+   ]
+  ]
+ },
+ "tuning": [
+  {
+   "parameters": {
+    "min_samples_leaf": 5,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 88.6,
+   "accuracy": 0.8554,
+   "macro_f1": 0.4471,
+   "recall": {
+    "Human": 0.9436,
+    "Pet": 0.9215,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 20,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 78.7,
+   "accuracy": 0.8416,
+   "macro_f1": 0.4423,
+   "recall": {
+    "Human": 0.9343,
+    "Pet": 0.9,
+    "IRobot": 0.0,
+    "Fan": 0.0024
+   }
+  },
+  {
+   "parameters": {
+    "min_samples_leaf": 50,
+    "max_features": "sqrt"
+   },
+   "fit_seconds": 69.5,
+   "accuracy": 0.8227,
+   "macro_f1": 0.4353,
+   "recall": {
+    "Human": 0.9182,
+    "Pet": 0.8743,
+    "IRobot": 0.0,
+    "Fan": 0.0047
+   }
+  }
+ ],
+ "class_weights": {
+  "Human": 0.5353,
+  "Pet": 0.5665,
+  "IRobot": 3.5229,
+  "Fan": 12.0851
+ },
+ "train_windows": 41331,
+ "validation_windows": 9424,
+ "features": 2380,
+ "training_seconds_total": 238.1
+}

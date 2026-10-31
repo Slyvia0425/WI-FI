@@ -1,0 +1,202 @@
+{
+ "model": "logistic_regression",
+ "precision_target": 0.9,
+ "frozen": {
+  "split_0": {
+   "temperature": 2.3042,
+   "thresholds": {
+    "Human": 0.4436,
+    "Pet": 0.3781,
+    "IRobot": null,
+    "Fan": null
+   },
+   "validation_windows_called": {
+    "Human": 4823,
+    "Pet": 4469,
+    "IRobot": 132,
+    "Fan": 0
+   }
+  },
+  "split_1": {
+   "temperature": 6.3231,
+   "thresholds": {
+    "Human": 0.8895,
+    "Pet": 0.3397,
+    "IRobot": null,
+    "Fan": 0.54
+   },
+   "validation_windows_called": {
+    "Human": 5028,
+    "Pet": 4173,
+    "IRobot": 8,
+    "Fan": 608
+   }
+  },
+  "split_2": {
+   "temperature": 0.6876,
+   "thresholds": {
+    "Human": 0.5707,
+    "Pet": 0.7189,
+    "IRobot": null,
+    "Fan": null
+   },
+   "validation_windows_called": {
+    "Human": 4630,
+    "Pet": 3588,
+    "IRobot": 600,
+    "Fan": 370
+   }
+  }
+ },
+ "splits": {
+  "split_0": {
+   "windows": 10103,
+   "unknown_share": 0.004,
+   "accuracy_all": 0.8359,
+   "macro_f1_all": 0.4501,
+   "accuracy_kept": 0.8391,
+   "macro_f1_kept": 0.4511,
+   "recall_kept": {
+    "Human": 0.9863,
+    "Pet": 0.9533,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   },
+   "claimed_windows": {
+    "Human": 5614,
+    "Pet": 4449,
+    "IRobot": 0,
+    "Fan": 0
+   },
+   "share_of_claims_that_are_right": {
+    "Human": 0.767,
+    "Pet": 0.931,
+    "IRobot": null,
+    "Fan": null
+   },
+   "unknown_by_true_class": {
+    "Human": 0.0,
+    "Pet": 0.005,
+    "IRobot": 0.0,
+    "Fan": 0.047
+   },
+   "errors_turned_into_unknown": 0.024,
+   "unknown_that_were_wrong": 0.975,
+   "wrong_claims_kept": 1619,
+   "lean_equals_true_class_when_unknown": 0.025
+  },
+  "split_1": {
+   "windows": 8891,
+   "unknown_share": 0.3154,
+   "accuracy_all": 0.8824,
+   "macro_f1_all": 0.4765,
+   "accuracy_kept": 0.9211,
+   "macro_f1_kept": 0.4775,
+   "recall_kept": {
+    "Human": 0.9202,
+    "Pet": 0.9984,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   },
+   "claimed_windows": {
+    "Human": 1851,
+    "Pet": 4125,
+    "IRobot": 0,
+    "Fan": 111
+   },
+   "share_of_claims_that_are_right": {
+    "Human": 0.997,
+    "Pet": 0.912,
+    "IRobot": null,
+    "Fan": 0.0
+   },
+   "unknown_by_true_class": {
+    "Human": 0.527,
+    "Pet": 0.025,
+    "IRobot": 0.676,
+    "Fan": 0.534
+   },
+   "errors_turned_into_unknown": 0.541,
+   "unknown_that_were_wrong": 0.202,
+   "wrong_claims_kept": 480,
+   "lean_equals_true_class_when_unknown": 0.798
+  },
+  "split_2": {
+   "windows": 11865,
+   "unknown_share": 0.4585,
+   "accuracy_all": 0.5786,
+   "macro_f1_all": 0.3643,
+   "accuracy_kept": 0.812,
+   "macro_f1_kept": 0.4386,
+   "recall_kept": {
+    "Human": 0.9917,
+    "Pet": 0.894,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   },
+   "claimed_windows": {
+    "Human": 4011,
+    "Pet": 2414,
+    "IRobot": 0,
+    "Fan": 0
+   },
+   "share_of_claims_that_are_right": {
+    "Human": 0.771,
+    "Pet": 0.88,
+    "IRobot": null,
+    "Fan": null
+   },
+   "unknown_by_true_class": {
+    "Human": 0.302,
+    "Pet": 0.422,
+    "IRobot": 0.723,
+    "Fan": 0.666
+   },
+   "errors_turned_into_unknown": 0.758,
+   "unknown_that_were_wrong": 0.697,
+   "wrong_claims_kept": 1208,
+   "lean_equals_true_class_when_unknown": 0.303
+  }
+ },
+ "note": "second report on the test rows: the first used one threshold for all classes (confidence_threshold_test.json); this rule was chosen after seeing it",
+ "summary": {
+  "unknown_share": {
+   "mean": 0.259,
+   "std": 0.232
+  },
+  "accuracy_all": {
+   "mean": 0.766,
+   "std": 0.164
+  },
+  "accuracy_kept": {
+   "mean": 0.857,
+   "std": 0.057
+  },
+  "macro_f1_all": {
+   "mean": 0.43,
+   "std": 0.059
+  },
+  "macro_f1_kept": {
+   "mean": 0.456,
+   "std": 0.02
+  },
+  "errors_turned_into_unknown": {
+   "mean": 0.441,
+   "std": 0.377
+  }
+ },
+ "first_report_global_threshold": {
+  "unknown_share": {
+   "mean": 0.249,
+   "std": 0.035
+  },
+  "accuracy_kept": {
+   "mean": 0.87,
+   "std": 0.139
+  },
+  "macro_f1_kept": {
+   "mean": 0.462,
+   "std": 0.042
+  }
+ }
+}

@@ -1,0 +1,2639 @@
+{
+ "features_v2": [
+  "std",
+  "mean_abs_diff",
+  "dominant_freq",
+  "low_share",
+  "range_over_std",
+  "skew",
+  "kurtosis",
+  "spec_share_0.5-1",
+  "spec_share_1-2",
+  "spec_share_2-4",
+  "spec_share_4-8",
+  "spec_share_8-20",
+  "spec_entropy",
+  "spec_flatness",
+  "spec_peak_to_mean",
+  "spec_centroid",
+  "spec_spread",
+  "std_variation_across_channels",
+  "link_std_spread",
+  "pca_share_1",
+  "pca_share_2",
+  "pca_share_3",
+  "pca_effective_rank",
+  "pca_n90",
+  "link_coherence_mean",
+  "link_coherence_min",
+  "adjacent_subcarrier_corr",
+  "ac_peak",
+  "ac_lag",
+  "hjorth_mobility",
+  "hjorth_complexity",
+  "zero_crossings_per_s",
+  "permutation_entropy",
+  "rolloff85",
+  "centroid",
+  "share_20_35",
+  "share_35_50",
+  "duty_cycle",
+  "burstiness",
+  "block_cv",
+  "global_share_20_35",
+  "global_share_35_50",
+  "global_median_freq",
+  "dyn_std_cv",
+  "dyn_std_change",
+  "dyn_share_slow",
+  "dyn_peak_to_mean",
+  "dyn24_std_cv",
+  "dyn24_std_change",
+  "dyn6_pca_share_1",
+  "dyn6_ac_peak",
+  "dyn6_permutation_entropy"
+ ],
+ "in_one_home_E11": {
+  "physical v1 | Random Forest": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.929,
+    "Pet": 0.927,
+    "IRobot": 0.524,
+    "Fan": 0.253
+   },
+   "accuracy": 0.827,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1249,
+     67,
+     25,
+     3
+    ],
+    [
+     199,
+     3026,
+     35,
+     4
+    ],
+    [
+     206,
+     430,
+     719,
+     18
+    ],
+    [
+     0,
+     59,
+     0,
+     20
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.635
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.838
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.879
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.913
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.211
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.916
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.892
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.842
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.965
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.253
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.924
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.986
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.976
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.923
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.995
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.983
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.981
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.976
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.636
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.812
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.989
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.991
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.972
+    }
+   ],
+   "folds": []
+  },
+  "physical v1 | Logistic Regression": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.775,
+    "Pet": 0.724,
+    "IRobot": 0.61,
+    "Fan": 0.532
+   },
+   "accuracy": 0.707,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1041,
+     100,
+     72,
+     131
+    ],
+    [
+     385,
+     2364,
+     274,
+     241
+    ],
+    [
+     134,
+     157,
+     838,
+     244
+    ],
+    [
+     10,
+     25,
+     2,
+     42
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.64
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.546
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.74
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.877
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.901
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.826
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.526
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.687
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.854
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.675
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.819
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.648
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.532
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.483
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.958
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.648
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.764
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.813
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.798
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.791
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.703
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.849
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.643
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.761
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.712
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.764
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.745
+    }
+   ],
+   "folds": []
+  },
+  "physical v2 | Random Forest": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.949,
+    "Pet": 0.94,
+    "IRobot": 0.639,
+    "Fan": 0.0
+   },
+   "accuracy": 0.862,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1276,
+     55,
+     12,
+     1
+    ],
+    [
+     151,
+     3068,
+     31,
+     14
+    ],
+    [
+     163,
+     330,
+     877,
+     3
+    ],
+    [
+     0,
+     79,
+     0,
+     0
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.802
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.9
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.87
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.986
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.18
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.855
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.967
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.99
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 1.0
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.882
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.972
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.981
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.962
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.972
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.96
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.953
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.693
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.84
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.972
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.993
+    }
+   ],
+   "folds": []
+  },
+  "physical v2 | Logistic Regression": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.921,
+    "Pet": 0.843,
+    "IRobot": 0.683,
+    "Fan": 0.241
+   },
+   "accuracy": 0.816,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1238,
+     67,
+     21,
+     18
+    ],
+    [
+     176,
+     2752,
+     185,
+     151
+    ],
+    [
+     37,
+     173,
+     938,
+     225
+    ],
+    [
+     10,
+     5,
+     45,
+     19
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.743
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.797
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.898
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.971
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.515
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.729
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.831
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.809
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.944
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.915
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.241
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.583
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.929
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.894
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.953
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.933
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.789
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.904
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.896
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.943
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.736
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.901
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.927
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.844
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.938
+    }
+   ],
+   "folds": []
+  },
+  "statistics | Random Forest": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.732,
+    "Pet": 0.784,
+    "IRobot": 0.189,
+    "Fan": 0.177
+   },
+   "accuracy": 0.63,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     984,
+     145,
+     128,
+     87
+    ],
+    [
+     269,
+     2560,
+     194,
+     241
+    ],
+    [
+     333,
+     186,
+     259,
+     595
+    ],
+    [
+     59,
+     6,
+     0,
+     14
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.193
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.724
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.833
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.69
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.493
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.177
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.388
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.981
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.823
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.792
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.697
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.177
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.559
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.91
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.611
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.774
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.77
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.93
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.994
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.731
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.802
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.564
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.826
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.966
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.604
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.786
+    }
+   ],
+   "folds": []
+  },
+  "statistics + physical v2 | Random Forest": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.956,
+    "Pet": 0.836,
+    "IRobot": 0.54,
+    "Fan": 0.038
+   },
+   "accuracy": 0.785,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1285,
+     32,
+     17,
+     10
+    ],
+    [
+     255,
+     2728,
+     139,
+     142
+    ],
+    [
+     181,
+     260,
+     742,
+     190
+    ],
+    [
+     59,
+     17,
+     0,
+     3
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.618
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.786
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.828
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.991
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.913
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.324
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.575
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.972
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.833
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.965
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.038
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.597
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.986
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.801
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.986
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.958
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.983
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.835
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.981
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.793
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.808
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.972
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.698
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.986
+    }
+   ],
+   "folds": []
+  },
+  "MiniRocket + physical v2 | Logistic Regression": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.99,
+    "Pet": 0.99,
+    "IRobot": 0.106,
+    "Fan": 0.253
+   },
+   "accuracy": 0.78,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1330,
+     1,
+     11,
+     2
+    ],
+    [
+     15,
+     3231,
+     14,
+     4
+    ],
+    [
+     880,
+     168,
+     146,
+     179
+    ],
+    [
+     2,
+     0,
+     57,
+     20
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.144
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.989
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.986
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.841
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 1.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.991
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.993
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.253
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.929
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.995
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.995
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.986
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.994
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 1.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 1.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 1.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.991
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 1.0
+    }
+   ],
+   "folds": []
+  }
+ },
+ "importances": {
+  "E11": [
+   [
+    "dyn24_std_change",
+    0.111
+   ],
+   [
+    "dyn_std_change",
+    0.069
+   ],
+   [
+    "dyn_std_cv",
+    0.056
+   ],
+   [
+    "skew",
+    0.045
+   ],
+   [
+    "dyn6_ac_peak",
+    0.039
+   ],
+   [
+    "pca_share_3",
+    0.038
+   ],
+   [
+    "dyn24_std_cv",
+    0.036
+   ],
+   [
+    "dyn_peak_to_mean",
+    0.028
+   ],
+   [
+    "dyn_share_slow",
+    0.026
+   ],
+   [
+    "spec_share_1-2",
+    0.025
+   ]
+  ],
+  "all rooms": [
+   [
+    "mean_abs_diff",
+    0.067
+   ],
+   [
+    "spec_share_4-8",
+    0.042
+   ],
+   [
+    "std_variation_across_channels",
+    0.042
+   ],
+   [
+    "global_share_35_50",
+    0.039
+   ],
+   [
+    "spec_share_8-20",
+    0.038
+   ],
+   [
+    "kurtosis",
+    0.036
+   ],
+   [
+    "global_share_20_35",
+    0.034
+   ],
+   [
+    "spec_spread",
+    0.032
+   ],
+   [
+    "std",
+    0.03
+   ],
+   [
+    "spec_share_2-4",
+    0.03
+   ]
+  ]
+ },
+ "leave_one_room_out": {
+  "physical v2 | Random Forest": {
+   "accuracy": 0.249,
+   "macro_f1": 0.138,
+   "recall": {
+    "Human": 0.296,
+    "Pet": 0.254,
+    "IRobot": 0.009,
+    "Fan": 0.0
+   },
+   "human_vs_rest_f1": 0.295,
+   "accuracy_per_room": {
+    "E11": 0.309,
+    "E12": 0.174,
+    "E13": 0.13,
+    "E14": 0.313,
+    "E15": 0.628,
+    "E16": 0.626,
+    "E17": 0.419,
+    "E18": 0.627,
+    "E19": 0.383,
+    "E20": 0.102
+   }
+  },
+  "physical v2 | Logistic Regression": {
+   "accuracy": 0.243,
+   "macro_f1": 0.181,
+   "recall": {
+    "Human": 0.26,
+    "Pet": 0.249,
+    "IRobot": 0.17,
+    "Fan": 0.057
+   },
+   "human_vs_rest_f1": 0.341,
+   "accuracy_per_room": {
+    "E11": 0.413,
+    "E12": 0.096,
+    "E13": 0.097,
+    "E14": 0.22,
+    "E15": 0.41,
+    "E16": 0.557,
+    "E17": 0.402,
+    "E18": 0.353,
+    "E19": 0.407,
+    "E20": 0.193
+   }
+  },
+  "statistics | Random Forest": {
+   "accuracy": 0.168,
+   "macro_f1": 0.125,
+   "recall": {
+    "Human": 0.195,
+    "Pet": 0.154,
+    "IRobot": 0.086,
+    "Fan": 0.146
+   },
+   "human_vs_rest_f1": 0.225,
+   "accuracy_per_room": {
+    "E11": 0.269,
+    "E12": 0.15,
+    "E13": 0.086,
+    "E14": 0.054,
+    "E15": 0.442,
+    "E16": 0.42,
+    "E17": 0.331,
+    "E18": 0.444,
+    "E19": 0.325,
+    "E20": 0.022
+   }
+  },
+  "statistics + physical v2 | Random Forest": {
+   "accuracy": 0.19,
+   "macro_f1": 0.134,
+   "recall": {
+    "Human": 0.245,
+    "Pet": 0.156,
+    "IRobot": 0.088,
+    "Fan": 0.064
+   },
+   "human_vs_rest_f1": 0.262,
+   "accuracy_per_room": {
+    "E11": 0.295,
+    "E12": 0.1,
+    "E13": 0.093,
+    "E14": 0.096,
+    "E15": 0.518,
+    "E16": 0.586,
+    "E17": 0.422,
+    "E18": 0.411,
+    "E19": 0.387,
+    "E20": 0.033
+   }
+  }
+ },
+ "features_v3": [
+  "std",
+  "mean_abs_diff",
+  "dominant_freq",
+  "low_share",
+  "range_over_std",
+  "skew",
+  "kurtosis",
+  "spec_share_0.5-1",
+  "spec_share_1-2",
+  "spec_share_2-4",
+  "spec_share_4-8",
+  "spec_share_8-20",
+  "spec_entropy",
+  "spec_flatness",
+  "spec_peak_to_mean",
+  "spec_centroid",
+  "spec_spread",
+  "std_variation_across_channels",
+  "link_std_spread",
+  "dominant_freq_spread",
+  "dominant_freq_mode_share",
+  "pca_share_1",
+  "pca_share_2",
+  "pca_share_3",
+  "pca_effective_rank",
+  "pca_n90",
+  "link_coherence_mean",
+  "link_coherence_min",
+  "adjacent_subcarrier_corr",
+  "ac_peak",
+  "ac_lag",
+  "hjorth_mobility",
+  "hjorth_complexity",
+  "zero_crossings_per_s",
+  "permutation_entropy",
+  "rolloff85",
+  "centroid",
+  "share_20_35",
+  "share_35_50",
+  "duty_cycle",
+  "burstiness",
+  "block_cv",
+  "global_share_20_35",
+  "global_share_35_50",
+  "global_median_freq",
+  "stft_centroid_std",
+  "stft_peak_freq_std",
+  "spectral_flux",
+  "decorrelation_time",
+  "pc1_skew",
+  "pc1_kurtosis",
+  "dyn_std_cv",
+  "dyn_std_change",
+  "dyn_share_slow",
+  "dyn_peak_to_mean",
+  "dyn24_std_cv",
+  "dyn24_std_change",
+  "dyn6_pca_share_1",
+  "dyn6_ac_peak",
+  "dyn6_permutation_entropy"
+ ],
+ "consistency_all_rooms": {
+  "Human vs Pet": {
+   "rooms": 6,
+   "features": [
+    [
+     "dyn24_std_change",
+     0.29
+    ],
+    [
+     "dyn_std_change",
+     0.23
+    ],
+    [
+     "dyn_std_cv",
+     0.2
+    ],
+    [
+     "link_std_spread",
+     0.2
+    ],
+    [
+     "std_variation_across_channels",
+     0.2
+    ],
+    [
+     "pca_n90",
+     0.1
+    ]
+   ]
+  },
+  "IRobot vs Human": {
+   "rooms": 2,
+   "features": [
+    [
+     "dyn24_std_change",
+     -0.4
+    ],
+    [
+     "std_variation_across_channels",
+     -0.36
+    ],
+    [
+     "dyn_std_change",
+     -0.36
+    ],
+    [
+     "link_std_spread",
+     -0.33
+    ],
+    [
+     "dyn_std_cv",
+     -0.32
+    ],
+    [
+     "dyn24_std_cv",
+     -0.25
+    ],
+    [
+     "dyn6_ac_peak",
+     0.18
+    ],
+    [
+     "link_coherence_mean",
+     0.16
+    ]
+   ]
+  },
+  "Fan vs Human": {
+   "rooms": 2,
+   "features": [
+    [
+     "dyn_std_cv",
+     -0.26
+    ],
+    [
+     "dyn24_std_change",
+     -0.25
+    ],
+    [
+     "dyn_std_change",
+     -0.2
+    ],
+    [
+     "dyn24_std_cv",
+     -0.19
+    ],
+    [
+     "std_variation_across_channels",
+     -0.19
+    ],
+    [
+     "pca_share_3",
+     0.18
+    ],
+    [
+     "link_coherence_mean",
+     0.13
+    ],
+    [
+     "pca_n90",
+     -0.13
+    ]
+   ]
+  },
+  "Fan vs Pet": {
+   "rooms": 3,
+   "features": [
+    [
+     "dyn24_std_cv",
+     -0.19
+    ],
+    [
+     "skew",
+     -0.13
+    ],
+    [
+     "kurtosis",
+     -0.13
+    ]
+   ]
+  }
+ },
+ "in_one_home_E11_v3": {
+  "selected_without_E11": [
+   "skew",
+   "kurtosis",
+   "spec_flatness",
+   "std_variation_across_channels",
+   "link_std_spread",
+   "pca_n90",
+   "hjorth_mobility",
+   "share_35_50",
+   "duty_cycle",
+   "global_share_20_35",
+   "dyn_std_cv",
+   "dyn_std_change",
+   "dyn24_std_cv",
+   "dyn24_std_change"
+  ],
+  "physical v3 | Random Forest": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.949,
+    "Pet": 0.942,
+    "IRobot": 0.631,
+    "Fan": 0.0
+   },
+   "accuracy": 0.861,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1275,
+     57,
+     11,
+     1
+    ],
+    [
+     143,
+     3075,
+     35,
+     11
+    ],
+    [
+     182,
+     324,
+     867,
+     0
+    ],
+    [
+     0,
+     79,
+     0,
+     0
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.792
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.911
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.87
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 1.0
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.18
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.897
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.962
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 1.0
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 1.0
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.867
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.972
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.991
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.967
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.944
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.96
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.986
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.962
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.657
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.826
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.994
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.995
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.986
+    }
+   ],
+   "folds": []
+  },
+  "physical v3 | Logistic Regression": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.929,
+    "Pet": 0.843,
+    "IRobot": 0.693,
+    "Fan": 0.241
+   },
+   "accuracy": 0.82,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1248,
+     59,
+     21,
+     16
+    ],
+    [
+     190,
+     2750,
+     207,
+     117
+    ],
+    [
+     37,
+     157,
+     951,
+     228
+    ],
+    [
+     11,
+     13,
+     36,
+     19
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.757
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.875
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.902
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.934
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.971
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.512
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.757
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.742
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.823
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.944
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.944
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.241
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.573
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.91
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.898
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.948
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.938
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.831
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.893
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.882
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.958
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.75
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.864
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.932
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.821
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.945
+    }
+   ],
+   "folds": []
+  },
+  "physical v3 consistent | Random Forest": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.92,
+    "Pet": 0.879,
+    "IRobot": 0.7,
+    "Fan": 0.0
+   },
+   "accuracy": 0.836,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     1237,
+     81,
+     23,
+     3
+    ],
+    [
+     264,
+     2868,
+     118,
+     14
+    ],
+    [
+     21,
+     379,
+     961,
+     12
+    ],
+    [
+     9,
+     69,
+     1,
+     0
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.807
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.682
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.795
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.967
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.972
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.971
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.399
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.743
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.93
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.957
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.951
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.937
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.0
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.957
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.882
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.949
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.92
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.938
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.901
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.938
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.925
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.915
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.75
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.887
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.87
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.943
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.972
+    }
+   ],
+   "folds": []
+  },
+  "physical v3 consistent | Logistic Regression": {
+   "room": "E11",
+   "setting": {
+    "C": 0.1,
+    "folds": 5,
+    "fan_train_share": 0.7,
+    "fan_gap_windows": 30
+   },
+   "tested_windows": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 79
+   },
+   "recall": {
+    "Human": 0.726,
+    "Pet": 0.529,
+    "IRobot": 0.87,
+    "Fan": 0.671
+   },
+   "accuracy": 0.652,
+   "majority_class_accuracy": 0.539,
+   "confusion_matrix": [
+    [
+     976,
+     98,
+     15,
+     255
+    ],
+    [
+     505,
+     1726,
+     326,
+     707
+    ],
+    [
+     6,
+     138,
+     1195,
+     34
+    ],
+    [
+     1,
+     22,
+     3,
+     53
+    ]
+   ],
+   "per_recording": [
+    {
+     "class": "IRobot",
+     "recording": "Test_1",
+     "recall": 0.921
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.538
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.428
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.45
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.873
+    },
+    {
+     "class": "Human",
+     "recording": "run",
+     "recall": 0.739
+    },
+    {
+     "class": "IRobot",
+     "recording": "Test_2",
+     "recall": 0.729
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.411
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.549
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.617
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.722
+    },
+    {
+     "class": "Human",
+     "recording": "sneak",
+     "recall": 0.683
+    },
+    {
+     "class": "Fan",
+     "recording": "Test_1",
+     "recall": 0.671
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_3",
+     "recall": 0.592
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_8",
+     "recall": 0.571
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.556
+    },
+    {
+     "class": "Human",
+     "recording": "sneak2",
+     "recall": 0.755
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.708
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_4",
+     "recall": 0.615
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_1",
+     "recall": 0.644
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_6",
+     "recall": 0.453
+    },
+    {
+     "class": "Human",
+     "recording": "swr",
+     "recall": 0.788
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.664
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_5",
+     "recall": 0.394
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_2",
+     "recall": 0.571
+    },
+    {
+     "class": "Pet",
+     "recording": "Test_7",
+     "recall": 0.566
+    },
+    {
+     "class": "Human",
+     "recording": "walk",
+     "recall": 0.648
+    }
+   ],
+   "folds": []
+  }
+ },
+ "leave_one_room_out_v3": {
+  "physical v3 | Random Forest": {
+   "accuracy": 0.251,
+   "macro_f1": 0.146,
+   "recall": {
+    "Human": 0.297,
+    "Pet": 0.252,
+    "IRobot": 0.033,
+    "Fan": 0.0
+   },
+   "human_vs_rest_f1": 0.295,
+   "accuracy_per_room": {
+    "E11": 0.316,
+    "E12": 0.175,
+    "E13": 0.128,
+    "E14": 0.327,
+    "E15": 0.656,
+    "E16": 0.629,
+    "E17": 0.4,
+    "E18": 0.603,
+    "E19": 0.384,
+    "E20": 0.112
+   },
+   "features_used_per_fold": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+   ]
+  },
+  "physical v3 | Logistic Regression": {
+   "accuracy": 0.257,
+   "macro_f1": 0.182,
+   "recall": {
+    "Human": 0.268,
+    "Pet": 0.28,
+    "IRobot": 0.127,
+    "Fan": 0.034
+   },
+   "human_vs_rest_f1": 0.349,
+   "accuracy_per_room": {
+    "E11": 0.379,
+    "E12": 0.089,
+    "E13": 0.105,
+    "E14": 0.196,
+    "E15": 0.429,
+    "E16": 0.587,
+    "E17": 0.421,
+    "E18": 0.408,
+    "E19": 0.416,
+    "E20": 0.226
+   },
+   "features_used_per_fold": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+   ]
+  },
+  "physical v3 consistent | Random Forest": {
+   "accuracy": 0.305,
+   "macro_f1": 0.189,
+   "recall": {
+    "Human": 0.314,
+    "Pet": 0.348,
+    "IRobot": 0.089,
+    "Fan": 0.006
+   },
+   "human_vs_rest_f1": 0.347,
+   "accuracy_per_room": {
+    "E11": 0.353,
+    "E12": 0.156,
+    "E13": 0.126,
+    "E14": 0.314,
+    "E15": 0.66,
+    "E16": 0.633,
+    "E17": 0.515,
+    "E18": 0.542,
+    "E19": 0.353,
+    "E20": 0.315
+   },
+   "features_used_per_fold": [
+    14,
+    29,
+    28,
+    26,
+    26,
+    26,
+    26,
+    26,
+    12,
+    26
+   ]
+  },
+  "physical v3 consistent | Logistic Regression": {
+   "accuracy": 0.177,
+   "macro_f1": 0.145,
+   "recall": {
+    "Human": 0.214,
+    "Pet": 0.136,
+    "IRobot": 0.189,
+    "Fan": 0.149
+   },
+   "human_vs_rest_f1": 0.298,
+   "accuracy_per_room": {
+    "E11": 0.31,
+    "E12": 0.092,
+    "E13": 0.091,
+    "E14": 0.144,
+    "E15": 0.141,
+    "E16": 0.405,
+    "E17": 0.338,
+    "E18": 0.334,
+    "E19": 0.385,
+    "E20": 0.069
+   },
+   "features_used_per_fold": [
+    14,
+    29,
+    28,
+    26,
+    26,
+    26,
+    26,
+    26,
+    12,
+    26
+   ]
+  }
+ }
+}

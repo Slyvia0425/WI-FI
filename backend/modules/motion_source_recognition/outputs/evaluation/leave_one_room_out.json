@@ -1,0 +1,652 @@
+{
+ "setting": {
+  "C": 0.1,
+  "max_iter": 300,
+  "model": "logistic_regression on MiniRocket"
+ },
+ "rooms": {
+  "E11": {
+   "room": "E11",
+   "windows": 6342,
+   "classes_in_room": {
+    "Human": 1344,
+    "Pet": 3264,
+    "IRobot": 1373,
+    "Fan": 361
+   },
+   "training_windows": 54516,
+   "dropped_same_content": 0,
+   "transformer_split": 0,
+   "held_out_windows_in_transformer_fit": [
+    123,
+    407,
+    1167
+   ],
+   "iterations": 117,
+   "converged": true,
+   "fit_seconds": 265,
+   "accuracy": 0.3635,
+   "majority_class_accuracy": 0.2119,
+   "majority_class": "Human",
+   "recall": {
+    "Human": 0.685,
+    "Pet": 0.42,
+    "IRobot": 0.009,
+    "Fan": 0.0
+   },
+   "called": {
+    "Human": 3252,
+    "Pet": 2635,
+    "IRobot": 425,
+    "Fan": 30
+   },
+   "confusion_matrix": [
+    [
+     920,
+     401,
+     23,
+     0
+    ],
+    [
+     1547,
+     1372,
+     315,
+     30
+    ],
+    [
+     637,
+     723,
+     13,
+     0
+    ],
+    [
+     148,
+     139,
+     74,
+     0
+    ]
+   ]
+  },
+  "E12": {
+   "room": "E12",
+   "windows": 1792,
+   "classes_in_room": {
+    "Pet": 1369,
+    "Fan": 423
+   },
+   "training_windows": 59066,
+   "dropped_same_content": 0,
+   "transformer_split": 1,
+   "held_out_windows_in_transformer_fit": [
+    60,
+    57,
+    394
+   ],
+   "iterations": 142,
+   "converged": true,
+   "fit_seconds": 334,
+   "accuracy": 0.2444,
+   "majority_class_accuracy": 0.0,
+   "majority_class": "Human",
+   "recall": {
+    "Pet": 0.312,
+    "Fan": 0.026
+   },
+   "called": {
+    "Human": 815,
+    "Pet": 451,
+    "IRobot": 394,
+    "Fan": 132
+   },
+   "confusion_matrix": [
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     634,
+     427,
+     187,
+     121
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     181,
+     24,
+     207,
+     11
+    ]
+   ]
+  },
+  "E13": {
+   "room": "E13",
+   "windows": 18531,
+   "classes_in_room": {
+    "Human": 16195,
+    "Pet": 1481,
+    "Fan": 855
+   },
+   "training_windows": 42327,
+   "dropped_same_content": 0,
+   "transformer_split": 2,
+   "held_out_windows_in_transformer_fit": [
+    1190,
+    898,
+    631
+   ],
+   "iterations": 293,
+   "converged": true,
+   "fit_seconds": 202,
+   "accuracy": 0.1066,
+   "majority_class_accuracy": 0.0799,
+   "majority_class": "Pet",
+   "recall": {
+    "Human": 0.033,
+    "Pet": 0.968,
+    "Fan": 0.009
+   },
+   "called": {
+    "Human": 541,
+    "Pet": 16624,
+    "IRobot": 1283,
+    "Fan": 83
+   },
+   "confusion_matrix": [
+    [
+     534,
+     14353,
+     1276,
+     32
+    ],
+    [
+     5,
+     1433,
+     0,
+     43
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     2,
+     838,
+     7,
+     8
+    ]
+   ]
+  },
+  "E14": {
+   "room": "E14",
+   "windows": 1717,
+   "classes_in_room": {
+    "Human": 1717
+   },
+   "training_windows": 59141,
+   "dropped_same_content": 0,
+   "transformer_split": 1,
+   "held_out_windows_in_transformer_fit": [
+    47,
+    40,
+    51
+   ],
+   "iterations": 165,
+   "converged": true,
+   "fit_seconds": 335,
+   "accuracy": 0.5009,
+   "majority_class_accuracy": 0.0,
+   "majority_class": "Pet",
+   "recall": {
+    "Human": 0.501
+   },
+   "called": {
+    "Human": 860,
+    "Pet": 404,
+    "IRobot": 225,
+    "Fan": 228
+   },
+   "confusion_matrix": [
+    [
+     860,
+     404,
+     225,
+     228
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "E15": {
+   "room": "E15",
+   "windows": 1499,
+   "classes_in_room": {
+    "Human": 498,
+    "Pet": 1001
+   },
+   "training_windows": 59359,
+   "dropped_same_content": 0,
+   "transformer_split": 2,
+   "held_out_windows_in_transformer_fit": [
+    57,
+    45,
+    37
+   ],
+   "iterations": 133,
+   "converged": true,
+   "fit_seconds": 329,
+   "accuracy": 0.5597,
+   "majority_class_accuracy": 0.3322,
+   "majority_class": "Human",
+   "recall": {
+    "Human": 0.52,
+    "Pet": 0.579
+   },
+   "called": {
+    "Human": 587,
+    "Pet": 804,
+    "IRobot": 108,
+    "Fan": 0
+   },
+   "confusion_matrix": [
+    [
+     259,
+     224,
+     15,
+     0
+    ],
+    [
+     328,
+     580,
+     93,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "E16": {
+   "room": "E16",
+   "windows": 2343,
+   "classes_in_room": {
+    "Human": 1922,
+    "Pet": 421
+   },
+   "training_windows": 58515,
+   "dropped_same_content": 0,
+   "transformer_split": 2,
+   "held_out_windows_in_transformer_fit": [
+    55,
+    56,
+    49
+   ],
+   "iterations": 128,
+   "converged": true,
+   "fit_seconds": 305,
+   "accuracy": 0.5335,
+   "majority_class_accuracy": 0.1797,
+   "majority_class": "Pet",
+   "recall": {
+    "Human": 0.536,
+    "Pet": 0.523
+   },
+   "called": {
+    "Human": 1197,
+    "Pet": 1030,
+    "IRobot": 108,
+    "Fan": 8
+   },
+   "confusion_matrix": [
+    [
+     1030,
+     810,
+     74,
+     8
+    ],
+    [
+     167,
+     220,
+     34,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "E17": {
+   "room": "E17",
+   "windows": 2344,
+   "classes_in_room": {
+    "Human": 1919,
+    "Pet": 425
+   },
+   "training_windows": 58514,
+   "dropped_same_content": 0,
+   "transformer_split": 1,
+   "held_out_windows_in_transformer_fit": [
+    60,
+    58,
+    71
+   ],
+   "iterations": 148,
+   "converged": true,
+   "fit_seconds": 301,
+   "accuracy": 0.4748,
+   "majority_class_accuracy": 0.1813,
+   "majority_class": "Pet",
+   "recall": {
+    "Human": 0.43,
+    "Pet": 0.675
+   },
+   "called": {
+    "Human": 960,
+    "Pet": 1343,
+    "IRobot": 32,
+    "Fan": 9
+   },
+   "confusion_matrix": [
+    [
+     826,
+     1056,
+     28,
+     9
+    ],
+    [
+     134,
+     287,
+     4,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "E18": {
+   "room": "E18",
+   "windows": 4397,
+   "classes_in_room": {
+    "Human": 1925,
+    "Pet": 2472
+   },
+   "training_windows": 56461,
+   "dropped_same_content": 0,
+   "transformer_split": 1,
+   "held_out_windows_in_transformer_fit": [
+    105,
+    77,
+    115
+   ],
+   "iterations": 114,
+   "converged": true,
+   "fit_seconds": 247,
+   "accuracy": 0.5426,
+   "majority_class_accuracy": 0.4378,
+   "majority_class": "Human",
+   "recall": {
+    "Human": 0.476,
+    "Pet": 0.595
+   },
+   "called": {
+    "Human": 1867,
+    "Pet": 2348,
+    "IRobot": 126,
+    "Fan": 56
+   },
+   "confusion_matrix": [
+    [
+     916,
+     878,
+     75,
+     56
+    ],
+    [
+     951,
+     1470,
+     51,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "E19": {
+   "room": "E19",
+   "windows": 5567,
+   "classes_in_room": {
+    "Human": 2634,
+    "IRobot": 2933
+   },
+   "training_windows": 55291,
+   "dropped_same_content": 0,
+   "transformer_split": 2,
+   "held_out_windows_in_transformer_fit": [
+    854,
+    850,
+    0
+   ],
+   "iterations": 148,
+   "converged": true,
+   "fit_seconds": 237,
+   "accuracy": 0.3921,
+   "majority_class_accuracy": 0.0,
+   "majority_class": "Pet",
+   "recall": {
+    "Human": 0.71,
+    "IRobot": 0.107
+   },
+   "called": {
+    "Human": 2544,
+    "Pet": 2497,
+    "IRobot": 362,
+    "Fan": 164
+   },
+   "confusion_matrix": [
+    [
+     1870,
+     682,
+     49,
+     33
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     674,
+     1815,
+     313,
+     131
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "E20": {
+   "room": "E20",
+   "windows": 16326,
+   "classes_in_room": {
+    "Pet": 16326
+   },
+   "training_windows": 44532,
+   "dropped_same_content": 0,
+   "transformer_split": 0,
+   "held_out_windows_in_transformer_fit": [
+    449,
+    512,
+    485
+   ],
+   "iterations": 300,
+   "converged": false,
+   "fit_seconds": 208,
+   "accuracy": 0.1056,
+   "majority_class_accuracy": 0.0,
+   "majority_class": "Human",
+   "recall": {
+    "Pet": 0.106
+   },
+   "called": {
+    "Human": 8285,
+    "Pet": 1724,
+    "IRobot": 1768,
+    "Fan": 4549
+   },
+   "confusion_matrix": [
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     8285,
+     1724,
+     1768,
+     4549
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  }
+ },
+ "pooled": {
+  "windows": 60858,
+  "accuracy": 0.248,
+  "macro_f1": 0.159,
+  "recall": {
+   "Human": 0.256,
+   "Pet": 0.281,
+   "IRobot": 0.076,
+   "Fan": 0.012
+  },
+  "confusion_matrix_rows_normalised": [
+   [
+    0.256,
+    0.668,
+    0.063,
+    0.013
+   ],
+   [
+    0.45,
+    0.281,
+    0.092,
+    0.177
+   ],
+   [
+    0.304,
+    0.589,
+    0.076,
+    0.03
+   ],
+   [
+    0.202,
+    0.611,
+    0.176,
+    0.012
+   ]
+  ],
+  "human_vs_rest": {
+   "precision": 0.345,
+   "recall": 0.256,
+   "f1": 0.294,
+   "false_alarms": {
+    "Pet": {
+     "windows": 12051,
+     "share_of_that_class": 0.45
+    },
+    "IRobot": {
+     "windows": 1311,
+     "share_of_that_class": 0.304
+    },
+    "Fan": {
+     "windows": 331,
+     "share_of_that_class": 0.202
+    }
+   },
+   "misses_called": {
+    "Pet": 18808,
+    "IRobot": 1765,
+    "Fan": 366
+   }
+  }
+ }
+}

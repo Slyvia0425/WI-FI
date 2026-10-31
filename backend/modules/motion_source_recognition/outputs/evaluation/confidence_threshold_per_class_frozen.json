@@ -1,0 +1,54 @@
+{
+ "created": "2026-10-18T07:20:29+00:00",
+ "model": "logistic_regression",
+ "precision_target": 0.9,
+ "min_windows_kept": 30,
+ "rule": "label = the class with the highest calibrated probability if that probability is at least the threshold of that class, else unknown; a class with threshold null is never claimed; lean = that class always",
+ "splits": {
+  "split_0": {
+   "temperature": 2.3042,
+   "thresholds": {
+    "Human": 0.4436,
+    "Pet": 0.3781,
+    "IRobot": null,
+    "Fan": null
+   },
+   "validation_windows_called": {
+    "Human": 4823,
+    "Pet": 4469,
+    "IRobot": 132,
+    "Fan": 0
+   }
+  },
+  "split_1": {
+   "temperature": 6.3231,
+   "thresholds": {
+    "Human": 0.8895,
+    "Pet": 0.3397,
+    "IRobot": null,
+    "Fan": 0.54
+   },
+   "validation_windows_called": {
+    "Human": 5028,
+    "Pet": 4173,
+    "IRobot": 8,
+    "Fan": 608
+   }
+  },
+  "split_2": {
+   "temperature": 0.6876,
+   "thresholds": {
+    "Human": 0.5707,
+    "Pet": 0.7189,
+    "IRobot": null,
+    "Fan": null
+   },
+   "validation_windows_called": {
+    "Human": 4630,
+    "Pet": 3588,
+    "IRobot": 600,
+    "Fan": 370
+   }
+  }
+ }
+}

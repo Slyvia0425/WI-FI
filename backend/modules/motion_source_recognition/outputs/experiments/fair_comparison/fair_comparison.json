@@ -1,0 +1,1183 @@
+{
+ "a1": {
+  "split_0": {
+   "chosen": 0.01,
+   "tried": [
+    {
+     "value": 0.0001,
+     "macro_f1": 0.4035,
+     "accuracy": 0.5657,
+     "recall": {
+      "Human": 0.5671,
+      "Pet": 0.6122,
+      "IRobot": 0.3324,
+      "Fan": 0.2931
+     },
+     "fit_seconds": 13.0,
+     "iterations": 154,
+     "converged": true
+    },
+    {
+     "value": 0.001,
+     "macro_f1": 0.4318,
+     "accuracy": 0.6683,
+     "recall": {
+      "Human": 0.6827,
+      "Pet": 0.7478,
+      "IRobot": 0.1773,
+      "Fan": 0.1537
+     },
+     "fit_seconds": 16.8,
+     "iterations": 240,
+     "converged": true
+    },
+    {
+     "value": 0.01,
+     "macro_f1": 0.4441,
+     "accuracy": 0.7113,
+     "recall": {
+      "Human": 0.7426,
+      "Pet": 0.7888,
+      "IRobot": 0.1551,
+      "Fan": 0.0922
+     },
+     "fit_seconds": 20.1,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 0.1,
+     "macro_f1": 0.4395,
+     "accuracy": 0.7177,
+     "recall": {
+      "Human": 0.7542,
+      "Pet": 0.7953,
+      "IRobot": 0.1302,
+      "Fan": 0.0709
+     },
+     "fit_seconds": 23.2,
+     "iterations": 300,
+     "converged": false
+    }
+   ],
+   "validation": {
+    "accuracy": 0.7113,
+    "macro_f1": 0.4441,
+    "per_class": {
+     "Human": {
+      "precision": 0.7724,
+      "recall": 0.7426,
+      "f1": 0.7572,
+      "windows": 4488
+     },
+     "Pet": {
+      "precision": 0.7423,
+      "recall": 0.7888,
+      "f1": 0.7648,
+      "windows": 4152
+     },
+     "IRobot": {
+      "precision": 0.1253,
+      "recall": 0.1551,
+      "f1": 0.1386,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.156,
+      "recall": 0.0922,
+      "f1": 0.1159,
+      "windows": 423
+     }
+    },
+    "confusion_matrix": [
+     [
+      3333,
+      907,
+      120,
+      128
+     ],
+     [
+      611,
+      3275,
+      183,
+      83
+     ],
+     [
+      168,
+      137,
+      56,
+      0
+     ],
+     [
+      203,
+      93,
+      88,
+      39
+     ]
+    ]
+   },
+   "seen_vs_unseen_user": {
+    "seen": {
+     "windows": 8640,
+     "accuracy": 0.765,
+     "recall": {
+      "Human": 0.743,
+      "Pet": 0.789,
+      "IRobot": null,
+      "Fan": null
+     }
+    },
+    "unseen": {
+     "windows": 784,
+     "accuracy": 0.121,
+     "recall": {
+      "Human": null,
+      "Pet": null,
+      "IRobot": 0.155,
+      "Fan": 0.092
+     }
+    }
+   }
+  },
+  "split_1": {
+   "chosen": 1.0,
+   "tried": [
+    {
+     "value": 0.0001,
+     "macro_f1": 0.4029,
+     "accuracy": 0.5181,
+     "recall": {
+      "Human": 0.5315,
+      "Pet": 0.5773,
+      "IRobot": 0.2727,
+      "Fan": 0.3736
+     },
+     "fit_seconds": 12.0,
+     "iterations": 160,
+     "converged": true
+    },
+    {
+     "value": 0.001,
+     "macro_f1": 0.4399,
+     "accuracy": 0.6078,
+     "recall": {
+      "Human": 0.6738,
+      "Pet": 0.664,
+      "IRobot": 0.1453,
+      "Fan": 0.4691
+     },
+     "fit_seconds": 17.2,
+     "iterations": 229,
+     "converged": true
+    },
+    {
+     "value": 0.01,
+     "macro_f1": 0.4419,
+     "accuracy": 0.6378,
+     "recall": {
+      "Human": 0.7232,
+      "Pet": 0.7013,
+      "IRobot": 0.0741,
+      "Fan": 0.4635
+     },
+     "fit_seconds": 22.3,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 0.1,
+     "macro_f1": 0.444,
+     "accuracy": 0.6413,
+     "recall": {
+      "Human": 0.7289,
+      "Pet": 0.7084,
+      "IRobot": 0.0672,
+      "Fan": 0.4298
+     },
+     "fit_seconds": 21.3,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 1.0,
+     "macro_f1": 0.4463,
+     "accuracy": 0.6441,
+     "recall": {
+      "Human": 0.735,
+      "Pet": 0.7099,
+      "IRobot": 0.0662,
+      "Fan": 0.4157
+     },
+     "fit_seconds": 21.5,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 10.0,
+     "macro_f1": 0.4432,
+     "accuracy": 0.6407,
+     "recall": {
+      "Human": 0.7307,
+      "Pet": 0.7055,
+      "IRobot": 0.0623,
+      "Fan": 0.4382
+     },
+     "fit_seconds": 21.6,
+     "iterations": 300,
+     "converged": false
+    }
+   ],
+   "validation": {
+    "accuracy": 0.6441,
+    "macro_f1": 0.4463,
+    "per_class": {
+     "Human": {
+      "precision": 0.7054,
+      "recall": 0.735,
+      "f1": 0.7199,
+      "windows": 4378
+     },
+     "Pet": {
+      "precision": 0.7071,
+      "recall": 0.7099,
+      "f1": 0.7085,
+      "windows": 4071
+     },
+     "IRobot": {
+      "precision": 0.1709,
+      "recall": 0.0662,
+      "f1": 0.0954,
+      "windows": 1012
+     },
+     "Fan": {
+      "precision": 0.1907,
+      "recall": 0.4157,
+      "f1": 0.2615,
+      "windows": 356
+     }
+    },
+    "confusion_matrix": [
+     [
+      3218,
+      912,
+      121,
+      127
+     ],
+     [
+      890,
+      2890,
+      168,
+      123
+     ],
+     [
+      366,
+      201,
+      67,
+      378
+     ],
+     [
+      88,
+      84,
+      36,
+      148
+     ]
+    ]
+   },
+   "seen_vs_unseen_user": {
+    "seen": {
+     "windows": 8307,
+     "accuracy": 0.727,
+     "recall": {
+      "Human": 0.774,
+      "Pet": 0.71,
+      "IRobot": null,
+      "Fan": 0.416
+     }
+    },
+    "unseen": {
+     "windows": 1510,
+     "accuracy": 0.187,
+     "recall": {
+      "Human": 0.434,
+      "Pet": null,
+      "IRobot": 0.066,
+      "Fan": null
+     }
+    }
+   }
+  },
+  "split_2": {
+   "chosen": 0.01,
+   "tried": [
+    {
+     "value": 0.0001,
+     "macro_f1": 0.3683,
+     "accuracy": 0.55,
+     "recall": {
+      "Human": 0.5613,
+      "Pet": 0.6009,
+      "IRobot": 0.338,
+      "Fan": 0.0592
+     },
+     "fit_seconds": 19.6,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 0.001,
+     "macro_f1": 0.4262,
+     "accuracy": 0.6179,
+     "recall": {
+      "Human": 0.6194,
+      "Pet": 0.6859,
+      "IRobot": 0.3657,
+      "Fan": 0.107
+     },
+     "fit_seconds": 19.5,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 0.01,
+     "macro_f1": 0.4346,
+     "accuracy": 0.6436,
+     "recall": {
+      "Human": 0.6303,
+      "Pet": 0.7358,
+      "IRobot": 0.3629,
+      "Fan": 0.0845
+     },
+     "fit_seconds": 20.8,
+     "iterations": 300,
+     "converged": false
+    },
+    {
+     "value": 0.1,
+     "macro_f1": 0.4089,
+     "accuracy": 0.6367,
+     "recall": {
+      "Human": 0.6255,
+      "Pet": 0.7371,
+      "IRobot": 0.2742,
+      "Fan": 0.0451
+     },
+     "fit_seconds": 20.2,
+     "iterations": 300,
+     "converged": false
+    }
+   ],
+   "validation": {
+    "accuracy": 0.6436,
+    "macro_f1": 0.4346,
+    "per_class": {
+     "Human": {
+      "precision": 0.7359,
+      "recall": 0.6303,
+      "f1": 0.679,
+      "windows": 4566
+     },
+     "Pet": {
+      "precision": 0.6631,
+      "recall": 0.7358,
+      "f1": 0.6976,
+      "windows": 3906
+     },
+     "IRobot": {
+      "precision": 0.2259,
+      "recall": 0.3629,
+      "f1": 0.2784,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0826,
+      "recall": 0.0845,
+      "f1": 0.0836,
+      "windows": 355
+     }
+    },
+    "confusion_matrix": [
+     [
+      2878,
+      1183,
+      366,
+      139
+     ],
+     [
+      843,
+      2874,
+      83,
+      106
+     ],
+     [
+      75,
+      67,
+      131,
+      88
+     ],
+     [
+      115,
+      210,
+      0,
+      30
+     ]
+    ]
+   },
+   "seen_vs_unseen_user": {
+    "seen": {
+     "windows": 5988,
+     "accuracy": 0.782,
+     "recall": {
+      "Human": 0.886,
+      "Pet": 0.768,
+      "IRobot": 0.363,
+      "Fan": null
+     }
+    },
+    "unseen": {
+     "windows": 3200,
+     "accuracy": 0.385,
+     "recall": {
+      "Human": 0.443,
+      "Pet": 0.166,
+      "IRobot": null,
+      "Fan": 0.085
+     }
+    }
+   }
+  }
+ },
+ "a3": {
+  "split_0": {
+   "C": 0.01,
+   "variants": {
+    "all": {
+     "features": 2320,
+     "macro_f1": 0.4441,
+     "accuracy": 0.7113,
+     "recall": {
+      "Human": 0.7426,
+      "Pet": 0.7888,
+      "IRobot": 0.1551,
+      "Fan": 0.0922
+     },
+     "fit_seconds": 22.0,
+     "iterations": 300,
+     "converged": false
+    },
+    "no_level": {
+     "features": 1624,
+     "macro_f1": 0.4207,
+     "accuracy": 0.674,
+     "recall": {
+      "Human": 0.7021,
+      "Pet": 0.7478,
+      "IRobot": 0.1717,
+      "Fan": 0.0804
+     },
+     "fit_seconds": 16.6,
+     "iterations": 300,
+     "converged": false
+    },
+    "relative_level": {
+     "features": 2088,
+     "macro_f1": 0.4336,
+     "accuracy": 0.6961,
+     "recall": {
+      "Human": 0.7291,
+      "Pet": 0.7695,
+      "IRobot": 0.1662,
+      "Fan": 0.078
+     },
+     "fit_seconds": 21.8,
+     "iterations": 300,
+     "converged": false
+    },
+    "no_level_no_energy": {
+     "features": 1160,
+     "macro_f1": 0.3881,
+     "accuracy": 0.6003,
+     "recall": {
+      "Human": 0.6161,
+      "Pet": 0.6655,
+      "IRobot": 0.3019,
+      "Fan": 0.0473
+     },
+     "fit_seconds": 11.7,
+     "iterations": 300,
+     "converged": false
+    }
+   }
+  },
+  "split_1": {
+   "C": 1.0,
+   "variants": {
+    "all": {
+     "features": 2320,
+     "macro_f1": 0.4463,
+     "accuracy": 0.6441,
+     "recall": {
+      "Human": 0.735,
+      "Pet": 0.7099,
+      "IRobot": 0.0662,
+      "Fan": 0.4157
+     },
+     "fit_seconds": 22.0,
+     "iterations": 300,
+     "converged": false
+    },
+    "no_level": {
+     "features": 1624,
+     "macro_f1": 0.4369,
+     "accuracy": 0.6186,
+     "recall": {
+      "Human": 0.6827,
+      "Pet": 0.6984,
+      "IRobot": 0.0761,
+      "Fan": 0.4607
+     },
+     "fit_seconds": 16.6,
+     "iterations": 300,
+     "converged": false
+    },
+    "relative_level": {
+     "features": 2088,
+     "macro_f1": 0.4399,
+     "accuracy": 0.6332,
+     "recall": {
+      "Human": 0.7254,
+      "Pet": 0.6937,
+      "IRobot": 0.0583,
+      "Fan": 0.441
+     },
+     "fit_seconds": 21.4,
+     "iterations": 300,
+     "converged": false
+    },
+    "no_level_no_energy": {
+     "features": 1160,
+     "macro_f1": 0.4249,
+     "accuracy": 0.5593,
+     "recall": {
+      "Human": 0.6176,
+      "Pet": 0.59,
+      "IRobot": 0.2223,
+      "Fan": 0.4494
+     },
+     "fit_seconds": 11.9,
+     "iterations": 300,
+     "converged": false
+    }
+   }
+  },
+  "split_2": {
+   "C": 0.01,
+   "variants": {
+    "all": {
+     "features": 2320,
+     "macro_f1": 0.4346,
+     "accuracy": 0.6436,
+     "recall": {
+      "Human": 0.6303,
+      "Pet": 0.7358,
+      "IRobot": 0.3629,
+      "Fan": 0.0845
+     },
+     "fit_seconds": 20.3,
+     "iterations": 300,
+     "converged": false
+    },
+    "no_level": {
+     "features": 1624,
+     "macro_f1": 0.4234,
+     "accuracy": 0.5951,
+     "recall": {
+      "Human": 0.5572,
+      "Pet": 0.6907,
+      "IRobot": 0.5263,
+      "Fan": 0.1014
+     },
+     "fit_seconds": 15.4,
+     "iterations": 300,
+     "converged": false
+    },
+    "relative_level": {
+     "features": 2088,
+     "macro_f1": 0.4249,
+     "accuracy": 0.6144,
+     "recall": {
+      "Human": 0.59,
+      "Pet": 0.7094,
+      "IRobot": 0.3767,
+      "Fan": 0.1239
+     },
+     "fit_seconds": 19.0,
+     "iterations": 300,
+     "converged": false
+    },
+    "no_level_no_energy": {
+     "features": 1160,
+     "macro_f1": 0.3795,
+     "accuracy": 0.5402,
+     "recall": {
+      "Human": 0.5129,
+      "Pet": 0.6211,
+      "IRobot": 0.3989,
+      "Fan": 0.1437
+     },
+     "fit_seconds": 10.5,
+     "iterations": 300,
+     "converged": false
+    }
+   }
+  }
+ },
+ "a2": {
+  "split_0": {
+   "chosen": 2,
+   "tried": [
+    {
+     "value": 1,
+     "macro_f1": 0.4597,
+     "accuracy": 0.8782,
+     "recall": {
+      "Human": 0.9672,
+      "Pet": 0.9477,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 160.8
+    },
+    {
+     "value": 2,
+     "macro_f1": 0.46,
+     "accuracy": 0.8787,
+     "recall": {
+      "Human": 0.9688,
+      "Pet": 0.9473,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 152.4
+    },
+    {
+     "value": 3,
+     "macro_f1": 0.4592,
+     "accuracy": 0.8771,
+     "recall": {
+      "Human": 0.9672,
+      "Pet": 0.9453,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 149.1
+    },
+    {
+     "value": 5,
+     "macro_f1": 0.4574,
+     "accuracy": 0.8736,
+     "recall": {
+      "Human": 0.9661,
+      "Pet": 0.9386,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 172.5
+    },
+    {
+     "value": 10,
+     "macro_f1": 0.4545,
+     "accuracy": 0.8682,
+     "recall": {
+      "Human": 0.9619,
+      "Pet": 0.9309,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 160.9
+    },
+    {
+     "value": 20,
+     "macro_f1": 0.4501,
+     "accuracy": 0.8596,
+     "recall": {
+      "Human": 0.9563,
+      "Pet": 0.9174,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 109.5
+    },
+    {
+     "value": 50,
+     "macro_f1": 0.4472,
+     "accuracy": 0.8529,
+     "recall": {
+      "Human": 0.9494,
+      "Pet": 0.9097,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 101.5
+    },
+    {
+     "value": 100,
+     "macro_f1": 0.4463,
+     "accuracy": 0.8452,
+     "recall": {
+      "Human": 0.9327,
+      "Pet": 0.9102,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     },
+     "fit_seconds": 92.7
+    }
+   ],
+   "validation": {
+    "accuracy": 0.8787,
+    "macro_f1": 0.46,
+    "per_class": {
+     "Human": {
+      "precision": 0.8126,
+      "recall": 0.9688,
+      "f1": 0.8838,
+      "windows": 4488
+     },
+     "Pet": {
+      "precision": 0.9656,
+      "recall": 0.9473,
+      "f1": 0.9564,
+      "windows": 4152
+     },
+     "IRobot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 423
+     }
+    },
+    "confusion_matrix": [
+     [
+      4348,
+      140,
+      0,
+      0
+     ],
+     [
+      219,
+      3933,
+      0,
+      0
+     ],
+     [
+      361,
+      0,
+      0,
+      0
+     ],
+     [
+      423,
+      0,
+      0,
+      0
+     ]
+    ]
+   },
+   "seen_vs_unseen_user": {
+    "seen": {
+     "windows": 8640,
+     "accuracy": 0.958,
+     "recall": {
+      "Human": 0.969,
+      "Pet": 0.947,
+      "IRobot": null,
+      "Fan": null
+     }
+    },
+    "unseen": {
+     "windows": 784,
+     "accuracy": 0.0,
+     "recall": {
+      "Human": null,
+      "Pet": null,
+      "IRobot": 0.0,
+      "Fan": 0.0
+     }
+    }
+   }
+  },
+  "split_1": {
+   "chosen": 5,
+   "tried": [
+    {
+     "value": 3,
+     "macro_f1": 0.6365,
+     "accuracy": 0.827,
+     "recall": {
+      "Human": 0.9513,
+      "Pet": 0.9138,
+      "IRobot": 0.0,
+      "Fan": 0.6573
+     },
+     "fit_seconds": 147.9
+    },
+    {
+     "value": 5,
+     "macro_f1": 0.6553,
+     "accuracy": 0.8289,
+     "recall": {
+      "Human": 0.9472,
+      "Pet": 0.9121,
+      "IRobot": 0.0,
+      "Fan": 0.7781
+     },
+     "fit_seconds": 152.8
+    },
+    {
+     "value": 10,
+     "macro_f1": 0.6414,
+     "accuracy": 0.8222,
+     "recall": {
+      "Human": 0.9331,
+      "Pet": 0.9067,
+      "IRobot": 0.0,
+      "Fan": 0.8315
+     },
+     "fit_seconds": 143.9
+    },
+    {
+     "value": 20,
+     "macro_f1": 0.5974,
+     "accuracy": 0.8078,
+     "recall": {
+      "Human": 0.926,
+      "Pet": 0.8794,
+      "IRobot": 0.0,
+      "Fan": 0.8315
+     },
+     "fit_seconds": 120.1
+    },
+    {
+     "value": 50,
+     "macro_f1": 0.5574,
+     "accuracy": 0.7969,
+     "recall": {
+      "Human": 0.9016,
+      "Pet": 0.8794,
+      "IRobot": 0.0,
+      "Fan": 0.8315
+     },
+     "fit_seconds": 101.7
+    },
+    {
+     "value": 100,
+     "macro_f1": 0.5285,
+     "accuracy": 0.783,
+     "recall": {
+      "Human": 0.8783,
+      "Pet": 0.871,
+      "IRobot": 0.0,
+      "Fan": 0.8315
+     },
+     "fit_seconds": 83.5
+    }
+   ],
+   "validation": {
+    "accuracy": 0.8289,
+    "macro_f1": 0.6553,
+    "per_class": {
+     "Human": {
+      "precision": 0.7776,
+      "recall": 0.9472,
+      "f1": 0.8541,
+      "windows": 4378
+     },
+     "Pet": {
+      "precision": 0.8834,
+      "recall": 0.9121,
+      "f1": 0.8975,
+      "windows": 4071
+     },
+     "IRobot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 1012
+     },
+     "Fan": {
+      "precision": 0.9858,
+      "recall": 0.7781,
+      "f1": 0.8697,
+      "windows": 356
+     }
+    },
+    "confusion_matrix": [
+     [
+      4147,
+      227,
+      0,
+      4
+     ],
+     [
+      358,
+      3713,
+      0,
+      0
+     ],
+     [
+      766,
+      246,
+      0,
+      0
+     ],
+     [
+      62,
+      17,
+      0,
+      277
+     ]
+    ]
+   },
+   "seen_vs_unseen_user": {
+    "seen": {
+     "windows": 8307,
+     "accuracy": 0.945,
+     "recall": {
+      "Human": 0.996,
+      "Pet": 0.912,
+      "IRobot": null,
+      "Fan": 0.778
+     }
+    },
+    "unseen": {
+     "windows": 1510,
+     "accuracy": 0.187,
+     "recall": {
+      "Human": 0.568,
+      "Pet": null,
+      "IRobot": 0.0,
+      "Fan": null
+     }
+    }
+   }
+  },
+  "split_2": {
+   "chosen": 50,
+   "tried": [
+    {
+     "value": 20,
+     "macro_f1": 0.456,
+     "accuracy": 0.8572,
+     "recall": {
+      "Human": 0.9733,
+      "Pet": 0.8781,
+      "IRobot": 0.0055,
+      "Fan": 0.0
+     },
+     "fit_seconds": 102.3
+    },
+    {
+     "value": 50,
+     "macro_f1": 0.4758,
+     "accuracy": 0.8498,
+     "recall": {
+      "Human": 0.9639,
+      "Pet": 0.8661,
+      "IRobot": 0.0665,
+      "Fan": 0.0
+     },
+     "fit_seconds": 89.4
+    },
+    {
+     "value": 100,
+     "macro_f1": 0.4743,
+     "accuracy": 0.8278,
+     "recall": {
+      "Human": 0.9439,
+      "Pet": 0.8346,
+      "IRobot": 0.0997,
+      "Fan": 0.0
+     },
+     "fit_seconds": 76.7
+    }
+   ],
+   "validation": {
+    "accuracy": 0.8498,
+    "macro_f1": 0.4758,
+    "per_class": {
+     "Human": {
+      "precision": 0.8621,
+      "recall": 0.9639,
+      "f1": 0.9101,
+      "windows": 4566
+     },
+     "Pet": {
+      "precision": 0.9143,
+      "recall": 0.8661,
+      "f1": 0.8896,
+      "windows": 3906
+     },
+     "IRobot": {
+      "precision": 0.233,
+      "recall": 0.0665,
+      "f1": 0.1034,
+      "windows": 361
+     },
+     "Fan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "windows": 355
+     }
+    },
+    "confusion_matrix": [
+     [
+      4401,
+      139,
+      26,
+      0
+     ],
+     [
+      467,
+      3383,
+      53,
+      3
+     ],
+     [
+      60,
+      0,
+      24,
+      277
+     ],
+     [
+      177,
+      178,
+      0,
+      0
+     ]
+    ]
+   },
+   "seen_vs_unseen_user": {
+    "seen": {
+     "windows": 5988,
+     "accuracy": 0.887,
+     "recall": {
+      "Human": 0.985,
+      "Pet": 0.916,
+      "IRobot": 0.066,
+      "Fan": null
+     }
+    },
+    "unseen": {
+     "windows": 3200,
+     "accuracy": 0.781,
+     "recall": {
+      "Human": 0.948,
+      "Pet": 0.0,
+      "IRobot": null,
+      "Fan": 0.0
+     }
+    }
+   }
+  }
+ },
+ "room": {
+  "split_2": {
+   "unseen_room_windows": 2634,
+   "seen_room_windows": 6554,
+   "unseen_rooms": [
+    "E19"
+   ],
+   "unseen_room_classes": {
+    "Human": 2634
+   },
+   "models": {
+    "RF statistics all": {
+     "accuracy_unseen_room": 0.7844,
+     "accuracy_seen_rooms": 0.7469,
+     "accuracy_all": 0.7576,
+     "macro_f1_all": 0.5215,
+     "fit_seconds": 52.2
+    },
+    "RF statistics no_level": {
+     "accuracy_unseen_room": 0.7544,
+     "accuracy_seen_rooms": 0.7493,
+     "accuracy_all": 0.7508,
+     "macro_f1_all": 0.516,
+     "fit_seconds": 49.1
+    },
+    "RF statistics relative_level": {
+     "accuracy_unseen_room": 0.7168,
+     "accuracy_seen_rooms": 0.7327,
+     "accuracy_all": 0.7281,
+     "macro_f1_all": 0.491,
+     "fit_seconds": 59.7
+    },
+    "RF statistics no_level_no_energy": {
+     "accuracy_unseen_room": 0.8071,
+     "accuracy_seen_rooms": 0.6987,
+     "accuracy_all": 0.7298,
+     "macro_f1_all": 0.4806,
+     "fit_seconds": 40.9
+    },
+    "LR statistics all": {
+     "accuracy_unseen_room": 0.4431,
+     "accuracy_seen_rooms": 0.7241,
+     "accuracy_all": 0.6436,
+     "macro_f1_all": 0.4346,
+     "fit_seconds": 19.1
+    },
+    "LR statistics no_level": {
+     "accuracy_unseen_room": 0.3516,
+     "accuracy_seen_rooms": 0.693,
+     "accuracy_all": 0.5951,
+     "macro_f1_all": 0.4234,
+     "fit_seconds": 14.8
+    },
+    "LR statistics relative_level": {
+     "accuracy_unseen_room": 0.3903,
+     "accuracy_seen_rooms": 0.7045,
+     "accuracy_all": 0.6144,
+     "macro_f1_all": 0.4249,
+     "fit_seconds": 18.7
+    },
+    "LR statistics no_level_no_energy": {
+     "accuracy_unseen_room": 0.3265,
+     "accuracy_seen_rooms": 0.626,
+     "accuracy_all": 0.5402,
+     "macro_f1_all": 0.3795,
+     "fit_seconds": 10.6
+    },
+    "RF statistics (saved, all)": {
+     "accuracy_unseen_room": 0.7844,
+     "accuracy_seen_rooms": 0.7469,
+     "accuracy_all": 0.7576,
+     "macro_f1_all": 0.5215
+    },
+    "LR MiniRocket (saved)": {
+     "accuracy_unseen_room": 0.779,
+     "accuracy_seen_rooms": 0.7501,
+     "accuracy_all": 0.7584,
+     "macro_f1_all": 0.5437
+    },
+    "LR statistics (a1, saved)": {
+     "accuracy_unseen_room": 0.4431,
+     "accuracy_seen_rooms": 0.7241,
+     "accuracy_all": 0.6436,
+     "macro_f1_all": 0.4346
+    },
+    "RF MiniRocket (a2, saved)": {
+     "accuracy_unseen_room": 0.9484,
+     "accuracy_seen_rooms": 0.8102,
+     "accuracy_all": 0.8498,
+     "macro_f1_all": 0.4758
+    }
+   }
+  }
+ }
+}

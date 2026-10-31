@@ -1,0 +1,638 @@
+{
+ "split_0": {
+  "stats|random_forest": {
+   "features": 2320,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.4692,
+   "accuracy": 0.7781,
+   "recall": {
+    "Human": 0.8398,
+    "Pet": 0.841,
+    "IRobot": 0.1413,
+    "Fan": 0.0496
+   },
+   "fit_seconds": 46.4
+  },
+  "stats|logistic_regression": {
+   "features": 2320,
+   "parameters": {
+    "C": 0.01
+   },
+   "macro_f1": 0.4441,
+   "accuracy": 0.7113,
+   "recall": {
+    "Human": 0.7426,
+    "Pet": 0.7888,
+    "IRobot": 0.1551,
+    "Fan": 0.0922
+   },
+   "fit_seconds": 59.7
+  },
+  "spectral|random_forest": {
+   "features": 2320,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.4376,
+   "accuracy": 0.8312,
+   "recall": {
+    "Human": 0.9084,
+    "Pet": 0.9041,
+    "IRobot": 0.0055,
+    "Fan": 0.0
+   },
+   "fit_seconds": 56.4
+  },
+  "spectral|logistic_regression": {
+   "features": 2320,
+   "parameters": {
+    "C": 0.1
+   },
+   "macro_f1": 0.4272,
+   "accuracy": 0.8121,
+   "recall": {
+    "Human": 0.8697,
+    "Pet": 0.9027,
+    "IRobot": 0.0028,
+    "Fan": 0.0024
+   },
+   "fit_seconds": 88.1
+  },
+  "stats+spectral|random_forest": {
+   "features": 4640,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.4363,
+   "accuracy": 0.8308,
+   "recall": {
+    "Human": 0.9249,
+    "Pet": 0.8858,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   },
+   "fit_seconds": 79.8
+  },
+  "stats+spectral|logistic_regression": {
+   "features": 4640,
+   "parameters": {
+    "C": 0.1
+   },
+   "macro_f1": 0.4315,
+   "accuracy": 0.8218,
+   "recall": {
+    "Human": 0.8741,
+    "Pet": 0.9205,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   },
+   "fit_seconds": 172.1
+  },
+  "link_stats|random_forest": {
+   "features": 40,
+   "parameters": {
+    "min_samples_leaf": 5
+   },
+   "macro_f1": 0.4349,
+   "accuracy": 0.7748,
+   "recall": {
+    "Human": 0.8603,
+    "Pet": 0.8208,
+    "IRobot": 0.0886,
+    "Fan": 0.0024
+   },
+   "fit_seconds": 8.1
+  },
+  "link_stats|logistic_regression": {
+   "features": 40,
+   "parameters": {
+    "C": 0.01
+   },
+   "macro_f1": 0.3427,
+   "accuracy": 0.554,
+   "recall": {
+    "Human": 0.6154,
+    "Pet": 0.5901,
+    "IRobot": 0.0249,
+    "Fan": 0.0
+   },
+   "fit_seconds": 1.2
+  },
+  "link_spectral|random_forest": {
+   "features": 40,
+   "parameters": {
+    "min_samples_leaf": 20
+   },
+   "macro_f1": 0.4644,
+   "accuracy": 0.6306,
+   "recall": {
+    "Human": 0.7003,
+    "Pet": 0.6096,
+    "IRobot": 0.3906,
+    "Fan": 0.3026
+   },
+   "fit_seconds": 7.5
+  },
+  "link_spectral|logistic_regression": {
+   "features": 40,
+   "parameters": {
+    "C": 0.001
+   },
+   "macro_f1": 0.3857,
+   "accuracy": 0.5245,
+   "recall": {
+    "Human": 0.6517,
+    "Pet": 0.4135,
+    "IRobot": 0.4515,
+    "Fan": 0.3262
+   },
+   "fit_seconds": 0.7
+  },
+  "link_both|random_forest": {
+   "features": 80,
+   "parameters": {
+    "min_samples_leaf": 5
+   },
+   "macro_f1": 0.4218,
+   "accuracy": 0.7893,
+   "recall": {
+    "Human": 0.8661,
+    "Pet": 0.8548,
+    "IRobot": 0.0055,
+    "Fan": 0.0
+   },
+   "fit_seconds": 11.2
+  },
+  "link_both|logistic_regression": {
+   "features": 80,
+   "parameters": {
+    "C": 0.01
+   },
+   "macro_f1": 0.3981,
+   "accuracy": 0.5932,
+   "recall": {
+    "Human": 0.67,
+    "Pet": 0.5843,
+    "IRobot": 0.2742,
+    "Fan": 0.1371
+   },
+   "fit_seconds": 2.7
+  },
+  "link0_both|random_forest": {
+   "features": 1160,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.4336,
+   "accuracy": 0.8251,
+   "recall": {
+    "Human": 0.9151,
+    "Pet": 0.8837,
+    "IRobot": 0.0,
+    "Fan": 0.0
+   },
+   "fit_seconds": 37.5
+  },
+  "link0_both|logistic_regression": {
+   "features": 1160,
+   "parameters": {
+    "C": 0.0001
+   },
+   "macro_f1": 0.4759,
+   "accuracy": 0.68,
+   "recall": {
+    "Human": 0.6854,
+    "Pet": 0.7486,
+    "IRobot": 0.241,
+    "Fan": 0.3239
+   },
+   "fit_seconds": 37.4
+  }
+ },
+ "split_1": {
+  "stats|random_forest": {
+   "features": 2320,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5608,
+   "accuracy": 0.7681,
+   "recall": {
+    "Human": 0.8634,
+    "Pet": 0.8357,
+    "IRobot": 0.1186,
+    "Fan": 0.6685
+   },
+   "fit_seconds": 46.9
+  },
+  "stats|logistic_regression": {
+   "features": 2320,
+   "parameters": {
+    "C": 1.0
+   },
+   "macro_f1": 0.4463,
+   "accuracy": 0.6441,
+   "recall": {
+    "Human": 0.735,
+    "Pet": 0.7099,
+    "IRobot": 0.0662,
+    "Fan": 0.4157
+   },
+   "fit_seconds": 101.9
+  },
+  "spectral|random_forest": {
+   "features": 2320,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5414,
+   "accuracy": 0.7603,
+   "recall": {
+    "Human": 0.8689,
+    "Pet": 0.8283,
+    "IRobot": 0.1344,
+    "Fan": 0.427
+   },
+   "fit_seconds": 68.0
+  },
+  "spectral|logistic_regression": {
+   "features": 2320,
+   "parameters": {
+    "C": 0.1
+   },
+   "macro_f1": 0.5218,
+   "accuracy": 0.7419,
+   "recall": {
+    "Human": 0.8467,
+    "Pet": 0.8249,
+    "IRobot": 0.0178,
+    "Fan": 0.5618
+   },
+   "fit_seconds": 86.4
+  },
+  "stats+spectral|random_forest": {
+   "features": 4640,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5704,
+   "accuracy": 0.7914,
+   "recall": {
+    "Human": 0.9027,
+    "Pet": 0.8597,
+    "IRobot": 0.1344,
+    "Fan": 0.5084
+   },
+   "fit_seconds": 82.8
+  },
+  "stats+spectral|logistic_regression": {
+   "features": 4640,
+   "parameters": {
+    "C": 10.0
+   },
+   "macro_f1": 0.5459,
+   "accuracy": 0.7639,
+   "recall": {
+    "Human": 0.8682,
+    "Pet": 0.8529,
+    "IRobot": 0.003,
+    "Fan": 0.6264
+   },
+   "fit_seconds": 217.7
+  },
+  "link_stats|random_forest": {
+   "features": 40,
+   "parameters": {
+    "min_samples_leaf": 5
+   },
+   "macro_f1": 0.4472,
+   "accuracy": 0.7138,
+   "recall": {
+    "Human": 0.8312,
+    "Pet": 0.8059,
+    "IRobot": 0.0119,
+    "Fan": 0.2107
+   },
+   "fit_seconds": 8.3
+  },
+  "link_stats|logistic_regression": {
+   "features": 40,
+   "parameters": {
+    "C": 1.0
+   },
+   "macro_f1": 0.347,
+   "accuracy": 0.5105,
+   "recall": {
+    "Human": 0.6142,
+    "Pet": 0.5382,
+    "IRobot": 0.0089,
+    "Fan": 0.3455
+   },
+   "fit_seconds": 1.5
+  },
+  "link_spectral|random_forest": {
+   "features": 40,
+   "parameters": {
+    "min_samples_leaf": 5
+   },
+   "macro_f1": 0.4079,
+   "accuracy": 0.6179,
+   "recall": {
+    "Human": 0.709,
+    "Pet": 0.6735,
+    "IRobot": 0.2006,
+    "Fan": 0.0478
+   },
+   "fit_seconds": 8.7
+  },
+  "link_spectral|logistic_regression": {
+   "features": 40,
+   "parameters": {
+    "C": 0.001
+   },
+   "macro_f1": 0.3287,
+   "accuracy": 0.4331,
+   "recall": {
+    "Human": 0.6147,
+    "Pet": 0.3095,
+    "IRobot": 0.1759,
+    "Fan": 0.3455
+   },
+   "fit_seconds": 0.9
+  },
+  "link_both|random_forest": {
+   "features": 80,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.4441,
+   "accuracy": 0.6747,
+   "recall": {
+    "Human": 0.7741,
+    "Pet": 0.7551,
+    "IRobot": 0.0089,
+    "Fan": 0.427
+   },
+   "fit_seconds": 9.3
+  },
+  "link_both|logistic_regression": {
+   "features": 80,
+   "parameters": {
+    "C": 0.1
+   },
+   "macro_f1": 0.396,
+   "accuracy": 0.5449,
+   "recall": {
+    "Human": 0.6453,
+    "Pet": 0.5517,
+    "IRobot": 0.1482,
+    "Fan": 0.3596
+   },
+   "fit_seconds": 2.7
+  },
+  "link0_both|random_forest": {
+   "features": 1160,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5672,
+   "accuracy": 0.7857,
+   "recall": {
+    "Human": 0.8954,
+    "Pet": 0.8536,
+    "IRobot": 0.1344,
+    "Fan": 0.5112
+   },
+   "fit_seconds": 39.8
+  },
+  "link0_both|logistic_regression": {
+   "features": 1160,
+   "parameters": {
+    "C": 10.0
+   },
+   "macro_f1": 0.5078,
+   "accuracy": 0.7208,
+   "recall": {
+    "Human": 0.8145,
+    "Pet": 0.8082,
+    "IRobot": 0.0316,
+    "Fan": 0.5281
+   },
+   "fit_seconds": 51.7
+  }
+ },
+ "split_2": {
+  "stats|random_forest": {
+   "features": 2320,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5228,
+   "accuracy": 0.7582,
+   "recall": {
+    "Human": 0.8644,
+    "Pet": 0.7207,
+    "IRobot": 0.4017,
+    "Fan": 0.1662
+   },
+   "fit_seconds": 38.1
+  },
+  "stats|logistic_regression": {
+   "features": 2320,
+   "parameters": {
+    "C": 0.01
+   },
+   "macro_f1": 0.4346,
+   "accuracy": 0.6436,
+   "recall": {
+    "Human": 0.6303,
+    "Pet": 0.7358,
+    "IRobot": 0.3629,
+    "Fan": 0.0845
+   },
+   "fit_seconds": 62.3
+  },
+  "spectral|random_forest": {
+   "features": 2320,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.4981,
+   "accuracy": 0.7479,
+   "recall": {
+    "Human": 0.7845,
+    "Pet": 0.8123,
+    "IRobot": 0.1773,
+    "Fan": 0.1493
+   },
+   "fit_seconds": 50.3
+  },
+  "spectral|logistic_regression": {
+   "features": 2320,
+   "parameters": {
+    "C": 0.001
+   },
+   "macro_f1": 0.5307,
+   "accuracy": 0.7251,
+   "recall": {
+    "Human": 0.7179,
+    "Pet": 0.8039,
+    "IRobot": 0.349,
+    "Fan": 0.3324
+   },
+   "fit_seconds": 86.1
+  },
+  "stats+spectral|random_forest": {
+   "features": 4640,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5503,
+   "accuracy": 0.8004,
+   "recall": {
+    "Human": 0.8725,
+    "Pet": 0.8264,
+    "IRobot": 0.2299,
+    "Fan": 0.1662
+   },
+   "fit_seconds": 66.6
+  },
+  "stats+spectral|logistic_regression": {
+   "features": 4640,
+   "parameters": {
+    "C": 0.001
+   },
+   "macro_f1": 0.5071,
+   "accuracy": 0.7153,
+   "recall": {
+    "Human": 0.7175,
+    "Pet": 0.7967,
+    "IRobot": 0.2133,
+    "Fan": 0.3014
+   },
+   "fit_seconds": 158.8
+  },
+  "link_stats|random_forest": {
+   "features": 40,
+   "parameters": {
+    "min_samples_leaf": 5
+   },
+   "macro_f1": 0.5106,
+   "accuracy": 0.7864,
+   "recall": {
+    "Human": 0.8561,
+    "Pet": 0.8221,
+    "IRobot": 0.1551,
+    "Fan": 0.138
+   },
+   "fit_seconds": 7.2
+  },
+  "link_stats|logistic_regression": {
+   "features": 40,
+   "parameters": {
+    "C": 0.1
+   },
+   "macro_f1": 0.3953,
+   "accuracy": 0.5616,
+   "recall": {
+    "Human": 0.7234,
+    "Pet": 0.4025,
+    "IRobot": 0.6565,
+    "Fan": 0.1352
+   },
+   "fit_seconds": 1.4
+  },
+  "link_spectral|random_forest": {
+   "features": 40,
+   "parameters": {
+    "min_samples_leaf": 20
+   },
+   "macro_f1": 0.5077,
+   "accuracy": 0.7188,
+   "recall": {
+    "Human": 0.8511,
+    "Pet": 0.6372,
+    "IRobot": 0.5152,
+    "Fan": 0.1211
+   },
+   "fit_seconds": 6.4
+  },
+  "link_spectral|logistic_regression": {
+   "features": 40,
+   "parameters": {
+    "C": 0.01
+   },
+   "macro_f1": 0.4829,
+   "accuracy": 0.6631,
+   "recall": {
+    "Human": 0.8208,
+    "Pet": 0.5123,
+    "IRobot": 0.6454,
+    "Fan": 0.3127
+   },
+   "fit_seconds": 1.2
+  },
+  "link_both|random_forest": {
+   "features": 80,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5193,
+   "accuracy": 0.7692,
+   "recall": {
+    "Human": 0.8535,
+    "Pet": 0.7739,
+    "IRobot": 0.374,
+    "Fan": 0.0338
+   },
+   "fit_seconds": 7.6
+  },
+  "link_both|logistic_regression": {
+   "features": 80,
+   "parameters": {
+    "C": 0.1
+   },
+   "macro_f1": 0.4931,
+   "accuracy": 0.6923,
+   "recall": {
+    "Human": 0.7959,
+    "Pet": 0.6226,
+    "IRobot": 0.7175,
+    "Fan": 0.1014
+   },
+   "fit_seconds": 3.0
+  },
+  "link0_both|random_forest": {
+   "features": 1160,
+   "parameters": {
+    "min_samples_leaf": 50
+   },
+   "macro_f1": 0.5312,
+   "accuracy": 0.7791,
+   "recall": {
+    "Human": 0.8495,
+    "Pet": 0.8054,
+    "IRobot": 0.2216,
+    "Fan": 0.1493
+   },
+   "fit_seconds": 31.5
+  },
+  "link0_both|logistic_regression": {
+   "features": 1160,
+   "parameters": {
+    "C": 0.01
+   },
+   "macro_f1": 0.4768,
+   "accuracy": 0.7008,
+   "recall": {
+    "Human": 0.7083,
+    "Pet": 0.7811,
+    "IRobot": 0.1994,
+    "Fan": 0.231
+   },
+   "fit_seconds": 32.6
+  }
+ }
+}

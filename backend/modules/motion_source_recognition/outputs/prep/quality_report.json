@@ -1,0 +1,16 @@
+{
+ "samples_checked": 60858,
+ "seconds": 41.3,
+ "ms_per_sample_per_worker": 2.7,
+ "unreadable": 0,
+ "wrong_shape": 0,
+ "with_nonfinite_values": 0,
+ "with_zero_channels": 0,
+ "with_flat_channels": 0,
+ "value_range": [
+  0.0,
+  8.948637962341309
+ ],
+ "marked_bad": 0,
+ "windows_with_an_identical_twin": 1228
+}
