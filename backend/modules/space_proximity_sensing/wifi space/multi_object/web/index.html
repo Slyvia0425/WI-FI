@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RoomSense · Spatial sensing</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/">◈ <strong>RoomSense</strong></a><div class="header-right"><span class="simulation-tag" data-zh="仿真演示" data-en="Simulation"></span><select id="lang" aria-label="Language" hidden><option value="en">English</option></select></div></header>
+<main>
+<div class="page-heading"><h1 data-zh="Wi-Fi 空间感知" data-en="Wi-Fi spatial sensing"></h1><p class="steps"><span data-zh="① 拖动摆放" data-en="① Place objects"></span><span data-zh="② 开始检测" data-en="② Start sensing"></span><span data-zh="③ 查看结果" data-en="③ View results"></span></p></div>
+<div id="loading" class="panel muted" data-zh="加载模型…" data-en="Loading model…"></div>
+<div id="app" hidden>
+<section class="workspace panel">
+<div class="control-bar">
+<label class="source-control"><span data-zh="场景" data-en="Scene"></span><select id="source"><option value="live" data-zh="自定义摆放" data-en="Custom layout"></option><option value="2" data-zh="测试：2个物体" data-en="Test: 2 objects"></option><option value="3" data-zh="测试：3个物体" data-en="Test: 3 objects"></option></select></label>
+<label id="radio-control" class="radio-control"><span data-zh="设备布局" data-en="Radio layout"></span><select id="trained-layout" aria-label="Radio layout"></select></label>
+<div class="run-actions"><button id="start" class="primary" data-zh="▶ 开始检测" data-en="Start"></button><button id="pause" data-zh="暂停" data-en="Pause"></button><button id="once" class="quiet" data-zh="单次检测" data-en="Once"></button></div><span id="status" class="status" role="status">Ready</span>
+</div>
+<p id="environment-note" class="microcopy" hidden></p><p id="model-binding" class="microcopy" aria-live="polite"></p>
+<div id="error" class="error" hidden></div>
+<div id="input-panel" class="edit-bar"><label class="count-control"><span data-zh="数量" data-en="Objects"></span><select id="count"><option id="single-target" value="1" hidden>1</option><option value="2">2</option><option value="3">3</option></select></label><div id="object-buttons" role="group" aria-label="Select object to move"></div><span id="edit-hint" class="microcopy" aria-live="polite"></span></div>
+<div class="maps">
+<article><div class="map-heading"><h2 data-zh="摆放位置" data-en="Placement"></h2><label class="check"><input id="show-truth" type="checkbox" checked><span data-zh="显示参考" data-en="Reference"></span></label></div><div id="truth-map"></div><p id="truth-caption" class="map-caption"></p></article>
+<article class="prediction-map"><div class="map-heading"><h2 data-zh="模型判断" data-en="Prediction"></h2><span id="prediction-badge" class="result-badge">—</span></div><div id="pred-map"></div><p id="pred-caption" class="map-caption"></p></article>
+</div>
+<div id="decision" class="decision" aria-live="polite"></div>
+<div class="legend"><span class="truth-key" data-zh="参考物体" data-en="Reference"></span><span class="prediction-key" data-zh="预测区域" data-en="Prediction"></span><span class="uncertain-key" data-zh="虚线：不确定" data-en="Dashed: uncertain"></span><span class="wrong-key" data-zh="橙红：与参考不符" data-en="Orange/red: mismatch"></span></div>
+</section>
+<div class="drawer-list">
+<details id="tx-panel" class="drawer"><summary><span data-zh="信号源位置" data-en="Transmitter positions"></span><span class="drawer-hint" data-zh="修改 / 恢复默认" data-en="Edit / reset"></span></summary><div class="drawer-body"><p class="note" data-zh="预设自动匹配模型；其他位置仅仿真，预测未验证。接收点固定。" data-en="Presets use matched models; other positions are unvalidated. Receivers stay fixed."></p><p id="layout-score" class="note"></p><div class="table-wrap"><table><thead><tr><th>TX</th><th>x (m)</th><th>y (m)</th><th>z (m)</th></tr></thead><tbody id="tx-fields"></tbody></table></div><div class="import-controls"><button id="tx-apply" data-zh="应用位置" data-en="Apply positions"></button><button id="tx-reset" data-zh="恢复默认" data-en="Reset defaults"></button></div></div></details>
+
+<details id="placement-details" class="drawer"><summary><span data-zh="坐标与尺寸" data-en="Position & size"></span><span class="drawer-hint" data-zh="精确调整" data-en="Fine adjustment"></span></summary><div class="drawer-body">
+<label class="inline-label"><span data-zh="编辑物体" data-en="Selected object"></span><select id="edit"><option value="0">A</option><option value="1">B</option><option value="2">C</option></select></label>
+<div id="shared-examples" class="import-controls" hidden><span class="microcopy" data-zh="同区摆放示例" data-en="Shared-zone placements"></span><button id="preset-two" data-zh="2件同区" data-en="2 in one zone"></button><button id="preset-three" data-zh="3件同区" data-en="3 in one zone"></button><button id="undo-layout" disabled data-zh="恢复原摆放" data-en="Restore layout"></button></div>
+<div class="table-wrap"><table><thead><tr><th data-zh="物体" data-en="Object"></th><th data-zh="尺寸档位" data-en="Size band"></th><th>x (m)</th><th>y (m)</th><th data-zh="比例" data-en="Scale"></th><th data-zh="长×宽×高 (m)" data-en="W×D×H (m)"></th></tr></thead><tbody id="placements"></tbody></table></div>
+<p id="placement-rule" class="note" data-zh="各档最多1件；中心位于不同区域，物体不能重叠或覆盖设备。" data-en="One per size band; distinct center zones, no overlap or device obstruction."></p></div></details>
+<details id="confidence-panel" class="drawer"><summary><span data-zh="置信度明细" data-en="Confidence details"></span><span id="confidence-summary" class="drawer-hint"></span></summary><div class="drawer-body"><p id="alternatives" class="note"></p><div id="heads" class="heads"></div><p id="window-info" class="note"></p></div></details>
+<details id="history-panel" class="drawer"><summary><span data-zh="运行记录" data-en="Run history"></span><span id="history-count" class="drawer-hint">0</span></summary><div class="drawer-body">
+<div class="section-row"><p id="summary" class="note"></p><button id="export" data-zh="导出记录" data-en="Export JSON"></button></div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th data-zh="设备布局" data-en="Radio layout"></th><th data-zh="参考数量" data-en="Reference"></th><th data-zh="预测数量" data-en="Predicted"></th><th data-zh="已接受" data-en="Accepted"></th><th data-zh="状态" data-en="Status"></th><th data-zh="耗时" data-en="Time"></th><th data-zh="布局匹配" data-en="Layout match"></th></tr></thead><tbody id="history"></tbody></table></div></div></details>
+<details id="results-panel" class="drawer"><summary><span data-zh="测试结果" data-en="Evaluation"></span><span id="evaluation-summary" class="drawer-hint"></span></summary><div class="drawer-body">
+<div id="stats" class="stats"></div><p id="evaluation-note" class="note"></p>
+<div class="table-wrap"><table><thead><tr><th data-zh="条件" data-en="Condition"></th><th>N</th><th>Macro-F1</th><th data-zh="物体数准确率" data-en="Object count"></th><th data-zh="完整区域" data-en="Exact zones"></th><th id="joint-col" hidden data-zh="区域+物体数" data-en="Zones + objects"></th></tr></thead><tbody id="evaluation"></tbody></table></div><p id="coverage" class="note"></p>
+<details id="before-after" class="nested" hidden><summary data-zh="优化前后对比" data-en="Before & after"></summary><p id="comparison-scope" class="note"></p><div class="table-wrap"><table><thead><tr><th data-zh="版本" data-en="Version"></th><th>N</th><th>Macro-F1</th><th data-zh="物体数准确率" data-en="Object count"></th><th data-zh="完整区域" data-en="Exact zones"></th><th id="baseline-joint-col" hidden data-zh="区域+物体数" data-en="Zones + objects"></th></tr></thead><tbody id="baseline-table"></tbody></table></div></details>
+<details class="nested"><summary data-zh="验证集选型" data-en="Validation selection"></summary><div id="comparison"></div></details>
+</div></details>
+<details id="advanced-panel" class="drawer"><summary><span data-zh="更多设置" data-en="More settings"></span><span class="drawer-hint" data-zh="信号 · 显示 · 导入" data-en="Signal · display · import"></span></summary><div class="drawer-body">
+<div class="settings-grid">
+<label><span data-zh="信号质量 SNR" data-en="Signal SNR"></span><select id="snr"><option value="30">30 dB</option><option value="20">20 dB</option><option value="10">10 dB</option></select></label>
+<label><span data-zh="检测长度" data-en="Run length"></span><select id="limit"><option value="20" data-zh="20次后停止" data-en="20 detections"></option><option value="unlimited" data-zh="持续运行" data-en="Until paused"></option></select></label>
+<label><span data-zh="输出模式" data-en="Output mode"></span><select id="output-mode"><option value="occupancy" data-zh="占用区域" data-en="Occupied zones"></option><option value="typed" data-zh="尺寸与区域（实验）" data-en="Size + zone (experimental)"></option></select></label>
+<label class="check"><input id="view3d" type="checkbox"><span data-zh="尺寸立体示意（实验）" data-en="Size view (experimental)"></span></label>
+</div>
+<details class="nested"><summary data-zh="导入CSI信号" data-en="Import CSI"></summary><p class="note">JSON · real / imag · 16 × 32 × 64</p><div class="import-controls"><button id="signal-download" data-zh="下载示例" data-en="Sample JSON"></button><input id="upload" type="file" accept=".json" aria-label="CSI JSON"><button id="upload-button" data-zh="上传并检测" data-en="Upload & infer"></button></div></details>
+
+</div></details>
+</div>
+</div>
+<footer data-zh="RoomSense · 多物体仿真 · 区域级定位" data-en="RoomSense · Multi-object simulation · Zone-level localization"></footer>
+</main><script src="/app.js"></script></body></html>

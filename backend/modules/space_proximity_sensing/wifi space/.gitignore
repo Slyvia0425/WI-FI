@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+.downloads/
+data/
+outputs/
+multi_object/data/
+multi_object/outputs/

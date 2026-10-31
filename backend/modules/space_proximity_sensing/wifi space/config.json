@@ -1,0 +1,22 @@
+{
+  "version": "static-obstacle-v1",
+  "engine": "sionna-rt==1.2.2",
+  "seed": 20261029,
+  "room_m": [6.0, 6.0, 3.0],
+  "object_size_m": [1.2, 0.8, 1.2],
+  "object_material": "wood",
+  "wall_material": "concrete",
+  "carrier_hz": 5240000000.0,
+  "bandwidth_hz": 20000000.0,
+  "subcarriers": 64,
+  "tx_m": [[0.2, 1.0, 0.65], [5.8, 4.8, 0.8]],
+  "rx_m": [[0.2, 3.5, 0.7], [1.8, 5.8, 0.8], [4.5, 5.8, 0.65], [5.8, 2.0, 0.7], [4.2, 0.2, 0.8], [2.2, 0.2, 0.65]],
+  "grid": [3, 3],
+  "position_jitter_m": [0.38, 0.48],
+  "max_depth": 3,
+  "samples_per_src": 100000,
+  "split_positions_per_zone": {"train": 70, "validation": 20, "test": 30, "device_shift": 15, "material_shift": 15},
+  "noise_snr_db": [25.0, 40.0],
+  "gain_sigma_db": 0.35,
+  "notes": "Fixed room, one known-size axis-aligned cuboid. Zones classify object center; zone centers are only a coarse rendering. Signal-only model inputs. No real-world or semantic furniture reconstruction claim."
+}

@@ -1,0 +1,6 @@
+{
+  "experiment": "coverage_v3",
+  "protocol": 3,
+  "reason": "Passed the predeclared validation improvement gate and placement/split checks",
+  "validation_gain": 0.2762485873972096
+}
